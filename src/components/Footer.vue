@@ -44,7 +44,7 @@
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10">
         
         <!-- Brand Column -->
-        <div class="lg:col-span-2 space-y-4">
+        <div class="space-y-4">
           <div class="flex items-center gap-3">
             <div class="size-10 rounded-xl bg-gradient-to-tr from-rose-600 to-amber-500 p-[2px] shadow-sm">
               <div class="w-full h-full bg-gray-950 rounded-[10px] flex items-center justify-center">
@@ -52,20 +52,20 @@
               </div>
             </div>
             <div>
-              <span class="text-base sm:text-lg font-black text-white tracking-tight font-sans block">
+              <span class="text-base font-black text-white tracking-tight font-sans block">
                 World Karate Federation
               </span>
               <div class="text-[11px] text-gray-400 font-medium">Sole IOC-Recognised Karate Governing Body</div>
             </div>
           </div>
 
-          <p class="text-xs text-gray-400 leading-relaxed max-w-sm">
-            The World Karate Federation (WKF) unites 198 member national federations and over 100 million practitioners worldwide under the Olympic charter.
+          <p class="text-xs text-gray-400 leading-relaxed">
+            The World Karate Federation (WKF) unites 198 member national federations and over 100 million practitioners worldwide.
           </p>
 
           <div class="text-xs text-gray-400 space-y-1 pt-1">
-            <div><strong class="text-gray-300">Headquarters:</strong> Calle Princesa, 25, 3º 1, 28008 Madrid, Spain</div>
-            <div><strong class="text-gray-300">Email:</strong> wkf@wkf.net • <strong class="text-gray-300">Tel:</strong> +34 915 35 96 32</div>
+            <div><strong class="text-gray-300">Headquarters:</strong> Madrid, Spain</div>
+            <div><strong class="text-gray-300">Email:</strong> wkf@wkf.net</div>
           </div>
         </div>
 
@@ -75,25 +75,62 @@
             Competitions
           </div>
           <ul class="space-y-2">
-            <li><router-link to="/events" class="text-gray-400 hover:text-white transition-colors text-decoration-none">Senior World Championships</router-link></li>
-            <li><router-link to="/events" class="text-gray-400 hover:text-white transition-colors text-decoration-none">Karate 1 Premier League</router-link></li>
+            <li><router-link to="/events" class="text-gray-400 hover:text-white transition-colors text-decoration-none">World Championships</router-link></li>
+            <li><router-link to="/events" class="text-gray-400 hover:text-white transition-colors text-decoration-none">Karate 1 Premier</router-link></li>
             <li><router-link to="/events" class="text-gray-400 hover:text-white transition-colors text-decoration-none">Karate 1 Series A</router-link></li>
-            <li><router-link to="/events" class="text-gray-400 hover:text-white transition-colors text-decoration-none">Karate 1 Youth League</router-link></li>
-            <li><router-link to="/ranking" class="text-gray-400 hover:text-white transition-colors text-decoration-none">Official Standings</router-link></li>
+            <li><router-link to="/events" class="text-gray-400 hover:text-white transition-colors text-decoration-none">Youth League</router-link></li>
+            <li><router-link to="/ranking" class="text-gray-400 hover:text-white transition-colors text-decoration-none">World Standings</router-link></li>
+          </ul>
+        </div>
+
+        <!-- Kaizen Digital Ecosystem (LMS & ERP) -->
+        <div class="space-y-3 text-xs">
+          <div class="font-bold text-rose-400 uppercase tracking-wider text-xs flex items-center gap-1.5">
+            <span class="size-1.5 rounded-full bg-rose-500"></span>
+            Kaizen Ecosystem
+          </div>
+          <ul class="space-y-2">
+            <li>
+              <a href="https://lms.kaizen.paradox-bd.com" target="_blank" rel="noopener" class="text-gray-300 hover:text-white transition-colors text-decoration-none flex items-center gap-1 font-medium">
+                <span>Kaizen Academy (LMS)</span>
+                <svg class="size-2.5 opacity-60" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" /></svg>
+              </a>
+            </li>
+            <li>
+              <a href="https://erp.kaizen.paradox-bd.com" target="_blank" rel="noopener" class="text-gray-300 hover:text-white transition-colors text-decoration-none flex items-center gap-1 font-medium">
+                <span>Kaizen ERP Portal</span>
+                <svg class="size-2.5 opacity-60" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" /></svg>
+              </a>
+            </li>
+            <li>
+              <a href="https://erp.kaizen.paradox-bd.com/app" target="_blank" rel="noopener" class="text-gray-400 hover:text-white transition-colors text-decoration-none">
+                Athlete & Dojo Portal
+              </a>
+            </li>
+            <li>
+              <a href="https://lms.kaizen.paradox-bd.com/lms/courses" target="_blank" rel="noopener" class="text-gray-400 hover:text-white transition-colors text-decoration-none">
+                Referee & Dan Grading
+              </a>
+            </li>
+            <li>
+              <router-link to="/approved" class="text-gray-400 hover:text-white transition-colors text-decoration-none">
+                Homologated Gear
+              </router-link>
+            </li>
           </ul>
         </div>
 
         <!-- Governance & Rules -->
         <div class="space-y-3 text-xs">
           <div class="font-bold text-white uppercase tracking-wider text-xs">
-            Governance & Rules
+            Governance
           </div>
           <ul class="space-y-2">
-            <li><router-link to="/documents" class="text-gray-400 hover:text-white transition-colors text-decoration-none">Competition Rules 2026</router-link></li>
-            <li><router-link to="/documents" class="text-gray-400 hover:text-white transition-colors text-decoration-none">Official Kata Syllabus</router-link></li>
-            <li><router-link to="/about" class="text-gray-400 hover:text-white transition-colors text-decoration-none">Executive Committee</router-link></li>
-            <li><router-link to="/approved" class="text-gray-400 hover:text-white transition-colors text-decoration-none">Approved Equipment</router-link></li>
-            <li><router-link to="/social-legacy" class="text-gray-400 hover:text-white transition-colors text-decoration-none">Guardian Girls Karate</router-link></li>
+            <li><router-link to="/documents" class="text-gray-400 hover:text-white transition-colors text-decoration-none">Rules 2026</router-link></li>
+            <li><router-link to="/documents" class="text-gray-400 hover:text-white transition-colors text-decoration-none">Kata Syllabus</router-link></li>
+            <li><router-link to="/about" class="text-gray-400 hover:text-white transition-colors text-decoration-none">Executive Board</router-link></li>
+            <li><router-link to="/olympics" class="text-gray-400 hover:text-white transition-colors text-decoration-none">Olympic Movement</router-link></li>
+            <li><router-link to="/social-legacy" class="text-gray-400 hover:text-white transition-colors text-decoration-none">Guardian Girls</router-link></li>
           </ul>
         </div>
 

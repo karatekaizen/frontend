@@ -67,73 +67,46 @@
 
         <!-- Desktop Navigation Items (Single-line whitespace-nowrap, No Two-line Breaks) -->
         <nav class="hidden lg:flex items-center gap-0.5 xl:gap-1 text-[13px] font-medium text-gray-600 dark:text-gray-300">
-          <router-link
-            to="/events"
-            class="px-2.5 py-1.5 rounded-lg whitespace-nowrap hover:text-gray-950 dark:hover:text-white hover:bg-gray-100/70 dark:hover:bg-gray-800 transition-colors"
-            active-class="text-rose-600 dark:text-rose-400 font-bold bg-rose-50/70 dark:bg-rose-950/40"
-          >
-            Events
-          </router-link>
-
-          <router-link
-            to="/ranking"
-            class="px-2.5 py-1.5 rounded-lg whitespace-nowrap hover:text-gray-950 dark:hover:text-white hover:bg-gray-100/70 dark:hover:bg-gray-800 transition-colors"
-            active-class="text-rose-600 dark:text-rose-400 font-bold bg-rose-50/70 dark:bg-rose-950/40"
-          >
-            Rankings
-          </router-link>
-
-          <router-link
-            to="/news"
-            class="px-2.5 py-1.5 rounded-lg whitespace-nowrap hover:text-gray-950 dark:hover:text-white hover:bg-gray-100/70 dark:hover:bg-gray-800 transition-colors"
-            active-class="text-rose-600 dark:text-rose-400 font-bold bg-rose-50/70 dark:bg-rose-950/40"
-          >
-            News
-          </router-link>
-
-          <router-link
-            to="/approved"
-            class="px-2.5 py-1.5 rounded-lg whitespace-nowrap hover:text-gray-950 dark:hover:text-white hover:bg-gray-100/70 dark:hover:bg-gray-800 transition-colors"
-            active-class="text-rose-600 dark:text-rose-400 font-bold bg-rose-50/70 dark:bg-rose-950/40"
-          >
-            Equipment
-          </router-link>
-
-          <router-link
-            to="/about"
-            class="px-2.5 py-1.5 rounded-lg whitespace-nowrap hover:text-gray-950 dark:hover:text-white hover:bg-gray-100/70 dark:hover:bg-gray-800 transition-colors"
-            active-class="text-rose-600 dark:text-rose-400 font-bold bg-rose-50/70 dark:bg-rose-950/40"
-          >
-            About WKF
-          </router-link>
-
-          <router-link
-            to="/olympics"
-            class="px-2.5 py-1.5 rounded-lg whitespace-nowrap hover:text-gray-950 dark:hover:text-white hover:bg-gray-100/70 dark:hover:bg-gray-800 transition-colors"
-            active-class="text-rose-600 dark:text-rose-400 font-bold bg-rose-50/70 dark:bg-rose-950/40"
-          >
-            Olympics
-          </router-link>
-
-          <router-link
-            to="/documents"
-            class="px-2.5 py-1.5 rounded-lg whitespace-nowrap hover:text-gray-950 dark:hover:text-white hover:bg-gray-100/70 dark:hover:bg-gray-800 transition-colors"
-            active-class="text-rose-600 dark:text-rose-400 font-bold bg-rose-50/70 dark:bg-rose-950/40"
-          >
-            Rules & Docs
-          </router-link>
-
-          <router-link
-            to="/social-legacy"
-            class="px-2.5 py-1.5 rounded-lg whitespace-nowrap hover:text-gray-950 dark:hover:text-white hover:bg-gray-100/70 dark:hover:bg-gray-800 transition-colors"
-            active-class="text-rose-600 dark:text-rose-400 font-bold bg-rose-50/70 dark:bg-rose-950/40"
-          >
-            Social Legacy
-          </router-link>
+          <template v-for="item in navLinks" :key="item.label">
+            <a
+              v-if="item.isExternal"
+              :href="item.href"
+              target="_blank"
+              rel="noopener"
+              class="px-2.5 py-1.5 rounded-lg whitespace-nowrap hover:text-gray-950 dark:hover:text-white hover:bg-gray-100/70 dark:hover:bg-gray-800 transition-colors inline-flex items-center gap-1 text-decoration-none text-rose-600 dark:text-rose-400 font-semibold"
+            >
+              <span>{{ item.label }}</span>
+              <svg class="size-2.5 opacity-70" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+              </svg>
+            </a>
+            <router-link
+              v-else
+              :to="item.path"
+              class="px-2.5 py-1.5 rounded-lg whitespace-nowrap hover:text-gray-950 dark:hover:text-white hover:bg-gray-100/70 dark:hover:bg-gray-800 transition-colors"
+              active-class="text-rose-600 dark:text-rose-400 font-bold bg-rose-50/70 dark:bg-rose-950/40"
+            >
+              {{ item.label }}
+            </router-link>
+          </template>
         </nav>
 
         <!-- Right Quick Actions -->
         <div class="flex items-center gap-2 sm:gap-3 shrink-0">
+          <!-- ERP & Member Portal Button -->
+          <a
+            href="https://erp.kaizen.paradox-bd.com"
+            target="_blank"
+            rel="noopener"
+            class="hidden sm:inline-flex items-center gap-1.5 px-2.5 py-1.5 text-xs font-semibold rounded-lg bg-gray-900 dark:bg-gray-800 hover:bg-gray-800 dark:hover:bg-gray-700 text-gray-200 border border-gray-700 dark:border-gray-600 transition-all text-decoration-none whitespace-nowrap shadow-xs"
+            title="Kaizen ERP & Member Portal"
+          >
+            <svg class="size-3.5 text-rose-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5.121 17.804A13.937 13.937 0 0112 16c2.5 0 4.847.655 6.879 1.804M15 10a3 3 0 11-6 0 3 3 0 016 0zm6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+            </svg>
+            <span>ERP Portal</span>
+          </a>
+
           <!-- Command Palette Search Button -->
           <button
             @click="$emit('open-search')"
@@ -182,17 +155,38 @@
       v-show="isMobileMenuOpen"
       class="lg:hidden border-t border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-900 px-4 pt-3 pb-6 space-y-1 text-sm font-medium"
     >
-      <router-link
-        v-for="item in navLinks"
-        :key="item.path"
-        :to="item.path"
-        @click="isMobileMenuOpen = false"
-        class="block px-3 py-2 rounded-lg text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 text-decoration-none"
-        active-class="bg-rose-50 dark:bg-rose-950/40 text-rose-600 dark:text-rose-400 font-bold"
-      >
-        {{ item.label }}
-      </router-link>
-      <div class="pt-3 border-t border-gray-100 dark:border-gray-800">
+      <template v-for="item in navLinks" :key="item.label">
+        <a
+          v-if="item.isExternal"
+          :href="item.href"
+          target="_blank"
+          rel="noopener"
+          class="flex items-center justify-between px-3 py-2 rounded-lg text-rose-600 dark:text-rose-400 font-semibold hover:bg-gray-100 dark:hover:bg-gray-800 text-decoration-none"
+        >
+          <span>{{ item.label }}</span>
+          <svg class="size-3 opacity-70" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+          </svg>
+        </a>
+        <router-link
+          v-else
+          :to="item.path"
+          @click="isMobileMenuOpen = false"
+          class="block px-3 py-2 rounded-lg text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 text-decoration-none"
+          active-class="bg-rose-50 dark:bg-rose-950/40 text-rose-600 dark:text-rose-400 font-bold"
+        >
+          {{ item.label }}
+        </router-link>
+      </template>
+      <div class="pt-3 border-t border-gray-100 dark:border-gray-800 space-y-2">
+        <a
+          href="https://erp.kaizen.paradox-bd.com"
+          target="_blank"
+          rel="noopener"
+          class="flex items-center justify-center gap-2 w-full px-4 py-2.5 rounded-lg bg-gray-900 dark:bg-gray-800 border border-gray-700 text-white font-semibold text-xs text-decoration-none"
+        >
+          <span>Kaizen ERP Portal</span>
+        </a>
         <a
           href="https://www.youtube.com/@WKFKarateWorldChamps"
           target="_blank"
@@ -224,7 +218,8 @@ const navLinks = [
   { path: '/events', label: 'Events & Calendar' },
   { path: '/ranking', label: 'World Ranking' },
   { path: '/news', label: 'News Center' },
-  { path: '/approved', label: 'Approved Equipment' },
+  { href: 'https://lms.kaizen.paradox-bd.com', label: 'Academy (LMS)', isExternal: true },
+  { path: '/approved', label: 'Equipment' },
   { path: '/about', label: 'About WKF' },
   { path: '/olympics', label: 'Olympics' },
   { path: '/documents', label: 'Rules & Docs' },

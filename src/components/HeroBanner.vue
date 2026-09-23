@@ -56,6 +56,18 @@
             >
               <span>Tournament Calendar</span>
             </router-link>
+
+            <a
+              href="https://lms.kaizen.paradox-bd.com"
+              target="_blank"
+              rel="noopener"
+              class="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-gradient-to-r from-amber-600/30 to-rose-600/30 hover:from-amber-600/40 hover:to-rose-600/40 text-amber-200 font-semibold text-sm border border-amber-500/30 backdrop-blur-sm transition-all text-decoration-none cursor-pointer"
+            >
+              <span>Kaizen Academy (LMS)</span>
+              <svg class="size-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+              </svg>
+            </a>
           </div>
 
           <!-- Clickable Story Thumbnails / Carousel Switcher -->
