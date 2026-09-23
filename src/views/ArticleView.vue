@@ -31,11 +31,11 @@
 
       <div class="flex items-center gap-3 pt-2 text-xs text-gray-600 dark:text-gray-400 border-b border-gray-200 dark:border-gray-800 pb-6">
         <div class="size-7 rounded-full bg-rose-600 text-white flex items-center justify-center font-bold text-xs shrink-0">
-          W
+          K
         </div>
         <div>
-          <span class="font-bold text-gray-900 dark:text-white">By {{ article.author || 'WKF Media Team' }}</span>
-          <div class="text-[11px] text-gray-400">WKF Media & Communications Directorate</div>
+          <span class="font-bold text-gray-900 dark:text-white">By {{ article.author || 'Kaizen Media Desk' }}</span>
+          <div class="text-[11px] text-gray-400">Kaizen Karate Academy Media Directorate</div>
         </div>
       </div>
     </header>
@@ -75,7 +75,7 @@
     <!-- Related Articles via ArticleCard -->
     <div class="pt-12 border-t border-gray-200 dark:border-gray-800 space-y-6">
       <h3 class="text-xl font-bold text-gray-950 dark:text-white font-sans">
-        More from the World Karate Federation
+        More from Kaizen Karate Academy
       </h3>
       <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
         <ArticleCard

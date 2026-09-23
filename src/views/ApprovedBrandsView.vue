@@ -2,9 +2,9 @@
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12 space-y-10">
     <!-- Header -->
     <SectionHeader
-      eyebrow="Official Certification"
-      title="WKF Approved Brands & Equipment"
-      description="To guarantee athlete safety and standardized competition performance, only equipment homologated by the World Karate Federation is authorized for use in official world and continental events."
+      eyebrow="Official Gear Standards"
+      title="Approved Dojo Equipment & Brands"
+      description="To guarantee student safety and standardized training performance, only equipment homologated to international standards is authorized for dojo sparring, examinations, and official competitions."
       :level="1"
     >
       <template #eyebrow-icon>
@@ -64,10 +64,10 @@
     <!-- Certification Standards Section -->
     <div class="p-8 rounded-2xl bg-gray-50 dark:bg-gray-850 border border-gray-200/80 dark:border-gray-700/80 space-y-4">
       <h2 class="text-lg font-bold text-gray-950 dark:text-white font-sans">
-        WKF Homologation Standards & Testing
+        Kaizen Dojo Equipment Safety & Standards
       </h2>
       <p class="text-xs sm:text-sm text-gray-600 dark:text-gray-300 leading-relaxed max-w-4xl">
-        All certified protections (gloves, shin-guards, foot guards, body protectors, and face masks) undergo stringent laboratory biomechanical impact absorption testing. Uniforms are verified for fabric density, weave durability, and freedom of motion to prevent unfair grip advantages during kumite bouts.
+        All certified protections (gloves, shin-guards, foot guards, body protectors, and headgear) used at Kaizen Karate Academy undergo stringent biomechanical impact absorption testing. Uniforms (Karate-Gi) and belts are certified for traditional durability and freedom of movement.
       </p>
     </div>
   </div>

@@ -4,7 +4,7 @@
     <SectionHeader
       eyebrow="Official Dispatches"
       title="News Center & Media"
-      description="The definitive archive for competition coverage, technical announcements, and institutional releases from the World Karate Federation."
+      description="The official newsroom for academy announcements, tournament dispatches, belt examinations, and masterclasses from Kaizen Karate Academy."
       :level="1"
     >
       <template #eyebrow-icon>

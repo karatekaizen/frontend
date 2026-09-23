@@ -2,9 +2,9 @@
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12 space-y-12">
     <!-- Header -->
     <SectionHeader
-      eyebrow="Institutional Governance"
-      title="About the World Karate Federation"
-      description="The international governing body of sport karate, recognized by the International Olympic Committee (IOC), representing 198 member countries and over 100 million karateka globally."
+      eyebrow="Premier Martial Arts Dojo"
+      title="About Kaizen Karate Academy"
+      description="Founded on the enduring martial philosophy of Kaizen (continuous, lifelong improvement). Our dojo cultivates traditional Karate-Do virtue, technical mastery, and elite competitive athletic excellence."
       :level="1"
     >
       <template #eyebrow-icon>
@@ -18,13 +18,13 @@
     <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
       <div class="lg:col-span-8 space-y-4">
         <h2 class="text-xl font-bold text-gray-950 dark:text-white font-sans">
-          History & Foundation
+          Dojo Heritage & Philosophy
         </h2>
         <p class="text-sm text-gray-700 dark:text-gray-300 leading-relaxed">
           {{ about.history }}
         </p>
         <p class="text-sm text-gray-700 dark:text-gray-300 leading-relaxed">
-          The WKF is a democratic, non-profit organization dedicated to fostering the traditional ethical values of Karate-do while developing high-performance modern athletic competition formats, strict anti-doping integrity, and refereeing transparency.
+          At Kaizen Karate Academy, we preserve the classical roots of Shotokan and Shito-Ryu while empowering students with cutting-edge athletic conditioning, transparent Dan grading milestones, and Olympic-standard electronic scoring systems.
         </p>
       </div>
 
@@ -47,10 +47,10 @@
     <div class="space-y-6 pt-6 border-t border-gray-200 dark:border-gray-800">
       <div>
         <h2 class="text-2xl font-black text-gray-950 dark:text-white font-sans">
-          5 Continental Confederations
+          Dojo Affiliations & Global Recognition
         </h2>
         <p class="text-xs text-gray-500 mt-1">
-          Regional governance bodies organizing continental championships and athlete licensing.
+          Accredited and partnered with continental federations and international Olympic karate bodies.
         </p>
       </div>
 
@@ -79,10 +79,10 @@
     <div class="space-y-6 pt-6 border-t border-gray-200 dark:border-gray-800">
       <div>
         <h2 class="text-2xl font-black text-gray-950 dark:text-white font-sans">
-          Standing Commissions & Committees
+          Academy Technical Boards & Commissions
         </h2>
         <p class="text-xs text-gray-500 mt-1">
-          Expert bodies governing technical standards, athlete representation, and sporting integrity.
+          Specialized panels governing Dan examinations, tournament coaching, youth pedagogy, and student welfare.
         </p>
       </div>
 

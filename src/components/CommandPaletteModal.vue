@@ -115,7 +115,7 @@
         <!-- Footer -->
         <div class="px-4 py-2.5 bg-gray-50 dark:bg-gray-800 border-t border-gray-100 dark:border-gray-800 flex items-center justify-between text-[11px] text-gray-500">
           <span>Navigate with click or Enter</span>
-          <span>WKF Unified Navigation</span>
+          <span>Kaizen Academy Navigation</span>
         </div>
       </div>
     </div>
@@ -143,11 +143,11 @@ const pages = [
   { title: "Events & Calendar", path: "/events" },
   { title: "World Rankings", path: "/ranking" },
   { title: "News Center", path: "/news" },
-  { title: "Approved Brands", path: "/approved" },
-  { title: "About WKF Governance", path: "/about" },
-  { title: "Olympics", path: "/olympics" },
-  { title: "Rules & Documents", path: "/documents" },
-  { title: "Social Legacy", path: "/social-legacy" }
+  { title: "Dojo Equipment & Gear", path: "/approved" },
+  { title: "About Kaizen Academy", path: "/about" },
+  { title: "Olympic Standards", path: "/olympics" },
+  { title: "Curriculum & Rules", path: "/documents" },
+  { title: "Dojo Community Legacy", path: "/social-legacy" }
 ]
 
 watch(() => props.isOpen, (newVal) => {

@@ -35,7 +35,7 @@
     <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <SectionHeader
         eyebrow="Kaizen Digital Infrastructure"
-        title="Federation ERP & Learning Academy"
+        title="Dojo ERP & Martial Arts Academy"
         :level="2"
       />
 
@@ -85,10 +85,10 @@
               <span>ERPNEXT INTEGRATION</span>
             </div>
             <h3 class="text-2xl font-bold tracking-tight text-white font-sans">
-              Federation ERP & Member Portal
+              Dojo ERP & Student Desk
             </h3>
             <p class="text-sm text-gray-300 leading-relaxed">
-              Complete club licensing, athlete digital passport, tournament registration, automated weigh-in verification, and financial management.
+              Complete student enrollment, athlete digital passport, tournament registration, Dan grading records, and dojo operations.
             </p>
             <ul class="text-xs text-gray-400 space-y-1.5 pt-1">
               <li class="flex items-center gap-2">
@@ -97,7 +97,7 @@
               </li>
               <li class="flex items-center gap-2">
                 <svg class="size-3.5 text-rose-400" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
-                <span>Real-time Tournament Brackets</span>
+                <span>Tournament Brackets & Weigh-ins</span>
               </li>
             </ul>
           </div>
@@ -108,7 +108,7 @@
               rel="noopener"
               class="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-rose-600 hover:bg-rose-500 text-white font-bold text-xs uppercase tracking-wider transition-all text-decoration-none shadow-sm cursor-pointer"
             >
-              <span>Open Member Desk</span>
+              <span>Open Student Desk</span>
               <svg class="size-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" /></svg>
             </a>
           </div>

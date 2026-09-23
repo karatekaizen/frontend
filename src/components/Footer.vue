@@ -46,26 +46,24 @@
         <!-- Brand Column -->
         <div class="space-y-4">
           <div class="flex items-center gap-3">
-            <div class="size-10 rounded-xl bg-gradient-to-tr from-rose-600 to-amber-500 p-[2px] shadow-sm">
-              <div class="w-full h-full bg-gray-950 rounded-[10px] flex items-center justify-center">
-                <span class="text-white font-black text-sm tracking-tighter">WKF</span>
-              </div>
+            <div class="size-10 rounded-xl bg-gradient-to-tr from-rose-600 to-amber-500 p-[1.5px] shadow-sm overflow-hidden shrink-0">
+              <img src="/logo.jpg" alt="Kaizen Karate Academy" class="w-full h-full object-cover rounded-[9px]" />
             </div>
             <div>
               <span class="text-base font-black text-white tracking-tight font-sans block">
-                World Karate Federation
+                Kaizen Karate Academy
               </span>
-              <div class="text-[11px] text-gray-400 font-medium">Sole IOC-Recognised Karate Governing Body</div>
+              <div class="text-[11px] text-gray-400 font-medium">Academy of Martial Arts</div>
             </div>
           </div>
 
           <p class="text-xs text-gray-400 leading-relaxed">
-            The World Karate Federation (WKF) unites 198 member national federations and over 100 million practitioners worldwide.
+            Kaizen Karate Academy is a premier martial arts dojo dedicated to traditional Karate-Do excellence, Dan grading standards, and high-performance athletic development.
           </p>
 
           <div class="text-xs text-gray-400 space-y-1 pt-1">
-            <div><strong class="text-gray-300">Headquarters:</strong> Madrid, Spain</div>
-            <div><strong class="text-gray-300">Email:</strong> wkf@wkf.net</div>
+            <div><strong class="text-gray-300">Dojo Headquarters:</strong> Kaizen Central Tatami</div>
+            <div><strong class="text-gray-300">Email:</strong> info@kaizen.paradox-bd.com</div>
           </div>
         </div>
 
@@ -165,7 +163,7 @@
       <!-- Copyright Bottom Bar -->
       <div class="pt-8 mt-8 border-t border-gray-900 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-gray-400">
         <div>
-          Copyright © 2026 World Karate Federation (WKF). All rights reserved.
+          Copyright © 2026 Kaizen Karate Academy. All rights reserved.
         </div>
         <div class="flex items-center gap-4">
           <router-link to="/documents" class="hover:text-white text-decoration-none text-gray-400">Privacy Policy</router-link>

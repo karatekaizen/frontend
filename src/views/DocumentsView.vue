@@ -2,9 +2,9 @@
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12 space-y-8">
     <!-- Header -->
     <SectionHeader
-      eyebrow="Official Governance & Regulations"
-      title="Rules, Statutes & Directives"
-      description="Official WKF governing documents, competition rules, approved kata syllabus, anti-doping codes in accordance with WADA guidelines, and organizer handbooks."
+      eyebrow="Academy Standards & Governance"
+      title="Curriculum, Rules & Directives"
+      description="Official Kaizen Karate Academy training syllabi, Dan grading examination criteria, approved kata lists, and Olympic WKF competition regulations."
       :level="1"
     >
       <template #eyebrow-icon>

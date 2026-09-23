@@ -2,9 +2,9 @@
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12 space-y-12">
     <!-- Header -->
     <SectionHeader
-      eyebrow="Social Responsibility"
-      title="Karate Social Legacy"
-      description="The World Karate Federation harnesses the global reach and core educational principles of Karate-do to champion gender equality, sustainability, youth empowerment, and universal inclusion."
+      eyebrow="Community & Dojo Welfare"
+      title="Kaizen Social Legacy"
+      description="Kaizen Karate Academy harnesses the core ethical principles of Karate-Do to champion community outreach, youth character building, women's self-defense, and inclusive martial arts."
       :level="1"
     >
       <template #eyebrow-icon>

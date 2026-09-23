@@ -117,7 +117,7 @@
                       <span>K. Nishiyama</span>
                       <span class="text-[10px] font-mono font-bold px-1 py-0.2 rounded bg-gray-800 text-gray-300">JPN</span>
                     </div>
-                    <div class="text-[11px] text-gray-400">Japan • WKF Rank #1 (Senshu ★)</div>
+                    <div class="text-[11px] text-gray-400">Japan • World Rank #1 (Senshu ★)</div>
                   </div>
                 </div>
                 <div class="text-3xl font-black text-rose-400 font-mono">
@@ -134,7 +134,7 @@
                       <span>N. Azhikanov</span>
                       <span class="text-[10px] font-mono font-bold px-1 py-0.2 rounded bg-gray-800 text-gray-300">KAZ</span>
                     </div>
-                    <div class="text-[11px] text-gray-400">Kazakhstan • WKF Rank #4</div>
+                    <div class="text-[11px] text-gray-400">Kazakhstan • World Rank #4</div>
                   </div>
                 </div>
                 <div class="text-3xl font-black text-blue-400 font-mono">

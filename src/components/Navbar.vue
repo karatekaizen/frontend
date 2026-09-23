@@ -9,28 +9,20 @@
         
         <!-- Logo -->
         <router-link to="/" class="flex items-center gap-2.5 shrink-0 text-decoration-none group">
-          <div class="size-9 rounded-xl bg-gradient-to-tr from-rose-600 via-rose-500 to-amber-500 p-[2px] shadow-xs shrink-0">
-            <div class="w-full h-full bg-white dark:bg-gray-900 rounded-[10px] flex items-center justify-center p-1">
-              <svg viewBox="0 0 100 100" class="w-full h-full text-rose-600">
-                <circle cx="50" cy="50" r="46" fill="none" stroke="#E11D48" stroke-width="4"/>
-                <circle cx="50" cy="50" r="38" fill="none" stroke="currentColor" stroke-width="1.5" stroke-dasharray="3 3"/>
-                <path d="M50 20 A 7 7 0 1 0 50 34 A 7 7 0 1 0 50 20 Z" fill="#E11D48" />
-                <path d="M36 44 Q 50 36 64 42 L 72 54 L 66 57 L 58 48 L 52 64 L 62 82 L 54 84 L 46 68 L 38 84 L 30 82 L 42 60 L 36 49 L 28 54 L 24 50 Z" fill="currentColor"/>
-                <circle cx="68" cy="38" r="4" fill="#D97706" />
-              </svg>
-            </div>
+          <div class="size-9 rounded-xl bg-gradient-to-tr from-rose-600 via-rose-500 to-amber-500 p-[1.5px] shadow-xs shrink-0 overflow-hidden">
+            <img src="/logo.jpg" alt="Kaizen Karate Academy" class="w-full h-full object-cover rounded-[9px]" />
           </div>
           <div class="flex flex-col">
             <div class="flex items-center gap-1.5 leading-none">
-              <span class="text-lg font-black tracking-tight text-gray-950 dark:text-white font-sans">
-                WKF<span class="text-rose-600">.</span>
+              <span class="text-base sm:text-lg font-black tracking-tight text-gray-950 dark:text-white font-sans">
+                KAIZEN<span class="text-rose-600">.</span>
               </span>
-              <span class="px-1.5 py-0.2 rounded text-[9px] font-bold bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-300 uppercase tracking-wider">
-                Official
+              <span class="px-1.5 py-0.2 rounded text-[9px] font-bold bg-rose-100 dark:bg-rose-950/60 text-rose-700 dark:text-rose-400 uppercase tracking-wider">
+                Academy
               </span>
             </div>
             <span class="text-[9px] font-semibold text-gray-500 dark:text-gray-400 uppercase tracking-wider leading-tight">
-              World Karate Federation
+              Academy of Martial Arts
             </span>
           </div>
         </router-link>
@@ -258,11 +250,11 @@ const primaryLinks = [
 ]
 
 const moreNavLinks = [
-  { path: '/approved', label: 'Equipment & Brands', desc: 'Homologated gear & certified brands' },
-  { path: '/about', label: 'About WKF', desc: 'Executive bureau & structure' },
-  { path: '/olympics', label: 'Olympic Karate', desc: 'Olympic Games & qualification pathways' },
-  { path: '/documents', label: 'Rules & Documents', desc: 'Rulebooks, statutes & bulletins' },
-  { path: '/social-legacy', label: 'Social Legacy', desc: 'Guardian Girls & youth empowerment' }
+  { path: '/approved', label: 'Dojo Equipment', desc: 'Approved Gi, belts & training gear' },
+  { path: '/about', label: 'About Academy', desc: 'Dojo lineage, senseis & philosophy' },
+  { path: '/olympics', label: 'Olympic Standards', desc: 'WKF competition syllabus & pathways' },
+  { path: '/documents', label: 'Curriculum & Rules', desc: 'Dan syllabus, kata guide & handbooks' },
+  { path: '/social-legacy', label: 'Dojo Community', desc: 'Youth empowerment & Guardian Girls' }
 ]
 
 const isMoreActive = computed(() => {

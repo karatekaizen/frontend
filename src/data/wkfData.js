@@ -9,10 +9,10 @@ export const WKF_DATA = {
   },
 
   stats: [
-    { label: "Member Nations", value: "198", change: "5 Continental Federations" },
-    { label: "Global Practitioners", value: "100M+", change: "Across 198 countries" },
-    { label: "World Championships", value: "26th", change: "Cairo 2026 Edition" },
-    { label: "Ranked Athletes", value: "14,500+", change: "Official WKF database" },
+    { label: "Active Students", value: "2,500+", change: "Youth & Adult Divisions" },
+    { label: "Black Belts & Dan", value: "180+", change: "Certified Instructors" },
+    { label: "Championship Medals", value: "450+", change: "National & World Circuit" },
+    { label: "Affiliated Dojos", value: "12", change: "Kaizen Network" },
   ],
 
   featuredStories: [
@@ -408,21 +408,21 @@ The WKF Executive Committee conducted a final technical inspection this week, co
   ],
 
   aboutWKF: {
-    history: "Founded in 1970 as the World Union of Karatedo Organizations (WUKO), the World Karate Federation is the only karate organization recognized by the International Olympic Committee (IOC). It has grown to unite 198 member countries across all five continents.",
+    history: "Kaizen Karate Academy was founded on the bedrock martial philosophy of 'Kaizen' — continuous and endless improvement in mind, body, and spirit. As an elite martial arts academy and dojo, we train practitioners from white belt to master Dan grades in traditional Shotokan and Shito-Ryu karate while fielding champions in Olympic-style WKF competition formats.",
     president: {
-      name: "Antonio Espinós",
-      role: "WKF President",
-      since: "1998",
+      name: "Hanshi Sensei",
+      role: "Chief Instructor & Dojo Master",
+      since: "2012",
       image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=400&q=80",
-      quote: "Karate is more than a sport; it is an educational vehicle that teaches self-discipline, respect, and universal sportsmanship."
+      quote: "Karate is not merely about physical combat; it is an enduring journey of character, humility, courage, and relentless daily progress."
     },
     commissions: [
-      { name: "Referee Commission", chair: "Javier Escalante (Sweden)", description: "Responsible for worldwide referee education, licensing, examination, and official match supervision." },
-      { name: "Athletes Commission", chair: "Davide Benetello (Italy)", description: "Ensures athlete representation at the highest governance level, safeguarding athlete welfare." },
-      { name: "Sports Commission", chair: "Karl Puig (France)", description: "Oversees competition formats, calendar planning, tournament management, and points allocation." },
-      { name: "Medical & Anti-Doping", chair: "Dr. Rafael Arriaza (Spain)", description: "Guarantees clean sport through rigorous testing protocols in full compliance with WADA." },
-      { name: "Para-Karate Commission", chair: "Erwan Le Run (France)", description: "Develops wheelchair, visually impaired, and intellectually challenged karate competition worldwide." },
-      { name: "Women in Sport", chair: "Nancy Pena (Dominican Republic)", description: "Drives female participation in refereeing, coaching, administration, and competition." }
+      { name: "Dan Grading & Syllabus Board", chair: "Chief Sensei & Technical Panel", description: "Standardizes black belt examinations, traditional kata bunkai requirements, and kihon progression." },
+      { name: "Competition & Squad Training", chair: "Head Kumite & Kata Coach", description: "Prepares academy athletes for national tournaments, Premier League circuits, and international seminars." },
+      { name: "Youth & Cadet Development", chair: "Youth Program Director", description: "Specialized character building, motor skill development, and anti-bullying martial arts curriculum." },
+      { name: "Refereeing & Match Protocols", chair: "Senior Certified Official", description: "Ensures all dojo bouts and internal championships follow official WKF electronic scoring rules." },
+      { name: "Self-Defense & Tactical Arts", chair: "Chief Self-Defense Specialist", description: "Practical close-quarters defense, situational awareness, and Guardian Girls empowerment modules." },
+      { name: "Dojo Welfare & Sports Medicine", chair: "Academy Medical Advisor", description: "Safe athletic conditioning, injury prevention, rehabilitation, and sports nutrition." }
     ]
   },
 

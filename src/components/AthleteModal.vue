@@ -12,7 +12,7 @@
           <div class="flex items-center gap-2">
             <span class="size-2 rounded-full bg-rose-500 animate-pulse"></span>
             <span class="text-xs font-bold text-white tracking-wider uppercase">
-              WKF Official Athlete Dossier
+              Kaizen Academy Athlete Dossier
             </span>
           </div>
 
@@ -49,7 +49,7 @@
                   <div class="text-xs font-medium text-gray-500 dark:text-gray-400 mt-1 flex items-center gap-2">
                     <span>{{ athlete.country }}</span>
                     <span>•</span>
-                    <span class="text-rose-600 dark:text-rose-400 font-bold">WKF Rank #{{ athlete.rank }}</span>
+                    <span class="text-rose-600 dark:text-rose-400 font-bold">World Rank #{{ athlete.rank }}</span>
                   </div>
                 </div>
               </div>
