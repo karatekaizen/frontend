@@ -9,11 +9,19 @@
       :class="compact ? 'rounded-lg' : 'rounded-xl'"
     >
       <img
+        v-if="!hasImageError && article.image"
         :src="article.image"
         :alt="article.title"
         class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
         loading="lazy"
+        @error="hasImageError = true"
       />
+      <div
+        v-else
+        class="w-full h-full bg-gradient-to-br from-gray-900 via-rose-950/40 to-gray-900 flex items-center justify-center p-4 text-center"
+      >
+        <span class="text-rose-500/60 font-black text-2xl tracking-widest uppercase">WKF NEWS</span>
+      </div>
       <span
         v-if="!compact"
         class="absolute top-2.5 left-2.5 px-2 py-0.5 rounded text-[10px] font-bold bg-gray-950/80 text-white backdrop-blur-sm"
@@ -59,6 +67,10 @@
 </template>
 
 <script setup>
+import { ref } from 'vue'
+
+const hasImageError = ref(false)
+
 defineProps({
   article: {
     type: Object,

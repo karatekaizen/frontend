@@ -19,6 +19,7 @@ declare module 'vue' {
     Footer: typeof import('./src/components/Footer.vue')['default']
     FrappeToast: typeof import('./src/components/FrappeToast.vue')['default']
     HeroBanner: typeof import('./src/components/HeroBanner.vue')['default']
+    LiveTicker: typeof import('./src/components/LiveTicker.vue')['default']
     MedalBadge: typeof import('./src/components/ui/MedalBadge.vue')['default']
     Navbar: typeof import('./src/components/Navbar.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']

@@ -229,7 +229,7 @@ The WKF Executive Committee conducted a final technical inspection this week, co
       category: "Asian Games",
       date: "Sep 20, 2026",
       readTime: "3 min read",
-      image: "https://images.unsplash.com/photo-1508215885820-4523e4e13f7b?auto=format&fit=crop&w=800&q=80",
+      image: "https://images.unsplash.com/photo-1555597673-b21d5c935865?auto=format&fit=crop&w=800&q=80",
       author: "WKF Media Team",
       summary: "Opening day matches featured fierce rivalries and packed stands at the Nippon Gaishi Hall."
     },
@@ -249,7 +249,7 @@ The WKF Executive Committee conducted a final technical inspection this week, co
       category: "Governance",
       date: "Sep 19, 2026",
       readTime: "4 min read",
-      image: "https://images.unsplash.com/photo-1517649763962-0c623266ddc0?auto=format&fit=crop&w=800&q=80",
+      image: "https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?auto=format&fit=crop&w=800&q=80",
       author: "Executive Bureau",
       summary: "Referees, coaches, and commission members align on video review and athlete welfare protocols."
     },

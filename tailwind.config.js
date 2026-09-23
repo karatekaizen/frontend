@@ -18,6 +18,7 @@ export default {
         zinc: colors.zinc,
         gray: {
           ...colors.gray,
+          750: '#232D42',
           850: '#18202F',
           950: '#0B0F19',
         },
