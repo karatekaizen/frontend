@@ -99,42 +99,6 @@
 
         <!-- Right Quick Actions -->
         <div class="flex items-center gap-2 shrink-0">
-          <!-- Student Portal / Sign In Button -->
-          <router-link
-            v-if="authState.isLoggedIn"
-            to="/profile"
-            class="hidden sm:inline-flex items-center gap-1.5 px-2.5 py-1.5 text-xs font-semibold rounded-lg bg-rose-50 dark:bg-rose-950/40 text-rose-700 dark:text-rose-300 border border-rose-200 dark:border-rose-900/60 hover:bg-rose-100 transition-all text-decoration-none whitespace-nowrap shadow-xs"
-            title="My Student Profile"
-          >
-            <div class="size-4 rounded-full bg-rose-600 text-white text-[9px] flex items-center justify-center font-bold">
-              {{ (authState.user?.fullName || 'S')[0].toUpperCase() }}
-            </div>
-            <span class="max-w-[100px] truncate">{{ authState.user?.fullName?.split(' ')[0] }}</span>
-          </router-link>
-          <button
-            v-else
-            @click="authStore.openAuthModal('login')"
-            class="hidden sm:inline-flex items-center gap-1.5 px-2.5 py-1.5 text-xs font-semibold rounded-lg bg-gray-100 dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700 text-gray-800 dark:text-gray-200 border border-gray-200 dark:border-gray-700 transition-all cursor-pointer whitespace-nowrap shadow-xs"
-          >
-            <svg class="size-3.5 text-gray-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
-            </svg>
-            <span>Sign In</span>
-          </button>
-
-          <!-- ERP Desk Button (for authorities/staff) -->
-          <a
-            href="https://erp.kaizen.paradox-bd.com"
-            target="_blank"
-            rel="noopener"
-            class="hidden md:inline-flex items-center gap-1.5 px-2.5 py-1.5 text-xs font-semibold rounded-lg bg-gray-900 dark:bg-gray-800 hover:bg-gray-800 dark:hover:bg-gray-700 text-gray-200 border border-gray-700 dark:border-gray-600 transition-all text-decoration-none whitespace-nowrap shadow-xs"
-            title="Kaizen ERP & Member Desk"
-          >
-            <svg class="size-3.5 text-rose-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5.121 17.804A13.937 13.937 0 0112 16c2.5 0 4.847.655 6.879 1.804M15 10a3 3 0 11-6 0 3 3 0 016 0zm6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-            </svg>
-            <span>ERP Desk</span>
-          </a>
 
           <!-- Command Palette Button -->
           <button
@@ -151,16 +115,97 @@
             </kbd>
           </button>
 
-          <!-- Watch Live Button -->
-          <a
-            href="https://www.youtube.com/@WKFKarateWorldChamps"
-            target="_blank"
-            rel="noopener"
-            class="inline-flex items-center gap-1.5 px-2.5 sm:px-3 py-1.5 text-xs font-bold rounded-lg bg-rose-600 hover:bg-rose-500 text-white shadow-xs transition-all text-decoration-none whitespace-nowrap"
-          >
-            <span class="size-1.5 rounded-full bg-white animate-ping"></span>
-            <span>Watch Live</span>
-          </a>
+          <!-- Auth: Logged Out → Login + Sign Up buttons -->
+          <template v-if="!isLoggedIn && !authLoading">
+            <button
+              @click="$emit('open-auth', 'login')"
+              class="hidden sm:inline-flex items-center px-3 py-1.5 text-xs font-semibold rounded-lg border border-gray-200 dark:border-gray-700 text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-800 transition-all cursor-pointer"
+            >
+              Log In
+            </button>
+            <button
+              @click="$emit('open-auth', 'signup')"
+              class="inline-flex items-center gap-1.5 px-3 py-1.5 text-xs font-bold rounded-lg bg-rose-600 hover:bg-rose-500 text-white shadow-xs transition-all cursor-pointer whitespace-nowrap"
+            >
+              <svg class="size-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18 9v3m0 0v3m0-3h3m-3 0h-3m-2-5a4 4 0 11-8 0 4 4 0 018 0zM3 20a6 6 0 0112 0v1H3v-1z"/>
+              </svg>
+              <span>Join Free</span>
+            </button>
+          </template>
+
+          <!-- Auth: Logged In → Avatar + dropdown -->
+          <div v-else-if="isLoggedIn" class="relative" @mouseenter="isProfileOpen = true" @mouseleave="isProfileOpen = false">
+            <button
+              class="flex items-center gap-2 pl-1 pr-2.5 py-1 rounded-xl border border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-gray-800 hover:bg-gray-100 dark:hover:bg-gray-750 transition-all cursor-pointer"
+              @click="isProfileOpen = !isProfileOpen"
+            >
+              <!-- Avatar -->
+              <div class="size-6 rounded-lg overflow-hidden bg-gradient-to-tr from-rose-600 to-amber-500 flex items-center justify-center shrink-0">
+                <img
+                  v-if="userProfile?.user_image"
+                  :src="`https://lms.kaizen.paradox-bd.com${userProfile.user_image}`"
+                  :alt="displayName"
+                  class="w-full h-full object-cover"
+                />
+                <span v-else class="text-[9px] font-black text-white">{{ initials }}</span>
+              </div>
+              <span class="text-xs font-semibold text-gray-700 dark:text-gray-300 max-w-[80px] truncate">{{ displayName }}</span>
+              <svg class="size-3 text-gray-400 transition-transform" :class="isProfileOpen ? 'rotate-180' : ''" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+              </svg>
+            </button>
+
+            <!-- Profile dropdown -->
+            <transition
+              enter-active-class="transition duration-150 ease-out"
+              enter-from-class="transform scale-95 opacity-0 -translate-y-1"
+              enter-to-class="transform scale-100 opacity-100 translate-y-0"
+              leave-active-class="transition duration-100 ease-in"
+              leave-from-class="transform scale-100 opacity-100 translate-y-0"
+              leave-to-class="transform scale-95 opacity-0 -translate-y-1"
+            >
+              <div v-if="isProfileOpen" class="absolute right-0 mt-1 w-44 rounded-xl bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-800 shadow-xl py-1.5 z-50">
+                <div class="px-3.5 py-2 border-b border-gray-100 dark:border-gray-800">
+                  <p class="text-xs font-bold text-gray-900 dark:text-white truncate">{{ displayName }}</p>
+                  <p class="text-[10px] text-gray-500 dark:text-gray-400 truncate">{{ currentUser }}</p>
+                </div>
+                <router-link
+                  to="/profile"
+                  @click="isProfileOpen = false"
+                  class="flex items-center gap-2 px-3.5 py-2 text-xs text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-800 hover:text-rose-600 dark:hover:text-rose-400 transition-colors text-decoration-none"
+                >
+                  <svg class="size-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0"/>
+                  </svg>
+                  My Profile
+                </router-link>
+                <a
+                  href="https://lms.kaizen.paradox-bd.com"
+                  target="_blank"
+                  @click="isProfileOpen = false"
+                  class="flex items-center gap-2 px-3.5 py-2 text-xs text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-800 hover:text-rose-600 dark:hover:text-rose-400 transition-colors text-decoration-none"
+                >
+                  <svg class="size-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.042A8.967 8.967 0 006 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 016 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 016-2.292c1.052 0 2.062.18 3 .512v14.25"/>
+                  </svg>
+                  Academy (LMS)
+                </a>
+                <button
+                  @click="handleLogout"
+                  class="w-full flex items-center gap-2 px-3.5 py-2 text-xs text-gray-500 dark:text-gray-400 hover:bg-red-50 dark:hover:bg-red-950/40 hover:text-red-600 transition-colors cursor-pointer border-t border-gray-100 dark:border-gray-800 mt-1"
+                >
+                  <svg class="size-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1"/>
+                  </svg>
+                  Sign Out
+                </button>
+              </div>
+            </transition>
+          </div>
+
+          <!-- Loading skeleton for auth -->
+          <div v-else class="size-8 rounded-xl bg-gray-100 dark:bg-gray-800 animate-pulse" />
 
           <!-- Mobile Hamburger Toggle -->
           <button
@@ -184,6 +229,27 @@
       v-show="isMobileMenuOpen"
       class="lg:hidden border-t border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-900 px-4 pt-3 pb-6 space-y-3 text-sm font-medium"
     >
+      <!-- Auth section for mobile -->
+      <div v-if="!isLoggedIn && !authLoading" class="flex gap-2 pb-3 border-b border-gray-100 dark:border-gray-800">
+        <button
+          @click="$emit('open-auth', 'login'); isMobileMenuOpen = false"
+          class="flex-1 py-2 text-xs font-semibold rounded-lg border border-gray-200 dark:border-gray-700 text-gray-700 dark:text-gray-300 hover:bg-gray-50 cursor-pointer text-center"
+        >Log In</button>
+        <button
+          @click="$emit('open-auth', 'signup'); isMobileMenuOpen = false"
+          class="flex-1 py-2 text-xs font-bold rounded-lg bg-rose-600 text-white cursor-pointer text-center"
+        >Join Free</button>
+      </div>
+      <div v-else-if="isLoggedIn" class="flex items-center gap-3 pb-3 border-b border-gray-100 dark:border-gray-800">
+        <div class="size-8 rounded-lg overflow-hidden bg-gradient-to-tr from-rose-600 to-amber-500 flex items-center justify-center">
+          <span class="text-xs font-black text-white">{{ initials }}</span>
+        </div>
+        <div class="flex-1 min-w-0">
+          <p class="text-xs font-bold text-gray-900 dark:text-white truncate">{{ displayName }}</p>
+          <router-link to="/profile" @click="isMobileMenuOpen = false" class="text-[10px] text-rose-600 dark:text-rose-400 text-decoration-none">View Profile →</router-link>
+        </div>
+      </div>
+
       <div class="space-y-1">
         <div class="text-[11px] font-bold text-gray-400 uppercase tracking-wider px-3 py-1">Competition</div>
         <router-link
@@ -209,32 +275,6 @@
           <span>Kaizen Academy (LMS)</span>
           <span class="px-1.5 py-0.2 rounded text-[10px] font-bold bg-rose-100 dark:bg-rose-900/50 text-rose-700 dark:text-rose-300">Live</span>
         </a>
-        <router-link
-          v-if="authState.isLoggedIn"
-          to="/profile"
-          @click="isMobileMenuOpen = false"
-          class="flex items-center justify-between px-3 py-2 rounded-lg bg-rose-50 dark:bg-rose-950/40 text-rose-700 dark:text-rose-300 font-bold text-decoration-none"
-        >
-          <span>Student Portal ({{ authState.user?.fullName?.split(' ')[0] }})</span>
-          <span class="text-xs text-rose-600 dark:text-rose-400">Profile</span>
-        </router-link>
-        <button
-          v-else
-          @click="isMobileMenuOpen = false; authStore.openAuthModal('login')"
-          class="flex items-center justify-between w-full px-3 py-2 rounded-lg text-left text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 font-semibold cursor-pointer"
-        >
-          <span>Sign In / Student Account</span>
-          <span class="text-xs text-gray-400">Auth</span>
-        </button>
-        <a
-          href="https://erp.kaizen.paradox-bd.com"
-          target="_blank"
-          rel="noopener"
-          class="flex items-center justify-between px-3 py-2 rounded-lg text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 text-decoration-none"
-        >
-          <span>Kaizen ERP & Member Desk</span>
-          <span class="text-xs text-gray-400">Desk</span>
-        </a>
       </div>
 
       <div class="space-y-1 pt-2 border-t border-gray-100 dark:border-gray-800">
@@ -251,15 +291,11 @@
         </router-link>
       </div>
 
-      <div class="pt-3 border-t border-gray-100 dark:border-gray-800 space-y-2">
-        <a
-          href="https://www.youtube.com/@WKFKarateWorldChamps"
-          target="_blank"
-          rel="noopener"
-          class="flex items-center justify-center gap-2 w-full px-4 py-2.5 rounded-lg bg-rose-600 text-white font-semibold text-xs text-decoration-none"
-        >
-          Watch Live Stream
-        </a>
+      <div v-if="isLoggedIn" class="pt-3 border-t border-gray-100 dark:border-gray-800">
+        <button
+          @click="handleLogout(); isMobileMenuOpen = false"
+          class="w-full flex items-center justify-center gap-2 py-2 text-xs text-red-600 font-semibold cursor-pointer"
+        >Sign Out</button>
       </div>
     </div>
   </header>
@@ -267,9 +303,9 @@
 
 <script setup>
 import { ref, computed, watch } from 'vue'
-import { useRoute } from 'vue-router'
-import { authStore, authState } from '../store/authStore.js'
+import { useRoute, useRouter } from 'vue-router'
 import LiveTicker from './LiveTicker.vue'
+import { isLoggedIn, currentUser, userProfile, authLoading, logout } from '../store/authStore.js'
 
 defineProps({
   liveBanner: {
@@ -278,11 +314,13 @@ defineProps({
   }
 })
 
-defineEmits(['open-search'])
+defineEmits(['open-search', 'open-auth'])
 
 const route = useRoute()
+const router = useRouter()
 const isMobileMenuOpen = ref(false)
 const isMoreOpen = ref(false)
+const isProfileOpen = ref(false)
 
 const primaryLinks = [
   { path: '/events', label: 'Events' },
@@ -302,8 +340,29 @@ const isMoreActive = computed(() => {
   return moreNavLinks.some(link => route.path.startsWith(link.path))
 })
 
+const displayName = computed(() =>
+  userProfile.value?.full_name ||
+  userProfile.value?.first_name ||
+  currentUser.value?.split('@')[0] ||
+  'Student'
+)
+
+const initials = computed(() => {
+  const name = displayName.value
+  const parts = name.trim().split(' ')
+  if (parts.length >= 2) return `${parts[0][0]}${parts[1][0]}`.toUpperCase()
+  return name.slice(0, 2).toUpperCase()
+})
+
+async function handleLogout() {
+  await logout()
+  isProfileOpen.value = false
+  if (route.path === '/profile') router.push('/')
+}
+
 watch(() => route.fullPath, () => {
   isMobileMenuOpen.value = false
   isMoreOpen.value = false
+  isProfileOpen.value = false
 })
 </script>

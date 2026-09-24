@@ -25,8 +25,6 @@ const routes = [
   { path: '/documents', name: 'Documents', component: DocumentsView },
   { path: '/social-legacy', name: 'SocialLegacy', component: SocialLegacyView },
   { path: '/profile', name: 'Profile', component: ProfileView },
-  { path: '/login', redirect: '/profile' },
-  { path: '/signup', redirect: '/profile' },
   { path: '/:pathMatch(.*)*', redirect: '/' }
 ]
 

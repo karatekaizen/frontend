@@ -141,7 +141,7 @@
 import { computed } from 'vue'
 import ErrorBoundary from './ui/ErrorBoundary.vue'
 import { showToast } from '../store/toastStore.js'
-import { authStore, authState } from '../store/authStore.js'
+import { isLoggedIn, currentUser } from '../store/authStore.js'
 
 const props = defineProps({
   event: {
@@ -155,16 +155,16 @@ defineEmits(['close'])
 const isRegistered = computed(() => {
   if (!props.event) return false
   const id = props.event.id || props.event.title
-  return authState.registeredEvents.some(e => (e.id || e.title) === id)
+  return false  // Event registration via LMS — placeholder
 })
 
 function handleRegister() {
-  authStore.registerForEvent(props.event)
+  showToast({ title: 'Register for Event', message: 'Visit Kaizen Academy to register for this event.', type: 'info' })
 }
 
 function handleUnregister() {
   const id = props.event?.id || props.event?.title
-  if (id) authStore.unregisterFromEvent(id)
+  showToast({ title: 'Contact Academy', message: 'Please contact the academy to cancel your registration.', type: 'info' })
 }
 
 function downloadBulletin() {

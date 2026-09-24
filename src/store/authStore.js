@@ -1,247 +1,182 @@
-import { reactive } from 'vue'
-import { showToast } from './toastStore.js'
+/**
+ * authStore.js — Shared auth state for the Kaizen website.
+ * Connects to the same Frappe/LMS backend as lms.kaizen.paradox-bd.com.
+ * Credentials & sessions are fully unified (shared site, shared cookies).
+ *
+ * LMS signup uses: lms.lms.user.sign_up (name + email → sends password-set link)
+ * Login uses:      frappe standard /api/method/login
+ */
+import { reactive, computed } from 'vue'
 
-function getCookie(name) {
-  const match = document.cookie.match(new RegExp('(^|;\\s*)(' + name + ')=([^;]*)'))
-  return match ? decodeURIComponent(match[3]) : null
-}
+const LMS_BASE = 'https://lms.kaizen.paradox-bd.com'
+let _csrf = null
 
-const STORAGE_EVENTS_KEY = 'kaizen_student_events'
-
-export const authState = reactive({
-  user: null,
-  isLoggedIn: false,
-  isLoading: false,
-  isAuthModalOpen: false,
-  authModalTab: 'login', // 'login' | 'signup'
-  registeredEvents: []
+// ─── State ────────────────────────────────────────────────────────────────
+const state = reactive({
+  user: null,       // null = loading | 'Guest' = logged out | email = logged in
+  profile: null,    // Frappe User doc fields
+  loading: false,
+  error: null,
 })
 
-export const authStore = {
-  get state() {
-    return authState
-  },
+// ─── Computed ─────────────────────────────────────────────────────────────
+export const isLoggedIn  = computed(() => state.user && state.user !== 'Guest')
+export const currentUser = computed(() => state.user)
+export const userProfile = computed(() => state.profile)
+export const authLoading = computed(() => state.loading)
+export const authError   = computed(() => state.error)
 
-  initAuth() {
-    try {
-      const rawEvents = localStorage.getItem(STORAGE_EVENTS_KEY)
-      if (rawEvents) {
-        authState.registeredEvents = JSON.parse(rawEvents)
-      }
-    } catch {
-      authState.registeredEvents = []
-    }
-
-    const userId = getCookie('user_id')
-    const fullName = getCookie('full_name')
-    const systemUser = getCookie('system_user')
-
-    if (userId && userId !== 'Guest') {
-      authState.user = {
-        email: userId,
-        fullName: fullName || userId.split('@')[0],
-        isSystemUser: systemUser === 'yes'
-      }
-      authState.isLoggedIn = true
-    } else {
-      authState.user = null
-      authState.isLoggedIn = false
-    }
-  },
-
-  openAuthModal(tab = 'login') {
-    authState.authModalTab = tab
-    authState.isAuthModalOpen = true
-  },
-
-  closeAuthModal() {
-    authState.isAuthModalOpen = false
-  },
-
-  async login(email, password) {
-    authState.isLoading = true
-    try {
-      const formData = new FormData()
-      formData.append('usr', email.trim())
-      formData.append('pwd', password)
-
-      const res = await fetch('/api/method/login', {
-        method: 'POST',
-        body: formData,
-        credentials: 'include'
-      })
-
-      const data = await res.json()
-
-      if (!res.ok) {
-        const errorMsg = data.message || data._server_messages || 'Invalid email or password.'
-        throw new Error(typeof errorMsg === 'string' ? errorMsg : 'Authentication failed')
-      }
-
-      const fullName = data.full_name || getCookie('full_name') || email.split('@')[0]
-      const isSystem = getCookie('system_user') === 'yes'
-
-      authState.user = {
-        email: email.trim(),
-        fullName,
-        isSystemUser: isSystem
-      }
-      authState.isLoggedIn = true
-      authState.isAuthModalOpen = false
-
-      showToast({
-        title: 'Welcome back!',
-        message: `Signed in as ${fullName}`,
-        type: 'success'
-      })
-
-      return { success: true, user: authState.user }
-    } catch (err) {
-      showToast({
-        title: 'Sign In Failed',
-        message: err.message || 'Could not verify credentials',
-        type: 'error'
-      })
-      throw err
-    } finally {
-      authState.isLoading = false
-    }
-  },
-
-  async signup({ fullName, email, password, userCategory = 'Student' }) {
-    authState.isLoading = true
-    try {
-      const formData = new FormData()
-      formData.append('email', email.trim())
-      formData.append('full_name', fullName.trim())
-      formData.append('password', password)
-      formData.append('verify_terms', '1')
-      formData.append('user_category', userCategory)
-
-      const res = await fetch('/api/method/lms.lms.user.sign_up', {
-        method: 'POST',
-        body: formData,
-        credentials: 'include'
-      })
-
-      const data = await res.json()
-
-      if (!res.ok) {
-        throw new Error(data.message || 'Registration failed')
-      }
-
-      if (Array.isArray(data.message) && data.message[0] === 0) {
-        throw new Error(data.message[1] || 'Unable to register')
-      }
-
-      authState.user = {
-        email: email.trim(),
-        fullName: fullName.trim(),
-        isSystemUser: false
-      }
-      authState.isLoggedIn = true
-      authState.isAuthModalOpen = false
-
-      showToast({
-        title: 'Account Created',
-        message: `Welcome to Kaizen Karate, ${fullName}!`,
-        type: 'success'
-      })
-
-      return { success: true, user: authState.user }
-    } catch (err) {
-      showToast({
-        title: 'Sign Up Failed',
-        message: err.message || 'Registration encountered an error',
-        type: 'error'
-      })
-      throw err
-    } finally {
-      authState.isLoading = false
-    }
-  },
-
-  async logout() {
-    try {
-      await fetch('/api/method/logout', {
-        method: 'POST',
-        credentials: 'include'
-      })
-    } catch {
-      // Continue client cleanup even if network request fails
-    }
-
-    authState.user = null
-    authState.isLoggedIn = false
-
-    showToast({
-      title: 'Signed Out',
-      message: 'You have been successfully logged out.',
-      type: 'info'
+// ─── Internal helpers ─────────────────────────────────────────────────────
+async function getCSRF() {
+  if (_csrf) return _csrf
+  try {
+    const r = await fetch(`${LMS_BASE}/api/method/frappe.auth.get_logged_user`, {
+      credentials: 'include'
     })
-  },
+    _csrf = r.headers.get('X-Frappe-CSRF-Token') || 'fetch'
+  } catch {
+    _csrf = 'fetch'
+  }
+  return _csrf
+}
 
-  registerForEvent(event) {
-    if (!authState.isLoggedIn) {
-      this.openAuthModal('login')
-      showToast({
-        title: 'Sign In Required',
-        message: 'Please sign in or register to participate in this event.',
-        type: 'warning'
-      })
-      return false
-    }
-
-    const eventId = event.id || event.title
-    const exists = authState.registeredEvents.some(e => (e.id || e.title) === eventId)
-
-    if (exists) {
-      showToast({
-        title: 'Already Registered',
-        message: `You are already registered for ${event.title}`,
-        type: 'info'
-      })
-      return false
-    }
-
-    const registration = {
-      id: eventId,
-      title: event.title,
-      dates: event.dates || event.date,
-      location: event.location,
-      category: event.category || 'Championship',
-      registeredAt: new Date().toISOString()
-    }
-
-    authState.registeredEvents.unshift(registration)
-    try {
-      localStorage.setItem(STORAGE_EVENTS_KEY, JSON.stringify(authState.registeredEvents))
-    } catch {
-      // Ignore storage errors
-    }
-
-    showToast({
-      title: 'Registration Confirmed',
-      message: `Successfully registered for ${event.title}!`,
-      type: 'success'
-    })
-    return true
-  },
-
-  unregisterFromEvent(eventId) {
-    const idx = authState.registeredEvents.findIndex(e => (e.id || e.title) === eventId)
-    if (idx !== -1) {
-      const removed = authState.registeredEvents.splice(idx, 1)[0]
-      try {
-        localStorage.setItem(STORAGE_EVENTS_KEY, JSON.stringify(authState.registeredEvents))
-      } catch {
-        // Ignore storage errors
-      }
-      showToast({
-        title: 'Registration Cancelled',
-        message: `Withdrawn from ${removed.title}`,
-        type: 'info'
-      })
-    }
+async function fetchProfile(email) {
+  try {
+    const r = await fetch(
+      `${LMS_BASE}/api/resource/User/${encodeURIComponent(email)}` +
+      `?fields=["first_name","last_name","full_name","email","user_image","username","bio"]`,
+      { credentials: 'include' }
+    )
+    const data = await r.json()
+    state.profile = data?.data || null
+  } catch {
+    state.profile = null
   }
 }
+
+// ─── Actions ──────────────────────────────────────────────────────────────
+
+/** Call once on app mount to restore existing session */
+export async function checkSession() {
+  state.loading = true
+  try {
+    const r = await fetch(`${LMS_BASE}/api/method/frappe.auth.get_logged_user`, {
+      credentials: 'include'
+    })
+    const data = await r.json()
+    state.user = data?.message || 'Guest'
+    if (isLoggedIn.value) await fetchProfile(state.user)
+  } catch {
+    state.user = 'Guest'
+    state.profile = null
+  } finally {
+    state.loading = false
+  }
+}
+
+/** Login with email + password. Returns { success, message } */
+export async function login(email, password) {
+  state.error = null
+  state.loading = true
+  try {
+    const csrf = await getCSRF()
+    const r = await fetch(`${LMS_BASE}/api/method/login`, {
+      method: 'POST',
+      credentials: 'include',
+      headers: {
+        'Content-Type': 'application/x-www-form-urlencoded',
+        'Accept': 'application/json',
+        'X-Frappe-CSRF-Token': csrf,
+      },
+      body: new URLSearchParams({ usr: email, pwd: password }).toString(),
+    })
+    const data = await r.json().catch(() => ({}))
+    if (r.ok) {
+      _csrf = null   // refresh CSRF token after login
+      await checkSession()
+      return { success: true }
+    }
+    const msg = data?.message || 'Invalid email or password.'
+    state.error = msg
+    return { success: false, message: msg }
+  } catch (err) {
+    const msg = 'Login failed. Please try again.'
+    state.error = msg
+    return { success: false, message: msg }
+  } finally {
+    state.loading = false
+  }
+}
+
+/**
+ * Sign up via LMS — sends name + email.
+ * Frappe creates account with random password, then sends a "set your password"
+ * email link. Returns { success, code, message }
+ * code 1 = email sent | code 2 = needs admin verify (no SMTP yet)
+ */
+export async function signUp(fullName, email) {
+  state.error = null
+  state.loading = true
+  try {
+    const csrf = await getCSRF()
+    const r = await fetch(`${LMS_BASE}/api/method/lms.lms.user.sign_up`, {
+      method: 'POST',
+      credentials: 'include',
+      headers: {
+        'Content-Type': 'application/json',
+        'Accept': 'application/json',
+        'X-Frappe-CSRF-Token': csrf,
+      },
+      body: JSON.stringify({
+        email,
+        full_name: fullName,
+        verify_terms: 1,
+        user_category: 'Student',
+      }),
+    })
+    const data = await r.json().catch(() => ({}))
+    if (!r.ok) {
+      const exc = data?.exception || data?._error_message || ''
+      if (exc.includes('Sign Up is disabled')) {
+        const msg = 'Sign up is currently disabled. Please contact the academy.'
+        state.error = msg
+        return { success: false, message: msg }
+      }
+      const msg = data?.message || 'Signup failed.'
+      state.error = msg
+      return { success: false, message: msg }
+    }
+    const [code, message] = data.message
+    if (parseInt(code) === 0) {
+      state.error = message
+      return { success: false, message }
+    }
+    return { success: true, code: parseInt(code), message }
+  } catch (err) {
+    const msg = 'Signup failed. Please try again.'
+    state.error = msg
+    return { success: false, message: msg }
+  } finally {
+    state.loading = false
+  }
+}
+
+/** Logout from Frappe session */
+export async function logout() {
+  state.loading = true
+  try {
+    const csrf = await getCSRF()
+    await fetch(`${LMS_BASE}/api/method/logout`, {
+      method: 'POST',
+      credentials: 'include',
+      headers: { 'X-Frappe-CSRF-Token': csrf, 'Accept': 'application/json' }
+    })
+  } catch { /* ignore */ } finally {
+    _csrf = null
+    state.user = 'Guest'
+    state.profile = null
+    state.loading = false
+  }
+}
+
+export default state

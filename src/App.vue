@@ -6,6 +6,7 @@
     <Navbar
       :live-banner="WKF_DATA.liveBanner"
       @open-search="isSearchOpen = true"
+      @open-auth="openAuthModal"
     />
 
     <!-- Routed Pages with Per-Page Error Boundary Protection -->
@@ -26,46 +27,68 @@
       @close="isSearchOpen = false"
     />
 
+    <!-- Auth Modal (Login / Sign Up) — shared across all pages -->
+    <AuthModal
+      :is-open="isAuthOpen"
+      :initial-mode="authMode"
+      @close="isAuthOpen = false"
+      @logged-in="isAuthOpen = false"
+    />
+
     <!-- Floating Tweak Panel (Frappe UI Design Skill Requirement) -->
     <TweakPanel />
 
     <!-- Global Toast Notifications -->
     <FrappeToast />
-
-    <!-- Unified Auth Modal -->
-    <AuthModal />
   </div>
 </template>
 
 <script setup>
-import { ref, onMounted, onUnmounted } from 'vue'
+import { ref, provide, onMounted, onUnmounted } from 'vue'
 import { WKF_DATA } from './data/wkfData.js'
 import { tweakStore, initTheme } from './store/tweakStore.js'
-import { authStore } from './store/authStore.js'
+import { checkSession } from './store/authStore.js'
 
 import Navbar from './components/Navbar.vue'
 import Footer from './components/Footer.vue'
 import CommandPaletteModal from './components/CommandPaletteModal.vue'
+import AuthModal from './components/AuthModal.vue'
 import TweakPanel from './components/TweakPanel.vue'
 import FrappeToast from './components/FrappeToast.vue'
-import AuthModal from './components/AuthModal.vue'
 import ErrorBoundary from './components/ui/ErrorBoundary.vue'
 
 const isSearchOpen = ref(false)
+const isAuthOpen   = ref(false)
+const authMode     = ref('login')
 
 // Initialize theme from tweakStore
 initTheme()
+
+// Restore existing Frappe session on app load (SSO with LMS)
+onMounted(() => {
+  checkSession()
+})
+
+// Provide openAuthModal so any descendant can open the modal
+function openAuthModal(mode = 'login') {
+  authMode.value = mode
+  isAuthOpen.value = true
+}
+provide('openAuthModal', openAuthModal)
 
 function handleGlobalKeydown(e) {
   if ((e.metaKey || e.ctrlKey) && e.key.toLowerCase() === 'k') {
     e.preventDefault()
     isSearchOpen.value = !isSearchOpen.value
   }
+  if (e.key === 'Escape') {
+    isSearchOpen.value = false
+    isAuthOpen.value = false
+  }
 }
 
 onMounted(() => {
   window.addEventListener('keydown', handleGlobalKeydown)
-  authStore.initAuth()
 })
 
 onUnmounted(() => {
