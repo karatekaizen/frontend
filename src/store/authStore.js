@@ -63,6 +63,11 @@ export async function checkSession() {
     const r = await fetch(`${LMS_BASE}/api/method/frappe.auth.get_logged_user`, {
       credentials: 'include'
     })
+    if (!r.ok) {
+      state.user = 'Guest'
+      state.profile = null
+      return
+    }
     const data = await r.json()
     state.user = data?.message || 'Guest'
     if (isLoggedIn.value) await fetchProfile(state.user)
