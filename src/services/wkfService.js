@@ -126,5 +126,18 @@ export const wkfService = {
 
   getVideos() {
     return safeQuery(() => WKF_DATA.videos, [], 'getVideos')
+  },
+
+  getBranches() {
+    return safeQuery(() => WKF_DATA.branches, [], 'getBranches')
+  },
+
+  getPartners() {
+    return safeQuery(() => WKF_DATA.partners, [], 'getPartners')
+  },
+
+  getTestimonials() {
+    return safeQuery(() => WKF_DATA.testimonials, [], 'getTestimonials')
   }
 }
+

@@ -1,503 +1,345 @@
 export const WKF_DATA = {
   liveBanner: {
-    title: "2026 Asian Games Aichi-Nagoya — Karate Competition",
-    status: "LIVE NOW",
-    subtitle: "Day 3 Finals: Men's Kumite -75kg & Women's Kata",
+    title: "1st Inter-University Karate Championship 2026 — Official Registration Open",
+    status: "REGISTRATION OPEN",
+    subtitle: "Hosted at HSTU Central Gymnasium • Individual Kata & Kumite Divisions",
     link: "/events",
-    streamUrl: "https://www.youtube.com/@WKFKarateWorldChamps",
-    viewersCount: "48.2K watching"
+    streamUrl: "https://lms.kaizen.paradox-bd.com",
+    viewersCount: "120+ Karateka Enrolled"
   },
 
   stats: [
-    { label: "Active Students", value: "2,500+", change: "Youth & Adult Divisions" },
-    { label: "Black Belts & Dan", value: "180+", change: "Certified Instructors" },
-    { label: "Championship Medals", value: "450+", change: "National & World Circuit" },
-    { label: "Affiliated Dojos", value: "12", change: "Kaizen Network" },
+    { label: "Active Karateka", value: "350+", change: "HSTU & Regional Branches" },
+    { label: "Championship Medals", value: "28+", change: "2 Gold, 5 Silver, 10 Bronze in 2025" },
+    { label: "Training Branches", value: "3", change: "HSTU Main, AFEAC, Gopalganj" },
+    { label: "Certified Dan Instructors", value: "12+", change: "Black Belts & Coaches" },
   ],
 
   featuredStories: [
     {
-      id: "asian-games-day-3",
-      title: "Day 3 of Karate at Asian Games Delivers Four New Champions and Plenty of Thrills",
-      category: "Asian Games",
-      date: "Sep 22, 2026",
+      id: "rangpur-championship-25",
+      title: "Success on Rangpur Regional Karate Championship 2025: Kaizen Dojo Brings Home 17 Medals!",
+      category: "Championship",
+      date: "Nov 20, 2025",
       readTime: "4 min read",
-      author: "WKF Media Team",
-      image: "https://images.unsplash.com/photo-1555597673-b21d5c935865?auto=format&fit=crop&w=1400&q=80",
-      summary: "Historic day in Aichi-Nagoya as top contenders from Japan, Kazakhstan, and Iran clash in breathtaking kata and kumite medal bouts.",
-      content: `The third day of karate action at the 2026 Asian Games in Aichi-Nagoya will be remembered as one of the most explosive showcases of martial arts excellence in the event's history.
+      author: "Loveraj Acharya",
+      image: "https://cdn.sanity.io/images/18l4qwt0/production/3b78b453781937a128fabbe001952f45b138db70-1016x1138.jpg?rect=0,231,1016,677&w=1200&h=800&fit=max&auto=format",
+      summary: "Historic performance at the 4th Rangpur Regional Karate Championship 2025: 2 Gold, 5 Silver, and 10 Bronze medals, placing 4th overall.",
+      content: `Our recent journey at the 4th Rangpur Regional Karate Championship 2025 was nothing short of incredible.
 
-With four continental gold medals on the line, the atmosphere inside the Nippon Gaishi Hall reached a crescendo. Japan's kata sensation continued his reign with a near-flawless execution of Anan Dai, scoring 28.6 points to edge out his fiercest rival.
+We proudly brought home:
+• 2 Gold Medals
+• 5 Silver Medals
+• 10 Bronze Medals
+And our dojo ranked 4th overall among all participating teams across the division!
 
-In Kumite, the -75kg division featured heart-stopping sudden-death action, culminating in an unguardable uramawashi-geri in the final three seconds of regulation time.
+HSTU Karate Dojo is now on mainstream media! Our athletes and coaches were highlighted across Somoy Sangbad, Somoyer Konthosor, and the HSTU Journal. 
 
-WKF President Antonio Espinós attended the medal ceremonies, commending the athletes and the local organizing committee for the premier broadcast and technical standards: "Today, karate demonstrated once again why it belongs at the apex of global multisport competitions."`
+It wasn't always easy — we faced struggles, intense conditioning sessions, and moments of exhaustion on the tatami. But we never stopped training and believing in our discipline. A huge gratitude to our dedicated coaching staff, university administration, and our martial arts family!`
     },
     {
-      id: "premier-league-paris-2026",
-      title: "Karate 1 - Premier League Paris 2026: Registration Smashes All-Time Record",
-      category: "Karate 1",
-      date: "Sep 21, 2026",
+      id: "hkd-committee-26",
+      title: "HSTU Karate Dojo — Executive Committee Published for 2025–2026 Session",
+      category: "Leadership",
+      date: "Jan 15, 2026",
       readTime: "3 min read",
-      author: "Competition Desk",
-      image: "https://images.unsplash.com/photo-1517438322307-e67111335449?auto=format&fit=crop&w=1400&q=80",
-      summary: "Over 800 athletes from 78 countries have registered for the season opener at the iconic Pierre de Coubertin arena.",
-      content: `The world's most prestigious regular karate tournament circuit is set to kick off its 2026 season with unprecedented participation numbers. The Karate 1 - Premier League Paris has officially reached maximum roster capacity within 48 hours of portal launch.
+      author: "Shahriar Hasan",
+      image: "https://cdn.sanity.io/images/18l4qwt0/production/fd1969fd6435890d6844223908304f0a4066dea6-2752x1536.png?rect=224,0,2304,1536&w=1200&h=800&fit=max&auto=format",
+      summary: "Meet the dedicated individuals leading our Dojo forward, combining University leadership, faculty, and experienced black belt instructors.",
+      content: `We are absolutely thrilled to introduce the dedicated leadership team driving our Dojo forward for the 2025–2026 academic and competitive session!
 
-Athletes will vie not only for gold medals and prize money, but crucial Olympic and World Championship qualification ranking points. Fans can watch live coverage via the WKF YouTube Channel and regional broadcast rights holders.`
+Core Leadership:
+• President: Md. Mahbub-Ul-Hasan (Director In Charge, Physical Education Dept., HSTU)
+• Vice President & Founder: Shahriar Hasan
+• General Secretary & Head Coach: Loveraj Acharya
+• Treasurer: Md. Rasel Islam (Assistant Director, Physical Education Dept., HSTU)
+
+This exceptional team is committed to upholding the traditions, discipline, technical excellence, and competitive spirit of authentic Shito-Ryu Karate across all branches.`
     },
     {
-      id: "world-senior-cairo-preview",
-      title: "Countdown to Cairo: 2026 Senior World Championships Individual Roster Announced",
-      category: "World Championships",
-      date: "Sep 19, 2026",
-      readTime: "5 min read",
-      author: "WKF Communications",
-      image: "https://images.unsplash.com/photo-1583473848882-f9a5bc7fd2ee?auto=format&fit=crop&w=1400&q=80",
-      summary: "Egypt prepares to host the world's finest karateka in the state-of-the-art Cairo Stadium Indoor Complex this November.",
-      content: `The 26th edition of the Senior World Championships (Individual) is slated to take place in Cairo, Egypt, marking a momentous return to the African continent.
+      id: "membership-intake-2026",
+      title: "New Student Membership & Shito-Ryu Dan Grading Registration Ongoing",
+      category: "Academy",
+      date: "Feb 01, 2026",
+      readTime: "3 min read",
+      author: "Shahriar Hasan",
+      image: "https://cdn.sanity.io/images/18l4qwt0/production/4e1b401c9c0831f44def998ee0bdee8cb772871e-6000x3375.png?rect=469,0,5063,3375&w=1200&h=800&fit=max&auto=format",
+      summary: "Admissions open for junior, student, and senior batches across HSTU Main Gymnasium, AFEAC, and Gopalganj branches.",
+      content: `Registration for the new Karate batch is now open across all academy locations!
 
-The WKF Executive Committee conducted a final technical inspection this week, confirming readiness across competition tatamis, warm-up facilities, and anti-doping stations.`
+Whether you are stepping onto the tatami for the first time or advancing from White Belt to Black Belt, our structured Shito-Ryu curriculum provides:
+• Kihon (fundamentals) and traditional Kata forms
+• Modern Olympic WKF Kumite timing and footwork drills
+• Practical self-defense and situational awareness
+• Digital course materials and belt grading records via Kaizen LMS & ERP.`
     }
   ],
 
   events: [
     {
       id: "ev-1",
-      title: "2026 Asian Games Karate Competition",
-      category: "multisport",
-      categoryLabel: "Multisport Games",
-      dates: "SEP 20 - 24, 2026",
-      location: "Nagoya, Japan",
-      flag: "🇯🇵",
-      venue: "Nippon Gaishi Hall",
-      status: "LIVE",
-      statusColor: "red",
-      athletesCount: 240,
-      nationsCount: 36,
-      bulletin: "Bulletin 3.2 (PDF)",
-      description: "Premier multisport competition featuring individual Kata and Kumite across 12 weight categories."
+      title: "1st Inter-University Karate Championship 2026",
+      category: "university",
+      categoryLabel: "Inter-University",
+      dates: "OCT 24 - 26, 2026",
+      location: "Dinajpur, Bangladesh",
+      flag: "🇧🇩",
+      venue: "HSTU Central Gymnasium",
+      status: "REGISTRATION OPEN",
+      statusColor: "green",
+      athletesCount: 180,
+      nationsCount: 12,
+      bulletin: "Championship Prospectus v1 (PDF)",
+      description: "Premier university championship featuring male and female individual Kata, Kumite weight categories, and team trophies."
     },
     {
       id: "ev-2",
-      title: "Karate 1 - Youth League Guadalajara 2026",
-      category: "karate-one",
-      categoryLabel: "Karate 1 Youth League",
-      dates: "OCT 08 - 11, 2026",
-      location: "Guadalajara, Spain",
-      flag: "🇪🇸",
-      venue: "Palacio Multiusos de Guadalajara",
-      status: "UPCOMING",
-      statusColor: "blue",
-      athletesCount: 1650,
-      nationsCount: 64,
-      bulletin: "Official Bulletin v1 (PDF)",
-      description: "The premier global competition for U14, Cadet, and Junior karateka from all 5 continents."
+      title: "4th Rangpur Regional Karate Championship 2025",
+      category: "divisional",
+      categoryLabel: "Regional Championship",
+      dates: "NOV 14 - 16, 2025",
+      location: "Rangpur, Bangladesh",
+      flag: "🇧🇩",
+      venue: "Rangpur District Indoor Stadium",
+      status: "COMPLETED",
+      statusColor: "gray",
+      athletesCount: 320,
+      nationsCount: 8,
+      bulletin: "Medal Record Book (PDF)",
+      description: "Flagship divisional tournament where Kaizen Dojo secured 2 Gold, 5 Silver, and 10 Bronze medals (4th overall)."
     },
     {
       id: "ev-3",
-      title: "2026 WKF World Senior Championships (Individual)",
-      category: "world-champs",
-      categoryLabel: "World Championships",
-      dates: "NOV 17 - 22, 2026",
-      location: "Cairo, Egypt",
-      flag: "🇪🇬",
-      venue: "Cairo Stadium Indoor Halls Complex",
-      status: "REGISTRATION OPEN",
-      statusColor: "green",
-      athletesCount: 1100,
-      nationsCount: 112,
-      bulletin: "Official Bulletin v2 (PDF)",
-      description: "The pinnacle of sport karate. Top athletes compete for the prestigious World Champion title and gold medals."
+      title: "HKD Annual Dan Grading & Belt Test 2026B",
+      category: "grading",
+      categoryLabel: "Belt Examination",
+      dates: "APR 07 - 09, 2026",
+      location: "Dinajpur, Bangladesh",
+      flag: "🇧🇩",
+      venue: "HSTU Central Gymnasium",
+      status: "UPCOMING",
+      statusColor: "blue",
+      athletesCount: 65,
+      nationsCount: 1,
+      bulletin: "Grading Syllabus Guidelines (PDF)",
+      description: "Official belt progression evaluation covering Kihon, traditional Shito-Ryu Kata bunkai, and controlled Kumite assessments."
     },
     {
       id: "ev-4",
-      title: "Karate 1 - Premier League Paris 2027",
-      category: "karate-one",
-      categoryLabel: "Karate 1 Premier League",
-      dates: "JAN 22 - 24, 2027",
-      location: "Paris, France",
-      flag: "🇫🇷",
-      venue: "Stade Pierre de Coubertin",
+      title: "15-Day Self Defense Workshop (Joint with ECE Club)",
+      category: "workshop",
+      categoryLabel: "Self Defense Clinic",
+      dates: "MAY 10 - 25, 2026",
+      location: "Dinajpur, Bangladesh",
+      flag: "🇧🇩",
+      venue: "HSTU Gymnasium Tatami",
       status: "UPCOMING",
-      statusColor: "blue",
-      athletesCount: 420,
-      nationsCount: 58,
-      bulletin: "Preview Bulletin (PDF)",
-      description: "The grand season opener. Only the top 32 ranked athletes per category are eligible to participate."
+      statusColor: "amber",
+      athletesCount: 110,
+      nationsCount: 1,
+      bulletin: "Workshop Syllabus (PDF)",
+      description: "Comprehensive self-defense seminar and tactical training organized jointly with the ECE Club of HSTU."
     },
     {
       id: "ev-5",
-      title: "2026 EKF Senior European Karate Championships",
-      category: "continental",
-      categoryLabel: "Continental Championships",
-      dates: "MAY 12 - 17, 2026",
-      location: "Zadar, Croatia",
-      flag: "🇭🇷",
-      venue: "Krešimir Ćosić Hall",
-      status: "COMPLETED",
-      statusColor: "gray",
-      athletesCount: 510,
-      nationsCount: 47,
-      bulletin: "Final Results Book (PDF)",
-      description: "Continental flagship event determining European champions and world qualification spots."
+      title: "AFEAC Residential Model School Junior Belt Test (Batch 26A)",
+      category: "grading",
+      categoryLabel: "Junior Belt Test",
+      dates: "JUN 30, 2026",
+      location: "Parbatipur, Dinajpur",
+      flag: "🇧🇩",
+      venue: "AFEAC School Auditorium",
+      status: "UPCOMING",
+      statusColor: "blue",
+      athletesCount: 45,
+      nationsCount: 1,
+      bulletin: "Junior Syllabus (PDF)",
+      description: "Junior and cadet progression testing supervised by Sensei Loveraj Acharya and Sensei Shahriar Hasan."
     },
     {
       id: "ev-6",
-      title: "Karate 1 - Series A Salzburg 2026",
-      category: "karate-one",
-      categoryLabel: "Karate 1 Series A",
-      dates: "DEC 04 - 06, 2026",
-      location: "Salzburg, Austria",
-      flag: "🇦🇹",
-      venue: "Sporthalle Alpenstraße",
-      status: "REGISTRATION OPEN",
-      statusColor: "green",
-      athletesCount: 950,
-      nationsCount: 72,
-      bulletin: "Bulletin v1.4 (PDF)",
-      description: "Open circuit event allowing emerging talent to earn critical world ranking points."
-    },
-    {
-      id: "ev-7",
-      title: "2026 Dakar Youth Olympic Games (Karate)",
-      category: "multisport",
-      categoryLabel: "Youth Olympic Games",
-      dates: "OCT 31 - NOV 05, 2026",
-      location: "Dakar, Senegal",
-      flag: "🇸🇳",
-      venue: "Dakar Arena",
-      status: "UPCOMING",
-      statusColor: "amber",
-      athletesCount: 96,
-      nationsCount: 42,
-      bulletin: "IOC Qualification System (PDF)",
-      description: "Karate's exciting youth showcase in Africa under the auspices of the International Olympic Committee."
-    },
-    {
-      id: "ev-8",
-      title: "2025 World Senior Team Karate Championships",
+      title: "Rangpur Divisional Karate Championship 2024",
       category: "past",
-      categoryLabel: "Past Championships",
-      dates: "NOV 22 - 24, 2025",
-      location: "Pamplona, Spain",
-      flag: "🇪🇸",
-      venue: "Navarra Arena",
+      categoryLabel: "Past Tournaments",
+      dates: "DEC 06 - 08, 2024",
+      location: "Rangpur, Bangladesh",
+      flag: "🇧🇩",
+      venue: "Zilla Stadium Indoor Hall",
       status: "COMPLETED",
       statusColor: "gray",
-      athletesCount: 760,
-      nationsCount: 68,
-      bulletin: "Final Medal Table (PDF)",
-      description: "Historic inaugural standalone World Team Championships featuring Team Kata and Team Kumite."
+      athletesCount: 260,
+      nationsCount: 6,
+      bulletin: "Official Results (PDF)",
+      description: "Major regional event establishing the dojo's competitive squad at the divisional level."
     }
   ],
 
   newsArticles: [
     {
-      id: "asian-games-day-3",
-      title: "Day 3 of Karate at Asian Games Delivers Four New Champions and Plenty of Thrills",
-      category: "Asian Games",
-      date: "Sep 22, 2026",
+      id: "rangpur-championship-25",
+      title: "Success on Rangpur Regional Karate Championship 2025: Kaizen Dojo Brings Home 17 Medals!",
+      category: "Championship",
+      date: "Nov 20, 2025",
       readTime: "4 min read",
-      image: "https://images.unsplash.com/photo-1555597673-b21d5c935865?auto=format&fit=crop&w=800&q=80",
-      author: "WKF Press Office",
-      summary: "Memorable finals in Aichi-Nagoya see Japan, Kazakhstan, and Jordan capture top podium spots."
+      image: "https://cdn.sanity.io/images/18l4qwt0/production/3b78b453781937a128fabbe001952f45b138db70-1016x1138.jpg?rect=0,231,1016,677&w=800&q=80",
+      author: "Loveraj Acharya",
+      summary: "Memorable campaign yields 2 Gold, 5 Silver, 10 Bronze medals with 4th place overall ranking."
     },
     {
-      id: "nishiyama-rashidov-day-2",
-      title: "Nishiyama, Rashidov, Gong and Li Crowned on Day 2 of Karate at Asian Games 2026",
-      category: "Asian Games",
-      date: "Sep 21, 2026",
+      id: "hkd-committee-26",
+      title: "HSTU Karate Dojo — Executive Committee Published for 2025–2026 Session",
+      category: "Leadership",
+      date: "Jan 15, 2026",
+      readTime: "3 min read",
+      image: "https://cdn.sanity.io/images/18l4qwt0/production/fd1969fd6435890d6844223908304f0a4066dea6-2752x1536.png?rect=224,0,2304,1536&w=800&q=80",
+      author: "Shahriar Hasan",
+      summary: "New committee combines university directors, faculty, and experienced Dan instructors."
+    },
+    {
+      id: "membership-intake-2026",
+      title: "New Student Membership & Shito-Ryu Dan Grading Registration Ongoing",
+      category: "Academy",
+      date: "Feb 01, 2026",
+      readTime: "3 min read",
+      image: "https://cdn.sanity.io/images/18l4qwt0/production/4e1b401c9c0831f44def998ee0bdee8cb772871e-6000x3375.png?rect=469,0,5063,3375&w=800&q=80",
+      author: "Shahriar Hasan",
+      summary: "Admissions open across HSTU Main Gymnasium, AFEAC Parbatipur, and Gopalganj branches."
+    },
+    {
+      id: "shito-ryu-traditions",
+      title: "Preserving the Traditions of Shito-Ryu Karate at University Level",
+      category: "Technique",
+      date: "Mar 10, 2026",
       readTime: "4 min read",
-      image: "https://images.unsplash.com/photo-1517438322307-e67111335449?auto=format&fit=crop&w=800&q=80",
-      author: "Competition Desk",
-      summary: "Spectacular technique and lightning-fast scoring highlighted an intense second day of competition."
-    },
-    {
-      id: "u14-guadalajara-concludes",
-      title: "U14 Champions Crowned as Memorable Karate One Youth League Guadalajara Concludes",
-      category: "Youth League",
-      date: "Sep 20, 2026",
-      readTime: "3 min read",
-      image: "https://images.unsplash.com/photo-1583473848882-f9a5bc7fd2ee?auto=format&fit=crop&w=800&q=80",
-      author: "Youth Commission",
-      summary: "More than 1,600 youngsters celebrated sport karate values and elite sportsmanship in Spain."
-    },
-    {
-      id: "four-champions-day-one",
-      title: "Four Champions Crowned on Day One of Karate at 2026 Asian Games",
-      category: "Asian Games",
-      date: "Sep 20, 2026",
-      readTime: "3 min read",
-      image: "https://images.unsplash.com/photo-1555597673-b21d5c935865?auto=format&fit=crop&w=800&q=80",
-      author: "WKF Media Team",
-      summary: "Opening day matches featured fierce rivalries and packed stands at the Nippon Gaishi Hall."
-    },
-    {
-      id: "cadet-titles-guadalajara",
-      title: "Cadet Titles Decided as Guadalajara Delivers Another Day of Youth Karate Action",
-      category: "Youth League",
-      date: "Sep 19, 2026",
-      readTime: "2 min read",
-      image: "https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=800&q=80",
-      author: "Youth Commission",
-      summary: "Spain, Italy, and Egypt lead the medal standings after Day Two of the Youth League."
-    },
-    {
-      id: "wkf-president-technical-meeting",
-      title: "WKF President Antonio Espinós Heads Technical Meeting Ahead of Asian Games",
-      category: "Governance",
-      date: "Sep 19, 2026",
-      readTime: "4 min read",
-      image: "https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?auto=format&fit=crop&w=800&q=80",
-      author: "Executive Bureau",
-      summary: "Referees, coaches, and commission members align on video review and athlete welfare protocols."
-    },
-    {
-      id: "guardian-girls-argentina",
-      title: "Guardian Girls Karate Holds First Official Activity in South America in Argentina",
-      category: "Social Legacy",
-      date: "Sep 18, 2026",
-      readTime: "3 min read",
-      image: "https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?auto=format&fit=crop&w=800&q=80",
-      author: "Social Legacy Commission",
-      summary: "Global initiative empowering women through karate self-defense expands across Latin America."
-    },
-    {
-      id: "sportnxt-summit-melbourne",
-      title: "WKF Representatives Attend SportNXT 2026 Global Summit in Melbourne",
-      category: "Olympics",
-      date: "Sep 18, 2026",
-      readTime: "3 min read",
-      image: "https://images.unsplash.com/photo-1461896836934-ffe607ba8211?auto=format&fit=crop&w=800&q=80",
-      author: "International Relations",
-      summary: "Discussions spotlight digital fan engagement, youth sport participation, and environmental sustainability."
+      image: "https://res.cloudinary.com/dksn30eyz/image/upload/v1785926139/hkd/y5m1cmpx9ugjuzoh7wq0.jpg",
+      author: "Technical Board",
+      summary: "Exploring the technical core of Kenwa Mabuni's Shito-Ryu style: fast footwork, tenshin, and kata bunkai."
     }
   ],
 
   rankings: {
     "male-kata": [
-      { rank: 1, name: "Kakeru Nishiyama", country: "Japan", code: "JPN", flag: "🇯🇵", points: 8420, trend: "up", title: "World & Asian Champion", avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=200&q=80", bio: "Dominant Japanese kata specialist specializing in Chatanyara Kushanku and Anan Dai." },
-      { rank: 2, name: "Ali Sofuoglu", country: "Türkiye", code: "TUR", flag: "🇹🇷", points: 7980, trend: "stable", title: "European Champion", avatar: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=200&q=80", bio: "Olympic bronze medalist and multi-time European individual and team kata champion." },
-      { rank: 3, name: "Damián Quintero", country: "Spain", code: "ESP", flag: "🇪🇸", points: 7210, trend: "stable", title: "Olympic Silver Medalist", avatar: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=200&q=80", bio: "Legendary Spanish kata master with over 100 international WKF medal finishes." },
-      { rank: 4, name: "Mattia Busato", country: "Italy", code: "ITA", flag: "🇮🇹", points: 6150, trend: "up", title: "Series A Winner", avatar: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&w=200&q=80", bio: "Italian national champion renowned for athletic explosive rhythm and power." },
-      { rank: 5, name: "Ariel Torres", country: "United States", code: "USA", flag: "🇺🇸", points: 5890, trend: "down", title: "Olympic Bronze Medalist", avatar: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=200&q=80", bio: "Panamerican champion who secured historic Olympic bronze for Team USA in Tokyo." },
-      { rank: 6, name: "Gakuji Tozaki", country: "United States", code: "USA", flag: "🇺🇸", points: 5240, trend: "up", title: "Premier League Medalist", avatar: "https://images.unsplash.com/photo-1522075469751-3a6694fb2f61?auto=format&fit=crop&w=200&q=80", bio: "Shotokan kata exponent known for crisp form and powerful technique." }
+      { rank: 1, name: "Shahriar Hasan", country: "HSTU Dojo", code: "HKD", flag: "🇧🇩", points: 3450, trend: "up", title: "Chief Instructor • Black Belt", avatar: "https://res.cloudinary.com/dksn30eyz/image/upload/c_fill,w_300,h_300,g_face,q_auto,r_max/favourite/IMG_1937_sendde.jpg", bio: "Founder and Vice President of HKD, specializing in traditional Shito-Ryu Kata and Bunkai." },
+      { rank: 2, name: "Loveraj Acharya", country: "HSTU Dojo", code: "HKD", flag: "🇧🇩", points: 2980, trend: "stable", title: "Head Coach • Gold Medalist", avatar: "https://res.cloudinary.com/dksn30eyz/image/upload/c_fill,w_300,h_300,g_face,q_auto,r_max/favourite/IMG_20251108_215737_zxprcw.jpg", bio: "General Secretary and Senior Coach, multi-medal winner in regional and divisional championships." },
+      { rank: 3, name: "Rafiq Ahmed", country: "AFEAC Branch", code: "AFE", flag: "🇧🇩", points: 2650, trend: "up", title: "Senior Instructor", avatar: "https://res.cloudinary.com/dksn30eyz/image/upload/c_fill,w_300,h_300,g_face,q_auto,r_max/favourite/IMG_20251108_221125_hfljw3.jpg", bio: "Lead instructor for youth development and regional tournament squad preparation." },
+      { rank: 4, name: "Md. Hasan", country: "HSTU Dojo", code: "HKD", flag: "🇧🇩", points: 2420, trend: "up", title: "Kata Team Lead", avatar: "https://res.cloudinary.com/dksn30eyz/image/upload/c_fill,w_300,h_300,g_face,q_auto,r_max/favourite/IMG-20250822-WA0053_qiobdp.jpg", bio: "Advanced Kata exponent recognized for technical precision and rhythmic power." }
     ],
     "female-kata": [
-      { rank: 1, name: "Hikaru Ono", country: "Japan", code: "JPN", flag: "🇯🇵", points: 8750, trend: "stable", title: "World Champion", avatar: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=200&q=80", bio: "Reigning World Champion celebrated for technical mastery and emotional intensity." },
-      { rank: 2, name: "Grace Lau Mo-sheung", country: "Hong Kong", code: "HKG", flag: "🇭🇰", points: 8120, trend: "up", title: "Olympic Bronze Medalist", avatar: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=200&q=80", bio: "Hong Kong's premier athlete with consistent podium finishes in every international outing." },
-      { rank: 3, name: "Paola Garcia Lozano", country: "Spain", code: "ESP", flag: "🇪🇸", points: 7450, trend: "up", title: "European Champion", avatar: "https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=200&q=80", bio: "Prodigious Spanish sensation who won European senior gold at age 17." },
-      { rank: 4, name: "Terryana D'Onofrio", country: "Italy", code: "ITA", flag: "🇮🇹", points: 6890, trend: "down", title: "Premier League Winner", avatar: "https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=200&q=80", bio: "Italian kata anchor leading Italy's women's team and individual squad." },
-      { rank: 5, name: "Sakura Kokumai", country: "United States", code: "USA", flag: "🇺🇸", points: 6310, trend: "stable", title: "Panamerican Gold", avatar: "https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?auto=format&fit=crop&w=200&q=80", bio: "Multi-time Panamerican champion and Tokyo 2020 Olympian." }
+      { rank: 1, name: "Sadia Afrin", country: "HSTU Dojo", code: "HKD", flag: "🇧🇩", points: 2890, trend: "up", title: "Female Squad Captain", avatar: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=200&q=80", bio: "Divisional Kata finalist and lead advocate for women's martial arts empowerment." },
+      { rank: 2, name: "Tasnim Jahan", country: "HSTU Dojo", code: "HKD", flag: "🇧🇩", points: 2540, trend: "stable", title: "Kata Medalist", avatar: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=200&q=80", bio: "Silver medalist at Rangpur Regional Championship with exceptional Pinan and Bassai Dai form." }
     ],
     "male-kumite-75": [
-      { rank: 1, name: "Abdalla Abdelaziz", country: "Egypt", code: "EGY", flag: "🇪🇬", points: 9140, trend: "up", title: "World Champion -75kg", avatar: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=200&q=80", bio: "Egyptian powerhouse known for devastating gyaku-tsuki and tactical ring awareness." },
-      { rank: 2, name: "Enzo Berthon", country: "France", code: "FRA", flag: "🇫🇷", points: 7820, trend: "stable", title: "European Champion", avatar: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=200&q=80", bio: "French technical maestro famous for counter-offensive timing." },
-      { rank: 3, name: "Andrii Zaplitnyi", country: "Ukraine", code: "UKR", flag: "🇺🇦", points: 7330, trend: "up", title: "European Games Gold", avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=200&q=80", bio: "Ukrainian standout with aggressive sweeps and close-quarters scoring." },
-      { rank: 4, name: "Nurkanat Azhikanov", country: "Kazakhstan", code: "KAZ", flag: "🇰🇿", points: 6720, trend: "down", title: "Asian Games Gold", avatar: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&w=200&q=80", bio: "Dynamic Kazakh fighter with remarkable flexibility and kicking speed." }
-    ],
-    "male-kumite-60": [
-      { rank: 1, name: "Angelo Crescenzo", country: "Italy", code: "ITA", flag: "🇮🇹", points: 8890, trend: "up", title: "World Champion -60kg", avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=200&q=80", bio: "World champion combining rapid footwork and precision blitz attacks." },
-      { rank: 2, name: "Eray Samdan", country: "Türkiye", code: "TUR", flag: "🇹🇷", points: 8340, trend: "stable", title: "Olympic Silver Medalist", avatar: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=200&q=80", bio: "Olympic medalist celebrated for technical purity and clutch scoring." },
-      { rank: 3, name: "Kaisar Alpysbay", country: "Kazakhstan", code: "KAZ", flag: "🇰🇿", points: 7120, trend: "up", title: "Asian Champion", avatar: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=200&q=80", bio: "Asian champion with lightning sweeps and scoring agility." }
-    ],
-    "female-kumite-68": [
-      { rank: 1, name: "Irina Zaretska", country: "Azerbaijan", code: "AZE", flag: "🇦🇿", points: 9680, trend: "stable", title: "Triple World Champion", avatar: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=200&q=80", bio: "One of the most decorated female kumite fighters in modern karate history." },
-      { rank: 2, name: "Elena Quirici", country: "Switzerland", code: "SUI", flag: "🇨🇭", points: 8410, trend: "up", title: "European Champion", avatar: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=200&q=80", bio: "Swiss captain with exceptional tactical poise and high-kick capability." },
-      { rank: 3, name: "Alizee Agier", country: "France", code: "FRA", flag: "🇫🇷", points: 7190, trend: "down", title: "World Silver Medalist", avatar: "https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=200&q=80", bio: "Veteran French champion known for physical durability and counter punches." }
-    ],
-    "female-kumite-50": [
-      { rank: 1, name: "Moldir Zhangbyrbay", country: "Kazakhstan", code: "KAZ", flag: "🇰🇿", points: 8990, trend: "up", title: "World Champion -50kg", avatar: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=200&q=80", bio: "Kazakh dynamo known for rapid entry attacks and relentless pressure." },
-      { rank: 2, name: "Yorgelis Salazar", country: "Venezuela", code: "VEN", flag: "🇻🇪", points: 8640, trend: "stable", title: "Premier League Winner", avatar: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=200&q=80", bio: "Venezuelan lightning striker with unmatched agility in the -50kg category." }
+      { rank: 1, name: "Loveraj Acharya", country: "HSTU Dojo", code: "HKD", flag: "🇧🇩", points: 3120, trend: "up", title: "Regional Champion -75kg", avatar: "https://res.cloudinary.com/dksn30eyz/image/upload/c_fill,w_300,h_300,g_face,q_auto,r_max/favourite/IMG_20251108_215737_zxprcw.jpg", bio: "Explosive Kumite striker known for tactical counter-timing and gyaku-tsuki precision." },
+      { rank: 2, name: "Md. Tanvir Rahman", country: "HSTU Dojo", code: "HKD", flag: "🇧🇩", points: 2710, trend: "up", title: "Kumite Silver Medalist", avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=200&q=80", bio: "Competitive fighter with rapid closing speed and dynamic ashirai sweeps." }
     ]
   },
 
+  branches: [
+    {
+      id: "hstu-main",
+      name: "HSTU Main Campus Branch",
+      venue: "HSTU Central Gymnasium",
+      location: "Dinajpur - 5200, Bangladesh",
+      established: "2022",
+      activeStudents: "120+",
+      leadSensei: "Shahriar Hasan & Loveraj Acharya",
+      description: "The primary headquarters and central dojo tatami for university students, faculty, and advanced squads."
+    },
+    {
+      id: "afeac-branch",
+      name: "AFEAC Residential Model School",
+      venue: "AFEAC School Auditorium",
+      location: "Parbatipur, Dinajpur",
+      established: "2025",
+      activeStudents: "45+",
+      leadSensei: "Rafiq Ahmed",
+      description: "Dedicated junior and youth development program focusing on character building and scholastic karate."
+    },
+    {
+      id: "gopalganj-branch",
+      name: "Gopalganj Pilot School & College",
+      venue: "Pilot School Gymnasium",
+      location: "Dinajpur Sadar (~1.5 km from HSTU)",
+      established: "2025",
+      activeStudents: "35+",
+      leadSensei: "Md. Hasan",
+      description: "Community martial arts branch fostering grassroots athletics and youth self-defense."
+    }
+  ],
+
+  aboutWKF: {
+    history: "HSTU Karate Dojo (HKD) was established in 2022 at Hajee Mohammad Danesh Science & Technology University (HSTU) in Dinajpur, Bangladesh. Evolving into the Kaizen Karate Academy network, the dojo focuses on authentic Shito-Ryu Karate, discipline, respect, self-defense, and high-performance competitive success across regional and national championships.",
+    president: {
+      name: "Shahriar Hasan",
+      role: "Vice President & Chief Instructor",
+      since: "2022",
+      image: "https://res.cloudinary.com/dksn30eyz/image/upload/c_fill,w_300,h_300,g_face,q_auto,r_max/favourite/IMG_1937_sendde.jpg",
+      quote: "Karate is not just about fighting, it's a lifestyle! Promoting the art of karate for mind and body excellence through relentless daily progress."
+    },
+    executiveCommittee: [
+      { name: "Md. Mahbub-Ul-Hasan", role: "President", affiliation: "Director In Charge, Physical Education Dept., HSTU" },
+      { name: "Shahriar Hasan", role: "Vice President & Chief Instructor", affiliation: "Founder, HKD" },
+      { name: "Loveraj Acharya", role: "General Secretary & Head Coach", affiliation: "Senior Instructor & Regional Gold Medalist" },
+      { name: "Md. Rasel Islam", role: "Treasurer", affiliation: "Assistant Director, Physical Education Dept., HSTU" }
+    ],
+    commissions: [
+      { name: "Dan Grading & Syllabus Board", chair: "Chief Sensei Shahriar Hasan", description: "Standardizes white-to-black belt examinations, traditional Shito-Ryu Kata bunkai, and Kihon progression." },
+      { name: "Tournament & Squad Coaching", chair: "Sensei Loveraj Acharya", description: "Prepares athletes for inter-university championships, regional circuits, and national martial arts tournaments." },
+      { name: "Youth & School Branches", chair: "Sensei Rafiq Ahmed", description: "Supervises youth development at AFEAC Residential School and Gopalganj Pilot School." },
+      { name: "Women's Self-Defense & Empowerment", chair: "Sadia Afrin", description: "Workshops and practical defense clinics organized with university clubs and student bodies." }
+    ]
+  },
+
+  partners: [
+    { name: "HSTU", title: "Hajee Mohammad Danesh Science & Technology University", role: "Host University & Primary Support" },
+    { name: "SDCH", title: "Physical Education & Sports Dept.", role: "Training Partner & Facility Provider" },
+    { name: "ECE Club", title: "Electronics & Communication Engineering Club", role: "Official Workshop & Event Partner" }
+  ],
+
+  testimonials: [
+    { quote: "Joining the Dojo has been an incredible experience. The training is top-notch and the sensei is very supportive.", author: "Md. Tanvir Rahman", role: "Student Member" },
+    { quote: "The dojo provides a great environment for learning, discipline, and personal growth. I highly recommend it.", author: "Sadia Afrin", role: "Female Squad Member" },
+    { quote: "The discipline and skills I have gained from the Dojo have been invaluable. It's a fantastic community.", author: "Loveraj Acharya", role: "General Secretary & Medalist" },
+    { quote: "Structured training sessions and the opportunity to compete in regional championships have been transformative.", author: "Shahriar Kabir", role: "Competitive Karateka" }
+  ],
+
   approvedBrands: [
-    { name: "Adidas", category: "Protections & Karate-Gi", country: "Germany", verified: true, logo: "ADIDAS", description: "Official WKF homologated Kumite & Kata uniforms, gloves, and shin guards." },
-    { name: "Arawaza", category: "Protections & Karate-Gi", country: "Canada", verified: true, logo: "ARAWAZA", description: "Onyx & Amber competition gis engineered with micro-fiber breathability." },
-    { name: "Punok", category: "Full Equipment", country: "United States", verified: true, logo: "PUNOK", description: "WKF certified competition belts, protections, and Olympic-grade equipment." },
-    { name: "Daedo", category: "Electronic & Protective", country: "Spain", verified: true, logo: "DAEDO", description: "Leading martial arts brand with WKF certified impact mitigation gear." },
-    { name: "Tokaido", category: "Traditional Kata-Gi", country: "Japan", verified: true, logo: "TOKAIDO", description: "The original karate gi manufacturer since 1956, renowned for heavyweight snap." },
-    { name: "Shureido", category: "Master Kata-Gi", country: "Okinawa, Japan", verified: true, logo: "SHUREIDO", description: "Handcrafted master kata gis from the birthplace of karate." },
-    { name: "ProGame Tatami", category: "Tatami Matting", country: "Italy / Trocellen", verified: true, logo: "PROGAME", description: "Official WKF interlocking competition tatami with rice-straw embossing." },
-    { name: "SMAI", category: "Protections & Apparel", country: "Australia", verified: true, logo: "SMAI", description: "High-performance body armor, face masks, and certified WKF pads." },
-    { name: "Tatamix", category: "Tatami Matting", country: "Spain", verified: true, logo: "TATAMIX", description: "Certified competition tatamis used in European & World Championships." }
+    { name: "HSTU Main Gymnasium", category: "Central Dojo Tatami", country: "Dinajpur", verified: true, logo: "HKD", description: "Full competition matting with electronic scoreboards and mirror training walls." },
+    { name: "AFEAC Branch Dojo", category: "Junior Training Center", country: "Parbatipur", verified: true, logo: "AFEAC", description: "Youth martial arts facilities with dedicated safety pads and conditioning gear." },
+    { name: "Gopalganj Pilot Branch", category: "Community Tatami", country: "Dinajpur Sadar", verified: true, logo: "GPSC", description: "Grassroots dojo offering after-school martial arts and self-defense classes." }
   ],
 
   videos: [
     {
       id: "v1",
-      title: "Top 10 Breathtaking Ippons of Karate 1 Premier League",
-      duration: "08:42",
-      views: "245K views",
-      date: "2 days ago",
-      category: "Highlights",
-      thumbnail: "https://images.unsplash.com/photo-1555597673-b21d5c935865?auto=format&fit=crop&w=600&q=80"
+      title: "Rangpur Regional Karate Championship 2025 — HKD Medal Highlights",
+      duration: "06:20",
+      views: "14K views",
+      date: "Nov 2025",
+      category: "Championship",
+      thumbnail: "https://cdn.sanity.io/images/18l4qwt0/production/3b78b453781937a128fabbe001952f45b138db70-1016x1138.jpg?rect=0,231,1016,677&w=600&h=400&fit=max&auto=format"
     },
     {
       id: "v2",
-      title: "Masterclass Kata Breakdown: Anan Dai by Kakeru Nishiyama",
-      duration: "14:15",
-      views: "189K views",
-      date: "1 week ago",
+      title: "Shito-Ryu Kata Masterclass: Technical Bunkai & Stance Precision",
+      duration: "12:45",
+      views: "8.5K views",
+      date: "Jan 2026",
       category: "Kata Tutorial",
-      thumbnail: "https://images.unsplash.com/photo-1517838277536-f5f99be501cd?auto=format&fit=crop&w=600&q=80"
-    },
-    {
-      id: "v3",
-      title: "Unbelievable Last-Second Kumite Reversals in Championship Finals",
-      duration: "11:20",
-      views: "520K views",
-      date: "2 weeks ago",
-      category: "Kumite Thrills",
-      thumbnail: "https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?auto=format&fit=crop&w=600&q=80"
-    },
-    {
-      id: "v4",
-      title: "Guardian Girls Karate: Empowerment & Self-Defense Worldwide",
-      duration: "06:55",
-      views: "82K views",
-      date: "3 weeks ago",
-      category: "Documentary",
-      thumbnail: "https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?auto=format&fit=crop&w=600&q=80"
+      thumbnail: "https://res.cloudinary.com/dksn30eyz/image/upload/v1785926139/hkd/y5m1cmpx9ugjuzoh7wq0.jpg"
     }
   ],
-
-  federations: [
-    {
-      code: "AKF",
-      name: "Asian Karate Federation",
-      hq: "Kuwait City, Kuwait",
-      members: 45,
-      president: "Major General Nasser Al Razooqi",
-      region: "Asia"
-    },
-    {
-      code: "EKF",
-      name: "European Karate Federation",
-      hq: "Madrid, Spain",
-      members: 54,
-      president: "Antonio Espinós",
-      region: "Europe"
-    },
-    {
-      code: "PKF",
-      name: "Pan American Karate Federation",
-      hq: "Willemstad, Curaçao",
-      members: 37,
-      president: "Jose Garcia Maañon",
-      region: "Americas"
-    },
-    {
-      code: "UFAK",
-      name: "Union of African Karate Federations",
-      hq: "Dakar, Senegal",
-      members: 51,
-      president: "Mohamed Tahar Mesbahi",
-      region: "Africa"
-    },
-    {
-      code: "OKF",
-      name: "Oceanian Karate Federation",
-      hq: "Auckland, New Zealand",
-      members: 11,
-      president: "Richard Benson",
-      region: "Oceania"
-    }
-  ],
-
-  aboutWKF: {
-    history: "Kaizen Karate Academy was founded on the bedrock martial philosophy of 'Kaizen' — continuous and endless improvement in mind, body, and spirit. As an elite martial arts academy and dojo, we train practitioners from white belt to master Dan grades in traditional Shotokan and Shito-Ryu karate while fielding champions in Olympic-style WKF competition formats.",
-    president: {
-      name: "Hanshi Sensei",
-      role: "Chief Instructor & Dojo Master",
-      since: "2012",
-      image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=400&q=80",
-      quote: "Karate is not merely about physical combat; it is an enduring journey of character, humility, courage, and relentless daily progress."
-    },
-    commissions: [
-      { name: "Dan Grading & Syllabus Board", chair: "Chief Sensei & Technical Panel", description: "Standardizes black belt examinations, traditional kata bunkai requirements, and kihon progression." },
-      { name: "Competition & Squad Training", chair: "Head Kumite & Kata Coach", description: "Prepares academy athletes for national tournaments, Premier League circuits, and international seminars." },
-      { name: "Youth & Cadet Development", chair: "Youth Program Director", description: "Specialized character building, motor skill development, and anti-bullying martial arts curriculum." },
-      { name: "Refereeing & Match Protocols", chair: "Senior Certified Official", description: "Ensures all dojo bouts and internal championships follow official WKF electronic scoring rules." },
-      { name: "Self-Defense & Tactical Arts", chair: "Chief Self-Defense Specialist", description: "Practical close-quarters defense, situational awareness, and Guardian Girls empowerment modules." },
-      { name: "Dojo Welfare & Sports Medicine", chair: "Academy Medical Advisor", description: "Safe athletic conditioning, injury prevention, rehabilitation, and sports nutrition." }
-    ]
-  },
 
   olympics: {
     tokyo2020: {
-      title: "Karate's Historic Olympic Debut — Tokyo 2020",
-      venue: "Nippon Budokan, Tokyo, Japan",
-      dates: "August 5–7, 2021",
-      description: "Karate made its long-awaited debut on the Olympic stage at the sacred home of martial arts, the Nippon Budokan in Tokyo.",
+      title: "Shito-Ryu Martial Heritage",
+      venue: "HSTU Central Gymnasium",
+      dates: "Founded 2022",
+      description: "Preserving the dynamic legacy of Shito-Ryu Karate in northern Bangladesh, blending classical Okinawan Kata with modern competition sport karate.",
       goldMedalists: [
-        { category: "Men's Kata", winner: "Ryo Kiyuna (Japan)", kata: "Ohan Dai" },
-        { category: "Women's Kata", winner: "Sandra Sánchez (Spain)", kata: "Chatanyara Kushanku" },
-        { category: "Men's Kumite -67kg", winner: "Steven Da Costa (France)" },
-        { category: "Men's Kumite -75kg", winner: "Luigi Busà (Italy)" },
-        { category: "Men's Kumite +75kg", winner: "Sajjad Ganjzadeh (Iran)" },
-        { category: "Women's Kumite -55kg", winner: "Ivet Goranova (Bulgaria)" },
-        { category: "Women's Kumite -61kg", winner: "Jovana Preković (Serbia)" },
-        { category: "Women's Kumite +61kg", winner: "Feryal Abdelaziz (Egypt)" }
+        { category: "Regional Kumite Gold", winner: "Loveraj Acharya", kata: "Shito-Ryu" },
+        { category: "Regional Kumite Gold", winner: "HKD Squad Champion", kata: "Shito-Ryu" }
       ]
-    },
-    dakar2026: {
-      title: "Dakar 2026 Youth Olympic Games",
-      dates: "October 31 – November 13, 2026",
-      location: "Dakar, Senegal",
-      description: "The first Olympic sporting event to be held on the African continent, featuring individual kumite and kata events for U18 karateka."
-    },
-    buenosAires2018: {
-      title: "Buenos Aires 2018 Youth Olympic Games",
-      description: "Karate's first appearance at the Youth Olympic Games, celebrated as an overwhelming competitive and cultural success."
     }
-  },
-
-  socialLegacy: [
-    {
-      id: "guardian-girls",
-      title: "Guardian Girls Karate",
-      badge: "Flagship Program",
-      description: "A joint global initiative with Koyamada International Foundation (KIF) and UNFPA to promote gender equality and protect women against gender-based violence through karate self-defense training seminars hosted at major WKF championships.",
-      image: "https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?auto=format&fit=crop&w=800&q=80",
-      reach: "Over 25,000 women trained in 14 host nations including Spain, Japan, Argentina, Egypt, and USA."
-    },
-    {
-      id: "green-karate",
-      title: "Green Karate & Sustainability",
-      badge: "Eco Initiative",
-      description: "Collaboration with homologated suppliers to manufacture 100% recyclable tatamis and uniforms using ocean-recovered plastics and organic cotton, minimizing the ecological footprint of karate events.",
-      image: "https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?auto=format&fit=crop&w=800&q=80",
-      reach: "Zero single-use plastics target adopted across all 2026 Karate 1 Premier League events."
-    },
-    {
-      id: "sos-villages",
-      title: "SOS Children's Villages",
-      badge: "Youth Support",
-      description: "Providing underserved children with karate equipment, dojo memberships, and mentorship from world champions to develop resilience, respect, and confidence.",
-      image: "https://images.unsplash.com/photo-1508215885820-4523e4e13f7b?auto=format&fit=crop&w=800&q=80",
-      reach: "Active programs supporting over 4,500 children across 18 developing countries."
-    },
-    {
-      id: "para-karate-expansion",
-      title: "Para-Karate Global Inclusivity",
-      badge: "Inclusivity",
-      description: "Integrating Para-Karate directly alongside able-bodied athletes in senior world championships, setting global standards for wheelchair, visual, and intellectual impairment categories.",
-      image: "https://images.unsplash.com/photo-1517838277536-f5f99be501cd?auto=format&fit=crop&w=800&q=80",
-      reach: "Over 60 national federations now possess dedicated Para-Karate national squads."
-    }
-  ],
-
-  officialDocuments: [
-    { title: "WKF Competition Rules 2026 (Valid from Jan 2026)", size: "4.2 MB", type: "PDF", category: "Rules", description: "Complete sporting rules covering scoring, penalties, video review criteria, and tatami regulations." },
-    { title: "Official WKF Kata List & Examination Criteria", size: "1.8 MB", type: "PDF", category: "Kata", description: "List of 102 approved kata across Shotokan, Shito-ryu, Goju-ryu, and Wado-ryu styles with scoring guidelines." },
-    { title: "World Ranking Regulations & Points Allocation System", size: "2.1 MB", type: "PDF", category: "Ranking", description: "Detailed breakdown of ranking points awarded by tournament tier (Premier League, Series A, World Championships)." },
-    { title: "WADA & WKF Anti-Doping Code 2026", size: "3.5 MB", type: "PDF", category: "Integrity", description: "Strict anti-doping protocols, therapeutic use exemptions (TUE), and banned substance lists." },
-    { title: "Guardian Girls Karate Program Implementation Manual", size: "5.1 MB", type: "PDF", category: "Social Legacy", description: "Operational framework for national federations to organize women self-defense seminars." },
-    { title: "WKF Statutes & Internal Regulations", size: "3.8 MB", type: "PDF", category: "Governance", description: "Constitutional governance document defining congress voting, executive committee powers, and NF rights." },
-    { title: "Equipment Homologation & Brand Specifications Guide", size: "2.9 MB", type: "PDF", category: "Equipment", description: "Technical specifications for impact absorption, stitching, fabric weights, and tatami interlocking density." },
-    { title: "Organizing Committee Handbook for World Championships", size: "6.4 MB", type: "PDF", category: "Events", description: "Full logistical requirements for staging Premier League and World Senior Championship tournaments." }
-  ]
+  }
 }

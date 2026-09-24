@@ -43,39 +43,73 @@
       </div>
     </div>
 
-    <!-- Continental Federations Section -->
+    <!-- Executive Committee (2025-2026) -->
     <div class="space-y-6 pt-6 border-t border-gray-200 dark:border-gray-800">
       <div>
         <h2 class="text-2xl font-black text-gray-950 dark:text-white font-sans">
-          Dojo Affiliations & Global Recognition
+          Executive Committee (2025–2026)
         </h2>
         <p class="text-xs text-gray-500 mt-1">
-          Accredited and partnered with continental federations and international Olympic karate bodies.
+          Dojo leadership combining university administration, physical education directors, and senior black belt instructors.
         </p>
       </div>
 
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4">
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
         <div
-          v-for="fed in federations"
-          :key="fed.code"
+          v-for="member in about.executiveCommittee"
+          :key="member.name"
           class="p-5 rounded-2xl bg-white dark:bg-gray-850 border border-gray-200/80 dark:border-gray-700/80 space-y-2"
         >
-          <div class="flex items-center justify-between">
-            <span class="text-lg font-black text-rose-600 font-mono">{{ fed.code }}</span>
-            <span class="px-2 py-0.5 rounded text-[10px] font-bold bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300">{{ fed.members }} NF</span>
+          <div class="text-xs font-bold text-rose-600 dark:text-rose-400 uppercase tracking-wider">
+            {{ member.role }}
           </div>
-          <div class="text-xs font-bold text-gray-950 dark:text-white leading-snug">
-            {{ fed.name }}
+          <div class="text-base font-bold text-gray-950 dark:text-white">
+            {{ member.name }}
           </div>
-          <div class="text-[11px] text-gray-500">
-            <div>HQ: {{ fed.hq }}</div>
-            <div>President: {{ fed.president }}</div>
+          <div class="text-xs text-gray-500 dark:text-gray-400">
+            {{ member.affiliation }}
           </div>
         </div>
       </div>
     </div>
 
-    <!-- Commissions Grid -->
+    <!-- Training Branches -->
+    <div class="space-y-6 pt-6 border-t border-gray-200 dark:border-gray-800">
+      <div>
+        <h2 class="text-2xl font-black text-gray-950 dark:text-white font-sans">
+          Training Branches & Dojos
+        </h2>
+        <p class="text-xs text-gray-500 mt-1">
+          Our affiliated training venues upholding the highest standards of Shito-Ryu Karate instruction.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div
+          v-for="branch in branches"
+          :key="branch.id"
+          class="p-6 rounded-2xl bg-white dark:bg-gray-850 border border-gray-200/80 dark:border-gray-700/80 space-y-3"
+        >
+          <div class="flex items-center justify-between">
+            <span class="text-xs font-bold px-2.5 py-1 rounded-full bg-rose-50 dark:bg-rose-950/50 text-rose-600 dark:text-rose-400 border border-rose-200 dark:border-rose-900">Est. {{ branch.established }}</span>
+            <span class="text-xs text-gray-500 font-semibold">{{ branch.activeStudents }} Students</span>
+          </div>
+          <h3 class="text-base font-bold text-gray-950 dark:text-white">
+            {{ branch.name }}
+          </h3>
+          <div class="text-xs text-gray-500">
+            <div><strong>Venue:</strong> {{ branch.venue }}</div>
+            <div><strong>Location:</strong> {{ branch.location }}</div>
+            <div><strong>Lead Sensei:</strong> {{ branch.leadSensei }}</div>
+          </div>
+          <p class="text-xs text-gray-600 dark:text-gray-400 leading-relaxed pt-1">
+            {{ branch.description }}
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Technical Boards Grid -->
     <div class="space-y-6 pt-6 border-t border-gray-200 dark:border-gray-800">
       <div>
         <h2 class="text-2xl font-black text-gray-950 dark:text-white font-sans">
@@ -86,7 +120,7 @@
         </p>
       </div>
 
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
         <div
           v-for="com in about.commissions"
           :key="com.name"
@@ -112,5 +146,6 @@ import { wkfService } from '../services/wkfService.js'
 import SectionHeader from '../components/ui/SectionHeader.vue'
 
 const about = wkfService.getAboutData()
-const federations = wkfService.getFederations()
+const branches = wkfService.getBranches()
 </script>
+

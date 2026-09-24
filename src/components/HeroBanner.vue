@@ -94,10 +94,10 @@
             <div class="flex items-center justify-between border-b border-gray-800 pb-3">
               <div class="flex items-center gap-2">
                 <span class="size-2 rounded-full bg-rose-500 animate-pulse"></span>
-                <span class="text-xs font-bold text-gray-200 uppercase tracking-wider">Tatami 1 • Asian Games</span>
+                <span class="text-xs font-bold text-gray-200 uppercase tracking-wider">Tatami 1 • HSTU Gymnasium</span>
               </div>
               <span class="text-[11px] font-mono font-bold text-rose-400 bg-rose-950/60 border border-rose-800/60 px-2.5 py-0.5 rounded-full">
-                FINALS BOUT
+                CHAMPIONSHIP FINAL
               </span>
             </div>
 
@@ -105,7 +105,7 @@
             <div class="space-y-3">
               <div class="flex items-center justify-between text-xs text-gray-400 font-medium">
                 <span class="uppercase tracking-wider">Men's Kumite -75kg Final</span>
-                <span class="text-rose-400 font-bold">● 48.2K Live</span>
+                <span class="text-amber-400 font-bold">🥇 Gold Medal Bout</span>
               </div>
 
               <!-- Competitor 1 (AKA - Red) -->
@@ -114,14 +114,14 @@
                   <span class="px-2 py-0.5 rounded bg-rose-600 text-white font-black text-[10px]">AKA</span>
                   <div>
                     <div class="text-sm font-bold text-white flex items-center gap-2">
-                      <span>K. Nishiyama</span>
-                      <span class="text-[10px] font-mono font-bold px-1 py-0.2 rounded bg-gray-800 text-gray-300">JPN</span>
+                      <span>Loveraj Acharya</span>
+                      <span class="text-[10px] font-mono font-bold px-1 py-0.2 rounded bg-gray-800 text-gray-300">HKD</span>
                     </div>
-                    <div class="text-[11px] text-gray-400">Japan • World Rank #1 (Senshu ★)</div>
+                    <div class="text-[11px] text-gray-400">Kaizen / HSTU Dojo • Gold Medalist (Senshu ★)</div>
                   </div>
                 </div>
                 <div class="text-3xl font-black text-rose-400 font-mono">
-                  4
+                  6
                 </div>
               </div>
 
@@ -131,10 +131,10 @@
                   <span class="px-2 py-0.5 rounded bg-blue-600 text-white font-black text-[10px]">AO</span>
                   <div>
                     <div class="text-sm font-bold text-white flex items-center gap-2">
-                      <span>N. Azhikanov</span>
-                      <span class="text-[10px] font-mono font-bold px-1 py-0.2 rounded bg-gray-800 text-gray-300">KAZ</span>
+                      <span>Regional Finalist</span>
+                      <span class="text-[10px] font-mono font-bold px-1 py-0.2 rounded bg-gray-800 text-gray-300">RNG</span>
                     </div>
-                    <div class="text-[11px] text-gray-400">Kazakhstan • World Rank #4</div>
+                    <div class="text-[11px] text-gray-400">Rangpur Divisional Karate Team</div>
                   </div>
                 </div>
                 <div class="text-3xl font-black text-blue-400 font-mono">
@@ -144,21 +144,19 @@
 
               <!-- Timing and Action -->
               <div class="flex items-center justify-between pt-2 text-xs text-gray-400">
-                <span class="flex items-center gap-1.5 font-mono">
-                  <svg class="size-3.5 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                <span class="flex items-center gap-1.5 font-mono text-emerald-400">
+                  <svg class="size-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
                   </svg>
-                  Remaining: 00:32 (Round 2)
+                  Result: Ippon Victory (Championship Final)
                 </span>
-                <a
-                  href="https://www.youtube.com/@WKFKarateWorldChamps"
-                  target="_blank"
-                  rel="noopener"
+                <router-link
+                  to="/events"
                   class="text-rose-400 hover:text-rose-300 font-bold hover:underline flex items-center gap-1"
                 >
-                  <span>Watch Stream</span>
+                  <span>All Events</span>
                   <span>→</span>
-                </a>
+                </router-link>
               </div>
             </div>
           </div>

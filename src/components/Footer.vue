@@ -62,8 +62,9 @@
           </p>
 
           <div class="text-xs text-gray-400 space-y-1 pt-1">
-            <div><strong class="text-gray-300">Dojo Headquarters:</strong> Kaizen Central Tatami</div>
-            <div><strong class="text-gray-300">Email:</strong> info@kaizen.paradox-bd.com</div>
+            <div><strong class="text-gray-300">Central Dojo:</strong> HSTU Gymnasium, Dinajpur - 5200</div>
+            <div><strong class="text-gray-300">Phone:</strong> +880 1777-300309</div>
+            <div><strong class="text-gray-300">Email:</strong> hstukarate@gmail.com</div>
           </div>
         </div>
 

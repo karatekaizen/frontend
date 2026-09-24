@@ -116,12 +116,47 @@
       </div>
     </section>
 
-    <!-- World Ranking Standings Preview -->
+    <!-- Training Branches Section -->
     <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <SectionHeader
-        eyebrow="Global Standings"
-        title="WKF World Ranking Leaders"
-        actionText="Complete Rankings & Categories"
+        eyebrow="Our Network"
+        title="Dojo Training Branches"
+        actionText="About Academy & Venues"
+        actionTo="/about"
+        :level="2"
+      />
+
+      <div class="mt-8 grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div
+          v-for="branch in branches"
+          :key="branch.id"
+          class="p-6 rounded-2xl bg-white dark:bg-gray-850 border border-gray-200/80 dark:border-gray-800 space-y-3 shadow-xs hover:border-rose-500/40 transition-all"
+        >
+          <div class="flex items-center justify-between">
+            <span class="text-xs font-bold px-2.5 py-1 rounded-full bg-rose-50 dark:bg-rose-950/50 text-rose-600 dark:text-rose-400 border border-rose-200 dark:border-rose-900">Est. {{ branch.established }}</span>
+            <span class="text-xs text-gray-500 font-semibold">{{ branch.activeStudents }} Students</span>
+          </div>
+          <h3 class="text-base font-bold text-gray-950 dark:text-white">
+            {{ branch.name }}
+          </h3>
+          <div class="text-xs text-gray-500 space-y-0.5">
+            <div><strong>Venue:</strong> {{ branch.venue }}</div>
+            <div><strong>Location:</strong> {{ branch.location }}</div>
+            <div><strong>Sensei:</strong> {{ branch.leadSensei }}</div>
+          </div>
+          <p class="text-xs text-gray-600 dark:text-gray-400 leading-relaxed pt-1">
+            {{ branch.description }}
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Dojo Standings Preview -->
+    <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <SectionHeader
+        eyebrow="Dojo Standings"
+        title="Kaizen Dojo Standings & Athletes"
+        actionText="Complete Rankings & Divisions"
         actionTo="/ranking"
         :level="2"
       />
@@ -182,6 +217,7 @@ const statistics = wkfService.getStatistics()
 const allEvents = wkfService.getEvents()
 const topAthletes = wkfService.getTopAthletes()
 const latestNews = wkfService.getNewsArticles(3)
+const branches = wkfService.getBranches()
 
 const upcomingEvents = computed(() => allEvents.slice(0, 4))
 
