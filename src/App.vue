@@ -31,6 +31,9 @@
 
     <!-- Global Toast Notifications -->
     <FrappeToast />
+
+    <!-- Unified Auth Modal -->
+    <AuthModal />
   </div>
 </template>
 
@@ -38,12 +41,14 @@
 import { ref, onMounted, onUnmounted } from 'vue'
 import { WKF_DATA } from './data/wkfData.js'
 import { tweakStore, initTheme } from './store/tweakStore.js'
+import { authStore } from './store/authStore.js'
 
 import Navbar from './components/Navbar.vue'
 import Footer from './components/Footer.vue'
 import CommandPaletteModal from './components/CommandPaletteModal.vue'
 import TweakPanel from './components/TweakPanel.vue'
 import FrappeToast from './components/FrappeToast.vue'
+import AuthModal from './components/AuthModal.vue'
 import ErrorBoundary from './components/ui/ErrorBoundary.vue'
 
 const isSearchOpen = ref(false)
@@ -60,6 +65,7 @@ function handleGlobalKeydown(e) {
 
 onMounted(() => {
   window.addEventListener('keydown', handleGlobalKeydown)
+  authStore.initAuth()
 })
 
 onUnmounted(() => {

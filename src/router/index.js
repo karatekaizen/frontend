@@ -11,6 +11,7 @@ import AboutView from '../views/AboutView.vue'
 import OlympicsView from '../views/OlympicsView.vue'
 import DocumentsView from '../views/DocumentsView.vue'
 import SocialLegacyView from '../views/SocialLegacyView.vue'
+import ProfileView from '../views/ProfileView.vue'
 
 const routes = [
   { path: '/', name: 'Home', component: HomeView },
@@ -23,6 +24,9 @@ const routes = [
   { path: '/olympics', name: 'Olympics', component: OlympicsView },
   { path: '/documents', name: 'Documents', component: DocumentsView },
   { path: '/social-legacy', name: 'SocialLegacy', component: SocialLegacyView },
+  { path: '/profile', name: 'Profile', component: ProfileView },
+  { path: '/login', redirect: '/profile' },
+  { path: '/signup', redirect: '/profile' },
   { path: '/:pathMatch(.*)*', redirect: '/' }
 ]
 

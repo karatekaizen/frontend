@@ -12,6 +12,7 @@ declare module 'vue' {
     AthleteCard: typeof import('./src/components/ui/AthleteCard.vue')['default']
     AthleteModal: typeof import('./src/components/AthleteModal.vue')['default']
     AthleteRow: typeof import('./src/components/ui/AthleteRow.vue')['default']
+    AuthModal: typeof import('./src/components/AuthModal.vue')['default']
     CommandPaletteModal: typeof import('./src/components/CommandPaletteModal.vue')['default']
     ErrorBoundary: typeof import('./src/components/ui/ErrorBoundary.vue')['default']
     EventModal: typeof import('./src/components/EventModal.vue')['default']

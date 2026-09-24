@@ -104,16 +104,32 @@
           </div>
 
           <!-- Modal Footer -->
-          <div class="p-4 bg-gray-50 dark:bg-gray-850/60 border-t border-gray-100 dark:border-gray-800 flex items-center justify-between">
+          <div class="p-4 bg-gray-50 dark:bg-gray-850/60 border-t border-gray-100 dark:border-gray-800 flex items-center justify-between gap-3 flex-wrap">
             <span class="text-[11px] text-gray-500 dark:text-gray-400">
               Status: <strong class="text-gray-900 dark:text-white">{{ event.status }}</strong>
             </span>
-            <button
-              @click="$emit('close')"
-              class="px-4 py-2 rounded-xl bg-gray-900 dark:bg-white text-white dark:text-gray-900 font-bold text-xs hover:bg-gray-800 dark:hover:bg-gray-100 transition-colors shadow-xs cursor-pointer"
-            >
-              Close
-            </button>
+            <div class="flex items-center gap-2">
+              <button
+                v-if="isRegistered"
+                @click="handleUnregister"
+                class="px-3 py-1.5 rounded-xl border border-red-200 dark:border-red-900/60 text-red-600 dark:text-red-400 hover:bg-red-50 dark:hover:bg-red-950/30 text-xs font-semibold transition-colors cursor-pointer"
+              >
+                Withdraw
+              </button>
+              <button
+                v-else
+                @click="handleRegister"
+                class="px-3.5 py-1.5 rounded-xl bg-rose-600 hover:bg-rose-500 text-white font-bold text-xs shadow-xs transition-colors cursor-pointer"
+              >
+                Register for Event
+              </button>
+              <button
+                @click="$emit('close')"
+                class="px-3 py-1.5 rounded-xl bg-gray-200 dark:bg-gray-800 text-gray-800 dark:text-gray-200 font-semibold text-xs hover:bg-gray-300 dark:hover:bg-gray-700 transition-colors cursor-pointer"
+              >
+                Close
+              </button>
+            </div>
           </div>
         </ErrorBoundary>
       </div>
@@ -122,8 +138,10 @@
 </template>
 
 <script setup>
+import { computed } from 'vue'
 import ErrorBoundary from './ui/ErrorBoundary.vue'
 import { showToast } from '../store/toastStore.js'
+import { authStore, authState } from '../store/authStore.js'
 
 const props = defineProps({
   event: {
@@ -133,6 +151,21 @@ const props = defineProps({
 })
 
 defineEmits(['close'])
+
+const isRegistered = computed(() => {
+  if (!props.event) return false
+  const id = props.event.id || props.event.title
+  return authState.registeredEvents.some(e => (e.id || e.title) === id)
+})
+
+function handleRegister() {
+  authStore.registerForEvent(props.event)
+}
+
+function handleUnregister() {
+  const id = props.event?.id || props.event?.title
+  if (id) authStore.unregisterFromEvent(id)
+}
 
 function downloadBulletin() {
   showToast({

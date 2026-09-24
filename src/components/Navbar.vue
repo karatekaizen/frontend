@@ -99,7 +99,30 @@
 
         <!-- Right Quick Actions -->
         <div class="flex items-center gap-2 shrink-0">
-          <!-- ERP Portal Button -->
+          <!-- Student Portal / Sign In Button -->
+          <router-link
+            v-if="authState.isLoggedIn"
+            to="/profile"
+            class="hidden sm:inline-flex items-center gap-1.5 px-2.5 py-1.5 text-xs font-semibold rounded-lg bg-rose-50 dark:bg-rose-950/40 text-rose-700 dark:text-rose-300 border border-rose-200 dark:border-rose-900/60 hover:bg-rose-100 transition-all text-decoration-none whitespace-nowrap shadow-xs"
+            title="My Student Profile"
+          >
+            <div class="size-4 rounded-full bg-rose-600 text-white text-[9px] flex items-center justify-center font-bold">
+              {{ (authState.user?.fullName || 'S')[0].toUpperCase() }}
+            </div>
+            <span class="max-w-[100px] truncate">{{ authState.user?.fullName?.split(' ')[0] }}</span>
+          </router-link>
+          <button
+            v-else
+            @click="authStore.openAuthModal('login')"
+            class="hidden sm:inline-flex items-center gap-1.5 px-2.5 py-1.5 text-xs font-semibold rounded-lg bg-gray-100 dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700 text-gray-800 dark:text-gray-200 border border-gray-200 dark:border-gray-700 transition-all cursor-pointer whitespace-nowrap shadow-xs"
+          >
+            <svg class="size-3.5 text-gray-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
+            </svg>
+            <span>Sign In</span>
+          </button>
+
+          <!-- ERP Desk Button (for authorities/staff) -->
           <a
             href="https://erp.kaizen.paradox-bd.com"
             target="_blank"
@@ -110,7 +133,7 @@
             <svg class="size-3.5 text-rose-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5.121 17.804A13.937 13.937 0 0112 16c2.5 0 4.847.655 6.879 1.804M15 10a3 3 0 11-6 0 3 3 0 016 0zm6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
             </svg>
-            <span>ERP Portal</span>
+            <span>ERP Desk</span>
           </a>
 
           <!-- Command Palette Button -->
@@ -186,6 +209,23 @@
           <span>Kaizen Academy (LMS)</span>
           <span class="px-1.5 py-0.2 rounded text-[10px] font-bold bg-rose-100 dark:bg-rose-900/50 text-rose-700 dark:text-rose-300">Live</span>
         </a>
+        <router-link
+          v-if="authState.isLoggedIn"
+          to="/profile"
+          @click="isMobileMenuOpen = false"
+          class="flex items-center justify-between px-3 py-2 rounded-lg bg-rose-50 dark:bg-rose-950/40 text-rose-700 dark:text-rose-300 font-bold text-decoration-none"
+        >
+          <span>Student Portal ({{ authState.user?.fullName?.split(' ')[0] }})</span>
+          <span class="text-xs text-rose-600 dark:text-rose-400">Profile</span>
+        </router-link>
+        <button
+          v-else
+          @click="isMobileMenuOpen = false; authStore.openAuthModal('login')"
+          class="flex items-center justify-between w-full px-3 py-2 rounded-lg text-left text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 font-semibold cursor-pointer"
+        >
+          <span>Sign In / Student Account</span>
+          <span class="text-xs text-gray-400">Auth</span>
+        </button>
         <a
           href="https://erp.kaizen.paradox-bd.com"
           target="_blank"
@@ -228,6 +268,7 @@
 <script setup>
 import { ref, computed, watch } from 'vue'
 import { useRoute } from 'vue-router'
+import { authStore, authState } from '../store/authStore.js'
 import LiveTicker from './LiveTicker.vue'
 
 defineProps({
