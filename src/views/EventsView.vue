@@ -85,11 +85,11 @@ const selectedYear = ref('all')
 const selectedEvent = ref(null)
 
 const categories = [
-  { id: 'all', label: 'All Championships' },
-  { id: 'world-champs', label: 'World Championships' },
-  { id: 'karate-one', label: 'Karate 1 Circuit' },
-  { id: 'continental', label: 'Continental' },
-  { id: 'multisport', label: 'Multisport / Olympics' },
+  { id: 'all', label: 'All Events' },
+  { id: 'university', label: 'Inter-University' },
+  { id: 'divisional', label: 'Divisional & Regional' },
+  { id: 'grading', label: 'Dan & Kyu Grading' },
+  { id: 'workshop', label: 'Workshops & Camps' },
   { id: 'past', label: 'Past Championships' }
 ]
 

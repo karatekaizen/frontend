@@ -66,11 +66,10 @@ const articles = wkfService.getNewsArticles()
 
 const categories = [
   'All',
-  'Asian Games',
-  'Youth League',
-  'Governance',
-  'Social Legacy',
-  'Olympics'
+  'Championship',
+  'Leadership',
+  'Academy',
+  'Technique'
 ]
 
 const {

@@ -231,6 +231,16 @@ Whether you are stepping onto the tatami for the first time or advancing from Wh
     "male-kumite-75": [
       { rank: 1, name: "Loveraj Acharya", country: "HSTU Dojo", code: "HKD", flag: "🇧🇩", points: 3120, trend: "up", title: "Regional Champion -75kg", avatar: "https://res.cloudinary.com/dksn30eyz/image/upload/c_fill,w_300,h_300,g_face,q_auto,r_max/favourite/IMG_20251108_215737_zxprcw.jpg", bio: "Explosive Kumite striker known for tactical counter-timing and gyaku-tsuki precision." },
       { rank: 2, name: "Md. Tanvir Rahman", country: "HSTU Dojo", code: "HKD", flag: "🇧🇩", points: 2710, trend: "up", title: "Kumite Silver Medalist", avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=200&q=80", bio: "Competitive fighter with rapid closing speed and dynamic ashirai sweeps." }
+    ],
+    "male-kumite-60": [
+      { rank: 1, name: "Rafiq Ahmed", country: "AFEAC Branch", code: "AFE", flag: "🇧🇩", points: 2840, trend: "up", title: "Divisional Finalist -60kg", avatar: "https://res.cloudinary.com/dksn30eyz/image/upload/c_fill,w_300,h_300,g_face,q_auto,r_max/favourite/IMG_20251108_221125_hfljw3.jpg", bio: "Agile lightweight fighter with rapid mawashi-geri and counter-scoring timing." },
+      { rank: 2, name: "Md. Hasan", country: "HSTU Dojo", code: "HKD", flag: "🇧🇩", points: 2510, trend: "stable", title: "Bronze Medalist -60kg", avatar: "https://res.cloudinary.com/dksn30eyz/image/upload/c_fill,w_300,h_300,g_face,q_auto,r_max/favourite/IMG-20250822-WA0053_qiobdp.jpg", bio: "Consistent performer with sharp defensive parries and explosive kizami-tsuki." }
+    ],
+    "female-kumite-68": [
+      { rank: 1, name: "Sadia Afrin", country: "HSTU Dojo", code: "HKD", flag: "🇧🇩", points: 2950, trend: "up", title: "Regional Medalist -68kg", avatar: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=200&q=80", bio: "Strong offensive lead with dominant distance control and scored ippons." }
+    ],
+    "female-kumite-50": [
+      { rank: 1, name: "Tasnim Jahan", country: "HSTU Dojo", code: "HKD", flag: "🇧🇩", points: 2620, trend: "up", title: "Junior Division Champion -50kg", avatar: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=200&q=80", bio: "High-cadence fighter specializing in deceptive blitz punches and sweep transitions." }
     ]
   },
 
