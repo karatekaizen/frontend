@@ -173,6 +173,17 @@
                     class="w-full px-3 py-2 text-sm rounded-lg border border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-gray-800 text-gray-900 dark:text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-rose-500/40 focus:border-rose-400 transition"
                   />
                 </div>
+                <div class="flex flex-col gap-1">
+                  <label class="text-xs font-semibold text-gray-600 dark:text-gray-400">Home Dojo Branch</label>
+                  <select
+                    v-model="selectedBranch"
+                    class="w-full px-3 py-2 text-sm rounded-lg border border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-gray-800 text-gray-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-rose-500/40 focus:border-rose-400 transition cursor-pointer"
+                  >
+                    <option v-for="d in dojoOptions" :key="d.slug" :value="d.branch_name">
+                      {{ d.branch_name }} ({{ d.city }})
+                    </option>
+                  </select>
+                </div>
 
                 <p class="text-[10px] text-gray-500 dark:text-gray-400 leading-relaxed">
                   By signing up you agree to Kaizen Academy's training policies.
@@ -238,33 +249,40 @@
 </template>
 
 <script setup>
-import { ref, watch } from 'vue'
+import { ref, watch, computed } from 'vue'
 import { login, signUp } from '../store/authStore.js'
+import { dojoService } from '../services/dojoService.js'
 
 const props = defineProps({
   isOpen: { type: Boolean, required: true },
-  initialMode: { type: String, default: 'login' }
+  initialMode: { type: String, default: 'login' },
+  initialBranch: { type: String, default: '' }
 })
 const emit = defineEmits(['close', 'logged-in'])
 
-const mode      = ref(props.initialMode)
-const email     = ref('')
-const password  = ref('')
-const fullName  = ref('')
-const showPwd   = ref(false)
-const localError = ref('')
-const isSubmitting = ref(false)
-const signupDone   = ref(false)
-const signupMessage = ref('')
+const mode           = ref(props.initialMode)
+const email          = ref('')
+const password       = ref('')
+const fullName       = ref('')
+const showPwd        = ref(false)
+const localError     = ref('')
+const isSubmitting   = ref(false)
+const signupDone     = ref(false)
+const signupMessage  = ref('')
+const selectedBranch = ref(props.initialBranch || 'HSTU Campus Karate Dojo')
+
+const dojoOptions = computed(() => dojoService.getDojos())
 
 watch(() => props.isOpen, (open) => {
   if (open) {
     mode.value = props.initialMode
+    if (props.initialBranch) selectedBranch.value = props.initialBranch
     clearState()
   }
 })
 
 watch(() => props.initialMode, (m) => { mode.value = m })
+watch(() => props.initialBranch, (b) => { if (b) selectedBranch.value = b })
 
 function clearState() {
   email.value = ''
@@ -297,7 +315,7 @@ async function handleSignup() {
     return
   }
   isSubmitting.value = true
-  const res = await signUp(fullName.value.trim(), email.value.trim())
+  const res = await signUp(fullName.value.trim(), email.value.trim(), selectedBranch.value)
   isSubmitting.value = false
   if (res.success) {
     signupDone.value = true

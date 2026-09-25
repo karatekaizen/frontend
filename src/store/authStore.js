@@ -119,11 +119,18 @@ export async function login(email, password) {
  * email link. Returns { success, code, message }
  * code 1 = email sent | code 2 = needs admin verify (no SMTP yet)
  */
-export async function signUp(fullName, email) {
+export async function signUp(fullName, email, branch = '') {
   state.error = null
   state.loading = true
   try {
     const csrf = await getCSRF()
+    const payload = {
+      email,
+      full_name: fullName,
+      verify_terms: 1,
+      user_category: 'Student',
+    }
+    if (branch) payload.branch = branch
     const r = await fetch(`${LMS_BASE}/api/method/lms.lms.user.sign_up`, {
       method: 'POST',
       credentials: 'include',
@@ -132,12 +139,7 @@ export async function signUp(fullName, email) {
         'Accept': 'application/json',
         'X-Frappe-CSRF-Token': csrf,
       },
-      body: JSON.stringify({
-        email,
-        full_name: fullName,
-        verify_terms: 1,
-        user_category: 'Student',
-      }),
+      body: JSON.stringify(payload),
     })
     const data = await r.json().catch(() => ({}))
     if (!r.ok) {

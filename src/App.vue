@@ -31,6 +31,7 @@
     <AuthModal
       :is-open="isAuthOpen"
       :initial-mode="authMode"
+      :initial-branch="authBranch"
       @close="isAuthOpen = false"
       @logged-in="isAuthOpen = false"
     />
@@ -60,6 +61,7 @@ import ErrorBoundary from './components/ui/ErrorBoundary.vue'
 const isSearchOpen = ref(false)
 const isAuthOpen   = ref(false)
 const authMode     = ref('login')
+const authBranch   = ref('')
 
 // Initialize theme from tweakStore
 initTheme()
@@ -70,8 +72,9 @@ onMounted(() => {
 })
 
 // Provide openAuthModal so any descendant can open the modal
-function openAuthModal(mode = 'login') {
+function openAuthModal(mode = 'login', branch = '') {
   authMode.value = mode
+  authBranch.value = branch
   isAuthOpen.value = true
 }
 provide('openAuthModal', openAuthModal)
@@ -87,11 +90,17 @@ function handleGlobalKeydown(e) {
   }
 }
 
+function handleOpenAuthEvent(e) {
+  openAuthModal(e.detail?.mode || 'login', e.detail?.dojo || '')
+}
+
 onMounted(() => {
   window.addEventListener('keydown', handleGlobalKeydown)
+  window.addEventListener('open-auth-modal', handleOpenAuthEvent)
 })
 
 onUnmounted(() => {
   window.removeEventListener('keydown', handleGlobalKeydown)
+  window.removeEventListener('open-auth-modal', handleOpenAuthEvent)
 })
 </script>

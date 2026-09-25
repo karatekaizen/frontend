@@ -326,7 +326,8 @@ const primaryLinks = [
   { path: '/events', label: 'Events' },
   { path: '/ranking', label: 'Rankings' },
   { path: '/news', label: 'News' },
-  { path: '/prospectus', label: 'Prospectus' }
+  { path: '/prospectus', label: 'Prospectus' },
+  { path: '/dojos', label: 'Dojos' }
 ]
 
 const moreNavLinks = [

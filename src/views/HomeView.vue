@@ -121,33 +121,17 @@
       <SectionHeader
         eyebrow="Our Network"
         title="Dojo Training Branches"
-        actionText="About Academy & Venues"
-        actionTo="/about"
+        actionText="Explore All Dojo Branches"
+        actionTo="/dojos"
         :level="2"
       />
 
-      <div class="mt-8 grid grid-cols-1 md:grid-cols-3 gap-6">
-        <div
-          v-for="branch in branches"
-          :key="branch.id"
-          class="p-6 rounded-2xl bg-white dark:bg-gray-850 border border-gray-200/80 dark:border-gray-800 space-y-3 shadow-xs hover:border-rose-500/40 transition-all"
-        >
-          <div class="flex items-center justify-between">
-            <span class="text-xs font-bold px-2.5 py-1 rounded-full bg-rose-50 dark:bg-rose-950/50 text-rose-600 dark:text-rose-400 border border-rose-200 dark:border-rose-900">Est. {{ branch.established }}</span>
-            <span class="text-xs text-gray-500 font-semibold">{{ branch.activeStudents }} Students</span>
-          </div>
-          <h3 class="text-base font-bold text-gray-950 dark:text-white">
-            {{ branch.name }}
-          </h3>
-          <div class="text-xs text-gray-500 space-y-0.5">
-            <div><strong>Venue:</strong> {{ branch.venue }}</div>
-            <div><strong>Location:</strong> {{ branch.location }}</div>
-            <div><strong>Sensei:</strong> {{ branch.leadSensei }}</div>
-          </div>
-          <p class="text-xs text-gray-600 dark:text-gray-400 leading-relaxed pt-1">
-            {{ branch.description }}
-          </p>
-        </div>
+      <div class="mt-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 gap-6">
+        <DojoCard
+          v-for="dojo in activeDojos"
+          :key="dojo.slug"
+          :dojo="dojo"
+        />
       </div>
     </section>
 
@@ -201,13 +185,15 @@
 </template>
 
 <script setup>
-import { ref, computed } from 'vue'
+import { ref, computed, onMounted } from 'vue'
 import { wkfService } from '../services/wkfService.js'
+import { dojoService } from '../services/dojoService.js'
 import HeroBanner from '../components/HeroBanner.vue'
 import SectionHeader from '../components/ui/SectionHeader.vue'
 import EventRow from '../components/ui/EventRow.vue'
 import AthleteCard from '../components/ui/AthleteCard.vue'
 import ArticleCard from '../components/ui/ArticleCard.vue'
+import DojoCard from '../components/ui/DojoCard.vue'
 import EventModal from '../components/EventModal.vue'
 import AthleteModal from '../components/AthleteModal.vue'
 import ErrorBoundary from '../components/ui/ErrorBoundary.vue'
@@ -217,7 +203,12 @@ const statistics = wkfService.getStatistics()
 const allEvents = wkfService.getEvents()
 const topAthletes = wkfService.getTopAthletes()
 const latestNews = wkfService.getNewsArticles(3)
-const branches = wkfService.getBranches()
+const activeDojos = ref(dojoService.getDojos())
+
+onMounted(async () => {
+  const fetched = await dojoService.fetchDojos()
+  if (fetched && fetched.length > 0) activeDojos.value = fetched
+})
 
 const upcomingEvents = computed(() => allEvents.slice(0, 4))
 

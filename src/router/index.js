@@ -13,9 +13,13 @@ import DocumentsView from '../views/DocumentsView.vue'
 import SocialLegacyView from '../views/SocialLegacyView.vue'
 import ProfileView from '../views/ProfileView.vue'
 import ProspectusView from '../views/ProspectusView.vue'
+import DojosView from '../views/DojosView.vue'
+import DojoDetailView from '../views/DojoDetailView.vue'
 
 const routes = [
   { path: '/', name: 'Home', component: HomeView },
+  { path: '/dojos', name: 'Dojos', component: DojosView },
+  { path: '/dojo/:slug', name: 'DojoDetail', component: DojoDetailView },
   { path: '/events', name: 'Events', component: EventsView },
   { path: '/ranking', name: 'Ranking', component: RankingView },
   { path: '/news', name: 'News', component: NewsView },
