@@ -25,6 +25,7 @@ declare module 'vue' {
     Navbar: typeof import('./src/components/Navbar.vue')['default']
     ProspectusDetail: typeof import('./src/components/prospectus/ProspectusDetail.vue')['default']
     ProspectusSidebar: typeof import('./src/components/prospectus/ProspectusSidebar.vue')['default']
+    ProspectusToc: typeof import('./src/components/prospectus/ProspectusToc.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
     SearchInput: typeof import('./src/components/ui/SearchInput.vue')['default']

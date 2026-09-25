@@ -1,1658 +1,555 @@
 /**
- * prospectusData.js — Shito-Ryu Karate Curriculum & Technical Prospectus
- * Extracted and unified from the official Shito-Ryu syllabus.
+ * prospectusData.js — 100% Full-Fidelity Shito-Ryu Technical Prospectus
+ * Auto-generated from official HKD documentation with full markdown content.
  */
-export const PROSPECTUS_DATA = {
-  "stances": [
-    {
-      "slug": "heisoku",
-      "title": "Heisoku Dachi",
-      "englishName": "Heisoku Dachi",
-      "japaneseName": "Heisoku Dachi",
-      "pronunciation": "হেই-সোকু দা-চি",
-      "summary": "ক্লোজড ফুট স্ট্যান্স — দুই পায়ের আঙুল এবং গোড়ালি সম্পূর্ণ যুক্ত, শীতো-রিউ কারাতের আনুষ্ঠানিক অ্যাটেনশন স্ট্যান্স।",
-      "description": "পায়ের আঙুল এবং গোড়ালি একসাথে যুক্ত — এটিকে \"ক্লোজড ফুট স্ট্যান্স\" বা বন্ধ পায়ের অবস্থান বলা হয়। এটি কারাতে ক্লাসের শুরু ও শেষে সেনসেইকে সালাম (Rei) করার সময় এবং কাতার সূচনায় ব্যবহৃত আনুষ্ঠানিক **প্রস্তুতি বা অ্যাটেনশন স্ট্যান্স**।",
-      "category": "stances",
-      "categoryLabel": "Stance (Dachi)",
-      "frontImage": "/prospectus/skills/stances/images/heisokuf.jpg",
-      "sideImage": "/prospectus/skills/stances/images/heisokus.jpg",
-      "points": [
-        "উভয় পা একসাথে রেখে গোড়ালি ও আঙুল একে অপরকে স্পর্শ করবে",
-        "পা দুটি একদম সোজা সামনের দিকে নির্দেশ করবে",
-        "হাঁটু সোজা থাকবে তবে শক্ত করে লক করা যাবে না",
-        "শরীরের ওজন উভয় পায়ে সমানভাবে থাকবে",
-        "মেরুদণ্ড একদম সোজা ও সোজা থাকবে",
-        "হাত দুটি শরীরের পাশে থাকবে"
-      ],
-      "powerSource": "",
-      "usage": "Heisoku Dachi মূলত আনুষ্ঠানিকতায় ব্যবহৃত হয়:\n- ক্লাস শুরু ও শেষের সালাম (Rei) করার সময়\n- কাতা শুরু করার আগের প্রস্তুত অবস্থানে"
-    },
-    {
-      "slug": "musubi",
-      "title": "Musubi Dachi",
-      "englishName": "Musubi Dachi",
-      "japaneseName": "Musubi Dachi",
-      "pronunciation": "মু-সু-বি দা-চি",
-      "summary": "ওপেন ফুট স্ট্যান্স — গোড়ালি একসাথে এবং আঙুল ৪৫ ডিগ্রি বাইরে খোলা, যা একটি গাঁটের মতো \"V\" আকৃতি তৈরি করে।",
-      "description": "গোড়ালি জোড়া লাগানো কিন্তু পায়ের আঙুল বাইরে খোলা, যা দেখতে একটি গাঁট (Musubi) বা \"V\" আকৃতির মতো। এই ওপেন-ফুট স্ট্যান্সটি আনুষ্ঠানিক প্রণাম ও সতর্ক অবস্থানের জন্য ব্যবহৃত হয়।",
-      "category": "stances",
-      "categoryLabel": "Stance (Dachi)",
-      "frontImage": "/prospectus/skills/stances/images/musubif.jpg",
-      "sideImage": "/prospectus/skills/stances/images/musubis.jpg",
-      "points": [
-        "দুই গোড়ালি পরস্পরের সাথে স্পর্শ করে থাকবে",
-        "পায়ের আঙুলগুলো বাইরের দিকে প্রায় ৪৫ ডিগ্রি কোণে নির্দেশ করবে",
-        "উপর থেকে দেখলে পা দুটি \"V\" আকৃতি গঠন করবে",
-        "হাঁটু সোজা কিন্তু শিথিল থাকবে",
-        "শরীরের ওজন দুই পায়ে সমানভাবে থাকবে"
-      ],
-      "powerSource": "",
-      "usage": "Musubi Dachi মূলত ব্যবহৃত হয়:\n- আনুষ্ঠানিক ধনুক প্রণাম (Rei) করার আগে ও পরে\n- নির্দিষ্ট কাতার শুরুতে প্রস্তুত পজিশন হিসেবে"
-    },
-    {
-      "slug": "heiko",
-      "title": "Heiko Dachi",
-      "englishName": "Heiko Dachi",
-      "japaneseName": "Heiko Dachi",
-      "pronunciation": "হেই-কো দা-চি",
-      "summary": "প্যারালাল স্ট্যান্স — পা দুটি হিপের চওড়ায় সোজা সমান্তরালভাবে রাখা। প্রাকৃতিক খোলা স্ট্যান্স।",
-      "description": "পা দুটি আলাদা এবং **সমান্তরাল** — হিপের চওড়ায় খোলা একটি নিরপেক্ষ স্ট্যান্স। \"Heiko\" অর্থ সমান্তরাল। এই স্ট্যান্সের প্রধান বৈশিষ্ট্য হলো দুই পায়ের আঙুলই একদম সোজা সামনের দিকে নির্দেশ করে।",
-      "category": "stances",
-      "categoryLabel": "Stance (Dachi)",
-      "frontImage": "/prospectus/skills/stances/images/heikof.jpg",
-      "sideImage": "/prospectus/skills/stances/images/heikos.jpg",
-      "points": [
-        "পা দুটি আনুমানিক হিপের প্রস্থের সমান চওড়া থাকবে",
-        "উভয় পা সমান্তরালভাবে সোজা সামনে থাকবে",
-        "হাঁটু শিথিলভাবে সোজা থাকবে",
-        "ওজন দুই পায়ে সমানভাবে থাকবে",
-        "সাধারণ স্বাভাবিক সোজা ভঙ্গি বজায় থাকবে"
-      ],
-      "powerSource": "",
-      "usage": "Heiko Dachi ব্যবহৃত হয়:\n- স্বাভাবিক দাঁড়িয়ে থাকার রেডি পজিশন হিসেবে\n- ওয়ার্ম-আপ এবং মৌলিক অনুশীলন করার সময়\n- টেকনিকের অন্তর্বর্তীকালীন ট্রানজিশন হিসেবে"
-    },
-    {
-      "slug": "hachiji",
-      "title": "Hachiji Dachi",
-      "englishName": "Hachiji Dachi",
-      "japaneseName": "Hachiji Dachi",
-      "pronunciation": "হা-চি-জি দা-চি",
-      "summary": "ন্যাচারাল ওপেন স্ট্যান্স — পা দুটি কাঁধ সমপরিমাণ চওড়া এবং পায়ের আঙুল বাইরের দিকে ৪৫ ডিগ্রিতে খোলা।",
-      "description": "পা দুটি কাঁধ সমপরিমাণ চওড়া রেখে পায়ের আঙুল **বাইরের দিকে ৪৫ ডিগ্রি কোণে** রাখা হয়। \"Hachiji\" শব্দটি জাপানি সংখ্যা ৮ (八) থেকে এসেছে, যা পায়ের অবস্থানের আকৃতির সাথে মিলে যায়। এটি অনুশীলনের অন্যতম প্রধান প্রাকৃতিক প্রস্তুত স্ট্যান্স।",
-      "category": "stances",
-      "categoryLabel": "Stance (Dachi)",
-      "frontImage": "/prospectus/skills/stances/images/hachijif.jpg",
-      "sideImage": "/prospectus/skills/stances/images/hachijis.jpg",
-      "points": [
-        "পা দুটি কাঁধের সমান চওড়া থাকবে",
-        "পায়ের আঙুলগুলো বাইরের দিকে ৪৫ ডিগ্রি কোণে খোলা থাকবে",
-        "হাঁটু হালকা বাঁকানো (স্বাভাবিক শিথিল মোচড়)",
-        "শরীরের ওজন দুই পায়ে সমানভাবে বন্টিত থাকবে",
-        "কাঁধ শিথিল এবং হিপ সমান্তরাল থাকবে"
-      ],
-      "powerSource": "",
-      "usage": "- অনুশীলনের প্রধান প্রস্তুত পজিশন (Yoi) হিসেবে\n- বহু কাতার শুরুর স্ট্যান্স হিসেবে"
-    },
-    {
-      "slug": "uchi-hachiji",
-      "title": "Uchi-Hachiji Dachi (Niafanchi Dachi)",
-      "englishName": "Uchi-Hachiji Dachi (Niafanchi Dachi)",
-      "japaneseName": "Uchi-Hachiji Dachi (Niafanchi Dachi)",
-      "pronunciation": "উ-চি হা-চি-জি দা-চি",
-      "summary": "ইনভার্টেড ন্যাচারাল স্ট্যান্স — পা কাঁধের চওড়া এবং পায়ের আঙুল ভেতরের দিকে ৪৫ ডিগ্রি কোণে নির্দেশিত।",
-      "description": "পা দুটি কাঁধ সমপরিমাণ চওড়া এবং পায়ের আঙুল **ভেতরের দিকে ৪৫ ডিগ্রি কোণে** ঘোরানো থাকে। \"Uchi\" অর্থ ভেতরের দিক। এটি হিপে একটি শক্তিশালী অভ্যন্তরীণ টান তৈরি করে এবং এটি নাইফাঞ্চি (Naifanchi) কাতার সাথে সম্পর্কিত।",
-      "category": "stances",
-      "categoryLabel": "Stance (Dachi)",
-      "frontImage": "/prospectus/skills/stances/images/naihanchif.jpg",
-      "sideImage": "/prospectus/skills/stances/images/naihanchis.jpg",
-      "points": [
-        "পা দুটি কাঁধের প্রস্থের সমান চওড়া থাকবে",
-        "পায়ের আঙুল ভেতরের দিকে ৪৫ ডিগ্রি কোণে থাকবে",
-        "হাঁটু দুটি বাইরের দিকে হালকা চাপ দিয়ে রাখতে হবে",
-        "উরু ও হিপের মধ্যে অভ্যন্তরীণ পেশীসংকোচন বা টেনশন থাকবে",
-        "ওজন দুই পায়ে সমানভাবে থাকবে"
-      ],
-      "powerSource": "",
-      "usage": "- Naifanchi (Naihanchi) কাতা সিরিজে ব্যবহৃত হয়\n- হিপ ও পায়ের অভ্যন্তরীণ শক্তি বৃদ্ধির প্রশিক্ষণে"
-    },
-    {
-      "slug": "shiko",
-      "title": "Shiko Dachi",
-      "englishName": "Shiko Dachi",
-      "japaneseName": "Shiko Dachi",
-      "pronunciation": "শি-কো দা-চি",
-      "summary": "স্ট্র্যাডল লেগ স্ট্যান্স — দুই পা চওড়া করে হাঁটু বাঁকানো \"সুমো\" স্ট্যান্স, যেখানে পায়ের আঙুল বাইরের দিকে ৪৫ ডিগ্রিতে থাকে।",
-      "description": "একটি চওড়া স্ট্র্যাডল-লেগ স্ট্যান্স যেখানে হাঁটু গভীরভাবে বাঁকানো থাকে — সুমো কুস্তিগীরদের অবস্থানের সাথে মিল থাকায় একে **\"সুমো\" স্ট্যান্স**ও বলা হয়। এটি পায়ের শক্তি ও নমনীয়তার জন্য অন্যতম চ্যালেঞ্জিং স্ট্যান্স।",
-      "category": "stances",
-      "categoryLabel": "Stance (Dachi)",
-      "frontImage": "/prospectus/skills/stances/images/shikof.jpg",
-      "sideImage": "/prospectus/skills/stances/images/shikos.jpg",
-      "points": [
-        "পা দুটি কাঁধের প্রস্থের চেয়ে বেশ চওড়া হবে (প্রায় ১.৫ থেকে ২ গুণ)",
-        "পায়ের আঙুল বাইরের দিকে ৪৫ ডিগ্রি কোণে নির্দেশ করবে",
-        "হাঁটু গভীরভাবে বাঁকানো হবে এবং পায়ের আঙুলের ওপর দিয়ে বাইরের দিকে থাকবে",
-        "উরু মেঝের সমান্তরালে নিয়ে আসার চেষ্টা করতে হবে",
-        "মোট ওজন দুই পায়ে সমান থাকবে এবং মেরুদণ্ড সোজা থাকবে"
-      ],
-      "powerSource": "",
-      "usage": "- Shiko এবং Nahate ঘরানার বিভিন্ন কাতাতে ব্যবহৃত হয়\n- কাছের শক্তিশেলী আক্রমণের অনুশীলনে\n- পায়ের শক্তি বাড়ানোর জন্য বিশেষ ব্যায়াম হিসেবে"
-    },
-    {
-      "slug": "moto",
-      "title": "Moto Dachi",
-      "englishName": "Moto Dachi",
-      "japaneseName": "Moto Dachi",
-      "pronunciation": "মো-তো দা-চি",
-      "summary": "বেসিক ফরোয়ার্ড স্ট্যান্স — সামনের হাঁটু সামান্য বাঁকানো, Zenkutsu Dachi-এর চেয়ে কিছুটা সংক্ষিপ্ত ফরোয়ার্ড স্ট্যান্স।",
-      "description": "সামনের হাঁটু **সামান্য বাঁকানো** একটি ফরোয়ার্ড স্ট্যান্স — যা Zenkutsu Dachi এর তুলনায় সংক্ষিপ্ত এবং সোজা। \"Moto\" অর্থ মৌলিক বা মূল। এটি শীতো-রিউ কুমিতে এবং মৌলিক প্রশিক্ষণে সর্বাধিক ব্যবহৃত হয়।",
-      "category": "stances",
-      "categoryLabel": "Stance (Dachi)",
-      "frontImage": "/prospectus/skills/stances/images/motof.jpg",
-      "sideImage": "/prospectus/skills/stances/images/motos.jpg",
-      "points": [
-        "সামনের পা সোজা সামনে নির্দেশ করবে",
-        "পেছনের পা বাইরের দিকে ৪৫ ডিগ্রি কোণে থাকবে",
-        "সামনের হাঁটু সামান্য বাঁকানো থাকবে",
-        "স্ট্যান্সের দৈর্ঘ্য মাঝারি — প্রায় এক কাঁধ সমপরিমাণ",
-        "ওজন বন্টন: প্রায় ৬০% সামনে এবং ৪০% পেছনে"
-      ],
-      "powerSource": "",
-      "usage": "- বেসিক ড্রিল (Kihon) এবং কারাতে স্পারিংয়ে (Kumite)\n- Nekoashi এবং Zenkutsu-এর মধ্যে স্থানান্তরের সময়\n- Heian (Pinan) কাতাতে ব্যাপকভাবে ব্যবহৃত হয়"
-    },
-    {
-      "slug": "zenkutsu",
-      "title": "Zenkutsu Dachi",
-      "englishName": "Zenkutsu Dachi",
-      "japaneseName": "Zenkutsu Dachi",
-      "pronunciation": "জেন-কুতসু দা-চি",
-      "summary": "লং ফরোয়ার্ড স্ট্যান্স — সামনের হাঁটু গভীরভাবে বাঁকানো এবং পেছনের পা প্রসারিত। শীতো-রিউর মূল পাওয়ার ড্রাইভ স্ট্যান্স।",
-      "description": "একটি দীর্ঘ ফরোয়ার্ড স্ট্যান্স যেখানে সামনের হাঁটু **গভীরভাবে বাঁকানো** এবং পেছনের পা সোজা প্রসারিত থাকে। \"Zenkutsu\" অর্থ সামনের দিকে ঝুঁকে থাকা। এটি কারাতের মূল পাওয়ার স্ট্যান্স এবং অধিকাংশ অগ্রগামী আক্রমণ ও ব্লকে ব্যবহৃত হয়।",
-      "category": "stances",
-      "categoryLabel": "Stance (Dachi)",
-      "frontImage": "/prospectus/skills/stances/images/zenkutsuf.jpg",
-      "sideImage": "/prospectus/skills/stances/images/zenkutsus.jpg",
-      "points": [
-        "সামনের পা সোজা সামনে নির্দেশ করবে",
-        "পেছনের পা বাইরের দিকে ৪৫ ডিগ্রি কোণে থাকবে",
-        "সামনের হাঁটু সঠিকভাবে গোড়ালি ও আঙুলের ওপর গভীরভাবে বাঁকানো",
-        "পেছনের পা সম্পূর্ণ সোজা থাকবে এবং গোড়ালি মাটিতে লাগানো থাকবে",
-        "ওজন বন্টন: প্রায় ৭০% সামনে এবং ৩০% পেছনে"
-      ],
-      "powerSource": "- হিপ রোটেশন (Koshi no kaiten) এবং পেছনের পায়ের গ্রাউন্ড ফোর্সের মাধ্যমে তীব্র শক্তি উৎপন্ন হয়।",
-      "usage": "- আক্রমণ (যেমন Oi-tsuki) এবং ব্লকে ব্যবহৃত সবচেয়ে পরিচিত স্ট্যান্স।\n- সকল Heian/Pinan কাতাতে এটি বিদ্যমান।"
-    },
-    {
-      "slug": "nekoashi",
-      "title": "Nekoashi Dachi",
-      "englishName": "Nekoashi Dachi",
-      "japaneseName": "Nekoashi Dachi",
-      "pronunciation": "নে-কো-আ-শি দা-চি",
-      "summary": "ক্যাট ফুট স্ট্যান্স — প্রায় সমস্ত ওজন পেছনের পায়ে, সামনের পা মাটিতে হালকাভাবে স্পর্শ করে থাকে। অত্যন্ত ক্ষিপ্র প্রতিরক্ষামূলক স্ট্যান্স।",
-      "description": "**\"বিড়ালের পায়ের স্ট্যান্স\"** — শরীরের প্রায় ৯০% ওজন পেছনের পায়ে থাকে এবং সামনের পায়ের কেবল বল (Ball of foot) মেঝেকে হালকাভাবে স্পর্শ করে থাকে। বিড়ালের মতো যেকোনো মুহূর্তে লাফিয়ে ওঠা বা সরে যাওয়ার জন্য এই স্ট্যান্সটি বিখ্যাত।",
-      "category": "stances",
-      "categoryLabel": "Stance (Dachi)",
-      "frontImage": "/prospectus/skills/stances/images/nekof.jpg",
-      "sideImage": "/prospectus/skills/stances/images/nekos.jpg",
-      "points": [
-        "পেছনের পায়ে প্রায় ৯০% ওজন থাকবে",
-        "সামনের পা মাটিতে শুধুমাত্র সামনের অংশে (Ball of foot) হালকা ছোঁয়া থাকবে",
-        "পেছনের হাঁটু গভীরভাবে বাঁকানো থাকবে",
-        "সামনের পা যেকোনো মুহূর্তে কিকের জন্য তুলে ফেলা সম্ভব"
-      ],
-      "powerSource": "",
-      "usage": "- স্পারিং (Kumite) এবং আত্মরক্ষামূলক পরিস্থিতিতে\n- Kushin নীতির প্রয়োগে"
-    },
-    {
-      "slug": "sanchin",
-      "title": "Sanchin Dachi",
-      "englishName": "Sanchin Dachi",
-      "japaneseName": "Sanchin Dachi",
-      "pronunciation": "সান-চিন দা-চি",
-      "summary": "আওয়ারগ্লাস স্ট্যান্স — ভেতরের দিকে পায়ের টেনশন সৃষ্টিকারী স্ট্যান্স, যা পুরো শরীরে পেশীসংকোচন তৈরি করে।",
-      "description": "**ইনওয়ার্ড টেনশন স্ট্যান্স** — একে \"আওয়ারগ্লাস\" (বালুঘড়ি) স্ট্যান্সও বলা হয়। \"Sanchin\" অর্থ \"তিনটি যুদ্ধ\" (মন, শরীর ও আত্মা)। এই স্ট্যান্সে পা ও উরুর পেশীতে ভেতরের দিকে তীব্র সংকোচন তৈরি করা হয়।",
-      "category": "stances",
-      "categoryLabel": "Stance (Dachi)",
-      "frontImage": "/prospectus/skills/stances/images/sanchinf.jpg",
-      "sideImage": "/prospectus/skills/stances/images/sanchins.jpg",
-      "points": [
-        "এক পা অন্য পায়ের এক কদম সামনে থাকবে",
-        "দুই পায়ের আঙুলই ভেতরের দিকে ঘুরানো থাকবে",
-        "সামনের পায়ের গোড়ালি পেছনের পায়ের আঙুলের লাইনে থাকবে (T-আকৃতি)",
-        "হাঁটু দুটি ভেতরের দিকে চাপ দিয়ে বাঁকানো থাকবে",
-        "শরীরের কেন্দ্র (Core) এবং তলপেট শক্ত সংকুচিত থাকবে"
-      ],
-      "powerSource": "",
-      "usage": "- **Sanchin kata** এবং Tensho kata-র মূল ভিত্তি স্ট্যান্স।\n- শরীরের দৃঢ়তা ও নিঃশ্বাসের নিয়ন্ত্রণ (Ibuki) বাড়াতে ব্যবহৃত হয়।"
-    },
-    {
-      "slug": "kokutsu",
-      "title": "Kokutsu Dachi",
-      "englishName": "Kokutsu Dachi",
-      "japaneseName": "Kokutsu Dachi",
-      "pronunciation": "কো-কুতসু দা-চি",
-      "summary": "ব্যাক স্ট্যান্স — ওজন প্রধানত পেছনের পায়ে, শরীর পেছনের দিকে মুখ করে থাকা অত্যন্ত শক্তিশালী প্রতিরক্ষামূলক স্ট্যান্স।",
-      "description": "**\"পেছনের দিকে ঝুঁকে থাকা\" স্ট্যান্স** — যাকে ব্যাক স্ট্যান্সও বলা হয়। \"Kokutsu\" অর্থ পেছনের দিকে ঝুঁকানো। শরীরের ওজনের বেশিরভাগ অংশ (৭০–৮০%) পেছনের পায়ে রাখা হয়, যা এটিকে একটি কার্যকর **আত্মরক্ষামূলক ও পাল্টা আক্রমণের স্ট্যান্স** হিসেবে গড়ে তোলে।",
-      "category": "stances",
-      "categoryLabel": "Stance (Dachi)",
-      "frontImage": "/prospectus/skills/stances/images/kokutsuf.jpg",
-      "sideImage": "/prospectus/skills/stances/images/kokutsus.jpg",
-      "points": [
-        "ওজনের প্রায় ৭০-৮০% পেছনের পায়ে থাকবে",
-        "পেছনের হাঁটু গভীরভাবে বাঁকানো থাকবে",
-        "সামনের পা সোজা সামনে এবং পেছনের পা ৯০ ডিগ্রি বাইরের দিকে নির্দেশ করবে",
-        "সামনের পা মাটি স্পর্শ করে থাকবে কিন্তু হালকা থাকবে"
-      ],
-      "powerSource": "",
-      "usage": "- Shuto-uke (নাইফ-হ্যান্ড ব্লক) এর সাথে ব্যাপকভাবে ব্যবহৃত হয়।\n- Heian (Pinan) এবং অন্যান্য বহু কাতাতে প্রতিরক্ষামূলক ভঙ্গিতে এটি ব্যবহৃত হয়।"
-    },
-    {
-      "slug": "kosa",
-      "title": "Kosa Dachi",
-      "englishName": "Kosa Dachi",
-      "japaneseName": "Kosa Dachi",
-      "pronunciation": "কো-সা দা-চি",
-      "summary": "হুকড লেগ স্ট্যান্স — এক পা অন্য পায়ের পেছনে ক্রস করা অবস্থায় হাঁটু নিচু করে রাখা স্ট্যান্স।",
-      "description": "**\"ক্রস করা পায়ের স্ট্যান্স\"** — এক পা অন্য পায়ের পেছনের দিকে ক্রস করে হাঁটু বাঁকিয়ে রাখা হয়। \"Kosa\" অর্থ ক্রস বা মোড়। কাতার মধ্যে দ্রুত ঘোরার বা লাফিয়ে নামার সময়ে এই স্ট্যান্স সাময়িকভাবে দেখা যায়।",
-      "category": "stances",
-      "categoryLabel": "Stance (Dachi)",
-      "frontImage": "/prospectus/skills/stances/images/kosadachif.jpg",
-      "sideImage": "/prospectus/skills/stances/images/kosadachis.jpg",
-      "points": [
-        "এক পা অন্য পায়ের পেছনে গিয়ে ক্রস হবে",
-        "উভয় হাঁটু বাঁকানো থাকবে",
-        "পেছনের পা আঙুলের ওপর (Ball of foot) ভর দিয়ে থাকবে",
-        "সামনের পা পুরো মেঝের ওপর ভর রাখবে"
-      ],
-      "powerSource": "",
-      "usage": "- কাতাতে ১৮০° বা ৩৬০° দ্রুত ঘোরার মুহূর্তে\n- লাফ দেওয়া বা কিক করার ঠিক আগের ক্ষণে"
-    },
-    {
-      "slug": "renoji",
-      "title": "Renoji Dachi",
-      "englishName": "Renoji Dachi",
-      "japaneseName": "Renoji Dachi",
-      "pronunciation": "রে-নো-জি দা-চি",
-      "summary": "এল-শেপ স্ট্যান্স — পা দুটি জাপানি কাতাকানা বর্ণ \"レ\" (Re) বা ইংরেজি \"L\" অক্ষরের আকৃতিতে রাখা হয়।",
-      "description": "একটি স্ট্যান্স যেখানে পা দুটি **ইংরেজি \"L\" অক্ষরের** আকৃতিতে থাকে — জাপানি কাতাকানা বর্ণ レ (Re) এর নামানুসারে এর নামকরণ করা হয়েছে। এক পা সামনে এবং অন্য পা পাশে ৯০ ডিগ্রিতে অবস্থান করে।",
-      "category": "stances",
-      "categoryLabel": "Stance (Dachi)",
-      "frontImage": "/prospectus/skills/stances/images/renojif.jpg",
-      "sideImage": "/prospectus/skills/stances/images/renojis.jpg",
-      "points": [
-        "এক পা সোজা সামনে এবং অন্য পা পাশে ৯০ ডিগ্রি সমকোণে থাকবে",
-        "পেছনের পায়ের গোড়ালি সামনের পায়ের গোড়ালির কাছাকাছি বা পেছনে থাকবে",
-        "হাঁটুর বাঁক স্বাভাবিক ও সোজা থাকবে",
-        "ওজন সামান্য পেছনের পায়ে বেশি থাকবে"
-      ],
-      "powerSource": "",
-      "usage": "- কৌশল পরিবর্তনের সময় মধ্যবর্তী ট্রানজিশন স্ট্যান্স হিসেবে ব্যবহৃত হয়।"
-    },
-    {
-      "slug": "sagiashi",
-      "title": "Sagiashi Dachi",
-      "englishName": "Sagiashi Dachi",
-      "japaneseName": "Sagiashi Dachi",
-      "pronunciation": "সা-গি-আ-শি দা-চি",
-      "summary": "হেরন ফুট স্ট্যান্স — এক পায়ে দাঁড়িয়ে থাকার স্ট্যান্স, যেখানে অন্য পা হাঁটু পর্যন্ত তুলে রাখা হয়।",
-      "description": "**\"সারস পাখির পায়ের স্ট্যান্স\"** — সারস পাখি (Sagi) যেভাবে এক পায়ে দাঁড়িয়ে থাকে, ঠিক সেই ভঙ্গিতে এটি করা হয়। একটি পায়ে সমস্ত ভর রেখে অন্য পা তুলে হাঁটু ভাজ করে পাশে রাখা হয়।",
-      "category": "stances",
-      "categoryLabel": "Stance (Dachi)",
-      "frontImage": "/prospectus/skills/stances/images/sagiashif1.jpg",
-      "sideImage": "/prospectus/skills/stances/images/sagiashib1.jpg",
-      "points": [
-        "সমস্ত শরীরের ওজন একটিমাত্র পায়ে থাকবে",
-        "ভর রাখা পা সামান্য হাঁটুতে বাঁকানো থাকবে যাতে ভারসাম্য থাকে",
-        "মুক্ত পা উঁচুতে হাঁটু তুলে অন্য পায়ের হাঁটুর কাছে ধরে রাখা হবে",
-        "শরীরের ভারসাম্য রক্ষা করা জরুরি"
-      ],
-      "powerSource": "",
-      "usage": "- উন্নত কাতার বিভিন্ন জটিল কৌশলে\n- এক পায়ে কিক করার চ্যাম্বারিং পজিশন হিসেবে"
-    },
-    {
-      "slug": "tee-ji",
-      "title": "Tee-Ji Dachi",
-      "englishName": "Tee-Ji Dachi",
-      "japaneseName": "Tee-Ji Dachi",
-      "pronunciation": "টি-জি দা-চি",
-      "summary": "টি-শেপ স্ট্যান্স — পা দুটি উল্টো ইংরেজি \"T\" অক্ষরের আকৃতিতে সাজানো থাকে।",
-      "description": "একটি স্ট্যান্স যেখানে পা দুটি **উল্টো \"T\" অক্ষরের** রূপ ধারণ করে — জাপানি কাতাকানা বর্ণ テ (Te) থেকে এই নাম এসেছে। সামনের পা সামনে থাকে এবং পেছনের পা লম্বভাবে সামনের গোড়ালির পেছনে থাকে।",
-      "category": "stances",
-      "categoryLabel": "Stance (Dachi)",
-      "frontImage": "/prospectus/skills/stances/images/tdachif.jpg",
-      "sideImage": "/prospectus/skills/stances/images/tdachis.jpg",
-      "points": [
-        "সামনের পা সোজা সামনে থাকবে",
-        "পেছনের পা লম্বভাবে (৯০ ডিগ্রি) সামনের গোড়ালির ঠিক পেছনে থাকবে",
-        "এটি উপর থেকে দেখলে একটি \"T\" আকৃতি গঠন করে"
-      ],
-      "powerSource": "",
-      "usage": "- নির্দিষ্ট কাতার মধ্যে দিক পরিবর্তন ও মোচড়ের সময় ব্যবহৃত হয়।"
-    },
-    {
-      "slug": "ukiashi",
-      "title": "Ukiashi Dachi",
-      "englishName": "Ukiashi Dachi",
-      "japaneseName": "Ukiashi Dachi",
-      "pronunciation": "উ-কি-আ-শি দা-চি",
-      "summary": "ফ্লোটিং ফুট স্ট্যান্স — Nekoashi Dachi এর মতোই তবে কিছুটা সোজা, যেখানে সামনের পা হালকা ভাসমান থাকে।",
-      "description": "**Nekoashi Dachi-এর অনুরূপ** একটি স্ট্যান্স, তবে শরীর কিছুটা সোজা এবং সামনের পাটি আলতোভাবে ভাসমান (Uki) অবস্থায় থাকে। সামনের পায়ে কোনো ওজন থাকে না এবং শরীর প্রস্তুত থাকে যেকোনো দিকে সরে যাওয়ার জন্য।",
-      "category": "stances",
-      "categoryLabel": "Stance (Dachi)",
-      "frontImage": "/prospectus/skills/stances/images/ukiashidachif.jpg",
-      "sideImage": "/prospectus/skills/stances/images/ukiashidachis.jpg",
-      "points": [
-        "Nekoashi-এর মতো ভঙ্গি তবে শরীর কিছুটা সোজা",
-        "সামনের পা একদম শিথিল ও ভাসমান",
-        "পেছনের পায়ে সম্পূর্ণ ভর থাকবে"
-      ],
-      "powerSource": "",
-      "usage": "- কৌশলগত অবস্থান পরিবর্তন ও দিক পরিবর্তনের জন্য।"
-    }
-  ],
-  "blocks": [
-    {
-      "slug": "gedan-barai",
-      "title": "Gedan Barai Uke — Low Sweep Block",
-      "englishName": "Low Sweep Block",
-      "japaneseName": "Gedan Barai Uke",
-      "pronunciation": "গে-দান বা-রাই উ-কে",
-      "summary": "মৌলিক নিম্ন স্তরের ডাউনওয়ার্ড সুইপিং ব্লক — নাভি, তলপেট ও পায়ের দিকে আসা আক্রমণ প্রতিহত করে।",
-      "description": "**নিম্ন স্তরের ডাউনওয়ার্ড সুইপিং ব্লক** — কারাতে প্রশিক্ষণে শেখানো প্রথম ও অত্যন্ত মৌলিক ব্লকগুলোর একটি। \"Gedan\" অর্থ নিম্নাঞ্চল, \"Barai\" অর্থ ঝাড়ু দেওয়া বা সুইপ করা। নাভি বা উরুর দিকে আসা আক্রমণ সরাতে বাহু দিয়ে কোণাকুণি নিচে সোয়াইপ করা হয়।",
-      "category": "blocks",
-      "categoryLabel": "Block (Uke-Waza)",
-      "gif": "/prospectus/skills/blocks/images/gedanbari.gif",
-      "images": [
-        {
-          "alt": "Gedan Barai Uke Animation",
-          "src": "/prospectus/skills/blocks/images/gedanbari.gif"
-        },
-        {
-          "alt": "Gedan Front 1",
-          "src": "/prospectus/skills/blocks/images/gedanbf1.jpg"
-        },
-        {
-          "alt": "Gedan Side 1",
-          "src": "/prospectus/skills/blocks/images/gedanbs1.jpg"
-        },
-        {
-          "alt": "Gedan Front 2",
-          "src": "/prospectus/skills/blocks/images/gedanbf2.jpg"
-        },
-        {
-          "alt": "Gedan Side 2",
-          "src": "/prospectus/skills/blocks/images/gedanbs2.jpg"
-        },
-        {
-          "alt": "Gedan Front 3",
-          "src": "/prospectus/skills/blocks/images/gedanbf3.jpg"
-        },
-        {
-          "alt": "Gedan Side 3",
-          "src": "/prospectus/skills/blocks/images/gedanbs3.jpg"
-        },
-        {
-          "alt": "Gedan Front 4",
-          "src": "/prospectus/skills/blocks/images/gedanbf4.jpg"
-        },
-        {
-          "alt": "Gedan Side 4",
-          "src": "/prospectus/skills/blocks/images/gedanbs4.jpg"
-        },
-        {
-          "alt": "Gedan Back View",
-          "src": "/prospectus/skills/blocks/images/gedanbb.jpg"
-        }
-      ],
-      "points": [
-        "ব্লকিং হাত বিপরীত কানের কাছে উঁচুতে থাকবে",
-        "অন্য হাত কোমর বা হিপে প্রস্তুত থাকবে (Hikite)",
-        "বাহুটি কোণাকুণি নিচের দিকে সুইপ করে আনুন",
-        "ব্লকিং মুষ্টি সামনের উরুর ওপর সামান্য ওপরে অবস্থান নেবে",
-        "অন্য হাতটি দ্রুত কোমরের হিপে টেনে আনুন (Hikite)"
-      ]
-    },
-    {
-      "slug": "yoko-uke",
-      "title": "Yoko Uke (Soto Uke) — Outside Block",
-      "englishName": "Outside Block",
-      "japaneseName": "Yoko Uke",
-      "pronunciation": "ইয়োকো উ-কে / সোতো উ-কে",
-      "summary": "মধ্যস্তরের ব্লক যা ভেতর থেকে বাইরের দিকে চালিত হয় — বুকের মাঝখানের আক্রমণকে বাইরের দিকে সরিয়ে দেয়।",
-      "description": "ব্লকটি শরীরের কেন্দ্র থেকে **বাইরের দিকে** চালিত হয়। \"Soto\" অর্থ বাইর। মধ্যস্তরের ঘুসি বা আক্রমণকে বুকের সেন্টারলাইন থেকে বাইরের দিকে সরিয়ে দিতে এটি ব্যবহৃত হয়।",
-      "category": "blocks",
-      "categoryLabel": "Block (Uke-Waza)",
-      "gif": "/prospectus/skills/blocks/images/sotouke.gif",
-      "images": [
-        {
-          "alt": "Yoko Uke Animation",
-          "src": "/prospectus/skills/blocks/images/sotouke.gif"
-        },
-        {
-          "alt": "Yoko Front 1",
-          "src": "/prospectus/skills/blocks/images/sotof1.jpg"
-        },
-        {
-          "alt": "Yoko Side 1",
-          "src": "/prospectus/skills/blocks/images/sotos1.jpg"
-        },
-        {
-          "alt": "Yoko Front 2",
-          "src": "/prospectus/skills/blocks/images/sotof2.jpg"
-        },
-        {
-          "alt": "Yoko Side 2",
-          "src": "/prospectus/skills/blocks/sotos2.jpg"
-        },
-        {
-          "alt": "Yoko Front 3",
-          "src": "/prospectus/skills/blocks/images/sotof3.jpg"
-        },
-        {
-          "alt": "Yoko Side 3",
-          "src": "/prospectus/skills/blocks/images/sotos3.jpg"
-        },
-        {
-          "alt": "Yoko Front 4",
-          "src": "/prospectus/skills/blocks/images/sotof4.jpg"
-        },
-        {
-          "alt": "Yoko Side 4",
-          "src": "/prospectus/skills/blocks/images/sotos4.jpg"
-        },
-        {
-          "alt": "Yoko Back View",
-          "src": "/prospectus/skills/blocks/images/sotob.jpg"
-        }
-      ],
-      "points": [
-        "বাহুটি ভেতরের দিক থেকে বাইরের দিকে ঘোরানো হয়",
-        "কনুই প্রায় ৯০ ডিগ্রি কোণে বানো শেষ পজিশনে থাকবে",
-        "বাহুর বাইরের হাড় দিয়ে আক্রমণ প্রতিহত করা হয়"
-      ]
-    },
-    {
-      "slug": "yoko-uchi",
-      "title": "Yoko Uchi (Uchi Uke) — Inside Block",
-      "englishName": "Inside Block",
-      "japaneseName": "Yoko Uchi",
-      "pronunciation": "ইয়োকো উ-চি / উ-চি উ-কে",
-      "summary": "মধ্যস্তরের ব্লক যা বাইরে থেকে ভেতরের দিকে চালিত হয় — সেন্টারলাইনের দিকে আক্রমণকে ঘুরিয়ে দেয়।",
-      "description": "ব্লকটি বাইরের দিক থেকে **ভেতরের দিকে** (শরীরের কেন্দ্রের দিকে) চালিত হয় — Yoko Uke এর বিপরীত দিক। \"Uchi\" অর্থ ভেতর।",
-      "category": "blocks",
-      "categoryLabel": "Block (Uke-Waza)",
-      "gif": "/prospectus/skills/blocks/images/uchiuke.gif",
-      "images": [
-        {
-          "alt": "Yoko Uchi Animation",
-          "src": "/prospectus/skills/blocks/images/uchiuke.gif"
-        },
-        {
-          "alt": "Uchi Front 1",
-          "src": "/prospectus/skills/blocks/images/uchif1.jpg"
-        },
-        {
-          "alt": "Uchi Side 1",
-          "src": "/prospectus/skills/blocks/images/uchis1.jpg"
-        },
-        {
-          "alt": "Uchi Front 2",
-          "src": "/prospectus/skills/blocks/images/uchif2.jpg"
-        },
-        {
-          "alt": "Uchi Side 2",
-          "src": "/prospectus/skills/blocks/images/uchis2.jpg"
-        },
-        {
-          "alt": "Uchi Front 3",
-          "src": "/prospectus/skills/blocks/images/uchif3.jpg"
-        },
-        {
-          "alt": "Uchi Side 3",
-          "src": "/prospectus/skills/blocks/images/uchis3.jpg"
-        },
-        {
-          "alt": "Uchi Front 4",
-          "src": "/prospectus/skills/blocks/images/uchif4.jpg"
-        },
-        {
-          "alt": "Uchi Side 4",
-          "src": "/prospectus/skills/blocks/images/uchis4.jpg"
-        },
-        {
-          "alt": "Uchi Back View",
-          "src": "/prospectus/skills/blocks/images/uchib.jpg"
-        }
-      ],
-      "points": [
-        "বাহুটি নিচু ও বাইরের দিক থেকে সোয়াইপ করে ভেতরের দিকে আনা হয়",
-        "বাহুর ভেতরের অংশ দিয়ে আঘাত সরানো হয়"
-      ]
-    },
-    {
-      "slug": "age-uke",
-      "title": "Age Uke — Rising Block",
-      "englishName": "Rising Block",
-      "japaneseName": "Age Uke",
-      "pronunciation": "আ-গে উ-কে",
-      "summary": "ঊর্ধ্বমুখী রাইজিং ব্লক — মাথার দিকে আসা আক্রমণকে ওপরের দিকে তুলে সরিয়ে দেয়।",
-      "description": "**উর্ধ্বমুখী উচ্চ-স্তরের ব্লক** — যা মাথার দিকে আসা আক্রমণকে প্রতিরোধ করতে ডিজাইন করা হয়েছে। \"Age\" অর্থ ওপরের দিকে ওঠানো।",
-      "category": "blocks",
-      "categoryLabel": "Block (Uke-Waza)",
-      "gif": "/prospectus/skills/blocks/images/ageuke.gif",
-      "images": [
-        {
-          "alt": "Age Uke Animation",
-          "src": "/prospectus/skills/blocks/images/ageuke.gif"
-        },
-        {
-          "alt": "Age Front 1",
-          "src": "/prospectus/skills/blocks/images/ageukef1.jpg"
-        },
-        {
-          "alt": "Age Side 1",
-          "src": "/prospectus/skills/blocks/images/ageukes1.jpg"
-        },
-        {
-          "alt": "Age Front 2",
-          "src": "/prospectus/skills/blocks/images/ageukef2.jpg"
-        },
-        {
-          "alt": "Age Side 2",
-          "src": "/prospectus/skills/blocks/ageukes2.jpg"
-        },
-        {
-          "alt": "Age Front 3",
-          "src": "/prospectus/skills/blocks/images/ageukef3.jpg"
-        },
-        {
-          "alt": "Age Side 3",
-          "src": "/prospectus/skills/blocks/images/ageukes3.jpg"
-        },
-        {
-          "alt": "Age Front 4",
-          "src": "/prospectus/skills/blocks/images/ageukef4.jpg"
-        },
-        {
-          "alt": "Age Side 4",
-          "src": "/prospectus/skills/blocks/images/ageukes4.jpg"
-        },
-        {
-          "alt": "Age Back View",
-          "src": "/prospectus/skills/blocks/images/ageukesb.jpg"
-        }
-      ],
-      "points": [
-        "বাহুটি নিচ থেকে সোজা কপাল ও মাথার ওপরের দিকে কোণাকুণি উঠে যায়",
-        "মুষ্টি কপালের ওপর \"ছাদের\" মতো কোণ সৃষ্টি করবে"
-      ]
-    },
-    {
-      "slug": "yoko-bari-uke",
-      "title": "Yoko Bari Uke",
-      "englishName": "Side Spreading Block",
-      "japaneseName": "Yoko Bari Uke",
-      "pronunciation": "",
-      "summary": "",
-      "description": "",
-      "category": "blocks",
-      "categoryLabel": "Block (Uke-Waza)",
-      "gif": "/prospectus/skills/blocks/images/yokobari.gif",
-      "images": [],
-      "points": []
-    },
-    {
-      "slug": "uchi-otoshi-uke",
-      "title": "Uchi Otoshi Uke",
-      "englishName": "Inside Drop Block",
-      "japaneseName": "Uchi Otoshi Uke",
-      "pronunciation": "",
-      "summary": "",
-      "description": "",
-      "category": "blocks",
-      "categoryLabel": "Block (Uke-Waza)",
-      "gif": "/prospectus/skills/blocks/images/uchiot.gif",
-      "images": [],
-      "points": []
-    },
-    {
-      "slug": "tsuki-uke",
-      "title": "Tsuki Uke — Punch Block",
-      "englishName": "Thrust / Punch Block",
-      "japaneseName": "Tsuki Uke",
-      "pronunciation": "চুকি উ-কে",
-      "summary": "একই সাথে ঘুসি ও ব্লক — যেখানে প্রতিরক্ষামূলক ব্লক এবং পাল্টা আক্রমণ একসাথে সম্পন্ন হয়।",
-      "description": "**একসাথে ঘুসি ও ব্লকিং কৌশল** — এটি একটি উন্নত প্রতিরক্ষা যেখানে একটি পাঞ্চ (Tsuki) দিয়েই আক্রমণ ঠেকানো ও প্রতিপক্ষকে আঘাত হানা হয়। এটি Hangeki নীতির শারীরিক রূপ।",
-      "category": "blocks",
-      "categoryLabel": "Block (Uke-Waza)",
-      "gif": "/prospectus/skills/blocks/images/tsuke.gif",
-      "images": [
-        {
-          "alt": "Tsuki Uke Animation",
-          "src": "/prospectus/skills/blocks/images/tsuke.gif"
-        },
-        {
-          "alt": "Tsuki Front 1",
-          "src": "/prospectus/skills/blocks/images/tsukif1.jpg"
-        },
-        {
-          "alt": "Tsuki Side 1",
-          "src": "/prospectus/skills/blocks/images/tsukis1.jpg"
-        },
-        {
-          "alt": "Tsuki Front 2",
-          "src": "/prospectus/skills/blocks/images/tsukif2.jpg"
-        },
-        {
-          "alt": "Tsuki Side 2",
-          "src": "/prospectus/skills/blocks/images/tsukis2.jpg"
-        },
-        {
-          "alt": "Tsuki Back View",
-          "src": "/prospectus/skills/blocks/images/tsukib.jpg"
-        }
-      ],
-      "points": []
-    },
-    {
-      "slug": "sukui-uke",
-      "title": "Sukui Uke",
-      "englishName": "Scoop Block",
-      "japaneseName": "Sukui Uke",
-      "pronunciation": "",
-      "summary": "",
-      "description": "",
-      "category": "blocks",
-      "categoryLabel": "Block (Uke-Waza)",
-      "gif": "/prospectus/skills/blocks/images/sukui.gif",
-      "images": [],
-      "points": []
-    }
-  ],
-  "punches": [
-    {
-      "slug": "oi-tsuki",
-      "title": "Oi Tsuki — Lunge Punch",
-      "englishName": "Lunge Punch",
-      "japaneseName": "Oi Tsuki",
-      "pronunciation": "ওই চুকি",
-      "summary": "স্টেপিং লঞ্জ পাঞ্চ — সামনের পা এগিয়ে নেওয়ার সাথে সাথে একই দিকের হাত দিয়ে সামনের দিকে শক্তিশালী ঘুসি।",
-      "description": "**কদম ফেলে লঞ্জ পাঞ্চ** — সামনের পা কদম ফেলে এগিয়ে নেওয়ার সাথে একই দিকের হাত দিয়ে সোজা ঘুসি মারা হয়। \"Oi\" অর্থ অনুগমন করা — হাতটি যেন কদম ফেলা পায়ের পিছু নেয়।",
-      "category": "punches",
-      "categoryLabel": "Punch (Tsuki-Waza)",
-      "gif": "/prospectus/skills/punches/images/oi_tzuki.gif",
-      "images": [
-        {
-          "alt": "Oi Tsuki Animation",
-          "src": "/prospectus/skills/punches/images/oi_tzuki.gif"
-        },
-        {
-          "alt": "Oi Front 1",
-          "src": "/prospectus/skills/punches/images/oif1.jpg"
-        },
-        {
-          "alt": "Oi Side 1",
-          "src": "/prospectus/skills/punches/images/ois1.jpg"
-        },
-        {
-          "alt": "Oi Front 2",
-          "src": "/prospectus/skills/punches/images/oif2.jpg"
-        },
-        {
-          "alt": "Oi Side 2",
-          "src": "/prospectus/skills/punches/images/ois2.jpg"
-        },
-        {
-          "alt": "Oi Front 3",
-          "src": "/prospectus/skills/punches/images/oif3.jpg"
-        },
-        {
-          "alt": "Oi Side 3",
-          "src": "/prospectus/skills/punches/images/ois3.jpg"
-        }
-      ],
-      "points": [
-        "পেছনের পা সামনে বাড়িয়ে Zenkutsu Dachi স্ট্যান্সে যান",
-        "পা মাটিতে বসার সাথে একই সময়ে একই দিকের হাত দিয়ে সামনে ঘুসি দিন",
-        "বিপরীত হাত কোমরে টেনে আনুন (Hikite)"
-      ]
-    },
-    {
-      "slug": "gyaku-tsuki",
-      "title": "Gyaku Tsuki — Reverse Punch",
-      "englishName": "Reverse Punch",
-      "japaneseName": "Gyaku Tsuki",
-      "pronunciation": "গিয়াকু চুকি",
-      "summary": "রিভার্স পাঞ্চ — সামনের পায়ের বিপরীত পেছনের হাত দিয়ে ঘুসি। শীতো-রিউয়ের সবচেয়ে শক্তিশালী ও কার্যকর পাঞ্চ।",
-      "description": "**রিভার্স হাত দিয়ে পাঞ্চ** — সামনের পায়ের বিপরীত পেছনের হাতটি দিয়ে ঘুসি মারা হয়। \"Gyaku\" অর্থ বিপরীত। হিপ সম্পূর্ণ ঘুরিয়ে পেছনের পা ও কোমরের শক্তি যোগ হওয়ায় এটি কারাতের সর্বাধিক শক্তিশালী ঘুসি।",
-      "category": "punches",
-      "categoryLabel": "Punch (Tsuki-Waza)",
-      "gif": "/prospectus/skills/punches/images/gyaku_tzuki.GIF",
-      "images": [
-        {
-          "alt": "Gyaku Tsuki Animation",
-          "src": "/prospectus/skills/punches/images/gyaku_tzuki.GIF"
-        },
-        {
-          "alt": "Gyaku Front 1",
-          "src": "/prospectus/skills/punches/images/gyakuf1.jpg"
-        },
-        {
-          "alt": "Gyaku Side 1",
-          "src": "/prospectus/skills/punches/images/gyakus1.jpg"
-        },
-        {
-          "alt": "Gyaku Front 2",
-          "src": "/prospectus/skills/punches/images/gyakuf2.jpg"
-        },
-        {
-          "alt": "Gyaku Side 2",
-          "src": "/prospectus/skills/punches/images/gyakus2.jpg"
-        },
-        {
-          "alt": "Gyaku Front 3",
-          "src": "/prospectus/skills/punches/images/gyakuf3.jpg"
-        },
-        {
-          "alt": "Gyaku Side 3",
-          "src": "/prospectus/skills/punches/images/gyakus3.jpg"
-        }
-      ],
-      "points": [
-        "পেছনের কোমর (Hip) সজোড়ে সামনের দিকে ঘোরান",
-        "পেছনের হাত সোজা ছুড়ে মারুন এবং সামনের হাতটি কোমরে সজোরে টেনে আনুন (Hikite)"
-      ]
-    },
-    {
-      "slug": "furi-tsuki",
-      "title": "Furi Tsuki — Roundhouse Punch",
-      "englishName": "Roundhouse / Hook Punch",
-      "japaneseName": "Furi Tsuki",
-      "pronunciation": "ফুরি চুকি",
-      "summary": "চক্রাকার বা ঘূর্ণায়মান রাউন্ডহাউস পাঞ্চ — হাত বাঁকিয়ে পাশ থেকে ঘুরিয়ে আঘাত করা হয়।",
-      "description": "**সার্কুলার সুইং পাঞ্চ** — যাকে রাউন্ডহাউস পাঞ্চও বলা হয়। \"Furi\" অর্থ ঘোরানো। সামনে সোজা ঘুসি না মেরে হাতটিকে পাশ থেকে একটি বৃত্তাকার পথে ঘুরিয়ে আনা হয়।",
-      "category": "punches",
-      "categoryLabel": "Punch (Tsuki-Waza)",
-      "gif": "/prospectus/skills/punches/images/furi_tzuki.GIF",
-      "images": [
-        {
-          "alt": "Furi Tsuki Animation",
-          "src": "/prospectus/skills/punches/images/furi_tzuki.GIF"
-        },
-        {
-          "alt": "Furi Front 1",
-          "src": "/prospectus/skills/punches/images/furif1.jpg"
-        },
-        {
-          "alt": "Furi Side 1",
-          "src": "/prospectus/skills/punches/images/furis1.jpg"
-        },
-        {
-          "alt": "Furi Front 2",
-          "src": "/prospectus/skills/punches/images/furif2.jpg"
-        },
-        {
-          "alt": "Furi Side 2",
-          "src": "/prospectus/skills/punches/images/furis2.jpg"
-        },
-        {
-          "alt": "Furi Front 3",
-          "src": "/prospectus/skills/punches/images/furif3.jpg"
-        },
-        {
-          "alt": "Furi Side 3",
-          "src": "/prospectus/skills/punches/images/furis3.jpg"
-        }
-      ],
-      "points": []
-    },
-    {
-      "slug": "age-tsuki",
-      "title": "Age Tsuki — Rising Punch",
-      "englishName": "Rising Upper Punch",
-      "japaneseName": "Age Tsuki",
-      "pronunciation": "আ-গে চুকি",
-      "summary": "উর্ধ্বমুখী রাইজিং পাঞ্চ — নিচ থেকে ওপরের দিকে থুতনি বা চোয়াল লক্ষ্য করে আপারকাটের মতো ঘুসি।",
-      "description": "**উর্ধ্বমুখী ঘুসি** — যা নিচ থেকে **ওপরের দিকে** উঠে প্রতিপক্ষের থুতনি বা মুখমণ্ডল লক্ষ্য করে আঘাত হানে। \"Age\" অর্থ ওপরের দিকে ওঠা। এটি কারাতের আপারকাট।",
-      "category": "punches",
-      "categoryLabel": "Punch (Tsuki-Waza)",
-      "gif": "/prospectus/skills/punches/images/age_tsuki.GIF",
-      "images": [
-        {
-          "alt": "Age Tsuki Animation",
-          "src": "/prospectus/skills/punches/images/age_tsuki.GIF"
-        },
-        {
-          "alt": "Age Front 1",
-          "src": "/prospectus/skills/punches/images/agef1.jpg"
-        },
-        {
-          "alt": "Age Side 1",
-          "src": "/prospectus/skills/punches/images/ages1.jpg"
-        },
-        {
-          "alt": "Age Front 2",
-          "src": "/prospectus/skills/punches/images/agef2.jpg"
-        },
-        {
-          "alt": "Age Side 2",
-          "src": "/prospectus/skills/punches/images/ages2.jpg"
-        },
-        {
-          "alt": "Age Front 3",
-          "src": "/prospectus/skills/punches/images/agef3.jpg"
-        },
-        {
-          "alt": "Age Side 3",
-          "src": "/prospectus/skills/punches/images/ages3.jpg"
-        }
-      ],
-      "points": []
-    },
-    {
-      "slug": "mae-te-tsuki",
-      "title": "Mae Te Tsuki — Lead Hand Jab",
-      "englishName": "Lead Hand Jab",
-      "japaneseName": "Mae Te Tsuki",
-      "pronunciation": "মা-এ তে চুকি",
-      "summary": "সামনের হাতের জ্যাব পাঞ্চ — কদম ফেলা ছাড়াই দ্রুত সামনের হাত দিয়ে ফ্লিকার জ্যাব আঘাত।",
-      "description": "**সামনের হাতের জ্যাব পাঞ্চ** — শরীরের সামনের হাতটি দিয়ে দ্রুত সোজা জ্যাব মারা হয়। \"Mae te\" অর্থ সামনের হাত। এটি গতি ও প্রতিপক্ষের দূরত্ব মাপার জন্য ব্যবহৃত হয়।",
-      "category": "punches",
-      "categoryLabel": "Punch (Tsuki-Waza)",
-      "gif": "/prospectus/skills/punches/images/mae_te_tzuki.GIF",
-      "images": [
-        {
-          "alt": "Mae Te Tsuki Animation",
-          "src": "/prospectus/skills/punches/images/mae_te_tzuki.GIF"
-        },
-        {
-          "alt": "Mae Te Front 1",
-          "src": "/prospectus/skills/punches/images/maetef1.jpg"
-        },
-        {
-          "alt": "Mae Te Side 1",
-          "src": "/prospectus/skills/punches/images/maetes1.jpg"
-        },
-        {
-          "alt": "Mae Te Front 2",
-          "src": "/prospectus/skills/punches/images/maetef2.jpg"
-        },
-        {
-          "alt": "Mae Te Side 2",
-          "src": "/prospectus/skills/punches/images/maetes2.jpg"
-        },
-        {
-          "alt": "Mae Te Front 3",
-          "src": "/prospectus/skills/punches/images/maetef3.jpg"
-        },
-        {
-          "alt": "Mae Te Side 3",
-          "src": "/prospectus/skills/punches/images/maetes3.jpg"
-        }
-      ],
-      "points": []
-    },
-    {
-      "slug": "ura-tsuki",
-      "title": "Ura Tsuki — Inverted Punch",
-      "englishName": "Close Range Inverted Punch",
-      "japaneseName": "Ura Tsuki",
-      "pronunciation": "উ-রা চুকি",
-      "summary": "ইনভার্টেড ক্লোজ পাঞ্চ — হাতের তালু ওপরের দিকে রেখে খুব কাছ থেকে আঘাত হানার শর্ট পাঞ্চ।",
-      "description": "**উল্টো তালুর ঘুসি** — হাতের **তালু ওপরের দিকে** রেখে শর্ট রেঞ্জে কারাতে পাঞ্চ। \"Ura\" অর্থ উল্টো।",
-      "category": "punches",
-      "categoryLabel": "Punch (Tsuki-Waza)",
-      "gif": "/prospectus/skills/punches/images/ura_tzuki.GIF",
-      "images": [
-        {
-          "alt": "Ura Tsuki Animation",
-          "src": "/prospectus/skills/punches/images/ura_tzuki.GIF"
-        },
-        {
-          "alt": "Ura Front 1",
-          "src": "/prospectus/skills/punches/images/uraf1.jpg"
-        },
-        {
-          "alt": "Ura Side 1",
-          "src": "/prospectus/skills/punches/images/uras1.jpg"
-        },
-        {
-          "alt": "Ura Front 2",
-          "src": "/prospectus/skills/punches/images/uraf2.jpg"
-        },
-        {
-          "alt": "Ura Side 2",
-          "src": "/prospectus/skills/punches/images/uras2.jpg"
-        }
-      ],
-      "points": []
-    },
-    {
-      "slug": "morote-tsuki",
-      "title": "Morote Tsuki — U-Punch",
-      "englishName": "Double Hand Punch",
-      "japaneseName": "Morote Tsuki",
-      "pronunciation": "মো-রো-তে চুকি",
-      "summary": "ডাবল ইউ-পাঞ্চ — দুই হাত দিয়ে একসাথে ওপর ও নিচে দুই স্তরে আক্রমণ হানার দ্বিমুখী পাঞ্চ।",
-      "description": "**ইউ-আকৃতির দ্বি-হস্ত পাঞ্চ** — দুই হাত দিয়ে **একই সাথে** ওপরের (Jodan) ও নিচের (Chudan/Gedan) দুটি ভিন্ন স্তরে ঘুসি দেওয়া হয়। \"Morote\" অর্থ দুই হাত।",
-      "category": "punches",
-      "categoryLabel": "Punch (Tsuki-Waza)",
-      "gif": "/prospectus/skills/punches/images/morote_tzuki.GIF",
-      "images": [
-        {
-          "alt": "Morote Tsuki Animation",
-          "src": "/prospectus/skills/punches/images/morote_tzuki.GIF"
-        },
-        {
-          "alt": "Morote Front 1",
-          "src": "/prospectus/skills/punches/images/morotef1.jpg"
-        },
-        {
-          "alt": "Morote Side 1",
-          "src": "/prospectus/skills/punches/images/morotes1.jpg"
-        },
-        {
-          "alt": "Morote Front 2",
-          "src": "/prospectus/skills/punches/images/morotef2.jpg"
-        },
-        {
-          "alt": "Morote Side 2",
-          "src": "/prospectus/skills/punches/images/morotes2.jpg"
-        }
-      ],
-      "points": []
-    }
-  ],
-  "kicks": [
-    {
-      "slug": "mae-geri",
-      "title": "Mae Geri",
-      "englishName": "Front Snap Kick",
-      "group": "Basic & Fundamental",
-      "target": "Chudan / Jodan",
-      "description": "পা সোজা সামনে সজোরে স্ন্যাপ করে মারার মৌলিক ফ্রন্ট কিক।"
-    },
-    {
-      "slug": "oi-geri",
-      "title": "Oi Geri",
-      "englishName": "Lunging Kick",
-      "group": "Basic & Fundamental",
-      "target": "Chudan",
-      "description": "সামনে কদম বাড়িয়ে শরীরের গতিশীলতায় মারার ফ্রন্ট কিক।"
-    },
-    {
-      "slug": "yoko-sokuto-geri",
-      "title": "Yoko Sokuto Geri",
-      "englishName": "Side Blade Kick",
-      "group": "Basic & Fundamental",
-      "target": "Chudan / Jodan",
-      "description": "পায়ের বাইরের ধারের (Sokuto) শক্ত অংশ দিয়ে পাশের সাইড কিক।"
-    },
-    {
-      "slug": "mawashi-geri",
-      "title": "Mawashi Geri",
-      "englishName": "Roundhouse Kick",
-      "group": "Basic & Fundamental",
-      "target": "Chudan / Jodan / Gedan",
-      "description": "পাশ থেকে বৃত্তাকারে ঘুরিয়ে আনা শক্তিশালী রাউন্ডহাউস কিক।"
-    },
-    {
-      "slug": "gyaku-mawashi-geri",
-      "title": "Gyaku Mawashi Geri",
-      "englishName": "Reverse Roundhouse Kick",
-      "group": "Reverse & Hook",
-      "target": "Jodan",
-      "description": "উল্টো দিক (ভেতর) থেকে ঘুরিয়ে আনা অপ্রত্যাশিত রাউন্ডহাউস কিক।"
-    },
-    {
-      "slug": "ura-mawashi-geri",
-      "title": "Ura Mawashi Geri",
-      "englishName": "Hook Kick",
-      "group": "Reverse & Hook",
-      "target": "Jodan",
-      "description": "গোড়ালি বা পায়ের বল দিয়ে বাঁকিয়ে মারা ক্ষিপ্র হুক কিক।"
-    },
-    {
-      "slug": "ushiro-geri",
-      "title": "Ushiro Geri",
-      "englishName": "Back Thrust Kick",
-      "group": "Rear & Spinning",
-      "target": "Chudan",
-      "description": "সোজাসুজি পেছনের দিকে গোড়ালি দিয়ে মারা ধ্বংসাত্মক ব্যাক কিক।"
-    },
-    {
-      "slug": "ushiro-mawashi-geri",
-      "title": "Ushiro Mawashi Geri",
-      "englishName": "Spinning Back Roundhouse",
-      "group": "Rear & Spinning",
-      "target": "Jodan",
-      "description": "৩৬০ ডিগ্রি ঘুরে মারা গতিশীল স্পিনিং ব্যাক রাউন্ডহাউস কিক।"
-    },
-    {
-      "slug": "mae-ashi-geri",
-      "title": "Mae-Ashi Geri",
-      "englishName": "Lead Leg Front Kick",
-      "group": "Lead Leg & Close-Range",
-      "target": "Chudan",
-      "description": "ওজন না বদলে সামনের পা দিয়ে অতর্কিত দ্রুত স্ন্যাপ ফ্রন্ট কিক।"
-    },
-    {
-      "slug": "fumikomi-geri",
-      "title": "Fumikomi Geri",
-      "englishName": "Stamp Kick",
-      "group": "Lead Leg & Close-Range",
-      "target": "Gedan (Knee/Foot)",
-      "description": "পায়ের পাতা বা হাঁটু লক্ষ্য করে সজোরে নিচে পদদলিত কিক।"
-    },
-    {
-      "slug": "hiza-geri",
-      "title": "Hiza Geri",
-      "englishName": "Knee Strike Kick",
-      "group": "Lead Leg & Close-Range",
-      "target": "Chudan / Jodan",
-      "description": "হাঁটুর শক্ত অংশ দিয়ে অতি কাছাকাছি এসে হাঁটু দিয়ে আঘাত।"
-    },
-    {
-      "slug": "mae-tobi-geri",
-      "title": "Mae-Tobi Geri",
-      "englishName": "Flying Front Kick",
-      "group": "Jumping Kicks",
-      "target": "Jodan",
-      "description": "লাফিয়ে উঠে বাতাসে শরীর ভাসিয়ে এক পায়ে সামনের কিক।"
-    },
-    {
-      "slug": "yoko-tobi-geri",
-      "title": "Yoko-Tobi Geri",
-      "englishName": "Flying Side Kick",
-      "group": "Jumping Kicks",
-      "target": "Jodan",
-      "description": "বাতাসে শরীর আনুভূমিক রেখে লাফিয়ে সাইড কিক।"
-    }
-  ],
-  "strikes": [
-    {
-      "slug": "shuto-uchi",
-      "title": "Shuto Uchi",
-      "englishName": "Knife-Hand Strike",
-      "targetPart": "খোলা হাতের বাইরের কিনার",
-      "description": "খোলা হাতের কিনার দিয়ে চপিং আঘাত — বিখ্যাত \"কারাতে চপ\"।"
-    },
-    {
-      "slug": "ura-uchi",
-      "title": "Ura Uchi",
-      "englishName": "Back-Fist Strike",
-      "targetPart": "মুষ্টির পেছনের অংশ",
-      "description": "মুষ্টির পেছনের অংশ দিয়ে দ্রুত চাবুকের মতো স্ন্যাপিং আঘাত।"
-    },
-    {
-      "slug": "kentsui-uchi",
-      "title": "Kentsui Uchi",
-      "englishName": "Hammerfist Strike",
-      "targetPart": "মুষ্টির নিচের শক্ত অংশ",
-      "description": "হাতুড়ির মতো মুষ্টির নিচ দিয়ে সজোরে নিচের দিকে আঘাত।"
-    },
-    {
-      "slug": "shotei-uchi",
-      "title": "Shotei (Teisho) Uchi",
-      "englishName": "Palm-Heel Strike",
-      "targetPart": "তালুর শক্ত নিচের অংশ",
-      "description": "হাতের তালুর নিচ দিয়ে সজোরে ধাক্কামূলক্ আঘাত।"
-    },
-    {
-      "slug": "haito-uchi",
-      "title": "Haito Uchi",
-      "englishName": "Ridge-Hand Strike",
-      "targetPart": "হাতের ভেতরের ধার (বৃদ্ধাঙ্গুল দিক)",
-      "description": "Shuto এর বিপরীত— হাতের ভেতরের ধার দিয়ে সার্কুলার আঘাত।"
-    },
-    {
-      "slug": "haishu-uchi",
-      "title": "Haishu Uchi",
-      "englishName": "Back-Hand Strike",
-      "targetPart": "খোলা হাতের পেছনের অংশ",
-      "description": "খোলা হাতের পেছন দিয়ে থাপ্পড়সদৃশ চাবুক আঘাত।"
-    },
-    {
-      "slug": "hiji-ate-uchi",
-      "title": "Hiji Ate Uchi",
-      "englishName": "Elbow Strike",
-      "targetPart": "কনুইয়ের শক্ত অগ্রভাগ",
-      "description": "অত্যন্ত কাছাকাছি দূরত্বের ধ্বংসাত্মক কনুইয়ের আঘাত।"
-    },
-    {
-      "slug": "koken-uchi",
-      "title": "Koken Uchi",
-      "englishName": "Bent Wrist Strike",
-      "targetPart": "বাঁকানো কবজির জয়েন্ট",
-      "description": "কবজি ভাজ করে কবজির ওপরের অংশ দিয়ে চাবুক আঘাত।"
-    }
-  ],
-  "defensePrinciples": [
-    {
-      "id": 1,
-      "name": "Rakka",
-      "kanji": "落花",
-      "meaning": "ঝরে পড়া ফুল (Falling Flowers)",
-      "strategy": "Hard Blocking",
-      "concept": "সর্বোচ্চ শক্তি প্রয়োগ করে সরাসরি আক্রমণকে থামিয়ে দেওয়া এবং প্রতিপক্ষের মনোবল চূর্ণ করা। একক ধ্বংসাত্মক পাল্টা শক্তি।",
-      "demoImages": [
-        {
-          "src": "/prospectus/skills/defense/images/s_rakka1.jpg",
-          "alt": "Rakka Demo 1"
-        },
-        {
-          "src": "/prospectus/skills/defense/images/S_rakka.2.jpg",
-          "alt": "Rakka Demo 2"
-        }
-      ]
-    },
-    {
-      "id": 2,
-      "name": "Ryusu",
-      "kanji": "流水",
-      "meaning": "প্রবাহিত পানি (Flowing Water)",
-      "strategy": "Soft Circular Deflection",
-      "concept": "প্রতিপক্ষের আক্রমণকে সরাসরি না ঠেকিয়ে তাকে ঘুরিয়ে দেওয়া। ঠিক যেমন পানি কোনো বাধা পেলে তার পাশ দিয়ে প্রবাহিত হয়ে যায়।",
-      "demoImages": [
-        {
-          "src": "/prospectus/skills/defense/images/s_rusui1.jpg",
-          "alt": "Ryusu Demo 1"
-        },
-        {
-          "src": "/prospectus/skills/defense/images/s_rusui2.jpg",
-          "alt": "Ryusu Demo 2"
-        },
-        {
-          "src": "/prospectus/skills/defense/images/s_rusui3.jpg",
-          "alt": "Ryusu Demo 3"
-        }
-      ]
-    },
-    {
-      "id": 3,
-      "name": "Teni",
-      "kanji": "転移",
-      "meaning": "শরীরের স্থানান্তর (Body Shifting / Taisabaki)",
-      "strategy": "Tactical Avoidance",
-      "concept": "আক্রমণের লাইন থেকে শরীরকে সরিয়ে ফেলা। আপনি যদি আক্রমণের লাইনে না থাকেন, তবে আক্রমণ আপনাকে আঘাত করতে পারবে না।",
-      "demoImages": [
-        {
-          "src": "/prospectus/skills/defense/images/s_teni.jpg",
-          "alt": "Teni Demo"
-        }
-      ]
-    },
-    {
-      "id": 4,
-      "name": "Kushin",
-      "kanji": "屈伸",
-      "meaning": "স্প্রিং সংকোচন ও প্রসারণ (Spring Elasticity)",
-      "strategy": "Stance Compression & Expansion",
-      "concept": "স্ট্যান্সের তাৎক্ষণিক পরিবর্তন (যেমন Moto → Nekoashi → Moto)। হাঁটু নিচু করে আক্রমণ এড়িয়ে সাথে সাথে স্প্রিংয়ের মতো পাল্টা আক্রমণ।",
-      "demoImages": [
-        {
-          "src": "/prospectus/skills/defense/images/S_kusshin1.jpg",
-          "alt": "Kushin Demo 1"
-        },
-        {
-          "src": "/prospectus/skills/defense/images/S_kusshin2.jpg",
-          "alt": "Kushin Demo 2"
-        },
-        {
-          "src": "/prospectus/skills/defense/images/S_KUSSHIN3.JPG",
-          "alt": "Kushin Demo 3"
-        }
-      ]
-    },
-    {
-      "id": 5,
-      "name": "Hangeki",
-      "kanji": "反撃",
-      "meaning": "কাউন্টার অ্যাটাক (Go No Sen)",
-      "strategy": "Simultaneous Counter Attack",
-      "concept": "আক্রমণ শুরু হওয়ার সাথে সাথেই একই মুহূর্তে পাল্টা আক্রমণ হানা। এখানে পাল্টা আক্রমণটিই ব্লকের কাজ করে (যেমন Tsuki Uke)।",
-      "demoImages": [
-        {
-          "src": "/prospectus/skills/defense/images/S_hangeki1.jpg",
-          "alt": "Hangeki Demo 1"
-        },
-        {
-          "src": "/prospectus/skills/defense/images/S_hangeki3.jpg",
-          "alt": "Hangeki Demo 2"
-        },
-        {
-          "src": "/prospectus/skills/defense/images/S_hangeki4.jpg",
-          "alt": "Hangeki Demo 3"
-        }
-      ]
-    }
-  ],
-  "grading": [
-    {
-      "belt": "White Belt",
-      "kyu": "9th Kyu",
-      "color": "#f3f4f6",
-      "border": "#9ca3af",
-      "textColor": "#1f2937",
-      "kata": "Juni No Kata",
-      "bunkai": "—",
-      "minInterval": "3 Months"
-    },
-    {
-      "belt": "Yellow Belt",
-      "kyu": "8th Kyu",
-      "color": "#facc15",
-      "border": "#eab308",
-      "textColor": "#854d0e",
-      "kata": "Heian Nidan",
-      "bunkai": "Heian Nidan",
-      "minInterval": "3 Months"
-    },
-    {
-      "belt": "Orange Belt",
-      "kyu": "7th Kyu",
-      "color": "#fb923c",
-      "border": "#f97316",
-      "textColor": "#9a3412",
-      "kata": "Heian Sandan, Heian Shodan",
-      "bunkai": "Heian Sandan",
-      "minInterval": "3 Months"
-    },
-    {
-      "belt": "Blue Belt",
-      "kyu": "6th Kyu",
-      "color": "#60a5fa",
-      "border": "#3b82f6",
-      "textColor": "#1e40af",
-      "kata": "Heian Yondan",
-      "bunkai": "Heian Shodan",
-      "minInterval": "3 Months"
-    },
-    {
-      "belt": "Green Belt",
-      "kyu": "5th Kyu",
-      "color": "#4ade80",
-      "border": "#22c55e",
-      "textColor": "#166534",
-      "kata": "Heian Godan, Rohai",
-      "bunkai": "Heian Yondan, Heian Godan",
-      "minInterval": "3 Months"
-    },
-    {
-      "belt": "Purple Belt",
-      "kyu": "4th Kyu",
-      "color": "#c084fc",
-      "border": "#a855f7",
-      "textColor": "#6b21a8",
-      "kata": "Juroku, Jitte",
-      "bunkai": "Rohai, Juroku, Jitte",
-      "minInterval": "3 Months"
-    },
-    {
-      "belt": "Brown Belt I",
-      "kyu": "3rd Kyu",
-      "color": "#a16207",
-      "border": "#78350f",
-      "textColor": "#ffffff",
-      "kata": "Jiin, Saifa, Naihanchi Shodan",
-      "bunkai": "Jiin, Saifa",
-      "minInterval": "6 Months"
-    },
-    {
-      "belt": "Brown Belt II",
-      "kyu": "2nd Kyu",
-      "color": "#854d0e",
-      "border": "#713f12",
-      "textColor": "#ffffff",
-      "kata": "Jion, Bassai Dai, Matsukaze",
-      "bunkai": "Jion, Bassai Dai",
-      "minInterval": "6 Months"
-    },
-    {
-      "belt": "Brown Belt III",
-      "kyu": "1st Kyu",
-      "color": "#713f12",
-      "border": "#451a03",
-      "textColor": "#ffffff",
-      "kata": "Seienchin, Sanchin",
-      "bunkai": "Matsukaze, Seienchin",
-      "minInterval": "6 Months"
-    }
-  ],
-  "kataLineages": [
-    {
-      "lineage": "Itosu Lineage",
-      "origin": "Shuri-te / Tomari-te",
-      "description": "পিনা বা হেইয়ান সিরিজের জনক এবং আধুনিক কারাতের প্রতিষ্ঠাতা মাস্টার ইতোসু ইঙ্কো-র কাতা ধারা।",
-      "katas": [
-        "Heian Shodan",
-        "Heian Nidan",
-        "Heian Sandan",
-        "Heian Yondan",
-        "Heian Godan",
-        "Bassai Dai",
-        "Bassai Sho",
-        "Chintei",
-        "Chinto",
-        "Gojushiho",
-        "Jiin",
-        "Jion",
-        "Jitte",
-        "Kosokun Dai",
-        "Kosokun Sho",
-        "Naihanchi Shodan",
-        "Naihanchi Nidan",
-        "Naihanchi Sandan",
-        "Rohai Shodan",
-        "Rohai Nidan",
-        "Rohai Sandan",
-        "Shiho-Kosokun"
-      ]
-    },
-    {
-      "lineage": "Higashionna Lineage",
-      "origin": "Naha-te",
-      "description": "নাহা-তে ধারার মহান গুরু কানরিও হিগাওন্নার শক্তিশালী শ্বাস-প্রশ্বাস ও ফোকাসযুক্ত কাতা সমূহ।",
-      "katas": [
-        "Sanchin",
-        "Saifa",
-        "Seienchin",
-        "Seisan",
-        "Seipai",
-        "Shisochin",
-        "Sanseru",
-        "Kururunfa",
-        "Superimpei (Pechurin)"
-      ]
-    },
-    {
-      "lineage": "Aragaki Lineage",
-      "origin": "Tomari-te",
-      "description": "আরাগাকি সেইশো ঐতিহ্যের ক্ষিপ্রতা ও শক্তিশালী শারীরিক ঘূর্ণনশীল কাতা।",
-      "katas": [
-        "Sochin",
-        "Niseishi",
-        "Unshu"
-      ]
-    },
-    {
-      "lineage": "Mabuni Kenwa (Founder)",
-      "origin": "Shito-Ryu Creation",
-      "description": "শীতো-রিউয়ের প্রতিষ্ঠাতা মাস্টার কেনওয়া মাবুনি কর্তৃক সরাসরি প্রবর্তিত ফর্ম।",
-      "katas": [
-        "Aoyagi",
-        "Juroku",
-        "Miyojo",
-        "Shinpa"
-      ]
-    },
-    {
-      "lineage": "Matsumura & Matsumora",
-      "origin": "Shorin-Ryu & Tomari-te",
-      "description": "সোশি মাতসুমুরা এবং কোসাকু মাতসুমোরার ঐতিহ্যবাহী রাজকীয় গার্ডদের প্রতিরক্ষা কাতা।",
-      "katas": [
-        "Matsumura Bassai",
-        "Matsumura Seisan",
-        "Wankan (Matsukaze)",
-        "Wanshu"
-      ]
-    },
-    {
-      "lineage": "Gokenki & Chatanyara",
-      "origin": "White Crane & Okinawan Roots",
-      "description": "চীনা হোয়াইট ক্রেন (White Crane) কুংফুর নমনীয়তা ও কুসাঙ্কুর প্রাচীন ঐতিহ্য।",
-      "katas": [
-        "Hakucho",
-        "Nipaipo",
-        "Papuren",
-        "Chatanyara Kusanku"
-      ]
-    }
-  ],
-  "dojoRules": [
-    "সবাইকে বিনয় ও সৌজন্যের সাথে সম্মান প্রদর্শন করুন।",
-    "কারাতে-কা (শিক্ষার্থী) ডোজোতে প্রবেশ করার সময় এবং বের হওয়ার সময় সর্বদা রেই (Bow) করবে।",
-    "কারাতে-কা সর্বদা গম্ভীর ও অনুশাসিত মনোভাব বজায় রাখবে। ডোজোতে কোনো কটু কথা বা চিৎকার-চেঁচামেচি নিষিদ্ধ।",
-    "অন্য কোনো কারাতে-কা বা সহপাঠীর সমালোচনা বা উপহাস করবেন না।",
-    "ক্লাস চলাকালীন কোনো প্রকার আংটি, ঘড়ি, চেইন বা ধাতব অলঙ্কার পরিধান করা যাবে না।",
-    "সকল শিক্ষার্থী ব্যক্তিগত স্বাস্থ্যবিধি ও পরিচ্ছন্নতা কঠোরভাবে বজায় রাখবে; হাত ও পায়ের নখ সর্বদা ছোট রাখা বাধ্যতামূলক।",
-    "পরিষ্কার সাদা কারাতে-গি (Karate-gi) এবং নিজ নিজ গ্রেড অনুযায়ী বেল্ট শক্তভাবে বেঁধে ক্লাসে উপস্থিত হতে হবে।",
-    "কারাতে-গিতে অনুমোদিত প্রাতিষ্ঠানিক ডোজো ক্রেস্ট/লোগো দৃশ্যমান থাকতে হবে।",
-    "সিনিয়র বেল্টধারীরা জুনিয়রদের শিখতে আন্তরিকভাবে সহায়তা করবে এবং জুনিয়ররা সিনিয়রদের নির্দেশ ও পরামর্শ শ্রদ্ধার সাথে অনুসরণ করবে।",
-    "প্রতি সপ্তাহে কমপক্ষে দুটি নির্ধারিত ক্লাসে নিয়মিত ও সময়নিষ্ঠভাবে উপস্থিত থাকতে হবে।",
-    "প্রধান প্রশিক্ষক বা সেনসেইয়ের সরাসরি অনুমতি ও তত্ত্বাবধান ছাড়া কোনো স্পারিং (Kumite) বা লড়াই অনুশীলন করা সম্পূর্ণ নিষিদ্ধ।",
-    "ক্লাস চলাকালীন বা ডোজো প্রাঙ্গণে ধূমপান, মাদকসেবন বা খাবার গ্রহণ সম্পূর্ণ নিষিদ্ধ।",
-    "অননুমোদিত বা অ-সদস্য কোনো ব্যক্তির কাছে বাইরে শীতো-রিউ কারাতে গোপন কৌশল প্রদর্শন বা শেখানো যাবে না।",
-    "শীতো-রিউ শিক্ষার্থীরা ডোজোর ভেতরে এবং সমাজের সর্বক্ষেত্রে ভদ্র, মার্জিত ও দায়িত্বশীল নাগরিকের মতো আচরণ করবে।",
-    "কোনো শিক্ষার্থী কখনো অযাচিত সহিংসতায় জড়াবে না বা কোনো প্রকার উস্কানিতে পা দেবে না; এর ব্যত্যয় ঘটলে আজীবন বহিষ্কারাদেশ কার্যকর হবে।"
-  ],
-  "dojoExercises": [
-    {
-      "no": 1,
-      "name": "Stride Jumps (Jumping Jacks)",
-      "bengali": "জাম্পিং জ্যাক",
-      "reps": "৬০ বার"
-    },
-    {
-      "no": 2,
-      "name": "Side Twist",
-      "bengali": "কোমর ঘোরানো",
-      "reps": "২০ বার"
-    },
-    {
-      "no": 3,
-      "name": "Side Stretch",
-      "bengali": "পাশের স্ট্র্যাচ",
-      "reps": "৩০ বার"
-    },
-    {
-      "no": 4,
-      "name": "Squats",
-      "bengali": "স্কোয়াট",
-      "reps": "১০ বার"
-    },
-    {
-      "no": 5,
-      "name": "Toe Touch",
-      "bengali": "পায়ের আঙুল স্পর্শ",
-      "reps": "৩০ বার"
-    },
-    {
-      "no": 6,
-      "name": "Grab-the-Ball",
-      "bengali": "গ্র্যাব দ্য বল",
-      "reps": "১০ বার"
-    },
-    {
-      "no": 7,
-      "name": "Standing Knees-to-Chest",
-      "bengali": "দাঁড়ানো হাঁটু বুকে ছোঁয়া",
-      "reps": "প্রতি পায়ে ৫ বার"
-    },
-    {
-      "no": 8,
-      "name": "Side-Kick Stretch (Flat)",
-      "bengali": "সাইড-কিক স্ট্র্যাচ (ফ্ল্যাট)",
-      "reps": "১০ বার"
-    },
-    {
-      "no": 9,
-      "name": "Side-Kick Stretch (Heel)",
-      "bengali": "সাইড-কিক স্ট্র্যাচ (গোড়ালি)",
-      "reps": "১০ বার"
-    },
-    {
-      "no": 10,
-      "name": "Standard Push-ups",
-      "bengali": "সাধারণ পুশ-আপ",
-      "reps": "১০–৫০ বার"
-    },
-    {
-      "no": 11,
-      "name": "Upper-half Body-lift",
-      "bengali": "আপার বডি লিফট",
-      "reps": "১০ বার"
-    },
-    {
-      "no": 12,
-      "name": "Lower-half Body-lift",
-      "bengali": "লোয়ার বডি লিফট",
-      "reps": "১০ বার"
-    },
-    {
-      "no": 13,
-      "name": "Leg Raises",
-      "bengali": "পা ওপরে তোলা",
-      "reps": "১০ বার"
-    },
-    {
-      "no": 14,
-      "name": "Seated Leg Stretch",
-      "bengali": "মাথা হাঁটুতে স্পর্শ",
-      "reps": "১০ বার"
-    },
-    {
-      "no": 15,
-      "name": "Seated Toe Touch",
-      "bengali": "বসে পায়ের আঙুল স্পর্শ",
-      "reps": "১০ বার"
-    },
-    {
-      "no": 16,
-      "name": "Seated Side Stretch",
-      "bengali": "বসে সাইড স্ট্র্যাচ",
-      "reps": "১০ বার"
-    },
-    {
-      "no": 17,
-      "name": "Seated Side Twist",
-      "bengali": "বসে কোমর মোচড়",
-      "reps": "১০ বার"
-    },
-    {
-      "no": 18,
-      "name": "Seated Swim",
-      "bengali": "বসে সাঁতার ভঙ্গি",
-      "reps": "১০ বার"
-    },
-    {
-      "no": 19,
-      "name": "Seated Knees-to-Chest",
-      "bengali": "বসে হাঁটু বুকে নেওয়া",
-      "reps": "১০ বার"
-    },
-    {
-      "no": 20,
-      "name": "Wide-arm Push-ups",
-      "bengali": "চওড়া পুশ-আপ",
-      "reps": "৩০–৫০ বার"
-    },
-    {
-      "no": 21,
-      "name": "Core Sit-ups",
-      "bengali": "সিট-আপস",
-      "reps": "১০–৫০ বার"
-    },
-    {
-      "no": 22,
-      "name": "Stand-up Back Arch",
-      "bengali": "পিছনের পিঠ বাঁকানো",
-      "reps": "প্রতি পায়ে ৫ বার"
-    },
-    {
-      "no": 23,
-      "name": "Seated Leg-raise & Hold",
-      "bengali": "মেঝে থেকে ৩ ইঞ্চি উঁচুতে হোল্ড",
-      "reps": "৭৫ কাউন্ট হোল্ড"
-    },
-    {
-      "no": 24,
-      "name": "Running On-the-spot",
-      "bengali": "এক জায়গায় দ্রুত দৌড়",
-      "reps": "৫০ কাউন্ট"
-    }
-  ],
-  "kumiteFootwork": [
-    {
-      "name": "Yori-Ashi",
-      "kanji": "寄り足",
-      "englishName": "Forward Push Step",
-      "concept": "সামনের পা আগে বাড়িয়ে কদম ফেলা। সামনের পা কদম ফেলে এবং পেছনের পা অনুসরণ করে সাথে সাথে চলে আসে যাতে কুমিতে স্ট্যান্সের সঠিক দূরত্ব ও গার্ড বজায় থাকে।"
-    },
-    {
-      "name": "Okuri-Ashi",
-      "kanji": "送り足",
-      "englishName": "Cross Step Advance",
-      "concept": "পেছনের পা সামনের পা অতিক্রম করে ক্রস করা। দ্রুত প্রতিপক্ষের কাছাকাছি পৌঁছাতে বা দীর্ঘ দূরত্ব কমাতে এটি ব্যবহৃত হয়।"
-    },
-    {
-      "name": "Sugi-Ashi",
-      "kanji": "過ぎ足",
-      "englishName": "Slide Adjust Step",
-      "concept": "পেছনের পা হালকা স্লাইড করে সামনের পায়ের কাছে নিয়ে আসা। আক্রমণ অথবা কাউন্টারের পূর্বে সূক্ষ্ম রেঞ্জ সমন্বয় করার পরিমিত কদম।"
-    },
-    {
-      "name": "Oi-Ashi",
-      "kanji": "追い足",
-      "englishName": "Full Chasing Lunge Step",
-      "concept": "পেছনের পা দিয়ে একটি দীর্ঘ ও গতিশীল কদম ফেলে সামনে অতিক্রম করা। বড় দূরত্ব দ্রুত অতিক্রম করে Oi-Tsuki বা Kizami-Zuki মারতে ব্যবহৃত হয়।"
-    }
-  ],
-  "tenshinDirections": [
-    {
-      "num": 1,
-      "name": "Mae (Forward)",
-      "japanese": "前",
-      "angle": "0° (North)",
-      "desc": "সোজাসুজি প্রতিপক্ষের দিকে সরাসরি এগিয়ে যাওয়া আক্রমণ।"
-    },
-    {
-      "num": 2,
-      "name": "Mae-Migi (Front-Right)",
-      "japanese": "前右",
-      "angle": "45° (NE)",
-      "desc": "ডান দিকে কোণাকুণি এগিয়ে প্রতিপক্ষের দুর্বল গার্ড লাইনে ঢোকা।"
-    },
-    {
-      "num": 3,
-      "name": "Ushiro-Migi (Rear-Right)",
-      "japanese": "後右",
-      "angle": "135° (SE)",
-      "desc": "ডান দিকে কোণাকুণি পেছনে সরে আক্রমণ এড়িয়ে পাল্টা পজিশন নেওয়া।"
-    },
-    {
-      "num": 4,
-      "name": "Ushiro (Backward)",
-      "japanese": "後",
-      "angle": "180° (South)",
-      "desc": "সোজা প্রতিপক্ষ থেকে সরলরেখায় পেছনে সরে নিরাপদ দূরত্ব তৈরি।"
-    },
-    {
-      "num": 5,
-      "name": "Ushiro-Hidari (Rear-Left)",
-      "japanese": "後左",
-      "angle": "225° (SW)",
-      "desc": "বাম দিকে কোণাকুণি পেছনে সরে প্রতিপক্ষের ডান আক্রমণের পাশ কাটানো।"
-    },
-    {
-      "num": 6,
-      "name": "Mae-Hidari (Front-Left)",
-      "japanese": "前左",
-      "angle": "315° (NW)",
-      "desc": "বাম দিকে কোণাকুণি এগিয়ে গিয়ে প্রতিপক্ষের ফ্ল্যাঙ্ক আক্রমণ করা।"
-    },
-    {
-      "num": 7,
-      "name": "Hidari (Side Left)",
-      "japanese": "左",
-      "angle": "270° (West)",
-      "desc": "বাম দিকে পার্শ্ববর্তী সরে গিয়ে সম্পূর্ণ ভিন্ন অ্যাঙ্গেল গ্রহণ।"
-    },
-    {
-      "num": 8,
-      "name": "Migi (Side Right)",
-      "japanese": "右",
-      "angle": "90° (East)",
-      "desc": "ডান দিকে পার্শ্ববর্তী সরে আক্রমণ লাইন থেকে বডি মুক্ত করা।"
-    }
-  ]
-};
+
+export const PROSPECTUS_DOCS = [
+  {
+    "route": "prospectus",
+    "parent_route": "",
+    "slug": "",
+    "category": "overview",
+    "category_label": "Overview",
+    "title": "কারাতে-দো প্রোসপেক্টাস",
+    "meta_label": "সংক্ষিপ্ত বিবরণ (Overview)",
+    "description": "শীতো-রিউ কারাতে-দো (Shito-Ryu Karate-do) সম্পর্কিত একটি বিস্তৃত কৌশলগত তথ্যকোষ — যার মধ্যে রয়েছে স্ট্যান্স, মুভমেন্ট, ডিফেন্স নীতি, ব্লক, পাঞ্চ, স্ট্রাইক, কিক, কাতা, কুমিতে ফুটওয়ার্ক, ডোজো নিয়মাবলী এবং গ্রেডিং প্রয়োজনীয়তা।",
+    "content": "# PROSPECTUS of HSTU KARATE DOJO\n\n**শীতো-রিউ কারাতে-দো (Shito-Ryu Karate-do)** সম্পর্কিত একটি সম্পূর্ণ ডকুমেন্টেশন নির্দেশিকা — যা ঐতিহ্যবাহী জাপানি মার্শাল আর্টের প্রতিষ্ঠাতা **কেনওয়া মাবুনি (Kenwa Mabuni)** (১৮৮৯–১৯৫২) এর ওপর ভিত্তি করে রচিত। এই প্রোসপেক্টাসটি শীতো-রিউ অনুশীলনের সমস্ত কারিগরি দিকগুলোকে বিভিন্ন বিভাগে বর্ণনা করেছে ।\n\n## শীতো-রিউ সম্পর্কে\n\nশীতো-রিউ হলো জাপানি কারাতের চারটি প্রধান শৈলীর একটি। এটি তার বিশাল সংখ্যক কাতা (৫০টিরও বেশি), নাহা-তে (Naha-te) এর শক্তি এবং সুরি-তে (Shuri-te) এর গতির ভারসাম্য এবং ওকিনাওয়ান মার্শাল আর্টের সুপ্রাচীন ঐতিহ্যের জন্য বিশ্বজুড়ে সুপরিচিত।\n\n> \"কারাতে-দো কেবল কোনো খেলাধুলো বা আত্মরক্ষার কৌশল নয়। এটি মনের আত্মশুদ্ধি ও আত্মনিয়ন্ত্রণের একটি সুনির্দিষ্ট শৃঙ্খলা।\" — *কেনওয়া মাবুনি*\n\n## প্রধান বিভাগসমূহ (Sections)\n\n| বিভাগ (Section) | জাপানি নাম | বিবরণ (Description) |\n|---|---|---|\n| [স্ট্যান্স (Stances)](/prospectus/stances) | Dachi-Kata | মৌলিক পায়ের অবস্থান, বডি পোস্টার এবং ভারসাম্যের ভিত্তি |\n| [মুভমেন্ট (Movement)](/prospectus/movement) | Tenshin-Happo | ৮-মুখী আক্রমণাত্মক ও প্রতিরক্ষামূলক মুভমেন্ট পদ্ধতি |\n| [ডিফেন্স (Defense)](/prospectus/defense) | Uke No Gogensoku | শীতো-রিউ কারাতের আত্মরক্ষার বিশেষ পাঁচটি মূলনীতি |\n| [ব্লক (Blocks)](/prospectus/blocks) | Uke-Waza | আত্মরক্ষা ও প্রতিহত করার ব্লক কৌশল |\n| [পাঞ্চ (Punches)](/prospectus/punches) | Tsuki-Waza | ঘুসি এবং হাত দিয়ে আঘাত হানার কৌশল |\n| [স্ট্রাইক (Strikes)](/prospectus/strikes) | Uchi-Waza | হাতের বিভিন্ন অংশ দিয়ে আঘাতের কৌশল |\n| [কিক (Kicks)](/prospectus/kicks) | Keri-Waza | পা দিয়ে আঘাত বা কিকিং কৌশল |\n| [কাতা (Kata)](/prospectus/kata) | — | গুরু-পরম্পরা বা ঐতিহ্যবাহী ধারানুসারে কাতার তালিকা |\n| [কুমিতে ফুটওয়ার্ক (Kumite Footwork)](/prospectus/kumite-footwork) | — | ফাইটিং বা স্পারিংয়ের জন্য প্রয়োজনীয় ফুটওয়ার্ক প্যাটার্ন |\n| [ডোজো নিয়মাবলী (In the Dojo)](/prospectus/in-the-dojo) | — | ডোজোর নিয়মকানুন এবং শারীরিক অনুশীলনের প্রোগ্রাম |\n| [গ্রেডিং (Grading)](/prospectus/grading) | — | বেল্ট অর্জন ও পরীক্ষার জন্য কাতার প্রয়োজনীয়তা |\n\n---\n\n*HSTU Karate Dojo - Terms of use apply.*",
+    "is_group": 1,
+    "sort_order": 0
+  },
+  {
+    "route": "prospectus/stances",
+    "parent_route": "prospectus",
+    "slug": "stances",
+    "category": "stances",
+    "category_label": "স্ট্যান্স (Dachi-Kata)",
+    "title": "মৌলিক স্ট্যান্সসমূহ (Dachi-Kata)",
+    "meta_label": "স্ট্যান্স (Dachi-Kata)",
+    "description": "শীতো-রিউ কারাতে-দোর মৌলিক স্ট্যান্সসমূহ — পায়ের অবস্থান, শরীরের ভারসাম্য এবং পোস্টারের মূল ভিত্তি।",
+    "content": "# মৌলিক স্ট্যান্সসমূহ — Dachi-Kata\n\nস্ট্যান্স হলো শীতো-রিউ কারাতের সমস্ত কৌশলের কাঠামোগত ভিত্তি। সঠিক স্ট্যান্স শরীরের স্থায়িত্ব, শক্তি উৎপাদন এবং দক্ষতার সাথে শরীরের ওজন স্থানান্তরে সাহায্য করে। প্রতিটি স্ট্যান্সে নির্দিষ্ট পায়ের অবস্থান, হাঁটু বাঁকানো এবং ওজনের ভারসাম্যের নিয়ম রয়েছে।\n\n## স্ট্যান্স রেফারেন্স তালিকা\n\n| জাপানি নাম | নাম (English) | বিবরণ |\n|---|---|---|\n| [Heisoku Dachi](/prospectus/stances/heisoku) | Closed Foot Stance | আঙুল ও গোড়ালি একসাথে যুক্ত — প্রস্তুত বা অ্যাটেনশন স্ট্যান্স। |\n| [Musubi Dachi](/prospectus/stances/musubi) | Open Foot Stance | গোড়ালি একসাথে এবং আঙুল বাইরে খোলা — \"V\" আকৃতির স্ট্যান্স। |\n| [Heiko Dachi](/prospectus/stances/heiko) | Parallel Stance | পা সমান্তরাল (হিপের সমপরিমাণ চওড়া)। |\n| [Hachiji Dachi](/prospectus/stances/hachiji) | Natural Stance | পা কাঁধের চওড়া, আঙুল ৪৫ ডিগ্রি বাইরের দিকে নির্দেশিত। |\n| [Uchi-Hachiji Dachi](/prospectus/stances/uchi-hachiji) | Inverted Natural Stance | পা কাঁধের চওড়া, আঙুল ৪৫ ডিগ্রি ভেতরের দিকে নির্দেশিত (Niafanchi Dachi)। |\n| [Shiko Dachi](/prospectus/stances/shiko) | Straddle Stance | দুই পা চওড়া করে হাঁটু বাঁকানো — \"সুমো\" স্ট্যান্স। |\n| [Moto Dachi](/prospectus/stances/moto) | Basic Forward Stance | সামনের হাঁটু সামান্য বাঁকানো, সংক্ষিপ্ত ফরোয়ার্ড স্ট্যান্স। |\n| [Zenkutsu Dachi](/prospectus/stances/zenkutsu) | Long Forward Stance | সামনের হাঁটু গভীর বাঁকানো, দীর্ঘ ফরোয়ার্ড স্ট্যান্স। |\n| [Nekoashi Dachi](/prospectus/stances/nekoashi) | Cat Foot Stance | \"বিড়ালের পায়ের\" স্ট্যান্স — ওজনের সিংহভাগ পেছনের পায়ে। |\n| [Sanchin Dachi](/prospectus/stances/sanchin) | Hourglass Stance | ভেতরের টেনশন স্ট্যান্স (\"আওয়ারগ্লাস\" স্ট্যান্স)। |\n| [Kokutsu Dachi](/prospectus/stances/kokutsu) | Back Stance | \"পেছনের দিকে ঝুঁকে থাকা\" ব্যাক স্ট্যান্স। |\n| [Renoji Dachi](/prospectus/stances/renoji) | L-Shape Stance | ইংরেজি \"L\" অক্ষরের মতো পায়ের অবস্থান। |\n| [Tee-Ji Dachi](/prospectus/stances/tee-ji) | T-Shape Stance | উল্টো \"T\" অক্ষরের মতো পায়ের অবস্থান। |\n| [Kosa Dachi](/prospectus/stances/kosa) | Hooked Leg Stance | \"ক্রস লেগ\" বা ক্রস করা পায়ের স্ট্যান্স। |\n| [Sagiashi Dachi](/prospectus/stances/sagiashi) | Heron Foot Stance | \"এক পায়ে দাঁড়ানো\" বা সারস পাখির মতো স্ট্যান্স। |\n| [Ukiashi Dachi](/prospectus/stances/ukiashi) | Floating Foot Stance | Nekoashi-এর মতো হলেও কিছুটা সোজা এবং হালকা ভাসমান পায়ের স্ট্যান্স। |\n\n---",
+    "is_group": 1,
+    "sort_order": 1
+  },
+  {
+    "route": "prospectus/stances/heisoku",
+    "parent_route": "prospectus/stances",
+    "slug": "heisoku",
+    "category": "stances",
+    "category_label": "স্ট্যান্স (Dachi-Kata)",
+    "title": "Heisoku Dachi",
+    "meta_label": "Heisoku Dachi",
+    "description": "ক্লোজড ফুট স্ট্যান্স — দুই পায়ের আঙুল এবং গোড়ালি সম্পূর্ণ যুক্ত, শীতো-রিউ কারাতের আনুষ্ঠানিক অ্যাটেনশন স্ট্যান্স।",
+    "content": "# Heisoku Dachi — Closed Foot Stance\n\n**উচ্চারণ:** *হেই-সোকু দা-চি*\n\n## বিবরণ\n\nপায়ের আঙুল এবং গোড়ালি একসাথে যুক্ত — এটিকে \"ক্লোজড ফুট স্ট্যান্স\" বা বন্ধ পায়ের অবস্থান বলা হয়। এটি কারাতে ক্লাসের শুরু ও শেষে সেনসেইকে সালাম (Rei) করার সময় এবং কাতার সূচনায় ব্যবহৃত আনুষ্ঠানিক **প্রস্তুতি বা অ্যাটেনশন স্ট্যান্স**।\n\n## ডেমোনস্ট্রেশন (Demonstration)\n\n| সামনের দৃশ্য (Front View) | পাশ্ব দৃশ্য (Side View) |\n|:---:|:---:|\n| ![Heisoku Dachi — front view](/prospectus/skills/stances/images/heisokuf.jpg) | ![Heisoku Dachi — side view](/prospectus/skills/stances/images/heisokus.jpg) |\n\n## প্রধান পয়েন্টসমূহ\n\n- উভয় পা একসাথে রেখে গোড়ালি ও আঙুল একে অপরকে স্পর্শ করবে\n- পা দুটি একদম সোজা সামনের দিকে নির্দেশ করবে\n- হাঁটু সোজা থাকবে তবে শক্ত করে লক করা যাবে না\n- শরীরের ওজন উভয় পায়ে সমানভাবে থাকবে\n- মেরুদণ্ড একদম সোজা ও সোজা থাকবে\n- হাত দুটি শরীরের পাশে থাকবে\n\n## ব্যবহার\n\nHeisoku Dachi মূলত আনুষ্ঠানিকতায় ব্যবহৃত হয়:\n- ক্লাস শুরু ও শেষের সালাম (Rei) করার সময়\n- কাতা শুরু করার আগের প্রস্তুত অবস্থানে",
+    "is_group": 0,
+    "sort_order": 2
+  },
+  {
+    "route": "prospectus/stances/musubi",
+    "parent_route": "prospectus/stances",
+    "slug": "musubi",
+    "category": "stances",
+    "category_label": "স্ট্যান্স (Dachi-Kata)",
+    "title": "Musubi Dachi",
+    "meta_label": "Musubi Dachi",
+    "description": "ওপেন ফুট স্ট্যান্স — গোড়ালি একসাথে এবং আঙুল ৪৫ ডিগ্রি বাইরে খোলা, যা একটি গাঁটের মতো \"V\" আকৃতি তৈরি করে।",
+    "content": "# Musubi Dachi — Open Foot Stance\n\n**উচ্চারণ:** *মু-সু-বি দা-চি*\n\n## বিবরণ\n\nগোড়ালি জোড়া লাগানো কিন্তু পায়ের আঙুল বাইরে খোলা, যা দেখতে একটি গাঁট (Musubi) বা \"V\" আকৃতির মতো। এই ওপেন-ফুট স্ট্যান্সটি আনুষ্ঠানিক প্রণাম ও সতর্ক অবস্থানের জন্য ব্যবহৃত হয়।\n\n## ডেমোনস্ট্রেশন (Demonstration)\n\n| সামনের দৃশ্য (Front View) | পাশ্ব দৃশ্য (Side View) |\n|:---:|:---:|\n| ![Musubi Dachi — front view](/prospectus/skills/stances/images/musubif.jpg) | ![Musubi Dachi — side view](/prospectus/skills/stances/images/musubis.jpg) |\n\n## প্রধান পয়েন্টসমূহ\n\n- দুই গোড়ালি পরস্পরের সাথে স্পর্শ করে থাকবে\n- পায়ের আঙুলগুলো বাইরের দিকে প্রায় ৪৫ ডিগ্রি কোণে নির্দেশ করবে\n- উপর থেকে দেখলে পা দুটি \"V\" আকৃতি গঠন করবে\n- হাঁটু সোজা কিন্তু শিথিল থাকবে\n- শরীরের ওজন দুই পায়ে সমানভাবে থাকবে\n\n## ব্যবহার\n\nMusubi Dachi মূলত ব্যবহৃত হয়:\n- আনুষ্ঠানিক ধনুক প্রণাম (Rei) করার আগে ও পরে\n- নির্দিষ্ট কাতার শুরুতে প্রস্তুত পজিশন হিসেবে",
+    "is_group": 0,
+    "sort_order": 3
+  },
+  {
+    "route": "prospectus/stances/heiko",
+    "parent_route": "prospectus/stances",
+    "slug": "heiko",
+    "category": "stances",
+    "category_label": "স্ট্যান্স (Dachi-Kata)",
+    "title": "Heiko Dachi",
+    "meta_label": "Heiko Dachi",
+    "description": "প্যারালাল স্ট্যান্স — পা দুটি হিপের চওড়ায় সোজা সমান্তরালভাবে রাখা। প্রাকৃতিক খোলা স্ট্যান্স।",
+    "content": "# Heiko Dachi — Parallel Stance\n\n**উচ্চারণ:** *হেই-কো দা-চি*\n\n## বিবরণ\n\nপা দুটি আলাদা এবং **সমান্তরাল** — হিপের চওড়ায় খোলা একটি নিরপেক্ষ স্ট্যান্স। \"Heiko\" অর্থ সমান্তরাল। এই স্ট্যান্সের প্রধান বৈশিষ্ট্য হলো দুই পায়ের আঙুলই একদম সোজা সামনের দিকে নির্দেশ করে।\n\n## ডেমোনস্ট্রেশন (Demonstration)\n\n| সামনের দৃশ্য (Front View) | পাশ্ব দৃশ্য (Side View) |\n|:---:|:---:|\n| ![Heiko Dachi — front view](/prospectus/skills/stances/images/heikof.jpg) | ![Heiko Dachi — side view](/prospectus/skills/stances/images/heikos.jpg) |\n\n## প্রধান পয়েন্টসমূহ\n\n- পা দুটি আনুমানিক হিপের প্রস্থের সমান চওড়া থাকবে\n- উভয় পা সমান্তরালভাবে সোজা সামনে থাকবে\n- হাঁটু শিথিলভাবে সোজা থাকবে\n- ওজন দুই পায়ে সমানভাবে থাকবে\n- সাধারণ স্বাভাবিক সোজা ভঙ্গি বজায় থাকবে\n\n## ব্যবহার\n\nHeiko Dachi ব্যবহৃত হয়:\n- স্বাভাবিক দাঁড়িয়ে থাকার রেডি পজিশন হিসেবে\n- ওয়ার্ম-আপ এবং মৌলিক অনুশীলন করার সময়\n- টেকনিকের অন্তর্বর্তীকালীন ট্রানজিশন হিসেবে",
+    "is_group": 0,
+    "sort_order": 4
+  },
+  {
+    "route": "prospectus/stances/hachiji",
+    "parent_route": "prospectus/stances",
+    "slug": "hachiji",
+    "category": "stances",
+    "category_label": "স্ট্যান্স (Dachi-Kata)",
+    "title": "Hachiji Dachi",
+    "meta_label": "Hachiji Dachi",
+    "description": "ন্যাচারাল ওপেন স্ট্যান্স — পা দুটি কাঁধ সমপরিমাণ চওড়া এবং পায়ের আঙুল বাইরের দিকে ৪৫ ডিগ্রিতে খোলা।",
+    "content": "# Hachiji Dachi — Natural Open Stance\n\n**উচ্চারণ:** *হা-চি-জি দা-চি*\n\n## বিবরণ\n\nপা দুটি কাঁধ সমপরিমাণ চওড়া রেখে পায়ের আঙুল **বাইরের দিকে ৪৫ ডিগ্রি কোণে** রাখা হয়। \"Hachiji\" শব্দটি জাপানি সংখ্যা ৮ (八) থেকে এসেছে, যা পায়ের অবস্থানের আকৃতির সাথে মিলে যায়। এটি অনুশীলনের অন্যতম প্রধান প্রাকৃতিক প্রস্তুত স্ট্যান্স।\n\n## ডেমোনস্ট্রেশন (Demonstration)\n\n| সামনের দৃশ্য (Front View) | পাশ্ব দৃশ্য (Side View) |\n|:---:|:---:|\n| ![Hachiji Dachi — front view](/prospectus/skills/stances/images/hachijif.jpg) | ![Hachiji Dachi — side view](/prospectus/skills/stances/images/hachijis.jpg) |\n\n## প্রধান পয়েন্টসমূহ\n\n- পা দুটি কাঁধের সমান চওড়া থাকবে\n- পায়ের আঙুলগুলো বাইরের দিকে ৪৫ ডিগ্রি কোণে খোলা থাকবে\n- হাঁটু হালকা বাঁকানো (স্বাভাবিক শিথিল মোচড়)\n- শরীরের ওজন দুই পায়ে সমানভাবে বন্টিত থাকবে\n- কাঁধ শিথিল এবং হিপ সমান্তরাল থাকবে\n\n## ব্যবহার\n\n- অনুশীলনের প্রধান প্রস্তুত পজিশন (Yoi) হিসেবে\n- বহু কাতার শুরুর স্ট্যান্স হিসেবে",
+    "is_group": 0,
+    "sort_order": 5
+  },
+  {
+    "route": "prospectus/stances/uchi-hachiji",
+    "parent_route": "prospectus/stances",
+    "slug": "uchi-hachiji",
+    "category": "stances",
+    "category_label": "স্ট্যান্স (Dachi-Kata)",
+    "title": "Uchi-Hachiji Dachi (Niafanchi Dachi)",
+    "meta_label": "Uchi-Hachiji Dachi",
+    "description": "ইনভার্টেড ন্যাচারাল স্ট্যান্স — পা কাঁধের চওড়া এবং পায়ের আঙুল ভেতরের দিকে ৪৫ ডিগ্রি কোণে নির্দেশিত।",
+    "content": "# Uchi-Hachiji Dachi — Inverted Natural Stance\n\n**উচ্চারণ:** *উ-চি হা-চি-জি দা-চি*\n\nঅপর নাম: **Niafanchi Dachi**\n\n## বিবরণ\n\nপা দুটি কাঁধ সমপরিমাণ চওড়া এবং পায়ের আঙুল **ভেতরের দিকে ৪৫ ডিগ্রি কোণে** ঘোরানো থাকে। \"Uchi\" অর্থ ভেতরের দিক। এটি হিপে একটি শক্তিশালী অভ্যন্তরীণ টান তৈরি করে এবং এটি নাইফাঞ্চি (Naifanchi) কাতার সাথে সম্পর্কিত।\n\n## ডেমোনস্ট্রেশন (Demonstration)\n\n| সামনের দৃশ্য (Front View) | পাশ্ব দৃশ্য (Side View) |\n|:---:|:---:|\n| ![Uchi-Hachiji Dachi — front view](/prospectus/skills/stances/images/naihanchif.jpg) | ![Uchi-Hachiji Dachi — side view](/prospectus/skills/stances/images/naihanchis.jpg) |\n\n## প্রধান পয়েন্টসমূহ\n\n- পা দুটি কাঁধের প্রস্থের সমান চওড়া থাকবে\n- পায়ের আঙুল ভেতরের দিকে ৪৫ ডিগ্রি কোণে থাকবে\n- হাঁটু দুটি বাইরের দিকে হালকা চাপ দিয়ে রাখতে হবে\n- উরু ও হিপের মধ্যে অভ্যন্তরীণ পেশীসংকোচন বা টেনশন থাকবে\n- ওজন দুই পায়ে সমানভাবে থাকবে\n\n## ব্যবহার\n\n- Naifanchi (Naihanchi) কাতা সিরিজে ব্যবহৃত হয়\n- হিপ ও পায়ের অভ্যন্তরীণ শক্তি বৃদ্ধির প্রশিক্ষণে",
+    "is_group": 0,
+    "sort_order": 6
+  },
+  {
+    "route": "prospectus/stances/shiko",
+    "parent_route": "prospectus/stances",
+    "slug": "shiko",
+    "category": "stances",
+    "category_label": "স্ট্যান্স (Dachi-Kata)",
+    "title": "Shiko Dachi",
+    "meta_label": "Shiko Dachi",
+    "description": "স্ট্র্যাডল লেগ স্ট্যান্স — দুই পা চওড়া করে হাঁটু বাঁকানো \"সুমো\" স্ট্যান্স, যেখানে পায়ের আঙুল বাইরের দিকে ৪৫ ডিগ্রিতে থাকে।",
+    "content": "# Shiko Dachi — Straddle Leg Stance\n\n**উচ্চারণ:** *শি-কো দা-চি*\n\n## বিবরণ\n\nএকটি চওড়া স্ট্র্যাডল-লেগ স্ট্যান্স যেখানে হাঁটু গভীরভাবে বাঁকানো থাকে — সুমো কুস্তিগীরদের অবস্থানের সাথে মিল থাকায় একে **\"সুমো\" স্ট্যান্স**ও বলা হয়। এটি পায়ের শক্তি ও নমনীয়তার জন্য অন্যতম চ্যালেঞ্জিং স্ট্যান্স।\n\n## ডেমোনস্ট্রেশন (Demonstration)\n\n| সামনের দৃশ্য (Front View) | পাশ্ব দৃশ্য (Side View) |\n|:---:|:---:|\n| ![Shiko Dachi — front view](/prospectus/skills/stances/images/shikof.jpg) | ![Shiko Dachi — side view](/prospectus/skills/stances/images/shikos.jpg) |\n\n## প্রধান পয়েন্টসমূহ\n\n- পা দুটি কাঁধের প্রস্থের চেয়ে বেশ চওড়া হবে (প্রায় ১.৫ থেকে ২ গুণ)\n- পায়ের আঙুল বাইরের দিকে ৪৫ ডিগ্রি কোণে নির্দেশ করবে\n- হাঁটু গভীরভাবে বাঁকানো হবে এবং পায়ের আঙুলের ওপর দিয়ে বাইরের দিকে থাকবে\n- উরু মেঝের সমান্তরালে নিয়ে আসার চেষ্টা করতে হবে\n- মোট ওজন দুই পায়ে সমান থাকবে এবং মেরুদণ্ড সোজা থাকবে\n\n## ব্যবহার\n\n- Shiko এবং Nahate ঘরানার বিভিন্ন কাতাতে ব্যবহৃত হয়\n- কাছের শক্তিশেলী আক্রমণের অনুশীলনে\n- পায়ের শক্তি বাড়ানোর জন্য বিশেষ ব্যায়াম হিসেবে",
+    "is_group": 0,
+    "sort_order": 7
+  },
+  {
+    "route": "prospectus/stances/moto",
+    "parent_route": "prospectus/stances",
+    "slug": "moto",
+    "category": "stances",
+    "category_label": "স্ট্যান্স (Dachi-Kata)",
+    "title": "Moto Dachi",
+    "meta_label": "Moto Dachi",
+    "description": "বেসিক ফরোয়ার্ড স্ট্যান্স — সামনের হাঁটু সামান্য বাঁকানো, Zenkutsu Dachi-এর চেয়ে কিছুটা সংক্ষিপ্ত ফরোয়ার্ড স্ট্যান্স।",
+    "content": "# Moto Dachi — Basic Forward Stance\n\n**উচ্চারণ:** *মো-তো দা-চি*\n\n## বিবরণ\n\nসামনের হাঁটু **সামান্য বাঁকানো** একটি ফরোয়ার্ড স্ট্যান্স — যা Zenkutsu Dachi এর তুলনায় সংক্ষিপ্ত এবং সোজা। \"Moto\" অর্থ মৌলিক বা মূল। এটি শীতো-রিউ কুমিতে এবং মৌলিক প্রশিক্ষণে সর্বাধিক ব্যবহৃত হয়।\n\n## ডেমোনস্ট্রেশন (Demonstration)\n\n| সামনের দৃশ্য (Front View) | পাশ্ব দৃশ্য (Side View) |\n|:---:|:---:|\n| ![Moto Dachi — front view](/prospectus/skills/stances/images/motof.jpg) | ![Moto Dachi — side view](/prospectus/skills/stances/images/motos.jpg) |\n\n## প্রধান পয়েন্টসমূহ\n\n- সামনের পা সোজা সামনে নির্দেশ করবে\n- পেছনের পা বাইরের দিকে ৪৫ ডিগ্রি কোণে থাকবে\n- সামনের হাঁটু সামান্য বাঁকানো থাকবে\n- স্ট্যান্সের দৈর্ঘ্য মাঝারি — প্রায় এক কাঁধ সমপরিমাণ\n- ওজন বন্টন: প্রায় ৬০% সামনে এবং ৪০% পেছনে\n\n## ব্যবহার\n\n- বেসিক ড্রিল (Kihon) এবং কারাতে স্পারিংয়ে (Kumite)\n- Nekoashi এবং Zenkutsu-এর মধ্যে স্থানান্তরের সময়\n- Heian (Pinan) কাতাতে ব্যাপকভাবে ব্যবহৃত হয়",
+    "is_group": 0,
+    "sort_order": 8
+  },
+  {
+    "route": "prospectus/stances/zenkutsu",
+    "parent_route": "prospectus/stances",
+    "slug": "zenkutsu",
+    "category": "stances",
+    "category_label": "স্ট্যান্স (Dachi-Kata)",
+    "title": "Zenkutsu Dachi",
+    "meta_label": "Zenkutsu Dachi",
+    "description": "লং ফরোয়ার্ড স্ট্যান্স — সামনের হাঁটু গভীরভাবে বাঁকানো এবং পেছনের পা প্রসারিত। শীতো-রিউর মূল পাওয়ার ড্রাইভ স্ট্যান্স।",
+    "content": "# Zenkutsu Dachi — Long Forward Stance\n\n**উচ্চারণ:** *জেন-কুতসু দা-চি*\n\n## বিবরণ\n\nএকটি দীর্ঘ ফরোয়ার্ড স্ট্যান্স যেখানে সামনের হাঁটু **গভীরভাবে বাঁকানো** এবং পেছনের পা সোজা প্রসারিত থাকে। \"Zenkutsu\" অর্থ সামনের দিকে ঝুঁকে থাকা। এটি কারাতের মূল পাওয়ার স্ট্যান্স এবং অধিকাংশ অগ্রগামী আক্রমণ ও ব্লকে ব্যবহৃত হয়।\n\n## ডেমোনস্ট্রেশন (Demonstration)\n\n| সামনের দৃশ্য (Front View) | পাশ্ব দৃশ্য (Side View) |\n|:---:|:---:|\n| ![Zenkutsu Dachi — front view](/prospectus/skills/stances/images/zenkutsuf.jpg) | ![Zenkutsu Dachi — side view](/prospectus/skills/stances/images/zenkutsus.jpg) |\n\n## প্রধান পয়েন্টসমূহ\n\n- সামনের পা সোজা সামনে নির্দেশ করবে\n- পেছনের পা বাইরের দিকে ৪৫ ডিগ্রি কোণে থাকবে\n- সামনের হাঁটু সঠিকভাবে গোড়ালি ও আঙুলের ওপর গভীরভাবে বাঁকানো\n- পেছনের পা সম্পূর্ণ সোজা থাকবে এবং গোড়ালি মাটিতে লাগানো থাকবে\n- ওজন বন্টন: প্রায় ৭০% সামনে এবং ৩০% পেছনে\n\n## শক্তি উৎপাদন\n\n- হিপ রোটেশন (Koshi no kaiten) এবং পেছনের পায়ের গ্রাউন্ড ফোর্সের মাধ্যমে তীব্র শক্তি উৎপন্ন হয়।\n\n## ব্যবহার\n\n- আক্রমণ (যেমন Oi-tsuki) এবং ব্লকে ব্যবহৃত সবচেয়ে পরিচিত স্ট্যান্স।\n- সকল Heian/Pinan কাতাতে এটি বিদ্যমান।",
+    "is_group": 0,
+    "sort_order": 9
+  },
+  {
+    "route": "prospectus/stances/nekoashi",
+    "parent_route": "prospectus/stances",
+    "slug": "nekoashi",
+    "category": "stances",
+    "category_label": "স্ট্যান্স (Dachi-Kata)",
+    "title": "Nekoashi Dachi",
+    "meta_label": "Nekoashi Dachi",
+    "description": "ক্যাট ফুট স্ট্যান্স — প্রায় সমস্ত ওজন পেছনের পায়ে, সামনের পা মাটিতে হালকাভাবে স্পর্শ করে থাকে। অত্যন্ত ক্ষিপ্র প্রতিরক্ষামূলক স্ট্যান্স।",
+    "content": "# Nekoashi Dachi — Cat Foot Stance\n\n**উচ্চারণ:** *নে-কো-আ-শি দা-চি*\n\n## বিবরণ\n\n**\"বিড়ালের পায়ের স্ট্যান্স\"** — শরীরের প্রায় ৯০% ওজন পেছনের পায়ে থাকে এবং সামনের পায়ের কেবল বল (Ball of foot) মেঝেকে হালকাভাবে স্পর্শ করে থাকে। বিড়ালের মতো যেকোনো মুহূর্তে লাফিয়ে ওঠা বা সরে যাওয়ার জন্য এই স্ট্যান্সটি বিখ্যাত।\n\n## ডেমোনস্ট্রেশন (Demonstration)\n\n| সামনের দৃশ্য (Front View) | পাশ্ব দৃশ্য (Side View) |\n|:---:|:---:|\n| ![Nekoashi Dachi — front view](/prospectus/skills/stances/images/nekof.jpg) | ![Nekoashi Dachi — side view](/prospectus/skills/stances/images/nekos.jpg) |\n\n## প্রধান পয়েন্টসমূহ\n\n- পেছনের পায়ে প্রায় ৯০% ওজন থাকবে\n- সামনের পা মাটিতে শুধুমাত্র সামনের অংশে (Ball of foot) হালকা ছোঁয়া থাকবে\n- পেছনের হাঁটু গভীরভাবে বাঁকানো থাকবে\n- সামনের পা যেকোনো মুহূর্তে কিকের জন্য তুলে ফেলা সম্ভব\n\n## সুবিধা\n\n- ওজন স্থানান্তর না করেই তাৎক্ষণিক সামনের পায়ে কিক (Front Kick) হানা যায়\n- পেছনের দিকে সরে গিয়ে আত্মরক্ষা করা সহজ\n\n## ব্যবহার\n\n- স্পারিং (Kumite) এবং আত্মরক্ষামূলক পরিস্থিতিতে\n- Kushin নীতির প্রয়োগে",
+    "is_group": 0,
+    "sort_order": 10
+  },
+  {
+    "route": "prospectus/stances/sanchin",
+    "parent_route": "prospectus/stances",
+    "slug": "sanchin",
+    "category": "stances",
+    "category_label": "স্ট্যান্স (Dachi-Kata)",
+    "title": "Sanchin Dachi",
+    "meta_label": "Sanchin Dachi",
+    "description": "আওয়ারগ্লাস স্ট্যান্স — ভেতরের দিকে পায়ের টেনশন সৃষ্টিকারী স্ট্যান্স, যা পুরো শরীরে পেশীসংকোচন তৈরি করে।",
+    "content": "# Sanchin Dachi — Hourglass Stance\n\n**উচ্চারণ:** *সান-চিন দা-চি*\n\n## বিবরণ\n\n**ইনওয়ার্ড টেনশন স্ট্যান্স** — একে \"আওয়ারগ্লাস\" (বালুঘড়ি) স্ট্যান্সও বলা হয়। \"Sanchin\" অর্থ \"তিনটি যুদ্ধ\" (মন, শরীর ও আত্মা)। এই স্ট্যান্সে পা ও উরুর পেশীতে ভেতরের দিকে তীব্র সংকোচন তৈরি করা হয়।\n\n## ডেমোনস্ট্রেশন (Demonstration)\n\n| সামনের দৃশ্য (Front View) | পাশ্ব দৃশ্য (Side View) |\n|:---:|:---:|\n| ![Sanchin Dachi — front view](/prospectus/skills/stances/images/sanchinf.jpg) | ![Sanchin Dachi — side view](/prospectus/skills/stances/images/sanchins.jpg) |\n\n## প্রধান পয়েন্টসমূহ\n\n- এক পা অন্য পায়ের এক কদম সামনে থাকবে\n- দুই পায়ের আঙুলই ভেতরের দিকে ঘুরানো থাকবে\n- সামনের পায়ের গোড়ালি পেছনের পায়ের আঙুলের লাইনে থাকবে (T-আকৃতি)\n- হাঁটু দুটি ভেতরের দিকে চাপ দিয়ে বাঁকানো থাকবে\n- শরীরের কেন্দ্র (Core) এবং তলপেট শক্ত সংকুচিত থাকবে\n\n## ব্যবহার\n\n- **Sanchin kata** এবং Tensho kata-র মূল ভিত্তি স্ট্যান্স।\n- শরীরের দৃঢ়তা ও নিঃশ্বাসের নিয়ন্ত্রণ (Ibuki) বাড়াতে ব্যবহৃত হয়।",
+    "is_group": 0,
+    "sort_order": 11
+  },
+  {
+    "route": "prospectus/stances/kokutsu",
+    "parent_route": "prospectus/stances",
+    "slug": "kokutsu",
+    "category": "stances",
+    "category_label": "স্ট্যান্স (Dachi-Kata)",
+    "title": "Kokutsu Dachi",
+    "meta_label": "Kokutsu Dachi",
+    "description": "ব্যাক স্ট্যান্স — ওজন প্রধানত পেছনের পায়ে, শরীর পেছনের দিকে মুখ করে থাকা অত্যন্ত শক্তিশালী প্রতিরক্ষামূলক স্ট্যান্স।",
+    "content": "# Kokutsu Dachi — Back Stance\n\n**উচ্চারণ:** *কো-কুতসু দা-চি*\n\n## বিবরণ\n\n**\"পেছনের দিকে ঝুঁকে থাকা\" স্ট্যান্স** — যাকে ব্যাক স্ট্যান্সও বলা হয়। \"Kokutsu\" অর্থ পেছনের দিকে ঝুঁকানো। শরীরের ওজনের বেশিরভাগ অংশ (৭০–৮০%) পেছনের পায়ে রাখা হয়, যা এটিকে একটি কার্যকর **আত্মরক্ষামূলক ও পাল্টা আক্রমণের স্ট্যান্স** হিসেবে গড়ে তোলে।\n\n## ডেমোনস্ট্রেশন (Demonstration)\n\n| সামনের দৃশ্য (Front View) | পাশ্ব দৃশ্য (Side View) |\n|:---:|:---:|\n| ![Kokutsu Dachi — front view](/prospectus/skills/stances/images/kokutsuf.jpg) | ![Kokutsu Dachi — side view](/prospectus/skills/stances/images/kokutsus.jpg) |\n\n## প্রধান পয়েন্টসমূহ\n\n- ওজনের প্রায় ৭০-৮০% পেছনের পায়ে থাকবে\n- পেছনের হাঁটু গভীরভাবে বাঁকানো থাকবে\n- সামনের পা সোজা সামনে এবং পেছনের পা ৯০ ডিগ্রি বাইরের দিকে নির্দেশ করবে\n- সামনের পা মাটি স্পর্শ করে থাকবে কিন্তু হালকা থাকবে\n\n## ব্যবহার\n\n- Shuto-uke (নাইফ-হ্যান্ড ব্লক) এর সাথে ব্যাপকভাবে ব্যবহৃত হয়।\n- Heian (Pinan) এবং অন্যান্য বহু কাতাতে প্রতিরক্ষামূলক ভঙ্গিতে এটি ব্যবহৃত হয়।",
+    "is_group": 0,
+    "sort_order": 12
+  },
+  {
+    "route": "prospectus/stances/renoji",
+    "parent_route": "prospectus/stances",
+    "slug": "renoji",
+    "category": "stances",
+    "category_label": "স্ট্যান্স (Dachi-Kata)",
+    "title": "Renoji Dachi",
+    "meta_label": "Renoji Dachi",
+    "description": "এল-শেপ স্ট্যান্স — পা দুটি জাপানি কাতাকানা বর্ণ \"レ\" (Re) বা ইংরেজি \"L\" অক্ষরের আকৃতিতে রাখা হয়।",
+    "content": "# Renoji Dachi — L-Shape Stance\n\n**উচ্চারণ:** *রে-নো-জি দা-চি*\n\n## বিবরণ\n\nএকটি স্ট্যান্স যেখানে পা দুটি **ইংরেজি \"L\" অক্ষরের** আকৃতিতে থাকে — জাপানি কাতাকানা বর্ণ レ (Re) এর নামানুসারে এর নামকরণ করা হয়েছে। এক পা সামনে এবং অন্য পা পাশে ৯০ ডিগ্রিতে অবস্থান করে।\n\n## ডেমোনস্ট্রেশন (Demonstration)\n\n| সামনের দৃশ্য (Front View) | পাশ্ব দৃশ্য (Side View) |\n|:---:|:---:|\n| ![Renoji Dachi — front view](/prospectus/skills/stances/images/renojif.jpg) | ![Renoji Dachi — side view](/prospectus/skills/stances/images/renojis.jpg) |\n\n## প্রধান পয়েন্টসমূহ\n\n- এক পা সোজা সামনে এবং অন্য পা পাশে ৯০ ডিগ্রি সমকোণে থাকবে\n- পেছনের পায়ের গোড়ালি সামনের পায়ের গোড়ালির কাছাকাছি বা পেছনে থাকবে\n- হাঁটুর বাঁক স্বাভাবিক ও সোজা থাকবে\n- ওজন সামান্য পেছনের পায়ে বেশি থাকবে\n\n## ব্যবহার\n\n- কৌশল পরিবর্তনের সময় মধ্যবর্তী ট্রানজিশন স্ট্যান্স হিসেবে ব্যবহৃত হয়।",
+    "is_group": 0,
+    "sort_order": 13
+  },
+  {
+    "route": "prospectus/stances/tee-ji",
+    "parent_route": "prospectus/stances",
+    "slug": "tee-ji",
+    "category": "stances",
+    "category_label": "স্ট্যান্স (Dachi-Kata)",
+    "title": "Tee-Ji Dachi",
+    "meta_label": "Tee-Ji Dachi",
+    "description": "টি-শেপ স্ট্যান্স — পা দুটি উল্টো ইংরেজি \"T\" অক্ষরের আকৃতিতে সাজানো থাকে।",
+    "content": "# Tee-Ji Dachi — T-Shape Stance\n\n**উচ্চারণ:** *টি-জি দা-চি*\n\n## বিবরণ\n\nএকটি স্ট্যান্স যেখানে পা দুটি **উল্টো \"T\" অক্ষরের** রূপ ধারণ করে — জাপানি কাতাকানা বর্ণ テ (Te) থেকে এই নাম এসেছে। সামনের পা সামনে থাকে এবং পেছনের পা লম্বভাবে সামনের গোড়ালির পেছনে থাকে।\n\n## ডেমোনস্ট্রেশন (Demonstration)\n\n| সামনের দৃশ্য (Front View) | পাশ্ব দৃশ্য (Side View) |\n|:---:|:---:|\n| ![Tee-Ji Dachi — front view](/prospectus/skills/stances/images/tdachif.jpg) | ![Tee-Ji Dachi — side view](/prospectus/skills/stances/images/tdachis.jpg) |\n\n## প্রধান পয়েন্টসমূহ\n\n- সামনের পা সোজা সামনে থাকবে\n- পেছনের পা লম্বভাবে (৯০ ডিগ্রি) সামনের গোড়ালির ঠিক পেছনে থাকবে\n- এটি উপর থেকে দেখলে একটি \"T\" আকৃতি গঠন করে\n\n## ব্যবহার\n\n- নির্দিষ্ট কাতার মধ্যে দিক পরিবর্তন ও মোচড়ের সময় ব্যবহৃত হয়।",
+    "is_group": 0,
+    "sort_order": 14
+  },
+  {
+    "route": "prospectus/stances/kosa",
+    "parent_route": "prospectus/stances",
+    "slug": "kosa",
+    "category": "stances",
+    "category_label": "স্ট্যান্স (Dachi-Kata)",
+    "title": "Kosa Dachi",
+    "meta_label": "Kosa Dachi",
+    "description": "হুকড লেগ স্ট্যান্স — এক পা অন্য পায়ের পেছনে ক্রস করা অবস্থায় হাঁটু নিচু করে রাখা স্ট্যান্স।",
+    "content": "# Kosa Dachi — Hooked Leg Stance\n\n**উচ্চারণ:** *কো-সা দা-চি*\n\n## বিবরণ\n\n**\"ক্রস করা পায়ের স্ট্যান্স\"** — এক পা অন্য পায়ের পেছনের দিকে ক্রস করে হাঁটু বাঁকিয়ে রাখা হয়। \"Kosa\" অর্থ ক্রস বা মোড়। কাতার মধ্যে দ্রুত ঘোরার বা লাফিয়ে নামার সময়ে এই স্ট্যান্স সাময়িকভাবে দেখা যায়।\n\n## ডেমোনস্ট্রেশন (Demonstration)\n\n| সামনের দৃশ্য (Front View) | পাশ্ব দৃশ্য (Side View) |\n|:---:|:---:|\n| ![Kosa Dachi — front view](/prospectus/skills/stances/images/kosadachif.jpg) | ![Kosa Dachi — side view](/prospectus/skills/stances/images/kosadachis.jpg) |\n\n## প্রধান পয়েন্টসমূহ\n\n- এক পা অন্য পায়ের পেছনে গিয়ে ক্রস হবে\n- উভয় হাঁটু বাঁকানো থাকবে\n- পেছনের পা আঙুলের ওপর (Ball of foot) ভর দিয়ে থাকবে\n- সামনের পা পুরো মেঝের ওপর ভর রাখবে\n\n## ব্যবহার\n\n- কাতাতে ১৮০° বা ৩৬০° দ্রুত ঘোরার মুহূর্তে\n- লাফ দেওয়া বা কিক করার ঠিক আগের ক্ষণে",
+    "is_group": 0,
+    "sort_order": 15
+  },
+  {
+    "route": "prospectus/stances/sagiashi",
+    "parent_route": "prospectus/stances",
+    "slug": "sagiashi",
+    "category": "stances",
+    "category_label": "স্ট্যান্স (Dachi-Kata)",
+    "title": "Sagiashi Dachi",
+    "meta_label": "Sagiashi Dachi",
+    "description": "হেরন ফুট স্ট্যান্স — এক পায়ে দাঁড়িয়ে থাকার স্ট্যান্স, যেখানে অন্য পা হাঁটু পর্যন্ত তুলে রাখা হয়।",
+    "content": "# Sagiashi Dachi — Heron Foot Stance\n\n**উচ্চারণ:** *সা-গি-আ-শি দা-চি*\n\n## বিবরণ\n\n**\"সারস পাখির পায়ের স্ট্যান্স\"** — সারস পাখি (Sagi) যেভাবে এক পায়ে দাঁড়িয়ে থাকে, ঠিক সেই ভঙ্গিতে এটি করা হয়। একটি পায়ে সমস্ত ভর রেখে অন্য পা তুলে হাঁটু ভাজ করে পাশে রাখা হয়।\n\n## ডেমোনস্ট্রেশন (Demonstration)\n\n| সামনের দৃশ্য (Front View) | পাশ্ব দৃশ্য (Side View) |\n|:---:|:---:|\n| ![Sagiashi Dachi — front view](/prospectus/skills/stances/images/sagiashif1.jpg) | ![Sagiashi Dachi — side view](/prospectus/skills/stances/images/sagiashib1.jpg) |\n\n## প্রধান পয়েন্টসমূহ\n\n- সমস্ত শরীরের ওজন একটিমাত্র পায়ে থাকবে\n- ভর রাখা পা সামান্য হাঁটুতে বাঁকানো থাকবে যাতে ভারসাম্য থাকে\n- মুক্ত পা উঁচুতে হাঁটু তুলে অন্য পায়ের হাঁটুর কাছে ধরে রাখা হবে\n- শরীরের ভারসাম্য রক্ষা করা জরুরি\n\n## ব্যবহার\n\n- উন্নত কাতার বিভিন্ন জটিল কৌশলে\n- এক পায়ে কিক করার চ্যাম্বারিং পজিশন হিসেবে",
+    "is_group": 0,
+    "sort_order": 16
+  },
+  {
+    "route": "prospectus/stances/ukiashi",
+    "parent_route": "prospectus/stances",
+    "slug": "ukiashi",
+    "category": "stances",
+    "category_label": "স্ট্যান্স (Dachi-Kata)",
+    "title": "Ukiashi Dachi",
+    "meta_label": "Ukiashi Dachi",
+    "description": "ফ্লোটিং ফুট স্ট্যান্স — Nekoashi Dachi এর মতোই তবে কিছুটা সোজা, যেখানে সামনের পা হালকা ভাসমান থাকে।",
+    "content": "# Ukiashi Dachi — Floating Foot Stance\n\n**উচ্চারণ:** *উ-কি-আ-শি দা-চি*\n\n## বিবরণ\n\n**Nekoashi Dachi-এর অনুরূপ** একটি স্ট্যান্স, তবে শরীর কিছুটা সোজা এবং সামনের পাটি আলতোভাবে ভাসমান (Uki) অবস্থায় থাকে। সামনের পায়ে কোনো ওজন থাকে না এবং শরীর প্রস্তুত থাকে যেকোনো দিকে সরে যাওয়ার জন্য।\n\n## ডেমোনস্ট্রেশন (Demonstration)\n\n| সামনের দৃশ্য (Front View) | পাশ্ব দৃশ্য (Side View) |\n|:---:|:---:|\n| ![Ukiashi Dachi — front view](/prospectus/skills/stances/images/ukiashidachif.jpg) | ![Ukiashi Dachi — side view](/prospectus/skills/stances/images/ukiashidachis.jpg) |\n\n## প্রধান পয়েন্টসমূহ\n\n- Nekoashi-এর মতো ভঙ্গি তবে শরীর কিছুটা সোজা\n- সামনের পা একদম শিথিল ও ভাসমান\n- পেছনের পায়ে সম্পূর্ণ ভর থাকবে\n\n## ব্যবহার\n\n- কৌশলগত অবস্থান পরিবর্তন ও দিক পরিবর্তনের জন্য।",
+    "is_group": 0,
+    "sort_order": 17
+  },
+  {
+    "route": "prospectus/movement",
+    "parent_route": "prospectus",
+    "slug": "movement",
+    "category": "movement",
+    "category_label": "মুভমেন্ট (Tenshin)",
+    "title": "মুভমেন্ট (Tenshin-Happo)",
+    "meta_label": "মুভমেন্ট (Tenshin)",
+    "description": "আটটি নির্দেশিত দিকে আক্রমণাত্মক ও প্রতিরক্ষামূলক কৌশল প্রয়োগের মৌলিক ক্ষমতা — শীতো-রিউ ফাইটিং কৌশলের মূল ভিত্তি।",
+    "content": "# মুভমেন্ট — Tenshin-Happo\n\n**অষ্ট-মুখী মুভমেন্ট (Eight-Directional Movement)**\n\n## সংক্ষিপ্ত বিবরণ\n\n**Tenshin-Happo** (転身八方) — \"আট-মুখী বডি মুভমেন্ট\" — হলো **আটটি ভিন্ন দিকে** আক্রমণাত্মক এবং প্রতিরক্ষামূলক উভয় কৌশল প্রয়োগ করার মৌলিক দক্ষতা। যেকোনো দিক বা কোণ থেকে আক্রমণ ও প্রতিরোধ করতে সক্ষম হওয়া শীতো-রিউ কৌশলের অন্যতম গুরুত্বপূর্ণ অঙ্গ।\n\n## আটটি দিক (The Eight Directions)\n\nশীতো-রিউ কারাতেতে নিচে উল্লেখিত আটটি মূল এবং অন্তর্বর্তী দিকে মুভমেন্ট অনুশীলন করা হয়:\n\n![Tenshin-Happo Diagram](/prospectus/skills/images/tenshin.gif)\n\n```\n        ↑ (১) সামনে (Forward)\n   ↖          ↗\n(৮) উত্তর-পশ্চিম (NW)      (২) উত্তর-পূর্ব (NE)\n  ←  (কেন্দ্র/Centre)  →\n(৭) দক্ষিণ-পশ্চিম (SW)      (৩) দক্ষিণ-পূর্ব (SE)\n   ↙          ↘\n        ↓ (৪) পেছনে (Backward)\n```\n\n| নম্বর | দিক (Direction) | বিবরণ (Description) |\n|---|---|---|\n| ১ — সামনে (Mae) | সোজাসুজি প্রতিপক্ষের দিকে এগিয়ে যাওয়া |\n| ২ — সামনে-ডানে (Mae-Migi) | ডান দিকে কোণাকুণি এগিয়ে যাওয়া |\n| ৩ — পেছনে-ডানে (Ushiro-Migi) | ডান দিকে কোণাকুণি পেছনে সরে যাওয়া |\n| ৪ — পেছনে (Ushiro) | সোজা প্রতিপক্ষ থেকে পেছনে সরে যাওয়া |\n| ৫ — পেছনে-বামে (Ushiro-Hidari) | বাম দিকে কোণাকুণি পেছনে সরে যাওয়া |\n| ৬ — সামনে-বামে (Mae-Hidari) | বাম দিকে কোণাকুণি এগিয়ে যাওয়া |\n| ৭ — বামে (Hidari) | বাম দিকে পার্শ্ববর্তী সরে যাওয়া |\n| ৮ — ডানে (Migi) | ডান দিকে পার্শ্ববর্তী সরে যাওয়া |\n\n## Taisabaki — শরীর স্থানান্তর (Body Shifting)\n\n**Taisabaki** (体捌き) হলো শরীর নিয়ন্ত্রণের একটি শিল্প — প্রতিপক্ষের আক্রমণের লাইন থেকে শরীরকে সরিয়ে নিয়ে সাথে সাথে পাল্টা আক্রমণের পজিশনে চলে যাওয়া। Tenshin-Happo আটটি দিকের যেকোনোটিতে Taisabaki প্রয়োগের দক্ষতা বাড়ায়।\n\nমূলনীতি: *নিরাপত্তা নিশ্চিত করতে শরীর সরিয়ে নিন, এবং সাথে সাথে পাল্টা আক্রমণ করুন।*\n\n## রেফারেন্স (References & Bibliography)\n\n1. Mabuni Kenei / Nakahashi Hidetoshi. *Karate-do Shito-ryu.* Paris, France: SEDIREP, 1989.\n2. Mabuni Kenei / Kassis Con. *Shito-ryu Karate-do.* Victoria, Australia: Dominie Press, 1997.\n3. Moledzki Sam. Personal Data Archives.",
+    "is_group": 0,
+    "sort_order": 18
+  },
+  {
+    "route": "prospectus/defense",
+    "parent_route": "prospectus",
+    "slug": "defense",
+    "category": "defense",
+    "category_label": "ডিফেন্স (Uke No Gogensoku)",
+    "title": "ডিফেন্স — Uke No Gogensoku",
+    "meta_label": "ডিফেন্স (Uke No Gogensoku)",
+    "description": "শীতো-রিউ কারাতের আত্মরক্ষার বিশেষ পাঁচটি মূলনীতি — সমস্ত প্রতিরক্ষামূলক ব্যবস্থার নির্দেশক নীতিসমূহ।",
+    "content": "# ডিফেন্স — Uke No Gogensoku\n\n**শীতো-রিউ কারাতের আত্মরক্ষার ৫টি প্রধান নীতি (Special Five Principles of Defense)**\n\n*প্রদর্শনী: গেনজো ইয়োওয়াতা সেনসেই (৭ম দান JKF শীতো-কাই), সহযোগিতায় মুরায়ামা আলোনসো সেনসেই (৪র্থ দান) এবং নাকায়ামা সেনসেই।*\n\n---\n\n## মূল ৫টি নীতি\n\nশীতো-রিউ কারাতে আত্মরক্ষার পাঁচটি মৌলিক ধারণা শিক্ষা দেয় — **Uke No Gogensoku** (受けの五原則)। এগুলো কেবল নিছক ব্লক নয়, বরং যেকোনো আক্রমণের জবাব দেওয়ার কৌশলগত নীতি।\n\n---\n\n### ১. RAKKA — 落花 (ঝরে পড়া ফুল)\n\nগাছের গোড়ায় এমন তীব্র শক্তিতে আঘাত করার ধারণা, যাতে গাছের শাখা থেকে ফুল (বিকাশমান অংশ) ঝরে পড়ে।\n\n**প্রয়োগ:** হার্ড ব্লক (Hard Blocking) — মোচড়সহ আকস্মিক সর্বোচ্চ শক্তি প্রয়োগ করে সরাসরি আক্রমণকে থামিয়ে দেওয়া এবং প্রতিপক্ষের মনোবল চূর্ণ করা।\n\n*চিন্তাধারা: একটি একক ধ্বংসাত্মক পাল্টা শক্তি যা আক্রমণকে পুরোপুরি ব্যর্থ করে।*\n\n**ডেমোনস্ট্রেশন (Demonstration):**\n![Rakka 1](/prospectus/skills/defense/images/s_rakka1.jpg)\n![Rakka 2](/prospectus/skills/defense/images/S_rakka.2.jpg)\n\n---\n\n### ২. RYUSU — 流水 (প্রবাহিত পানি)\n\n**সফট ব্লকিং (Soft Blocking)** বা আক্রমণকে সহ্য করে গোলাকার বা ডাইভার্টিং ব্লকের মাধ্যমে সার্কুলার মোশনে তার দিক পরিবর্তন করে দেওয়ার ধারণা।\n\n**প্রয়োগ:** প্রতিপক্ষের আক্রমণকে সরাসরি না ঠেকিয়ে তাকে ঘুরিয়ে দেওয়া। ঠিক যেমন পানি কোনো বাধা পেলে তার পাশ দিয়ে প্রবাহিত হয়ে যায়।\n\n*চিন্তাধারা: নমনীয়তা গ্রহণ করুন, প্রতিপক্ষের বলকে অন্য দিকে চালিত করুন।*\n\n**ডেমোনস্ট্রেশন (Demonstration):**\n![Ryusu 1](/prospectus/skills/defense/images/s_rusui1.jpg)\n![Ryusu 2](/prospectus/skills/defense/images/s_rusui2.jpg)\n![Ryusu 3](/prospectus/skills/defense/images/s_rusui3.jpg)\n\n---\n\n### ৩. TENI — 転移 (শরীরের স্থানান্তর / Taisabaki)\n\nপ্রতিপক্ষের আক্রমণের পথ থেকে **শরীরকে সরিয়ে নেওয়া বা ঘুরিয়ে দেওয়া** — কৌশলী বডি মুভমেন্ট (Taisabaki) প্রয়োগ করে আক্রমণ এড়ানো।\n\n**প্রয়োগ:** আক্রমণের লাইন থেকে শরীরকে সরিয়ে ফেলা। হাত দিয়ে ব্লক করার চেয়ে শরীর সরিয়ে নেওয়া এখানে মূল প্রতিরক্ষা।\n\n*চিন্তাধারা: আপনি যদি আক্রমণের লাইনে না থাকেন, তবে আক্রমণ আপনাকে আঘাত করতে পারবে না।*\n\n**ডেমোনস্ট্রেশন (Demonstration):**\n![Teni 1](/prospectus/skills/defense/images/s_teni.jpg)\n\n---\n\n### ৪. KUSHIN — 屈伸 (স্প্রিংয়ের মতো সংকোচন ও প্রসারণ)\n\n**স্ট্যান্সের তাৎক্ষণিক পরিবর্তন** (যেমন- Moto Dachi → Nekoashi Dachi → Moto Dachi) — যেকোনো কোণ থেকে দ্রুত সরে গিয়ে সাথে সাথে আবার পূর্বের অবস্থানে ফিরে আসা।\n\n**প্রয়োগ:** স্প্রিং-এর মতো প্রতিক্রিয়া — হাঁটুর ওপর ভর দিয়ে ওজন নিচু করে আক্রমণ এড়িয়ে যাওয়া এবং সাথে সাথে স্প্রিংয়ের মতো ঘুরে দাঁড়িয়ে পাল্টা আক্রমণ করা।\n\n*চিন্তাধারা: সংকুচিত স্প্রিংয়ের স্থিস্থাপকতা — এড়াতে সংকুচিত হন, প্রতিঘাতে মুক্ত হন।*\n\n**ডেমোনস্ট্রেশন (Demonstration):**\n![Kushin 1](/prospectus/skills/defense/images/S_kusshin1.jpg)\n![Kushin 2](/prospectus/skills/defense/images/S_kusshin2.jpg)\n![Kushin 2b](/prospectus/skills/defense/images/S_kusshin2b.jpg)\n![Kushin 3](/prospectus/skills/defense/images/S_KUSSHIN3.JPG)\n![Kushin 4](/prospectus/skills/defense/images/S_KUSSHIN4.JPG)\n![Kushin 4b](/prospectus/skills/defense/images/S_kusshin4b.jpg)\n\n---\n\n### ৫. HANGEKI — 反撃 (পাল্টা আক্রমণ / \"Go No Sen\")\n\nকার্যকর প্রতিরক্ষামূলক ব্যবস্থা হিসেবে একটি **শক্তিশালী পাল্টা আক্রমণাত্মক কৌশল** তৈরি করার ধারণা (যেমন- Tsuki Uke বা Wa Uke)।\n\n**প্রয়োগ:** আক্রমণ শুরু হওয়ার সাথে সাথেই একই মুহূর্তে পাল্টা আক্রমণ হানা। এখানে পাল্টা আক্রমণটিই ব্লকের কাজ করে।\n\n*চিন্তাধারা: সঠিক সময়ে নিখুঁত পাল্টা আক্রমণই হলো সেরা আত্মরক্ষা।*\n\n**ডেমোনস্ট্রেশন (Demonstration):**\n![Hangeki 1](/prospectus/skills/defense/images/S_hangeki1.jpg)\n![Hangeki 2](/prospectus/skills/defense/images/S_hangeki3.jpg)\n![Hangeki 3](/prospectus/skills/defense/images/S_hangeki4.jpg)\n\n---\n\n## সারসংক্ষেপ সারণী (Summary Table)\n\n| # | জাপানি নাম | অর্থ | মূল ধারণা |\n|---|---|---|---|\n| ১ | Rakka | ঝরে পড়া ফুল | সর্বোচ্চ শক্তিতে হার্ড ব্লক |\n| ২ | Ryusu | প্রবাহিত পানি | সার্কুলার মোশনে নরমভাবে দিক পরিবর্তন |\n| ৩ | Teni | বডি মুভমেন্ট | Taisabaki প্রয়োগে শরীর সরিয়ে এড়ানো |\n| ৪ | Kushin | স্প্রিং অ্যাকশন | স্ট্যান্সের সংকোচন-প্রসারণে সরে যাওয়া ও ফেরা |\n| ৫ | Hangeki | কাউন্টার অ্যাটাক | একসাথে ব্লক ও একইসাথে পাল্টা আঘাত |\n\n---\n\n## রেফারেন্স (References & Bibliography)\n\n1. Photographs of Iwata Sensei and Murayama Sensei taken from *Seikan Karate-do Magazine*. Tokyo, Japan. Vol. 257 — December 1995.\n2. Photographs of Iwata Sensei and Nakayama Sensei taken from *Seikan Karate-do Magazine*. Tokyo, Japan. Vol. 305 — July 1998.\n3. Sells, John. \"Shito-ryu Karate, Okinawa's Not So Hidden Secret.\" *Karate Magazine* article.\n4. Mabuni Kenei / Nakahashi Hidetoshi. *Karate-do Shito-ryu.* Paris, France: SEDIREP, 1989.\n5. Moledzki, Sam. Personal Data Archives.",
+    "is_group": 0,
+    "sort_order": 19
+  },
+  {
+    "route": "prospectus/blocks",
+    "parent_route": "prospectus",
+    "slug": "blocks",
+    "category": "blocks",
+    "category_label": "ব্লক (Uke-Waza)",
+    "title": "ব্লকিং টেকনিকসমূহ — Uke-Waza",
+    "meta_label": "ব্লক (Uke-Waza)",
+    "description": "শীতো-রিউ কারাতের সমস্ত ব্লক কৌশল (Uke-Waza) — মৌলিক নিম্ন ব্লক থেকে শুরু করে উন্নত ও সমসাময়িক কাউন্টার ব্লকের তালিকা।",
+    "content": "# ব্লকিং টেকনিকসমূহ — Uke-Waza\n\n**受け技** — আক্রমণ গ্রহণ ও প্রতিহত করার শিল্প।\n\nশীতো-রিউ কারাতেতে ব্লক মানে কেবল নিষ্ক্রিয় প্রতিরক্ষা নয়। সঠিক ব্লক পাল্টা আক্রমণের সুযোগ তৈরি করে এবং অনেক ক্ষেত্রে ব্লক নিজেই আক্রমণের রূপ নেয় (যেমন Tsuki Uke)। আক্রমণ প্রতিহতের স্তর (Jodan/Chudan/Gedan), দিক এবং হাতের গঠনের ওপর ভিত্তি করে ব্লকসমূহ শ্রেণীবদ্ধ করা হয়।\n\n---\n\n## মৌলিক ব্লকসমূহ (Fundamental Blocks)\n\n| জাপানি নাম | নাম (English) | বিবরণ |\n|---|---|---|\n| [Gedan Barai Uke (Hari Uke)](/prospectus/blocks/gedan-barai) | Low Sweep Block | নিম্ন স্তরের ডাউনওয়ার্ড সুইপিং ব্লক — নাভি ও নিম্নাঙ্গের আক্রমণ প্রতিহত করে। |\n| [Yoko Uke (Soto Uke)](/prospectus/blocks/yoko-uke) | Outside Block | ভেতর থেকে বাইরের দিকে ব্লক — বুকের ওপর আঘাত ঠেকায়। |\n| [Yoko Uchi (Uchi Uke)](/prospectus/blocks/yoko-uchi) | Inside Block | বাইরে থেকে ভেতরের দিকে ব্লক — মধ্যস্তরের আক্রমণ ভেতরের দিকে সরায়। |\n| [Age Uke](/prospectus/blocks/age-uke) | Rising Block | ঊর্ধ্বমুখী ব্লক — মাথার ওপর আঘাত বা ফেস পাঞ্চ প্রতিহত করে। |\n| Yoko Bari Uke | Side Sweep Block | পাশ্ববর্তী সুইপিং ব্লক। |\n| Uchi Otoshi Uke | Inside Drop Block | সার্কুলার ভেতরে নিচের দিকে চাপ দিয়ে ঠেকানোর ব্লক। |\n\n---\n\n## সমসাময়িক ও সাপোর্টেড ব্লক (Simultaneous & Augmented Blocks)\n\n| জাপানি নাম | নাম (English) | বিবরণ |\n|---|---|---|\n| [Tsuki Uke](/prospectus/blocks/tsuki-uke) | Punch Block | একই সাথে ঘুসি ও ব্লক — যেখানে ঘুসিটি নিজেই ব্লকের কাজ করে। |\n| Te Kubi Sasae Uke | Supported Wrist Block | কবজি দ্বারা সমর্থিত বিশেষ ব্লক। |\n| Sukui Uke | Scoop Block | নিচে থেকে টেনে তোলার মতো স্কুপ ব্লক। |\n| Hijisasae Uke | Elbow Block | কনুই দিয়ে সমর্থিত মধ্যস্তরের ব্লক। |\n\n---\n\n## খোলা হাতের ব্লক (Open-Hand Blocks)\n\n| জাপানি নাম | নাম (English) | বিবরণ |\n|---|---|---|\n| Shuto Uke | Knife-Hand Block | হাতের বাইরের ধার দিয়ে ব্লকিং — \"নাইফ-হ্যান্ড\" ব্লক। |\n| Nagashi Uke | Flowing Block | খোলা হাতে গড়িয়ে নেওয়ার মতো সুইপিং ব্লক। |\n| Shiuko Uke (Haishu Uke) | Back-Hand Block | হাতের পেছনের অংশ দিয়ে খোলা হাতের ব্লক। |\n| Shotei Uke (Teisho) | Palm-Heel Block | হাতের তালুর নিচের শক্ত অংশ দিয়ে ব্লক। |\n\n---\n\n## ক্রস এবং প্রেসিং ব্লক (Cross & Pressing Blocks)\n\n| জাপানি নাম | নাম (English) | বিবরণ |\n|---|---|---|\n| Kosa Uke | X-Block | কবজি দুটি \"X\" আকৃতিতে ক্রস করে ঠেকানোর ব্লক। |\n| Osae Uke | Pressing Block | নিচের দিকে চেপে ধরে আটকানোর ব্লক। |\n| Kakewake Uke | Reverse-Wedge Block | উভয় হাত বাইরের দিকে একসাথে খুলে দেওয়ার ওয়েজ ব্লক। |\n\n---\n\n## ব্লকিং স্তরসমূহ (Blocking Levels)\n\n| স্তর (Level) | জাপানি নাম | লক্ষ্য অঞ্চল (Target Area) |\n|---|---|---|\n| উচ্চ স্তর (Upper) | Jodan | মাথা, মুখমণ্ডল, ঘাড় |\n| মধ্যম স্তর (Middle) | Chudan | বুক, সোলার প্লেক্সাস, পাঁজর |\n| নিম্ন স্তর (Lower) | Gedan | তলপেট, উরু, পা |",
+    "is_group": 1,
+    "sort_order": 20
+  },
+  {
+    "route": "prospectus/blocks/gedan-barai",
+    "parent_route": "prospectus/blocks",
+    "slug": "gedan-barai",
+    "category": "blocks",
+    "category_label": "ব্লক (Uke-Waza)",
+    "title": "Gedan Barai Uke — Low Sweep Block",
+    "meta_label": "Gedan Barai Uke",
+    "description": "মৌলিক নিম্ন স্তরের ডাউনওয়ার্ড সুইপিং ব্লক — নাভি, তলপেট ও পায়ের দিকে আসা আক্রমণ প্রতিহত করে।",
+    "content": "# Gedan Barai Uke — Low Sweep Block\n\nঅপর নাম: **Hari Uke**\n\n**উচ্চারণ:** *গে-দান বা-রাই উ-কে*\n\n## বিবরণ\n\n**নিম্ন স্তরের ডাউনওয়ার্ড সুইপিং ব্লক** — কারাতে প্রশিক্ষণে শেখানো প্রথম ও অত্যন্ত মৌলিক ব্লকগুলোর একটি। \"Gedan\" অর্থ নিম্নাঞ্চল, \"Barai\" অর্থ ঝাড়ু দেওয়া বা সুইপ করা। নাভি বা উরুর দিকে আসা আক্রমণ সরাতে বাহু দিয়ে কোণাকুণি নিচে সোয়াইপ করা হয়।\n\n## ডেমোনস্ট্রেশন (Demonstration)\n\n![Gedan Barai Uke Animation](/prospectus/skills/blocks/images/gedanbari.gif)\n\n| স্টেপ ১ (সামনে / পাশে) | স্টেপ ২ (সামনে / পাশে) | স্টেপ ৩ (সামনে / পাশে) | স্টেপ ৪ (সামনে / পাশে) |\n|:---:|:---:|:---:|:---:|\n| ![Gedan Front 1](/prospectus/skills/blocks/images/gedanbf1.jpg) <br> ![Gedan Side 1](/prospectus/skills/blocks/images/gedanbs1.jpg) | ![Gedan Front 2](/prospectus/skills/blocks/images/gedanbf2.jpg) <br> ![Gedan Side 2](/prospectus/skills/blocks/images/gedanbs2.jpg) | ![Gedan Front 3](/prospectus/skills/blocks/images/gedanbf3.jpg) <br> ![Gedan Side 3](/prospectus/skills/blocks/images/gedanbs3.jpg) | ![Gedan Front 4](/prospectus/skills/blocks/images/gedanbf4.jpg) <br> ![Gedan Side 4](/prospectus/skills/blocks/images/gedanbs4.jpg) |\n\n![Gedan Back View](/prospectus/skills/blocks/images/gedanbb.jpg)\n\n## কৌশল (Technique)\n\n**শুরুর অবস্থান:**\n- ব্লকিং হাত বিপরীত কানের কাছে উঁচুতে থাকবে\n- অন্য হাত কোমর বা হিপে প্রস্তুত থাকবে (Hikite)\n\n**প্রয়োগ:**\n- বাহুটি কোণাকুণি নিচের দিকে সুইপ করে আনুন\n- ব্লকিং মুষ্টি সামনের উরুর ওপর সামান্য ওপরে অবস্থান নেবে\n- অন্য হাতটি দ্রুত কোমরের হিপে টেনে আনুন (Hikite)\n\n**স্পর্শের অংশ:** বাহুর বাইরের নিচের অংশ।\n\n## ব্যবহার\n\n- নিম্নাঞ্চলের কিক (Mae geri gedan) ও সুইপিং আক্রমণ প্রতিহত করতে।",
+    "is_group": 0,
+    "sort_order": 21
+  },
+  {
+    "route": "prospectus/blocks/yoko-uke",
+    "parent_route": "prospectus/blocks",
+    "slug": "yoko-uke",
+    "category": "blocks",
+    "category_label": "ব্লক (Uke-Waza)",
+    "title": "Yoko Uke (Soto Uke) — Outside Block",
+    "meta_label": "Yoko Uke (Soto Uke)",
+    "description": "মধ্যস্তরের ব্লক যা ভেতর থেকে বাইরের দিকে চালিত হয় — বুকের মাঝখানের আক্রমণকে বাইরের দিকে সরিয়ে দেয়।",
+    "content": "# Yoko Uke (Soto Uke) — Outside Block\n\nঅপর নাম: **Soto Uke** (আউটসাইড ব্লক)\n\n**উচ্চারণ:** *ইয়োকো উ-কে / সোতো উ-কে*\n\n## বিবরণ\n\nব্লকটি শরীরের কেন্দ্র থেকে **বাইরের দিকে** চালিত হয়। \"Soto\" অর্থ বাইর। মধ্যস্তরের ঘুসি বা আক্রমণকে বুকের সেন্টারলাইন থেকে বাইরের দিকে সরিয়ে দিতে এটি ব্যবহৃত হয়।\n\n## ডেমোনস্ট্রেশন (Demonstration)\n\n![Yoko Uke Animation](/prospectus/skills/blocks/images/sotouke.gif)\n\n| স্টেপ ১ (সামনে / পাশে) | স্টেপ ২ (সামনে / পাশে) | স্টেপ ৩ (সামনে / পাশে) | স্টেপ ৪ (সামনে / পাশে) |\n|:---:|:---:|:---:|:---:|\n| ![Yoko Front 1](/prospectus/skills/blocks/images/sotof1.jpg) <br> ![Yoko Side 1](/prospectus/skills/blocks/images/sotos1.jpg) | ![Yoko Front 2](/prospectus/skills/blocks/images/sotof2.jpg) <br> ![Yoko Side 2](/prospectus/skills/blocks/sotos2.jpg) | ![Yoko Front 3](/prospectus/skills/blocks/images/sotof3.jpg) <br> ![Yoko Side 3](/prospectus/skills/blocks/images/sotos3.jpg) | ![Yoko Front 4](/prospectus/skills/blocks/images/sotof4.jpg) <br> ![Yoko Side 4](/prospectus/skills/blocks/images/sotos4.jpg) |\n\n![Yoko Back View](/prospectus/skills/blocks/images/sotob.jpg)\n\n## কৌশল (Technique)\n\n- বাহুটি ভেতরের দিক থেকে বাইরের দিকে ঘোরানো হয়\n- কনুই প্রায় ৯০ ডিগ্রি কোণে বানো শেষ পজিশনে থাকবে\n- বাহুর বাইরের হাড় দিয়ে আক্রমণ প্রতিহত করা হয়\n\n## ব্যবহার\n\n- মধ্যস্তরের পাঞ্চ (Chudan tsuki) সরাতে।",
+    "is_group": 0,
+    "sort_order": 22
+  },
+  {
+    "route": "prospectus/blocks/yoko-uchi",
+    "parent_route": "prospectus/blocks",
+    "slug": "yoko-uchi",
+    "category": "blocks",
+    "category_label": "ব্লক (Uke-Waza)",
+    "title": "Yoko Uchi (Uchi Uke) — Inside Block",
+    "meta_label": "Yoko Uchi (Uchi Uke)",
+    "description": "মধ্যস্তরের ব্লক যা বাইরে থেকে ভেতরের দিকে চালিত হয় — সেন্টারলাইনের দিকে আক্রমণকে ঘুরিয়ে দেয়।",
+    "content": "# Yoko Uchi (Uchi Uke) — Inside Block\n\nঅপর নাম: **Uchi Uke** (ইনসাইড ব্লক)\n\n**উচ্চারণ:** *ইয়োকো উ-চি / উ-চি উ-কে*\n\n## বিবরণ\n\nব্লকটি বাইরের দিক থেকে **ভেতরের দিকে** (শরীরের কেন্দ্রের দিকে) চালিত হয় — Yoko Uke এর বিপরীত দিক। \"Uchi\" অর্থ ভেতর। \n\n## ডেমোনস্ট্রেশন (Demonstration)\n\n![Yoko Uchi Animation](/prospectus/skills/blocks/images/uchiuke.gif)\n\n| স্টেপ ১ (সামনে / পাশে) | স্টেপ ২ (সামনে / পাশে) | স্টেপ ৩ (সামনে / পাশে) | স্টেপ ৪ (সামনে / পাশে) |\n|:---:|:---:|:---:|:---:|\n| ![Uchi Front 1](/prospectus/skills/blocks/images/uchif1.jpg) <br> ![Uchi Side 1](/prospectus/skills/blocks/images/uchis1.jpg) | ![Uchi Front 2](/prospectus/skills/blocks/images/uchif2.jpg) <br> ![Uchi Side 2](/prospectus/skills/blocks/images/uchis2.jpg) | ![Uchi Front 3](/prospectus/skills/blocks/images/uchif3.jpg) <br> ![Uchi Side 3](/prospectus/skills/blocks/images/uchis3.jpg) | ![Uchi Front 4](/prospectus/skills/blocks/images/uchif4.jpg) <br> ![Uchi Side 4](/prospectus/skills/blocks/images/uchis4.jpg) |\n\n![Uchi Back View](/prospectus/skills/blocks/images/uchib.jpg)\n\n## কৌশল (Technique)\n\n- বাহুটি নিচু ও বাইরের দিক থেকে সোয়াইপ করে ভেতরের দিকে আনা হয়\n- বাহুর ভেতরের অংশ দিয়ে আঘাত সরানো হয়",
+    "is_group": 0,
+    "sort_order": 23
+  },
+  {
+    "route": "prospectus/blocks/age-uke",
+    "parent_route": "prospectus/blocks",
+    "slug": "age-uke",
+    "category": "blocks",
+    "category_label": "ব্লক (Uke-Waza)",
+    "title": "Age Uke — Rising Block",
+    "meta_label": "Age Uke",
+    "description": "ঊর্ধ্বমুখী রাইজিং ব্লক — মাথার দিকে আসা আক্রমণকে ওপরের দিকে তুলে সরিয়ে দেয়।",
+    "content": "# Age Uke — Rising Block\n\n**উচ্চারণ:** *আ-গে উ-কে*\n\n## বিবরণ\n\n**উর্ধ্বমুখী উচ্চ-স্তরের ব্লক** — যা মাথার দিকে আসা আক্রমণকে প্রতিরোধ করতে ডিজাইন করা হয়েছে। \"Age\" অর্থ ওপরের দিকে ওঠানো।\n\n## ডেমোনস্ট্রেশন (Demonstration)\n\n![Age Uke Animation](/prospectus/skills/blocks/images/ageuke.gif)\n\n| স্টেপ ১ (সামনে / পাশে) | স্টেপ ২ (সামনে / পাশে) | স্টেপ ৩ (সামনে / পাশে) | স্টেপ ৪ (সামনে / পাশে) |\n|:---:|:---:|:---:|:---:|\n| ![Age Front 1](/prospectus/skills/blocks/images/ageukef1.jpg) <br> ![Age Side 1](/prospectus/skills/blocks/images/ageukes1.jpg) | ![Age Front 2](/prospectus/skills/blocks/images/ageukef2.jpg) <br> ![Age Side 2](/prospectus/skills/blocks/ageukes2.jpg) | ![Age Front 3](/prospectus/skills/blocks/images/ageukef3.jpg) <br> ![Age Side 3](/prospectus/skills/blocks/images/ageukes3.jpg) | ![Age Front 4](/prospectus/skills/blocks/images/ageukef4.jpg) <br> ![Age Side 4](/prospectus/skills/blocks/images/ageukes4.jpg) |\n\n![Age Back View](/prospectus/skills/blocks/images/ageukesb.jpg)\n\n## কৌশল (Technique)\n\n- বাহুটি নিচ থেকে সোজা কপাল ও মাথার ওপরের দিকে কোণাকুণি উঠে যায়\n- মুষ্টি কপালের ওপর \"ছাদের\" মতো কোণ সৃষ্টি করবে\n\n## ব্যবহার\n\n- মুখের দিকে আসা পাঞ্চ (Jodan tsuki) এবং ওপর থেকে আসা স্ট্রাইক সরাতে।",
+    "is_group": 0,
+    "sort_order": 24
+  },
+  {
+    "route": "prospectus/blocks/tsuki-uke",
+    "parent_route": "prospectus/blocks",
+    "slug": "tsuki-uke",
+    "category": "blocks",
+    "category_label": "ব্লক (Uke-Waza)",
+    "title": "Tsuki Uke — Punch Block",
+    "meta_label": "Tsuki Uke",
+    "description": "একই সাথে ঘুসি ও ব্লক — যেখানে প্রতিরক্ষামূলক ব্লক এবং পাল্টা আক্রমণ একসাথে সম্পন্ন হয়।",
+    "content": "# Tsuki Uke — Punch Block\n\n**উচ্চারণ:** *চুকি উ-কে*\n\n## বিবরণ\n\n**একসাথে ঘুসি ও ব্লকিং কৌশল** — এটি একটি উন্নত প্রতিরক্ষা যেখানে একটি পাঞ্চ (Tsuki) দিয়েই আক্রমণ ঠেকানো ও প্রতিপক্ষকে আঘাত হানা হয়। এটি Hangeki নীতির শারীরিক রূপ।\n\n## ডেমোনস্ট্রেশন (Demonstration)\n\n![Tsuki Uke Animation](/prospectus/skills/blocks/images/tsuke.gif)\n\n| স্টেপ ১ (সামনে / পাশে) | স্টেপ ২ (সামনে / পাশে) |\n|:---:|:---:|\n| ![Tsuki Front 1](/prospectus/skills/blocks/images/tsukif1.jpg) <br> ![Tsuki Side 1](/prospectus/skills/blocks/images/tsukis1.jpg) | ![Tsuki Front 2](/prospectus/skills/blocks/images/tsukif2.jpg) <br> ![Tsuki Side 2](/prospectus/skills/blocks/images/tsukis2.jpg) |\n\n![Tsuki Back View](/prospectus/skills/blocks/images/tsukib.jpg)\n\n## মূল ধারণা\n\nব্লক এবং কাউন্টার অ্যাটাক দুটি আলাদা ধাপে না করে **একই সময়ে** সম্পন্ন করাই Tsuki Uke-এর মূল বিষয়।\n\n## ব্যবহার\n\n- সোজা আসা পাঞ্চের (Oi tsuki, Gyaku tsuki) বিরুদ্ধে অত্যন্ত কার্যকর।",
+    "is_group": 0,
+    "sort_order": 25
+  },
+  {
+    "route": "prospectus/punches",
+    "parent_route": "prospectus",
+    "slug": "punches",
+    "category": "punches",
+    "category_label": "পাঞ্চ (Tsuki-Waza)",
+    "title": "পাঞ্চিং টেকনিকসমূহ — Tsuki-Waza",
+    "meta_label": "পাঞ্চ (Tsuki-Waza)",
+    "description": "শীতো-রিউ কারাতের সমস্ত ঘুসি এবং হাত দিয়ে আঘাত হানার কৌশল — মৌলিক Seiken Tsuki থেকে শুরু করে উন্নত কম্বিনেশন পাঞ্চ।",
+    "content": "# পাঞ্চিং টেকনিকসমূহ — Tsuki-Waza\n\n**突き技** — মুষ্টির সাহায্যে থ্রাস্ট এবং আঘাত হানার শিল্প।\n\nশীতো-রিউ পাঞ্চিং কৌশল হিপ রোটেশন (Koshi), সঠিক মুষ্টি গঠন (Seiken) এবং বিপরীত হাতের পাওয়ার টেনে আনা (Hikite) এর সমন্বয়ে পরিচালিত হয়। শক্তি উৎপন্ন হয় পা থেকে, যা হিপের মাধ্যমে সঞ্চালিত হয়ে ঘুসির মাধ্যমে প্রতিপক্ষের শরীরে আঘাত হানে।\n\n---\n\n## মুষ্টি গঠন (Fist Formations)\n\n**Seiken (正拳)** — ফোর-ফিস্ট: তর্জনী ও মধ্যমা আঙুলের গোড়ালি দিয়ে গঠিত প্রধান ঘুসি আঘাতকারী অংশ। আঘাতের সময় কবজি সম্পূর্ণ সোজা ও শক্ত রাখতে হয়।\n\n---\n\n## পাঞ্চিং কৌশলসমূহ (Tsuki-Waza)\n\n| জাপানি নাম | নাম (English) | বিবরণ |\n|---|---|---|\n| Seiken Tsuki | Fore-Fist Punch | মৌলিক সোজা ঘুসি — অনুশীলনের প্রথম ধাপ। |\n| [Oi Tsuki](/prospectus/punches/oi) | Lunge Punch | কদম ফেলে সামনের দিকে এগিয়ে লঞ্জ পাঞ্চ। |\n| [Gyaku Tsuki](/prospectus/punches/gyaku) | Reverse Punch | বিপরীত হাতের পাঞ্চ — সবচেয়ে শক্তিশালী রিভার্স পাঞ্চ। |\n| [Furi Tsuki](/prospectus/punches/furi) | Roundhouse Punch | পাশ থেকে ঘোরানো বৃত্তাকার রাউন্ডহাউস পাঞ্চ। |\n| [Age Tsuki](/prospectus/punches/age) | Rising Punch | নিচ থেকে থুতনির দিকে ওঠা উর্ধ্বমুখী আপারকাট পাঞ্চ। |\n| Kagi Tsuki | Hook Punch | কনুই বাঁকিয়ে স্বল্প দূরত্বের হুক পাঞ্চ। |\n| [Mae Te Tsuki](/prospectus/punches/mae-te) | Jab | সামনের হাতের দ্রুত জ্যাব পাঞ্চ। |\n| [Ura Tsuki](/prospectus/punches/ura) | Inverted Punch | হাতের তালু ওপরের দিকে রেখে কাছের ইনভার্টেড পাঞ্চ। |\n| [Morote Tsuki](/prospectus/punches/morote) | U-Punch | উভয় হাত দিয়ে একসাথে দুই স্তরে \"U\" আকৃতির পাঞ্চ। |\n| Tate Tsuki | Vertical Fist Punch | খাড়া মুষ্টির পাঞ্চ (বুড়ো আঙুল ওপরের দিকে)। |\n| Nihon Tsuki | Double Punch | পর পর জোড়া পাঞ্চ। |\n\n---\n\n## অন্যান্য থ্রাস্ট কৌশল (Other Hand Thrusting Techniques)\n\n| জাপানি নাম | নাম (English) | বিবরণ |\n|---|---|---|\n| Yonhon Nukite | Four-Finger Spear Hand | চার আঙুল সোজা প্রসারিত স্পিয়ার-হ্যান্ড আঘাত। |\n\n---\n\n## টার্গেট লেভেল (Target Levels)\n\n| স্তর (Level) | জাপানি নাম | লক্ষ্য অঞ্চল (Target Area) |\n|---|---|---|\n| উচ্চ স্তর (Upper) | Jodan | মাথা, মুখমণ্ডল, ঘাড় |\n| মধ্যম স্তর (Middle) | Chudan | বুক, সোলার প্লেক্সাস, পাঁজর |\n| নিম্ন স্তর (Lower) | Gedan | তলপেট, নাভি |\n\n---\n\n## পাওয়ার মূলনীতি (Power Principles)\n\n১. **Koshi (হিপ মোচড়)** — হিপের ঘূর্ণন বাহুকে গতি দেয়\n২. **Hikite (টেনে আনা হাত)** — বিপরীত হাত দ্রুত কোমরে টেনে আনলে মোচড় ও শক্তি বাড়ে\n৩. **Kime (একগ্রতা)** — আঘাত হানার মুহূর্তে পেশীর সর্বোচ্চ সংকোচন",
+    "is_group": 1,
+    "sort_order": 26
+  },
+  {
+    "route": "prospectus/punches/oi",
+    "parent_route": "prospectus/punches",
+    "slug": "oi",
+    "category": "punches",
+    "category_label": "পাঞ্চ (Tsuki-Waza)",
+    "title": "Oi Tsuki — Lunge Punch",
+    "meta_label": "Oi Tsuki",
+    "description": "স্টেপিং লঞ্জ পাঞ্চ — সামনের পা এগিয়ে নেওয়ার সাথে সাথে একই দিকের হাত দিয়ে সামনের দিকে শক্তিশালী ঘুসি।",
+    "content": "# Oi Tsuki — Lunge Punch\n\n**উচ্চারণ:** *ওই চুকি*\n\n## বিবরণ\n\n**কদম ফেলে লঞ্জ পাঞ্চ** — সামনের পা কদম ফেলে এগিয়ে নেওয়ার সাথে একই দিকের হাত দিয়ে সোজা ঘুসি মারা হয়। \"Oi\" অর্থ অনুগমন করা — হাতটি যেন কদম ফেলা পায়ের পিছু নেয়।\n\n## ডেমোনস্ট্রেশন (Demonstration)\n\n![Oi Tsuki Animation](/prospectus/skills/punches/images/oi_tzuki.gif)\n\n| স্টেপ ১ (সামনে / পাশে) | স্টেপ ২ (সামনে / পাশে) | স্টেপ ৩ (সামনে / পাশে) |\n|:---:|:---:|:---:|\n| ![Oi Front 1](/prospectus/skills/punches/images/oif1.jpg) <br> ![Oi Side 1](/prospectus/skills/punches/images/ois1.jpg) | ![Oi Front 2](/prospectus/skills/punches/images/oif2.jpg) <br> ![Oi Side 2](/prospectus/skills/punches/images/ois2.jpg) | ![Oi Front 3](/prospectus/skills/punches/images/oif3.jpg) <br> ![Oi Side 3](/prospectus/skills/punches/images/ois3.jpg) |\n\n## কৌশল (Technique)\n\n- পেছনের পা সামনে বাড়িয়ে Zenkutsu Dachi স্ট্যান্সে যান\n- পা মাটিতে বসার সাথে একই সময়ে একই দিকের হাত দিয়ে সামনে ঘুসি দিন\n- বিপরীত হাত কোমরে টেনে আনুন (Hikite)\n\n## ব্যবহার\n\n- প্রাথমিক লাইনিং অনুশীলনে (Kihon) এবং কারাতের প্রায় সমস্ত কাতাতে এটি রয়েছে।",
+    "is_group": 0,
+    "sort_order": 27
+  },
+  {
+    "route": "prospectus/punches/gyaku",
+    "parent_route": "prospectus/punches",
+    "slug": "gyaku",
+    "category": "punches",
+    "category_label": "পাঞ্চ (Tsuki-Waza)",
+    "title": "Gyaku Tsuki — Reverse Punch",
+    "meta_label": "Gyaku Tsuki",
+    "description": "রিভার্স পাঞ্চ — সামনের পায়ের বিপরীত পেছনের হাত দিয়ে ঘুসি। শীতো-রিউয়ের সবচেয়ে শক্তিশালী ও কার্যকর পাঞ্চ।",
+    "content": "# Gyaku Tsuki — Reverse Punch\n\n**উচ্চারণ:** *গিয়াকু চুকি*\n\n## বিবরণ\n\n**রিভার্স হাত দিয়ে পাঞ্চ** — সামনের পায়ের বিপরীত পেছনের হাতটি দিয়ে ঘুসি মারা হয়। \"Gyaku\" অর্থ বিপরীত। হিপ সম্পূর্ণ ঘুরিয়ে পেছনের পা ও কোমরের শক্তি যোগ হওয়ায় এটি কারাতের সর্বাধিক শক্তিশালী ঘুসি।\n\n## ডেমোনস্ট্রেশন (Demonstration)\n\n![Gyaku Tsuki Animation](/prospectus/skills/punches/images/gyaku_tzuki.GIF)\n\n| স্টেপ ১ (সামনে / পাশে) | স্টেপ ২ (সামনে / পাশে) | স্টেপ ৩ (সামনে / পাশে) |\n|:---:|:---:|:---:|\n| ![Gyaku Front 1](/prospectus/skills/punches/images/gyakuf1.jpg) <br> ![Gyaku Side 1](/prospectus/skills/punches/images/gyakus1.jpg) | ![Gyaku Front 2](/prospectus/skills/punches/images/gyakuf2.jpg) <br> ![Gyaku Side 2](/prospectus/skills/punches/images/gyakus2.jpg) | ![Gyaku Front 3](/prospectus/skills/punches/images/gyakuf3.jpg) <br> ![Gyaku Side 3](/prospectus/skills/punches/images/gyakus3.jpg) |\n\n## কৌশল (Technique)\n\n- পেছনের কোমর (Hip) সজোড়ে সামনের দিকে ঘোরান\n- পেছনের হাত সোজা ছুড়ে মারুন এবং সামনের হাতটি কোমরে সজোরে টেনে আনুন (Hikite)\n\n## ব্যবহার\n\n- কুমিতে বা স্পারিংয়ে ব্লকের পরপরই প্রধান পাল্টা আক্রমণ (Counter Attack) হিসেবে।",
+    "is_group": 0,
+    "sort_order": 28
+  },
+  {
+    "route": "prospectus/punches/furi",
+    "parent_route": "prospectus/punches",
+    "slug": "furi",
+    "category": "punches",
+    "category_label": "পাঞ্চ (Tsuki-Waza)",
+    "title": "Furi Tsuki — Roundhouse Punch",
+    "meta_label": "Furi Tsuki",
+    "description": "চক্রাকার বা ঘূর্ণায়মান রাউন্ডহাউস পাঞ্চ — হাত বাঁকিয়ে পাশ থেকে ঘুরিয়ে আঘাত করা হয়।",
+    "content": "# Furi Tsuki — Roundhouse Punch\n\n**উচ্চারণ:** *ফুরি চুকি*\n\n## বিবরণ\n\n**সার্কুলার সুইং পাঞ্চ** — যাকে রাউন্ডহাউস পাঞ্চও বলা হয়। \"Furi\" অর্থ ঘোরানো। সামনে সোজা ঘুসি না মেরে হাতটিকে পাশ থেকে একটি বৃত্তাকার পথে ঘুরিয়ে আনা হয়।\n\n## ডেমোনস্ট্রেশন (Demonstration)\n\n![Furi Tsuki Animation](/prospectus/skills/punches/images/furi_tzuki.GIF)\n\n| স্টেপ ১ (সামনে / পাশে) | স্টেপ ২ (সামনে / পাশে) | স্টেপ ৩ (সামনে / পাশে) |\n|:---:|:---:|:---:|\n| ![Furi Front 1](/prospectus/skills/punches/images/furif1.jpg) <br> ![Furi Side 1](/prospectus/skills/punches/images/furis1.jpg) | ![Furi Front 2](/prospectus/skills/punches/images/furif2.jpg) <br> ![Furi Side 2](/prospectus/skills/punches/images/furis2.jpg) | ![Furi Front 3](/prospectus/skills/punches/images/furif3.jpg) <br> ![Furi Side 3](/prospectus/skills/punches/images/furis3.jpg) |\n\n## ব্যবহার\n\n- প্রতিপক্ষের কান, গাল বা চোয়ালের পাশে আঘাত করার জন্য।",
+    "is_group": 0,
+    "sort_order": 29
+  },
+  {
+    "route": "prospectus/punches/age",
+    "parent_route": "prospectus/punches",
+    "slug": "age",
+    "category": "punches",
+    "category_label": "পাঞ্চ (Tsuki-Waza)",
+    "title": "Age Tsuki — Rising Punch",
+    "meta_label": "Age Tsuki",
+    "description": "উর্ধ্বমুখী রাইজিং পাঞ্চ — নিচ থেকে ওপরের দিকে থুতনি বা চোয়াল লক্ষ্য করে আপারকাটের মতো ঘুসি।",
+    "content": "# Age Tsuki — Rising Punch\n\n**উচ্চারণ:** *আ-গে চুকি*\n\n## বিবরণ\n\n**উর্ধ্বমুখী ঘুসি** — যা নিচ থেকে **ওপরের দিকে** উঠে প্রতিপক্ষের থুতনি বা মুখমণ্ডল লক্ষ্য করে আঘাত হানে। \"Age\" অর্থ ওপরের দিকে ওঠা। এটি কারাতের আপারকাট।\n\n## ডেমোনস্ট্রেশন (Demonstration)\n\n![Age Tsuki Animation](/prospectus/skills/punches/images/age_tsuki.GIF)\n\n| স্টেপ ১ (সামনে / পাশে) | স্টেপ ২ (সামনে / পাশে) | স্টেপ ৩ (সামনে / পাশে) |\n|:---:|:---:|:---:|\n| ![Age Front 1](/prospectus/skills/punches/images/agef1.jpg) <br> ![Age Side 1](/prospectus/skills/punches/images/ages1.jpg) | ![Age Front 2](/prospectus/skills/punches/images/agef2.jpg) <br> ![Age Side 2](/prospectus/skills/punches/images/ages2.jpg) | ![Age Front 3](/prospectus/skills/punches/images/agef3.jpg) <br> ![Age Side 3](/prospectus/skills/punches/images/ages3.jpg) |\n\n## ব্যবহার\n\n- কাছে এসে খুব শর্ট রেঞ্জে থুতনির নিচে আঘাত করার জন্য।",
+    "is_group": 0,
+    "sort_order": 30
+  },
+  {
+    "route": "prospectus/punches/mae-te",
+    "parent_route": "prospectus/punches",
+    "slug": "mae-te",
+    "category": "punches",
+    "category_label": "পাঞ্চ (Tsuki-Waza)",
+    "title": "Mae Te Tsuki — Lead Hand Jab",
+    "meta_label": "Mae Te Tsuki",
+    "description": "সামনের হাতের জ্যাব পাঞ্চ — কদম ফেলা ছাড়াই দ্রুত সামনের হাত দিয়ে ফ্লিকার জ্যাব আঘাত।",
+    "content": "# Mae Te Tsuki — Lead Hand Jab\n\n**উচ্চারণ:** *মা-এ তে চুকি*\n\n## বিবরণ\n\n**সামনের হাতের জ্যাব পাঞ্চ** — শরীরের সামনের হাতটি দিয়ে দ্রুত সোজা জ্যাব মারা হয়। \"Mae te\" অর্থ সামনের হাত। এটি গতি ও প্রতিপক্ষের দূরত্ব মাপার জন্য ব্যবহৃত হয়।\n\n## ডেমোনস্ট্রেশন (Demonstration)\n\n![Mae Te Tsuki Animation](/prospectus/skills/punches/images/mae_te_tzuki.GIF)\n\n| স্টেপ ১ (সামনে / পাশে) | স্টেপ ২ (সামনে / পাশে) | স্টেপ ৩ (সামনে / পাশে) |\n|:---:|:---:|:---:|\n| ![Mae Te Front 1](/prospectus/skills/punches/images/maetef1.jpg) <br> ![Mae Te Side 1](/prospectus/skills/punches/images/maetes1.jpg) | ![Mae Te Front 2](/prospectus/skills/punches/images/maetef2.jpg) <br> ![Mae Te Side 2](/prospectus/skills/punches/images/maetes2.jpg) | ![Mae Te Front 3](/prospectus/skills/punches/images/maetef3.jpg) <br> ![Mae Te Side 3](/prospectus/skills/punches/images/maetes3.jpg) |\n\n## ব্যবহার\n\n- **Mae Te Tsuki jodan → Gyaku Tsuki chudan** (প্রথমে মুখে জ্যাব, তারপর বুকে রিভার্স পাঞ্চ) কম্বিনেশনে।",
+    "is_group": 0,
+    "sort_order": 31
+  },
+  {
+    "route": "prospectus/punches/ura",
+    "parent_route": "prospectus/punches",
+    "slug": "ura",
+    "category": "punches",
+    "category_label": "পাঞ্চ (Tsuki-Waza)",
+    "title": "Ura Tsuki — Inverted Punch",
+    "meta_label": "Ura Tsuki",
+    "description": "ইনভার্টেড ক্লোজ পাঞ্চ — হাতের তালু ওপরের দিকে রেখে খুব কাছ থেকে আঘাত হানার শর্ট পাঞ্চ।",
+    "content": "# Ura Tsuki — Inverted Punch\n\n**উচ্চারণ:** *উ-রা চুকি*\n\n## বিবরণ\n\n**উল্টো তালুর ঘুসি** — হাতের **তালু ওপরের দিকে** রেখে শর্ট রেঞ্জে কারাতে পাঞ্চ। \"Ura\" অর্থ উল্টো।\n\n## ডেমোনস্ট্রেশন (Demonstration)\n\n![Ura Tsuki Animation](/prospectus/skills/punches/images/ura_tzuki.GIF)\n\n| স্টেপ ১ (সামনে / পাশে) | স্টেপ ২ (সামনে / পাশে) |\n|:---:|:---:|\n| ![Ura Front 1](/prospectus/skills/punches/images/uraf1.jpg) <br> ![Ura Side 1](/prospectus/skills/punches/images/uras1.jpg) | ![Ura Front 2](/prospectus/skills/punches/images/uraf2.jpg) <br> ![Ura Side 2](/prospectus/skills/punches/images/uras2.jpg) |\n\n## ব্যবহার\n\n- অত্যন্ত কাছাকাছি দূরত্বে সোলার প্লেক্সাস বা পেটে আঘাত হানতে।",
+    "is_group": 0,
+    "sort_order": 32
+  },
+  {
+    "route": "prospectus/punches/morote",
+    "parent_route": "prospectus/punches",
+    "slug": "morote",
+    "category": "punches",
+    "category_label": "পাঞ্চ (Tsuki-Waza)",
+    "title": "Morote Tsuki — U-Punch",
+    "meta_label": "Morote Tsuki",
+    "description": "ডাবল ইউ-পাঞ্চ — দুই হাত দিয়ে একসাথে ওপর ও নিচে দুই স্তরে আক্রমণ হানার দ্বিমুখী পাঞ্চ।",
+    "content": "# Morote Tsuki — U-Punch\n\n**উচ্চারণ:** *মো-রো-তে চুকি*\n\n## বিবরণ\n\n**ইউ-আকৃতির দ্বি-হস্ত পাঞ্চ** — দুই হাত দিয়ে **একই সাথে** ওপরের (Jodan) ও নিচের (Chudan/Gedan) দুটি ভিন্ন স্তরে ঘুসি দেওয়া হয়। \"Morote\" অর্থ দুই হাত।\n\n## ডেমোনস্ট্রেশন (Demonstration)\n\n![Morote Tsuki Animation](/prospectus/skills/punches/images/morote_tzuki.GIF)\n\n| স্টেপ ১ (সামনে / পাশে) | স্টেপ ২ (সামনে / পাশে) |\n|:---:|:---:|\n| ![Morote Front 1](/prospectus/skills/punches/images/morotef1.jpg) <br> ![Morote Side 1](/prospectus/skills/punches/images/morotes1.jpg) | ![Morote Front 2](/prospectus/skills/punches/images/morotef2.jpg) <br> ![Morote Side 2](/prospectus/skills/punches/images/morotes2.jpg) |\n\n## ব্যবহার\n\n- একসাথে দুই জায়গায় আক্রমণ করায় প্রতিপক্ষের পক্ষে দুটি আটকানো অসম্ভব হয়ে পড়ে।",
+    "is_group": 0,
+    "sort_order": 33
+  },
+  {
+    "route": "prospectus/strikes",
+    "parent_route": "prospectus",
+    "slug": "strikes",
+    "category": "strikes",
+    "category_label": "স্ট্রাইক (Uchi-Waza)",
+    "title": "স্ট্রাইকিং টেকনিকসমূহ — Uchi-Waza",
+    "meta_label": "স্ট্রাইক (Uchi-Waza)",
+    "description": "শীতো-রিউ কারাতের হাতের বিভিন্ন অংশ এবং কনুই দিয়ে আঘাতের কৌশল — নাইফ-হ্যান্ড, ব্যাকফিস্ট, হাতুড়ি ঘুসি, পাম-হিল ইত্যাদি।",
+    "content": "# হাতের বিভিন্ন আঘাতের কৌশল — Uchi-Waza\n\n**打ち技** — হাতের বিভিন্ন অংশ এবং কনুই ব্যবহার করে আঘাতের শিল্প।\n\nপাঞ্চিং টেকনিক (Tsuki-Waza) এর থেকে স্ট্রাইকিং টেকনিক (Uchi-Waza) ভিন্ন। এখানে সোজাসুজি ঘুসি না মেরে হাতের কিনার, পেছনের অংশ, তালু বা কনুই দিয়ে সুইং বা স্ন্যাপিং মোশনে আঘাত হানা হয়।\n\n---\n\n## স্ট্রাইকিং কৌশলসমূহ (Uchi-Waza)\n\n| জাপানি নাম | নাম (English) | আঘাতের অংশ | বিবরণ |\n|---|---|---|---|\n| Shuto Uchi | Knife-Hand Strike | খোলা হাতের বাইরের কিনার | খোলা হাতের কিনার দিয়ে চপিং আঘাত — \"কারাতে চপ\"। |\n| Ura Uchi | Back-Fist Strike | মুষ্টির পেছনের অংশ | মুষ্টির পেছনের অংশ দিয়ে দ্রুত চাবুকের মতো স্ন্যাপিং আঘাত। |\n| Kentsui Uchi | Hammerfist Strike | মুষ্টির নিচের শক্ত অংশ | হাতুড়ির মতো মুষ্টির নিচ দিয়ে সজোরে নিচের দিকে আঘাত। |\n| Shotei (Teisho) Uchi | Palm-Heel Strike | তালুর শক্ত নিচের অংশ | হাতের তালুর নিচ দিয়ে সজোরে ধাক্কামূলক্ আঘাত। |\n| Haito Uchi | Ridge-Hand Strike | হাতের ভেতরের অংশ (বুড়ো আঙুলের দিক) | Shuto এর বিপরীত— হাতের ভেতরের ধার দিয়ে আঘাত। |\n| Haishu Uchi | Back-Hand Strike | খোলা হাতের পেছনের অংশ | খোলা হাতের পেছন দিয়ে থাপ্পড়সদৃশ আঘাত। |\n| Hiji Ate Uchi | Elbow Strike | কনুইয়ের শক্ত অগ্রভাগ | অত্যন্ত কাছাকাছি দূরত্বের ধ্বংসাত্মক কনুইয়ের আঘাত। |\n| Koken Uchi | Bent Wrist Strike | বাঁকানো কবজির জয়েন্ট | কবজি ভাজ করে কবজির ওপরের অংশ দিয়ে চাবুক আঘাত। |\n\n---\n\n## মূল নীতিসমূহ\n\n- **Snapping Strikes** (যেমন Ura Uchi, Shuto Uchi) — চাবুকের মতো দ্রুত আঘাত হেনে মুহূর্তেই হাত ফিরিয়ে আনা হয়।\n- **Driving Strikes** (যেমন Kentsui Uchi, Shotei Uchi) — শরীরের ওজন দিয়ে প্রতিপক্ষের শরীরে আঘাত ঢুকিয়ে দেওয়া হয়।\n- **Elbow Strikes (Hiji Ate)** — মানুষের শরীরের কঠিনতম অংশ কনুই। খুব কাছাকাছি মারামারিতে এটি চূড়ান্ত ক্ষতিকারক।",
+    "is_group": 0,
+    "sort_order": 34
+  },
+  {
+    "route": "prospectus/kicks",
+    "parent_route": "prospectus",
+    "slug": "kicks",
+    "category": "kicks",
+    "category_label": "কিক (Keri-Waza)",
+    "title": "কিকিং টেকনিকসমূহ — Keri-Waza",
+    "meta_label": "কিক (Keri-Waza)",
+    "description": "শীতো-রিউ কারাতের পা দিয়ে আঘাত করার সম্পূর্ণ কৌশলপঞ্জি — ফ্রন্ট কিক, সাইড কিক, রাউন্ডহাউস কিক, স্পিনিং কিক এবং ফ্লাইং কিক।",
+    "content": "# কিকিং টেকনিকসমূহ — Keri-Waza\n\n**蹴り技** — পা, শিন (Shin) এবং হাঁটু দিয়ে আঘাত করার শিল্প।\n\nশীতো-রিউ কিকিং টেকনিকসমূহ তিনটি ভিন্ন দূরত্বে প্রয়োগ করা হয়: অতি কাছাকাছি (হাঁটুর কিক), মাঝারি (ফ্রন্ট ও রাউন্ডহাউস কিক) এবং দীর্ঘ দূরত্ব (লাফিয়ে ফ্লাইং কিক)। সব কিকেই হিপ রোটেশন এবং কিক শেষে পা দ্রুত গুটিয়ে আনা (Retraction) অত্যন্ত জরুরি।\n\n---\n\n## কিকিং কৌশলসমূহ\n\n### মৌলিক ও সাধারণ কিকসমূহ (Basic & Fundamental Kicks)\n\n| জাপানি নাম | নাম (English) | বিবরণ |\n|---|---|---|\n| Mae Geri | Front Kick | পা সোজা সামনে সজোরে স্ন্যাপ করে মারার মৌলিক ফ্রন্ট কিক। |\n| Oi Geri | Lunging Kick | সামনে কদম বাড়িয়ে শরীরের গতিশীলতায় মারার ফ্রন্ট কিক। |\n| Yoko Sokuto Geri | Side Kick | পায়ের বাইরের ধারের (Sokuto) শক্ত অংশ দিয়ে পাশের সাইড কিক। |\n| Mawashi Geri | Roundhouse Kick | পাশ থেকে বৃত্তাকারে ঘুরিয়ে আনা রাউন্ডহাউস কিক। |\n\n### রিভার্স ও হুক কিকসমূহ (Reverse & Hook Kicks)\n\n| জাপানি নাম | নাম (English) | বিবরণ |\n|---|---|---|\n| Gyaku Mawashi Geri | Reverse Roundhouse Kick | উল্টো দিক (ভেতর) থেকে ঘুরিয়ে আনা রাউন্ডহাউস কিক। |\n| Ura Mawashi Geri | Hook Kick | গোড়ালি বা পায়ের বল দিয়ে বাঁকিয়ে মারা হুক কিক। |\n\n### পেছনের ও স্পিনিং কিকসমূহ (Rear & Spinning Kicks)\n\n| জাপানি নাম | name (English) | বিবরণ |\n|---|---|---|\n| Ushiro Geri | Back Kick | সোজাসুজি পেছনের দিকে গোড়ালি দিয়ে মারা ব্যাক কিক। |\n| Ushiro Mawashi Geri | Spinning Back Roundhouse | ৩৬০ ডিগ্রি ঘুরে মারা স্পিনিং ব্যাক রাউন্ডহাউস কিক। |\n| Gyaku Geri | Reverse Roundhouse (Spinning) | ঘুরন্ত রিভার্স ইনসাইড রাউন্ডহাউস কিক। |\n\n### সামনের পা ও কাছের কিকসমূহ (Lead Leg & Close-Range Kicks)\n\n| জাপানি নাম | নাম (English) | বিবরণ |\n|---|---|---|\n| Mae-Ashi Geri | Lead Leg Front Kick | ওজন না বদলে সামনের পা দিয়ে দ্রুত স্ন্যাপ ফ্রন্ট কিক। |\n| Fumikomi Geri | Stamp Kick | পায়ের পাতা বা হাঁটু লক্ষ্য করে সজোরে নিচে পদদলিত কিক। |\n| Hiza Geri | Knee Kick | হাঁটুর শক্ত অংশ দিয়ে কাছে এসে হাঁটু দিয়ে আঘাত। |\n\n### লাফিয়ে কিক (Jumping Kicks)\n\n| জাপানি নাম | নাম (English) | বিবরণ |\n|---|---|---|\n| Mae-Tobi Geri | Flying Front Kick | বাতাসে লাফিয়ে উঠে ফ্রন্ট কিক। |\n| Yoko-Tobi Geri | Flying Side Kick | বাতাসে লাফিয়ে উঠে সাইড কিক। |\n\n---\n\n## কিক করার প্রধান ৩টি ধাপ\n\n১. **Chamber (হাঁটু উঁচুতে তোলা)** — কিক করার আগে হাঁটু বুক বা কোমর পর্যন্ত উঁচুতে তুলতে হবে\n২. **Extension (প্রসারণ)** — পা সজোরে সোজা করে টার্গেটে আঘাত করা\n৩. **Retraction (পা গোটানো)** — আঘাত শেষে পা প্রতিপক্ষ যেন ধরতে না পারে সেজন্য আগের পথে দ্রুত গুটিয়ে আনা",
+    "is_group": 0,
+    "sort_order": 35
+  },
+  {
+    "route": "prospectus/kata",
+    "parent_route": "prospectus",
+    "slug": "kata",
+    "category": "kata",
+    "category_label": "কাতা (Kata)",
+    "title": "কাতা — Kata",
+    "meta_label": "কাতা (Kata)",
+    "description": "কারাতে-দো শীতো-কাই ক্যানাডা ডোজোতে শিক্ষা দেওয়া বিভিন্ন গুরু-পরম্পরা বা লাইন অনুযায়ী শীতো-রিউ কাতার সম্পূর্ণ তালিকা।",
+    "content": "# কাতা — Kata\n\n**型** — পূর্ব-নির্ধারিত আত্মরক্ষা ও আক্রমণের সুসংগঠিত কারাতে ফর্ম।\n\nকাতা হলো কারাতের জীবন্ত বিশ্বকোষ। প্রতিটি কাতা হলো নির্দিষ্ট স্ট্যান্স, ডিফেন্স, আক্রমণ, শ্বাসপ্রশ্বাস এবং ফোকাসড পাওয়ার (Kime) এর সমন্বয়ে গঠিত একটি ধারাবাহিক ফর্মুলা, যা বহু প্রাচীন ওকিনাওয়ান ও জাপানি মাস্টারদের যুদ্ধকৌশল ধারণ করে রেখেছে।\n\n> \"কাতা কোনো নাচ বা নাটकीय প্রদর্শন নয়। কাতা হলো কারাতের একটি বৈজ্ঞানিক ও সুনির্দিষ্ট অনুশীলন।\" — *কেনওয়া মাবুনি*\n\n## শীতো-রিউয়ের কাতা পদ্ধতি\n\nশীতো-রিউ কারাতেতে যেকোনো বড় শৈলীর তুলনায় সবচেয়ে বেশি **৫০টিরও বেশি কাতা** রয়েছে — যা ওকিনাওয়ার নাহা-তে (Naha-te) এবং সুরি-তে (Shuri-te) উভয় ঐতিহ্যের সংমিশ্রণ। নিচে ঐতিহাসিক মাস্টারদের লাইন অনুযায়ী কাতার তালিকা দেওয়া হলো।\n\n---\n\n## ARAGAKI ঐতিহ্য\n\n- Niseishi\n- Sochin\n- Unshu\n\n---\n\n## CHATANYARA ঐতিহ্য\n\n- Kusanku\n\n---\n\n## GOKENKI ঐতিহ্য\n\n- Hakucho\n- Nipaipo\n- Papuren\n\n---\n\n## HIGASHIONNA ঐতিহ্য\n\n- Kururunfa\n- Saifa\n- Sanchin\n- Sanseru\n- Seienchin\n- Seipai\n- Seisan\n- Shisochin\n- Superimpei (Pechurin)\n\n---\n\n## ISHIMINE ঐতিহ্য\n\n- Bassai\n\n---\n\n## ITOSU ঐতিহ্য\n\n### Heian (Pinan) সিরিজ\n- Heian (Pinan) Shodan\n- Heian (Pinan) Nidan\n- Heian (Pinan) Sandan\n- Heian (Pinan) Yondan\n- Heian (Pinan) Godan\n\n### উন্নত কাতা (Advanced Kata)\n- Bassai Dai\n- Bassai Sho\n- Chintei\n- Chinto\n- Gojushiho\n- Jiin\n- Jion\n- Jitte\n- Kosokun Dai\n- Kosokun Sho\n\n### Naihanchi সিরিজ\n- Naifuanchin Shodan (Naihanchi Shodan)\n- Naifuanchin Nidan\n- Naifuanchin Sandan\n\n### Rohai সিরিজ\n- Rohai Shodan\n- Rohai Nidan\n- Rohai Sandan\n\n### অন্যান্য\n- Shiho-Kosokun\n\n---\n\n## MABUNI KENWA ঐতিহ্য\n\n- Aoyagi\n- Juroku\n- Miyojo\n\n---\n\n## MATSUBAYASHI (Shorin Ryu) ঐতিহ্য\n\n- Annanko\n\n---\n\n## MATSUMURA ঐতিহ্য\n\n- Bassai\n- Seisan\n- Rohai\n\n---\n\n## MATSUMORA ঐতিহ্য\n\n- Rohai\n- Wankan (Matsukaze)\n- Wanshu\n\n---\n\n## MIYAGI ঐতিহ্য\n\n- Gekisai Ichi\n- Gekisai Ni\n- Tensho\n\n---\n\n## UECHI / MABUNI ঐতিহ্য\n\n- Shinpa\n\n---\n\n## সম্পর্কিত লিংক\n\n- [গ্রেডিংয়ের জন্য কাতার প্রয়োজনীয়তা](/prospectus/grading)",
+    "is_group": 0,
+    "sort_order": 36
+  },
+  {
+    "route": "prospectus/kumite-footwork",
+    "parent_route": "prospectus",
+    "slug": "kumite-footwork",
+    "category": "kumite-footwork",
+    "category_label": "কুমিতে ফুটওয়ার্ক (Kumite Footwork)",
+    "title": "কুমিতে ফুটওয়ার্ক (Kumite Footwork)",
+    "meta_label": "কুমিতে ফুটওয়ার্ক (Kumite Footwork)",
+    "description": "শীতো-রিউ কারাতে ফাইট বা স্পারিংয়ের চারটি মৌলিক ফুটওয়ার্ক প্যাটার্ন — Yori-Ashi, Okuri-Ashi, Sugi-Ashi, এবং Oi-Ashi।",
+    "content": "# কুমিতে ফুটওয়ার্ক — Kumite Footwork\n\n**組手 足捌き** — শীতো-রিউ ফাইটিং বা স্পারিংয়ের ৪টি মৌলিক ফুটওয়ার্ক পদ্ধতি।\n\nশীতো-রিউ ফাইটিং শৈলীতে ৪টি মৌলিক ফুটওয়ার্ক প্যাটার্ন ব্যবহার করা হয়। সঠিক ফুটওয়ার্ক না থাকলে আক্রমণ বা প্রতিরক্ষা কোনোটিই সঠিক দূরত্ব থেকে প্রয়োগ করা সম্ভব নয়।\n\n---\n\n## ৪টি মৌলিক ফুটওয়ার্ক প্যাটার্ন\n\n### ১. YORI-ASHI — 寄り足\n**সামনের পা আগে বাড়িয়ে কদম ফেলা**\n\nসামনের পা সামনের দিকে কদম ফেলে এবং পেছনের পা অনুসরণ করে সাথে সাথে চলে আসে যাতে কুমিতে স্ট্যান্সের সঠিক দূরত্ব বজায় থাকে।\n\n---\n\n### ২. OKURI-ASHI — 送り足\n**পেছনের পা সামনের পা অতিক্রম করে ক্রস করা**\n\nপেছনের পা দ্রুত সামনের পাকে ডিঙ্গিয়ে সামনে চলে যায় — দ্রুত প্রতিপক্ষের কাছাকাছি পৌঁছাতে এটি ব্যবহৃত হয়।\n\n---\n\n### ৩. SUGI-ASHI — 過ぎ足\n**পেছনের পা সামনের পায়ের কাছে নিয়ে আসা**\n\nপেছনের পা হালকা স্লাইড করে সামনের পায়ের কাছে আসে — সূক্ষ্ম দূরত্ব সমন্বয় করার ছোট কদম।\n\n---\n\n### ৪. OI-ASHI — 追い足\n**পেছনের পা দিয়ে বড় কদম ফেলে সামনে যাওয়া**\n\nপেছনের পা দিয়ে একটি দীর্ঘ কদম ফেলে সামনে অতিক্রম করা — বড় দূরত্ব পার হতে Oi Tsuki-র সাথে এটি ব্যবহৃত হয়।\n\n---\n\n## অনুশীলনের নিয়মাবলী\n\n> *শিক্ষার্থীদের অবশ্যই এই ফুটওয়ার্কের সাথে আক্রমণ ও ব্লকের সঠিক সংমিশ্রণ ঘটাতে হবে।*\n\n---\n\n## Yori-Ashi অনুশীলনী সেট (Exercise Set)\n\nডান বা বাম **Kumite-kamae** (স্পারিং প্রস্তুত ভঙ্গি) থেকে শুরু করুন। সামনের পা বাড়িয়ে পেছনের পা টেনে এনে সমন্বয় করুন:\n\n| # | কম্বিনেশন (Combination) |\n|---|---|\n| ১ | YORI-ASHI এর সাথে MAE TE TSUKI jodan |\n| ২ | YORI-ASHI এর সাথে GYAKU TSUKI chudan (বা jodan) |\n| ৩ | YORI-ASHI, MAE TE TSUKI jodan এবং GYAKU TSUKI chudan |\n| ৪ | YORI-ASHI, GYAKU TSUKI chudan এবং MAE TE TSUKI jodan |\n| ৫ | YORI-ASHI, MAE TE TSUKI jodan এবং GYAKU TSUKI chudan, taisabaki ও MAE TE TSUKI jodan |\n| ৬ | YORI-ASHI, GYAKU TSUKI chudan এবং URA UCHI jodan |\n| ৭ | YORI-ASHI, MAE TE TSUKI jodan, GYAKU TSUKI jodan এবং MAE GERI chudan |\n| ৮ | YORI-ASHI, GYAKU TSUKI jodan এবং MAE GERI chudan |\n| ৯ | YORI-ASHI, MAE TE TSUKI jodan, taisabaki, GYAKU TSUKI jodan, MAWASHI GERI chudan এবং GYAKU USHIRO MAWASHI GERI jodan |\n| ১০ | YORI-ASHI, GYAKU TSUKI jodan, taisabaki, MAWASHI GERI chudan এবং GYAKU USHIRO MAWASHI GERI jodan |\n\nসম্পূর্ণ করার পর **বিপরীত পজিশন (ডান/বাম) নিয়ে পুনরায় অনুশীলন করুন**।",
+    "is_group": 0,
+    "sort_order": 37
+  },
+  {
+    "route": "prospectus/in-the-dojo",
+    "parent_route": "prospectus",
+    "slug": "in-the-dojo",
+    "category": "in-the-dojo",
+    "category_label": "ডোজো নিয়মাবলী (In the Dojo)",
+    "title": "ডোজো অনুশাসন (In the Dojo)",
+    "meta_label": "ডোজো নিয়মাবলী (In the Dojo)",
+    "description": "কারাতে শিক্ষার্থীদের জন্য গুরুত্বপূর্ণ তথ্য — ডোজোর আচরণবিধি এবং সাধারণ শারীরিক অনুশীলনের তালিকা।",
+    "content": "# ডোজো অনুশাসন — In the Dojo\n\n**道場** — কারাতে অনুশীলন হল। ডোজো হলো শিক্ষা, আত্মনিয়ন্ত্রণ এবং আত্মোন্নতির এক পবিত্র স্থান।\n\nডোজো কেবল কোনো জিম বা খেলার ঘর নয়। এটি এমন এক স্থান যেখানে প্রজন্মের পর প্রজন্ম ধরে চলে আসা সুপ্রাচীন কারাতে ঐতিহ্য শিক্ষকের কাছ থেকে শিষ্যের মধ্যে সঞ্চারিত হয়। ডোজোতে সঠিক আচরণ সেনসেই ও সহপাঠীদের প্রতি শ্রদ্ধাবোধ প্রদর্শন করে।\n\n## বিষয়বস্তু\n\n- [ডোজো নিয়মাবলী (Dojo Rules)](/prospectus/in-the-dojo/dojo-rules) — কারাতে শীতো-রিউ শিক্ষার্থীদের ১৫টি আবশ্যকীয় নিয়মকানুন\n- [শারীরিক ব্যায়াম প্রোগ্রাম (Basic Exercise Program)](/prospectus/in-the-dojo/exercises) — ২৪টি ব্যায়ামের স্ট্যান্ডার্ড ওয়ার্ম-আপ সূচি",
+    "is_group": 1,
+    "sort_order": 38
+  },
+  {
+    "route": "prospectus/in-the-dojo/dojo-rules",
+    "parent_route": "prospectus/in-the-dojo",
+    "slug": "dojo-rules",
+    "category": "in-the-dojo",
+    "category_label": "ডোজো নিয়মাবলী (In the Dojo)",
+    "title": "ডোজো নিয়মাবলী (Dojo Rules)",
+    "meta_label": "ডোজো নিয়মাবলী (Dojo Rules)",
+    "description": "কারাতে-দো শীতো-রিউ শিক্ষার্থীদের জন্য নির্ধারিত ১৫টি আচারের নিয়মাবলী — ডোজোর ভেতরে এবং বাইরে।",
+    "content": "# ডোজো নিয়মাবলী (Dojo Rules)\n\nকারাতে-দো শীতো-রিউয়ের সকল সদস্যের জন্য নির্ধারিত **১৫টি আচরণবিধি**। এই নিয়মগুলো ডোজোর ভেতরে এবং বাইরে একজন কারাতেকার নৈতিক মান রক্ষা করে।\n\n---\n\n## ১৫টি প্রধান নিয়মাবলী\n\n১. **সবাইকে বিনয় ও সৌজন্যের সাথে সম্মান প্রদর্শন করুন।**\n\n২. কারাতে-কা (শিক্ষার্থী) ডোজোতে প্রবেশ করার সময় এবং বের হওয়ার সময় **প্রণাম (Bow) করবে**।\n\n৩. কারাতে-কা সর্বদা **গম্ভীর ও অনুশাসিত মনোভাব বজায় রাখবে**। ডোজোতে কোনো কটু কথা বা চিৎকার-চেঁচামেচি করা যাবে না।\n\n৪. **অন্য কারাতে-কাদের সমালোচনা বা উপহাস করবেন না।**\n\n৫. ক্লাসের সময় কোনো **আংটি, ঘড়ি বা অলঙ্কার পরা যাবে না**।\n\n৬. সকল কারাতে-কা **স্বাস্থ্যবিধি মেনে চলবে**। শারীরিক পরিচ্ছন্নতা অপরিহার্য। হাতের ও পায়ের নখ ছোট রাখতে হবে।\n\n৭. সকল কারাতে-কাকে অবশ্যই **পরিষ্কার সাদা কারাতে-গি (Karate-gi)** এবং নিজ বেল্ট শক্ত করে বেঁধে ক্লাসে উপস্থিত হতে হবে।\n\n৮. কারাতে-গিতে সঠিক প্রাতিষ্ঠানিক লোগো/ক্রেস্ট থাকতে হবে।\n\n৯. **সিনিয়র বেল্টধারীরা জুনিয়রদের শেখাতে সাহায্য করবে** এবং জুনিয়র বেল্টধারীরা সিনিয়রদের নির্দেশ মেনে চলবে।\n\n১০. কারাতে-কাকে প্রতি সপ্তাহে অন্তত **দুটি নির্ধারিত ক্লাসে নিয়মিত উপস্থিত থাকতে হবে**।\n\n১১. সেনসেইয়ের সরাসরি অনুমতি ছাড়া কোনো **স্পারিং বা যুদ্ধ অনুশীলন করা যাবে না**।\n\n১২. ক্লাসের সময় **ধূমপান, মদ্যপান বা খাবার খাওয়া সম্পূর্ণ নিষিদ্ধ**।\n\n১৩. কোনো অবস্থাতেই শীতো-রিউ কারাতে কোনো অ-সদস্যের কাছে বাইরে শিক্ষা দেওয়া যাবে না।\n\n১৪. শীতো-রিউ কারাতে-কারা ডোজোর ভেতরে এবং বাইরে সর্বদা ভদ্র ও মার্জিত আচরণ করবে।\n\n১৫. কোনো কারাতে-কা ডোজোর বাইরে **সহিংসতা ছড়াবে না বা উস্কানিতে পা দেবে না**। এর ব্যত্যয় ঘটলে আজীবনের জন্য কারাতে থেকে বহিষ্কার করা হবে।\n\n---\n\n> *ডোজো হলো শ্রদ্ধা ও আত্মশুদ্ধির জায়গা। এই নিয়মগুলো কারাতের মর্যাদা রক্ষার জন্য গঠিত।*",
+    "is_group": 0,
+    "sort_order": 39
+  },
+  {
+    "route": "prospectus/in-the-dojo/exercises",
+    "parent_route": "prospectus/in-the-dojo",
+    "slug": "exercises",
+    "category": "in-the-dojo",
+    "category_label": "ডোজো নিয়মাবলী (In the Dojo)",
+    "title": "শারীরিক ব্যায়াম প্রোগ্রাম (Basic Exercise Program)",
+    "meta_label": "শারীরিক ব্যায়াম প্রোগ্রাম (Basic Exercise Program)",
+    "description": "শীতো-রিউ কারাতে অনুশীলনের শুরুতে করা ২৪টি ব্যায়ামের ওয়ার্ম-আপ এবং ফিটনেস প্রোগ্রাম।",
+    "content": "# শারীরিক ব্যায়াম প্রোগ্রাম — Basic Exercise Program\n\nনিচের ২৪টি ব্যায়াম কারাতে ক্লাস শুরুর আগে **ওয়ার্ম-আপ ও ফিটনেস প্রোগ্রাম** হিসেবে সম্পন্ন করা হয়। এই প্রোগ্রামটি নমনীয়তা (Flexibility), শারীরিক শক্তি ও স্ট্যামিনা বৃদ্ধি করে।\n\n---\n\n## ব্যায়ামের তালিকা\n\n| # | ব্যায়ামের নাম (Exercise) | পুনরাবৃত্তি (Reps) |\n|---|---|---|\n| ১ | Stride Jumps (জাম্পিং জ্যাক) | ৬০ বার |\n| ২ | Side Twist (কোমর ঘোরানো) | ২০ বার |\n| ৩ | Side Stretch (পাশের স্ট্র্যাচ) | ৩০ বার |\n| ৪ | Squats (স্কোয়াট) | ১০ বার |\n| ৫ | Toe Touch (পায়ের আঙুল স্পর্শ) | ৩০ বার |\n| ৬ | Grab-the-Ball | ১০ বার |\n| ৭ | Standing Knees-to-Chest *(প্রতি পায়ে ৫ বার)* | ১ সেট |\n| ৮ | Side-Kick Stretch — ফ্ল্যাট *(প্রতি পায়ে ৫ বার)* | ১০ বার |\n| ৯ | Side-Kick Stretch — গোড়ালি *(প্রতি পায়ে ৫ বার)* | ১০ বার |\n| ১০ | Push-ups (সাধারণ পুশ-আপ) | ১০–৫০ বার |\n| ১১ | Upper-half Body-lift | ১০ বার |\n| ১২ | Lower-half Body-lift | ১০ বার |\n| ১৩ | Leg Raises (পা ওপরে তোলা) | ১০ বার |\n| ১৪ | Seated Leg Stretch (মাথা হাঁটুতে স্পর্শ) | ১০ বার |\n| ১৫ | Seated Toe Touch *(প্রতি পায়ে ৫ বার)* | ১০ বার |\n| ১৬ | Seated Side Stretch (কনুই মেঝেবর্ধিত) | ১০ বার |\n| ১৭ | Seated Side Twist | ১০ বার |\n| ১৮ | Seated Swim | ১০ বার |\n| ১৯ | Seated Knees-to-Chest | ১০ বার |\n| ২০ | Push-ups (চওড়া পা পুশ-আপ) | ৩০–৫০ বার |\n| ২১ | Sit-ups (সিট-আপস) | ১০–৫০ বার |\n| ২২ | Stand-up Back Arch *(প্রতি পায়ে ৫ বার)* | ১০ বার |\n| ২৩ | Seated Leg-raise & Hold *(মেঝে থেকে ৩ ইঞ্চি উঁচুতে)* | ৭৫ কাউন্ট হোল্ড |\n| ২৪ | Running On-the-spot (এক জায়গায় দৌড়) | ৫০ কাউন্ট |\n\n---\n\n> *নিয়মিত ওয়ার্ম-আপ ইনজুরি প্রতিরোধ করে এবং শরীর ও মনকে অনুশীলনের উপযোগী করে তোলে।*",
+    "is_group": 0,
+    "sort_order": 40
+  },
+  {
+    "route": "prospectus/grading",
+    "parent_route": "prospectus",
+    "slug": "grading",
+    "category": "grading",
+    "category_label": "গ্রেডিং (Grading)",
+    "title": "বেল্ট পরীক্ষা ও গ্রেডিং (Grading Requirements)",
+    "meta_label": "গ্রেডিং (Grading)",
+    "description": "কারাতে-দো শীতো-কাই বেল্ট অর্জন ও পরীক্ষার প্রয়োজনীয়তা — ৯ নম্বর কিউ (সাদা বেল্ট) থেকে ১ নম্বর কিউ (বাদামী বেল্ট)।",
+    "content": "# বেল্ট পরীক্ষা ও গ্রেডিং (Grading Requirements)\n\n**বেল্ট অর্জনের জন্য কাতার প্রয়োজনীয়তা**\n\nকারাতে-দো শীতো-কাই ক্যানাডায় ক্যু (Gyu / Grade) অনুযায়ী বেল্ট পরীক্ষার সময় নির্দিষ্ট **কাতা (Kata)** প্রদর্শন করতে হয়। মৌলিক কাতা **\"Juni-no Kata\"** দিয়ে পরীক্ষা সূচনা হয়।\n\n---\n\n## বেল্ট লেভেল অনুযায়ী প্রয়োজনীয় কাতার তালিকা\n\n| বেল্ট লেভেল (Belt Level) | কিউ (Kyu) | প্রয়োজনীয় কাতা (Kata Required) | প্রয়োজনীয় বুঙ্কাই (Bunkai Required) | ন্যূনতম বিরতি কাল |\n|---|---|---|---|---|\n| সাদা বেল্ট (White Belt) | 9th Kyu | Juni No Kata | — | ৩ মাস |\n| হলুদ বেল্ট (Yellow Belt) | 8th Kyu | Heian Nidan | Heian Nidan | ৩ মাস |\n| কমলা বেল্ট (Orange Belt) | 7th Kyu | Heian Sandan, Heian Shodan | Heian Sandan | ৩ মাস |\n| নীল বেল্ট (Blue Belt) | 6th Kyu | Heian Yondan | Heian Shodan | ৩ মাস |\n| সবুজ বেল্ট (Green Belt) | 5th Kyu | Heian Godan, Rohai | Heian Yondan, Heian Godan | ৩ মাস |\n| বেগুনি বেল্ট (Purple Belt) | 4th Kyu | Juroku, Jitte | Rohai, Juroku, Jitte | ৩ মাস |\n| ব্রাউন বেল্ট I (Brown Belt I) | 3rd Kyu | Jiin, Saifa, Naihanchi Shodan | Jiin, Saifa | ৬ মাস |\n| ব্রাউন বেল্ট II (Brown Belt II) | 2nd Kyu | Jion, Bassai Dai, Matsukaze | Jion, Bassai Dai | ৬ মাস |\n| ব্রাউন বেল্ট III (Brown Belt III) | 1st Kyu | Seienchin, Sanchin | Matsukaze, Seienchin | ৬ মাস |\n\n---\n\n## মূল বিষয়সমূহ\n\n### কাতা প্রদর্শন (Kata Performance)\n\nপরীক্ষায় কাতা প্রদর্শনের সময় যা বিচার করা হয়:\n- সঠিক টেকনিক (ব্লক, পাঞ্চ, কিক)\n- সঠিক স্ট্যান্স ও পোস্টার\n- সঠিক মুভমেন্ট ও ট্রানজিশন\n- টাইমিং ও রিদম\n- কিমে (Kime — চূড়ান্ত শক্তির ফোকাস)\n- শ্বাসপ্রশ্বাস\n\n### বুঙ্কাই (Bunkai)\n\n**Bunkai** (分解) অর্থ বিশ্লেষণ বা প্রয়োগ। কাতার গতিবিধিগুলো বাস্তব জীবনে কীভাবে আত্মরক্ষায় ব্যবহার করা হয়, তা সহপাঠীর সাথে হাতে-কলমে প্রদর্শন করাই হলো বুঙ্কাই।\n\n---\n\n## সম্পর্কিত লিংক\n\n- [সম্পূর্ণ কাতার তালিকা](/prospectus/kata) — ঐতিহাসিক ঐতিহ্য অনুযায়ী কাতার ক্যাটালগ\n- [ডোজো অনুশাসন](/prospectus/in-the-dojo) — ডোজোর নিয়ম এবং ফিটনেস প্রোগ্রাম",
+    "is_group": 0,
+    "sort_order": 41
+  }
+];
+
+export const PROSPECTUS_ROUTES = Object.fromEntries(PROSPECTUS_DOCS.map(d => [d.route, d]));

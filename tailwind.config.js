@@ -1,6 +1,8 @@
 import frappePreset from 'frappe-ui/tailwind'
 import colors from 'tailwindcss/colors'
 
+import typography from '@tailwindcss/typography'
+
 /** @type {import('tailwindcss').Config} */
 export default {
   presets: [frappePreset],
@@ -37,5 +39,5 @@ export default {
       },
     },
   },
-  plugins: [],
+  plugins: [typography],
 }

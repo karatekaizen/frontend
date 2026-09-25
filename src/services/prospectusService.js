@@ -1,4 +1,4 @@
-import { PROSPECTUS_DATA } from '../data/prospectusData.js'
+import { PROSPECTUS_DOCS, PROSPECTUS_ROUTES } from '../data/prospectusData.js'
 import { captureError } from '../store/errorStore.js'
 
 const ERP_API_BASE = 'https://erp.kaizen.paradox-bd.com/api/resource'
@@ -17,16 +17,16 @@ export const prospectusService = {
       fetchPromise = (async () => {
         try {
           const res = await fetch(
-            `${ERP_API_BASE}/Wiki%20Document?fields=["name","title","route","is_group","parent_wiki_document","sort_order"]&limit_page_length=100`,
+            `${ERP_API_BASE}/Wiki%20Document?fields=["name","title","route","is_group","parent_wiki_document","sort_order","content"]&limit_page_length=100`,
             {
               headers: { 'Accept': 'application/json' },
-              signal: AbortSignal.timeout(6000)
+              signal: AbortSignal.timeout(5000)
             }
           )
 
           if (res.ok) {
             const json = await res.json()
-            if (json.data && json.data.length > 0) {
+            if (json.data && json.data.length >= 35) {
               cachedDocuments = json.data
               return cachedDocuments
             }
@@ -35,8 +35,8 @@ export const prospectusService = {
           captureError(err, 'prospectusService:getDocuments', false)
         }
 
-        // Fallback to local data
-        cachedDocuments = this.getLocalFallbackTree()
+        // 100% full-fidelity fallback
+        cachedDocuments = PROSPECTUS_DOCS
         return cachedDocuments
       })()
     }
@@ -45,108 +45,136 @@ export const prospectusService = {
   },
 
   /**
-   * Fetch full content of a single document
+   * Fetch document detail by route or name
    */
-  async getDocumentDetail(nameOrRoute) {
+  async getDocumentDetail(routeOrName) {
+    const route = routeOrName ? routeOrName.replace(/^\/+/, '') : 'prospectus'
+    
+    // First check local/bundled data (instant response)
+    const local = PROSPECTUS_ROUTES[route]
+
+    // If online cache has content, prefer that or merge
     try {
-      // If it's a route, lookup document by route first
       const docs = await this.getDocuments()
-      const match = docs.find(d => d.name === nameOrRoute || d.route === nameOrRoute)
-      
-      const docName = match ? match.name : nameOrRoute
-
-      const res = await fetch(`${ERP_API_BASE}/Wiki%20Document/${docName}`, {
-        headers: { 'Accept': 'application/json' },
-        signal: AbortSignal.timeout(6000)
-      })
-
-      if (res.ok) {
-        const json = await res.json()
-        if (json.data) return json.data
+      const match = docs.find(d => d.route === route || d.name === routeOrName)
+      if (match && match.content) {
+        return {
+          ...local,
+          ...match,
+          content: match.content || local?.content || ''
+        }
       }
-    } catch (err) {
-      captureError(err, 'prospectusService:getDocumentDetail', false)
+    } catch {
+      // Fallback below
     }
 
-    // Fallback from local data
-    return this.getLocalDetailByRoute(nameOrRoute)
+    return local || PROSPECTUS_DOCS[0]
   },
 
   /**
-   * Build category-wise hierarchy from documents
+   * Build complete nested documentation tree
    */
   async getCategoryTree() {
     const docs = await this.getDocuments()
-    const categories = [
-      { id: 'stances', name: 'স্ট্যান্স (Dachi-Kata)', route: 'prospectus/stances', icon: 'zap' },
-      { id: 'punches', name: 'পাঞ্চ (Tsuki-Waza)', route: 'prospectus/punches', icon: 'crosshair' },
-      { id: 'blocks', name: 'ব্লক (Uke-Waza)', route: 'prospectus/blocks', icon: 'shield' },
-      { id: 'kicks', name: 'কিক (Keri-Waza)', route: 'prospectus/kicks', icon: 'arrow-up' },
-      { id: 'strikes', name: 'স্ট্রাইক (Uchi-Waza)', route: 'prospectus/strikes', icon: 'target' },
-      { id: 'defense', name: 'ডিফেন্স (Uke No Gogensoku)', route: 'prospectus/defense', icon: 'lock' },
-      { id: 'kata', name: 'কাতা (Kata Catalog)', route: 'prospectus/kata', icon: 'book-open' },
-      { id: 'grading', name: 'বেল্ট ও গ্রেডিং (Grading)', route: 'prospectus/grading', icon: 'award' },
-      { id: 'movement', name: 'মুভমেন্ট (Tenshin)', route: 'prospectus/movement', icon: 'compass' },
-      { id: 'in-the-dojo', name: 'ডোজো নিয়মাবলী (In the Dojo)', route: 'prospectus/in-the-dojo', icon: 'info' },
-      { id: 'kumite-footwork', name: 'কুমিতে ফুটওয়ার্ক', route: 'prospectus/kumite-footwork', icon: 'activity' }
+    const docMap = Object.fromEntries(docs.map(d => [d.route, d]))
+
+    // The canonical syllabus category order from HKDOfficial _meta.json
+    const categoryDefs = [
+      { id: 'overview', title: 'সংক্ষিপ্ত বিবরণ (Overview)', route: 'prospectus', icon: 'book' },
+      { id: 'stances', title: 'স্ট্যান্স (Dachi-Kata)', route: 'prospectus/stances', icon: 'zap' },
+      { id: 'movement', title: 'মুভমেন্ট (Tenshin)', route: 'prospectus/movement', icon: 'compass' },
+      { id: 'defense', title: 'ডিফেন্স (Uke No Gogensoku)', route: 'prospectus/defense', icon: 'shield' },
+      { id: 'blocks', title: 'ব্লক (Uke-Waza)', route: 'prospectus/blocks', icon: 'lock' },
+      { id: 'punches', title: 'পাঞ্চ (Tsuki-Waza)', route: 'prospectus/punches', icon: 'crosshair' },
+      { id: 'strikes', title: 'স্ট্রাইক (Uchi-Waza)', route: 'prospectus/strikes', icon: 'target' },
+      { id: 'kicks', title: 'কিক (Keri-Waza)', route: 'prospectus/kicks', icon: 'arrow-up' },
+      { id: 'kata', title: 'কাতা (Kata)', route: 'prospectus/kata', icon: 'award' },
+      { id: 'kumite-footwork', title: 'কুমিতে ফুটওয়ার্ক', route: 'prospectus/kumite-footwork', icon: 'activity' },
+      { id: 'in-the-dojo', title: 'ডোজো নিয়মাবলী (In the Dojo)', route: 'prospectus/in-the-dojo', icon: 'info' },
+      { id: 'grading', title: 'গ্রেডিং (Grading)', route: 'prospectus/grading', icon: 'check-circle' }
     ]
 
-    return categories.map(cat => {
-      const items = docs.filter(d => 
+    return categoryDefs.map(cat => {
+      const isOverview = cat.id === 'overview'
+      const catDoc = docMap[cat.route] || PROSPECTUS_ROUTES[cat.route]
+
+      if (isOverview) {
+        return {
+          id: cat.id,
+          title: cat.title,
+          route: cat.route,
+          icon: cat.icon,
+          isGroup: false,
+          hasChildren: false,
+          items: []
+        }
+      }
+
+      // Find direct children
+      const children = docs.filter(d => 
         d.route && 
-        d.route.startsWith(cat.route) && 
-        d.route !== cat.route && 
-        !d.is_group
-      )
+        d.route.startsWith(cat.route + '/') && 
+        d.route !== cat.route
+      ).sort((a, b) => (a.sort_order || 0) - (b.sort_order || 0))
+
+      const hasChildren = children.length > 0
+
       return {
-        ...cat,
-        items,
-        count: items.length
+        id: cat.id,
+        title: cat.title,
+        route: cat.route,
+        icon: cat.icon,
+        isGroup: hasChildren,
+        hasChildren,
+        doc: catDoc,
+        items: children.map(c => ({
+          title: c.meta_label || c.title,
+          route: c.route,
+          slug: c.slug
+        }))
       }
     })
   },
 
   /**
-   * Local bundled fallback tree
+   * Extract Headings from markdown content for right-side docked TOC
    */
-  getLocalFallbackTree() {
-    const list = []
-    for (const [catKey, items] of Object.entries(PROSPECTUS_DATA)) {
-      if (Array.isArray(items)) {
-        items.forEach((item, idx) => {
-          list.push({
-            name: `${catKey}-${item.slug || idx}`,
-            title: item.title || item.englishName || `${catKey} ${idx + 1}`,
-            route: `prospectus/${catKey}/${item.slug || idx}`,
-            is_group: 0,
-            sort_order: idx
-          })
-        })
+  extractToc(markdown) {
+    if (!markdown) return []
+    const lines = markdown.split('\n')
+    const toc = []
+    
+    for (const line of lines) {
+      const match = line.match(/^(#{2,3})\s+(.+)$/)
+      if (match) {
+        const level = match[1].length // 2 or 3
+        const rawTitle = match[2].trim()
+        // Strip markdown links or formatting from heading text
+        const title = rawTitle.replace(/\[([^\]]+)\]\([^)]+\)/g, '$1').replace(/[*_`]/g, '')
+        const id = title
+          .toLowerCase()
+          .replace(/[^\w\s-]/g, '')
+          .trim()
+          .replace(/\s+/g, '-')
+        
+        toc.push({ level, title, id, rawTitle })
       }
     }
-    return list
+    return toc
   },
 
   /**
-   * Local detail fallback
+   * Get previous and next documents for pagination docking
    */
-  getLocalDetailByRoute(nameOrRoute) {
-    for (const [catKey, items] of Object.entries(PROSPECTUS_DATA)) {
-      if (Array.isArray(items)) {
-        const found = items.find(i => 
-          nameOrRoute.includes(i.slug) || 
-          i.title?.toLowerCase() === nameOrRoute.toLowerCase()
-        )
-        if (found) {
-          return {
-            title: found.title,
-            route: `prospectus/${catKey}/${found.slug}`,
-            content: found.description || found.summary || '',
-            localItem: found
-          }
-        }
-      }
-    }
-    return null
+  getPrevNext(currentRoute) {
+    const list = PROSPECTUS_DOCS
+    const idx = list.findIndex(d => d.route === currentRoute)
+    if (idx === -1) return { prev: null, next: null }
+
+    const prev = idx > 0 ? { title: list[idx - 1].meta_label || list[idx - 1].title, route: list[idx - 1].route } : null
+    const next = idx < list.length - 1 ? { title: list[idx + 1].meta_label || list[idx + 1].title, route: list[idx + 1].route } : null
+
+    return { prev, next }
   }
 }
+

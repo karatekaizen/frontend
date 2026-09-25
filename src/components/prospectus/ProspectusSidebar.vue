@@ -1,7 +1,7 @@
 <template>
   <div class="flex flex-col h-full bg-white dark:bg-gray-850 border border-gray-200 dark:border-gray-800 rounded-2xl shadow-xs overflow-hidden">
     <!-- Header with Search -->
-    <div class="p-4 border-b border-gray-200 dark:border-gray-800 space-y-3">
+    <div class="p-4 border-b border-gray-200 dark:border-gray-800 space-y-3 shrink-0">
       <div class="flex items-center justify-between">
         <div class="flex items-center gap-2">
           <span class="size-2 rounded-full bg-rose-500 animate-pulse"></span>
@@ -10,86 +10,151 @@
           </h3>
         </div>
         <span class="text-[11px] font-mono font-medium px-2 py-0.5 rounded-full bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-300">
-          {{ totalTechniques }} Techs
+          42 Docs
         </span>
       </div>
 
       <SearchInput
         v-model="searchQuery"
-        placeholder="Filter syllabus..."
+        placeholder="Search syllabus techniques..."
         width-class="w-full"
         size="sm"
       />
     </div>
 
     <!-- Tree Navigation List -->
-    <div class="flex-1 overflow-y-auto p-2 divide-y divide-gray-100 dark:divide-gray-800/60 custom-scrollbar">
-      <div 
-        v-for="category in filteredCategories" 
-        :key="category.id" 
-        class="py-1"
-      >
-        <!-- Category Accordion Toggle -->
+    <div class="flex-1 overflow-y-auto p-2.5 space-y-1 custom-scrollbar">
+      <!-- Search Results View if Searching -->
+      <div v-if="searchQuery.trim()" class="space-y-1">
+        <div class="px-2 py-1 text-[11px] font-mono text-gray-400 uppercase tracking-wider">
+          Matching Techniques ({{ searchResults.length }})
+        </div>
         <button
+          v-for="item in searchResults"
+          :key="item.route"
           type="button"
-          @click="toggleCategory(category.id)"
-          class="w-full flex items-center justify-between px-3 py-2 text-left rounded-xl hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors group cursor-pointer"
+          @click="$emit('select-item', item)"
+          class="w-full text-left px-3 py-2 rounded-xl text-xs transition-all flex items-center justify-between group cursor-pointer"
+          :class="[
+            selectedRoute === item.route 
+              ? 'bg-rose-50 dark:bg-rose-950/40 text-rose-600 dark:text-rose-400 font-semibold shadow-xs' 
+              : 'text-gray-700 dark:text-gray-300 hover:bg-gray-100/70 dark:hover:bg-gray-800'
+          ]"
         >
-          <div class="flex items-center gap-2.5 min-w-0">
-            <svg 
-              class="size-4 shrink-0 transition-transform duration-200 text-gray-400 group-hover:text-rose-500"
-              :class="isCategoryOpen(category.id) ? 'rotate-90 text-rose-500' : ''"
-              fill="none" 
-              viewBox="0 0 24 24" 
-              stroke="currentColor"
-            >
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
-            </svg>
-            <span class="text-xs font-semibold text-gray-900 dark:text-gray-100 truncate">
-              {{ category.name }}
-            </span>
+          <div class="min-w-0 flex-1 pr-2">
+            <p class="truncate font-medium">{{ item.meta_label || item.title }}</p>
+            <p class="text-[10px] text-gray-400 font-mono truncate">{{ item.category_label || item.route }}</p>
           </div>
-
-          <span class="text-[10px] font-mono px-1.5 py-0.5 rounded-md bg-gray-100 dark:bg-gray-800 text-gray-500 dark:text-gray-400 group-hover:bg-rose-50 dark:group-hover:bg-rose-900/30 group-hover:text-rose-600 transition-colors">
-            {{ category.items.length }}
-          </span>
+          <span v-if="selectedRoute === item.route" class="size-1.5 rounded-full bg-rose-500 shrink-0"></span>
         </button>
+        <div v-if="searchResults.length === 0" class="p-6 text-center text-xs text-gray-400">
+          No techniques match "{{ searchQuery }}"
+        </div>
+      </div>
 
-        <!-- Techniques List under Category -->
-        <transition
-          enter-active-class="transition duration-150 ease-out"
-          enter-from-class="transform -translate-y-1 opacity-0"
-          enter-to-class="transform translate-y-0 opacity-100"
-        >
-          <div 
-            v-if="isCategoryOpen(category.id)" 
-            class="pl-7 pr-1 py-1 space-y-0.5"
+      <!-- Hierarchical Tree View (Normal) -->
+      <template v-else>
+        <div v-for="cat in categories" :key="cat.id" class="space-y-0.5">
+          <!-- Leaf Category (Movement, Defense, Strikes, Kicks, Kata, Footwork, Grading, Root Overview) -->
+          <button
+            v-if="!cat.hasChildren"
+            type="button"
+            @click="$emit('select-item', { route: cat.route, title: cat.title })"
+            class="w-full flex items-center justify-between px-3 py-2 text-left rounded-xl text-xs transition-colors group cursor-pointer"
+            :class="[
+              selectedRoute === cat.route 
+                ? 'bg-rose-50 dark:bg-rose-950/40 text-rose-600 dark:text-rose-400 font-semibold shadow-xs' 
+                : 'text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-800'
+            ]"
           >
-            <button
-              v-for="item in category.items"
-              :key="item.route"
-              type="button"
-              @click="$emit('select-item', item)"
-              class="w-full text-left px-2.5 py-1.5 rounded-lg text-xs transition-all flex items-center justify-between group cursor-pointer"
+            <div class="flex items-center gap-2.5 min-w-0">
+              <span class="size-1.5 rounded-full" :class="selectedRoute === cat.route ? 'bg-rose-500' : 'bg-gray-300 dark:bg-gray-600 group-hover:bg-rose-400'"></span>
+              <span class="truncate">{{ cat.title }}</span>
+            </div>
+            <span v-if="selectedRoute === cat.route" class="size-1.5 rounded-full bg-rose-500 shrink-0"></span>
+          </button>
+
+          <!-- Group Category with Children (Stances, Blocks, Punches, In the Dojo) -->
+          <div v-else class="space-y-0.5">
+            <div
+              class="w-full flex items-center justify-between px-3 py-2 rounded-xl text-xs font-semibold transition-colors group"
               :class="[
-                selectedRoute === item.route 
-                  ? 'bg-rose-50 dark:bg-rose-950/40 text-rose-600 dark:text-rose-400 font-semibold shadow-xs' 
-                  : 'text-gray-600 dark:text-gray-400 hover:bg-gray-100/70 dark:hover:bg-gray-800 hover:text-gray-900 dark:hover:text-white'
+                selectedRoute === cat.route 
+                  ? 'bg-rose-50/70 dark:bg-rose-950/30 text-rose-600 dark:text-rose-400' 
+                  : 'text-gray-900 dark:text-gray-100 hover:bg-gray-50 dark:hover:bg-gray-800'
               ]"
             >
-              <span class="truncate pr-2">{{ cleanTitle(item.title) }}</span>
-              <span 
-                v-if="selectedRoute === item.route"
-                class="size-1.5 rounded-full bg-rose-500 shrink-0"
-              ></span>
-            </button>
-          </div>
-        </transition>
-      </div>
+              <!-- Click Label to view category overview -->
+              <button
+                type="button"
+                @click="$emit('select-item', { route: cat.route, title: cat.title })"
+                class="flex items-center gap-2.5 min-w-0 flex-1 text-left cursor-pointer"
+              >
+                <svg 
+                  class="size-3.5 shrink-0 transition-transform duration-200 text-gray-400 group-hover:text-rose-500"
+                  :class="isCategoryOpen(cat.id) ? 'rotate-90 text-rose-500' : ''"
+                  fill="none" 
+                  viewBox="0 0 24 24" 
+                  stroke="currentColor"
+                >
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7" />
+                </svg>
+                <span class="truncate">{{ cat.title }}</span>
+              </button>
 
-      <div v-if="filteredCategories.length === 0" class="p-6 text-center text-xs text-gray-400">
-        No techniques match "{{ searchQuery }}"
-      </div>
+              <!-- Chevron & Count Badge to toggle accordion -->
+              <button
+                type="button"
+                @click.stop="toggleCategory(cat.id)"
+                class="p-1 rounded-md hover:bg-gray-200/60 dark:hover:bg-gray-700/60 transition-colors cursor-pointer"
+                :title="isCategoryOpen(cat.id) ? 'Collapse' : 'Expand'"
+              >
+                <span class="text-[10px] font-mono px-1.5 py-0.5 rounded-md bg-gray-100 dark:bg-gray-800 text-gray-500 dark:text-gray-400">
+                  {{ cat.items.length }}
+                </span>
+              </button>
+            </div>
+
+            <!-- Nested Child Items Container -->
+            <div 
+              v-show="isCategoryOpen(cat.id)"
+              class="ml-3 pl-3 border-l border-gray-200 dark:border-gray-800 py-0.5 space-y-0.5"
+            >
+              <!-- Child: Category Overview Link -->
+              <button
+                type="button"
+                @click="$emit('select-item', { route: cat.route, title: `${cat.title} — Overview` })"
+                class="w-full text-left px-2.5 py-1.5 rounded-lg text-xs transition-all flex items-center justify-between cursor-pointer"
+                :class="[
+                  selectedRoute === cat.route 
+                    ? 'bg-rose-50 dark:bg-rose-950/40 text-rose-600 dark:text-rose-400 font-semibold' 
+                    : 'text-gray-500 dark:text-gray-400 hover:bg-gray-100/70 dark:hover:bg-gray-800 hover:text-gray-900 dark:hover:text-white'
+                ]"
+              >
+                <span class="italic text-[11px]">সংক্ষিপ্ত বিবরণ (Overview)</span>
+                <span v-if="selectedRoute === cat.route" class="size-1.5 rounded-full bg-rose-500 shrink-0"></span>
+              </button>
+
+              <!-- Child Techniques -->
+              <button
+                v-for="item in cat.items"
+                :key="item.route"
+                type="button"
+                @click="$emit('select-item', item)"
+                class="w-full text-left px-2.5 py-1.5 rounded-lg text-xs transition-all flex items-center justify-between group cursor-pointer"
+                :class="[
+                  selectedRoute === item.route 
+                    ? 'bg-rose-50 dark:bg-rose-950/40 text-rose-600 dark:text-rose-400 font-semibold shadow-xs' 
+                    : 'text-gray-600 dark:text-gray-400 hover:bg-gray-100/70 dark:hover:bg-gray-800 hover:text-gray-900 dark:hover:text-white'
+                ]"
+              >
+                <span class="truncate pr-1">{{ item.title }}</span>
+                <span v-if="selectedRoute === item.route" class="size-1.5 rounded-full bg-rose-500 shrink-0"></span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </template>
     </div>
   </div>
 </template>
@@ -97,6 +162,7 @@
 <script setup>
 import { ref, computed } from 'vue'
 import SearchInput from '../ui/SearchInput.vue'
+import { PROSPECTUS_DOCS } from '../../data/prospectusData.js'
 
 const props = defineProps({
   categories: {
@@ -112,46 +178,29 @@ const props = defineProps({
 defineEmits(['select-item'])
 
 const searchQuery = ref('')
-const openCategories = ref(new Set(['stances', 'punches', 'blocks']))
+const openCategories = ref(new Set(['stances', 'blocks', 'punches', 'in-the-dojo']))
 
-const totalTechniques = computed(() => {
-  return props.categories.reduce((acc, c) => acc + (c.items?.length || 0), 0)
-})
-
-function cleanTitle(title) {
-  if (!title) return ''
-  return title.replace(/^[#\s]+/, '').split('—')[0].trim()
-}
-
-function toggleCategory(id) {
-  if (openCategories.value.has(id)) {
-    openCategories.value.delete(id)
+function toggleCategory(catId) {
+  if (openCategories.value.has(catId)) {
+    openCategories.value.delete(catId)
   } else {
-    openCategories.value.add(id)
+    openCategories.value.add(catId)
   }
 }
 
-function isCategoryOpen(id) {
-  if (searchQuery.value.trim()) return true
-  return openCategories.value.has(id)
+function isCategoryOpen(catId) {
+  return openCategories.value.has(catId)
 }
 
-const filteredCategories = computed(() => {
-  const query = searchQuery.value.trim().toLowerCase()
-  if (!query) return props.categories
-
-  return props.categories
-    .map(cat => {
-      const matchedItems = (cat.items || []).filter(item => 
-        item.title?.toLowerCase().includes(query) ||
-        item.route?.toLowerCase().includes(query)
-      )
-      return {
-        ...cat,
-        items: matchedItems
-      }
-    })
-    .filter(cat => cat.items.length > 0 || cat.name?.toLowerCase().includes(query))
+const searchResults = computed(() => {
+  const q = searchQuery.value.trim().toLowerCase()
+  if (!q) return []
+  return PROSPECTUS_DOCS.filter(d => 
+    d.title?.toLowerCase().includes(q) ||
+    d.meta_label?.toLowerCase().includes(q) ||
+    d.slug?.toLowerCase().includes(q) ||
+    d.category?.toLowerCase().includes(q)
+  )
 })
 </script>
 
