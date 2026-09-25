@@ -325,7 +325,8 @@ const isProfileOpen = ref(false)
 const primaryLinks = [
   { path: '/events', label: 'Events' },
   { path: '/ranking', label: 'Rankings' },
-  { path: '/news', label: 'News' }
+  { path: '/news', label: 'News' },
+  { path: '/prospectus', label: 'Prospectus' }
 ]
 
 const moreNavLinks = [

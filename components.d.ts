@@ -23,6 +23,8 @@ declare module 'vue' {
     LiveTicker: typeof import('./src/components/LiveTicker.vue')['default']
     MedalBadge: typeof import('./src/components/ui/MedalBadge.vue')['default']
     Navbar: typeof import('./src/components/Navbar.vue')['default']
+    ProspectusDetail: typeof import('./src/components/prospectus/ProspectusDetail.vue')['default']
+    ProspectusSidebar: typeof import('./src/components/prospectus/ProspectusSidebar.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
     SearchInput: typeof import('./src/components/ui/SearchInput.vue')['default']

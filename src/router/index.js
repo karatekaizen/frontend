@@ -12,6 +12,7 @@ import OlympicsView from '../views/OlympicsView.vue'
 import DocumentsView from '../views/DocumentsView.vue'
 import SocialLegacyView from '../views/SocialLegacyView.vue'
 import ProfileView from '../views/ProfileView.vue'
+import ProspectusView from '../views/ProspectusView.vue'
 
 const routes = [
   { path: '/', name: 'Home', component: HomeView },
@@ -19,6 +20,8 @@ const routes = [
   { path: '/ranking', name: 'Ranking', component: RankingView },
   { path: '/news', name: 'News', component: NewsView },
   { path: '/news/:id', name: 'Article', component: ArticleView },
+  { path: '/prospectus', name: 'Prospectus', component: ProspectusView },
+  { path: '/prospectus/:category?/:slug?', name: 'ProspectusItem', component: ProspectusView },
   { path: '/approved', name: 'ApprovedBrands', component: ApprovedBrandsView },
   { path: '/about', name: 'About', component: AboutView },
   { path: '/olympics', name: 'Olympics', component: OlympicsView },
