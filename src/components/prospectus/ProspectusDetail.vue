@@ -134,13 +134,18 @@ const pagination = computed(() => {
   return prospectusService.getPrevNext(props.detail?.route || '')
 })
 
-// Configure marked with custom heading IDs for TOC jumping
+// Configure marked with custom heading IDs and responsive table wrappers
 const renderer = new marked.Renderer()
 renderer.heading = ({ tokens, depth }) => {
   const text = tokens.map(t => t.raw).join('')
   const clean = text.replace(/\[([^\]]+)\]\([^)]+\)/g, '$1').replace(/[*_`]/g, '').trim()
   const id = clean.toLowerCase().replace(/[^\w\s-]/g, '').trim().replace(/\s+/g, '-')
-  return `<h${depth} id="${id}" class="scroll-mt-24 group flex items-center justify-between">${text}<a href="#${id}" class="opacity-0 group-hover:opacity-100 text-gray-400 hover:text-rose-500 ml-2 text-sm transition-opacity">#</a></h${depth}>`
+  return `<h${depth} id="${id}" class="scroll-mt-24 group flex items-center justify-between">${text}<a href="#${id}" class="opacity-0 group-hover:opacity-100 text-gray-400 hover:text-rose-500 ml-2 text-sm transition-opacity" title="Anchor link">#</a></h${depth}>`
+}
+
+renderer.table = function(token) {
+  const defaultHtml = this.constructor.prototype.table.call(this, token)
+  return `<div class="overflow-x-auto my-6 border border-gray-200 dark:border-gray-800 rounded-xl shadow-xs">${defaultHtml}</div>`
 }
 
 marked.setOptions({
@@ -149,12 +154,73 @@ marked.setOptions({
   breaks: false
 })
 
+function preprocessAlerts(md) {
+  if (!md) return ''
+  return md.replace(/^>\s*\[!(NOTE|TIP|IMPORTANT|WARNING|CAUTION)\]\s*\n((?:>.*\n?)+)/gm, (match, type, body) => {
+    const cleanBody = body.replace(/^>\s?/gm, '').trim()
+    const alertThemes = {
+      NOTE: {
+        bg: 'bg-blue-50/80 dark:bg-blue-950/30',
+        border: 'border-blue-200 dark:border-blue-800',
+        text: 'text-blue-950 dark:text-blue-200',
+        title: 'text-blue-700 dark:text-blue-400',
+        badge: 'bg-blue-100 dark:bg-blue-900/60 text-blue-700 dark:text-blue-300',
+        icon: '<svg class="size-4 shrink-0 text-blue-500" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>'
+      },
+      TIP: {
+        bg: 'bg-emerald-50/80 dark:bg-emerald-950/30',
+        border: 'border-emerald-200 dark:border-emerald-800',
+        text: 'text-emerald-950 dark:text-emerald-200',
+        title: 'text-emerald-700 dark:text-emerald-400',
+        badge: 'bg-emerald-100 dark:bg-emerald-900/60 text-emerald-700 dark:text-emerald-300',
+        icon: '<svg class="size-4 shrink-0 text-emerald-500" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" /></svg>'
+      },
+      WARNING: {
+        bg: 'bg-amber-50/80 dark:bg-amber-950/30',
+        border: 'border-amber-200 dark:border-amber-800',
+        text: 'text-amber-950 dark:text-amber-200',
+        title: 'text-amber-700 dark:text-amber-400',
+        badge: 'bg-amber-100 dark:bg-amber-900/60 text-amber-700 dark:text-amber-300',
+        icon: '<svg class="size-4 shrink-0 text-amber-500" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" /></svg>'
+      },
+      IMPORTANT: {
+        bg: 'bg-purple-50/80 dark:bg-purple-950/30',
+        border: 'border-purple-200 dark:border-purple-800',
+        text: 'text-purple-950 dark:text-purple-200',
+        title: 'text-purple-700 dark:text-purple-400',
+        badge: 'bg-purple-100 dark:bg-purple-900/60 text-purple-700 dark:text-purple-300',
+        icon: '<svg class="size-4 shrink-0 text-purple-500" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>'
+      },
+      CAUTION: {
+        bg: 'bg-rose-50/80 dark:bg-rose-950/30',
+        border: 'border-rose-200 dark:border-rose-800',
+        text: 'text-rose-950 dark:text-rose-200',
+        title: 'text-rose-700 dark:text-rose-400',
+        badge: 'bg-rose-100 dark:bg-rose-900/60 text-rose-700 dark:text-rose-300',
+        icon: '<svg class="size-4 shrink-0 text-rose-500" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" /></svg>'
+      }
+    }[type] || {
+      bg: 'bg-gray-50',
+      border: 'border-gray-200',
+      text: 'text-gray-800',
+      title: 'text-gray-700',
+      badge: 'bg-gray-100',
+      icon: ''
+    }
+
+    return `<div class="my-5 p-4 rounded-xl border ${alertThemes.border} ${alertThemes.bg} ${alertThemes.text} not-prose shadow-xs space-y-1.5"><div class="flex items-center gap-2 font-bold ${alertThemes.title} uppercase tracking-wider text-xs">${alertThemes.icon}<span>${type}</span></div><div class="text-xs sm:text-sm leading-relaxed">${cleanBody}</div></div>\n\n`
+  })
+}
+
 const renderedMarkdown = computed(() => {
   let content = props.detail?.content || ''
   if (!content) return '<p class="text-gray-400 italic">No content available for this technique.</p>'
 
   // Strip frontmatter if still present
   content = content.replace(/^---[\s\S]*?---\s*/, '')
+
+  // Preprocess GitHub alerts
+  content = preprocessAlerts(content)
 
   try {
     return marked.parse(content)

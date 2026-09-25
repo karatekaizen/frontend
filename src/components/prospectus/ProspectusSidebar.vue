@@ -59,6 +59,7 @@
           <button
             v-if="!cat.hasChildren"
             type="button"
+            :data-prospectus-route="cat.route"
             @click="$emit('select-item', { route: cat.route, title: cat.title })"
             class="w-full flex items-center justify-between px-3 py-2 text-left rounded-xl text-xs transition-colors group cursor-pointer"
             :class="[
@@ -87,6 +88,7 @@
               <!-- Click Label to view category overview -->
               <button
                 type="button"
+                :data-prospectus-route="cat.route"
                 @click="$emit('select-item', { route: cat.route, title: cat.title })"
                 class="flex items-center gap-2.5 min-w-0 flex-1 text-left cursor-pointer"
               >
@@ -123,6 +125,7 @@
               <!-- Child: Category Overview Link -->
               <button
                 type="button"
+                :data-prospectus-route="`${cat.route}-overview`"
                 @click="$emit('select-item', { route: cat.route, title: `${cat.title} — Overview` })"
                 class="w-full text-left px-2.5 py-1.5 rounded-lg text-xs transition-all flex items-center justify-between cursor-pointer"
                 :class="[
@@ -140,6 +143,7 @@
                 v-for="item in cat.items"
                 :key="item.route"
                 type="button"
+                :data-prospectus-route="item.route"
                 @click="$emit('select-item', item)"
                 class="w-full text-left px-2.5 py-1.5 rounded-lg text-xs transition-all flex items-center justify-between group cursor-pointer"
                 :class="[
@@ -160,7 +164,7 @@
 </template>
 
 <script setup>
-import { ref, computed } from 'vue'
+import { ref, computed, watch, nextTick, onMounted } from 'vue'
 import SearchInput from '../ui/SearchInput.vue'
 import { PROSPECTUS_DOCS } from '../../data/prospectusData.js'
 
@@ -191,6 +195,38 @@ function toggleCategory(catId) {
 function isCategoryOpen(catId) {
   return openCategories.value.has(catId)
 }
+
+function ensureCategoryForRoute(route) {
+  if (!route) return
+  const parts = route.replace(/^\/+/, '').split('/')
+  if (parts.length >= 2) {
+    const cat = parts[1] // e.g. stances, blocks, punches, in-the-dojo
+    openCategories.value.add(cat)
+  }
+}
+
+function scrollActiveIntoView() {
+  nextTick(() => {
+    const activeEl = document.querySelector(`[data-prospectus-route="${props.selectedRoute}"]`)
+    if (activeEl) {
+      activeEl.scrollIntoView({ behavior: 'smooth', block: 'nearest' })
+    }
+  })
+}
+
+watch(
+  () => props.selectedRoute,
+  (newRoute) => {
+    ensureCategoryForRoute(newRoute)
+    scrollActiveIntoView()
+  },
+  { immediate: true }
+)
+
+onMounted(() => {
+  ensureCategoryForRoute(props.selectedRoute)
+  scrollActiveIntoView()
+})
 
 const searchResults = computed(() => {
   const q = searchQuery.value.trim().toLowerCase()
