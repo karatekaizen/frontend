@@ -331,6 +331,8 @@ const primaryLinks = [
 ]
 
 const moreNavLinks = [
+  { path: '/cert-verify', label: 'Verify Certificates', desc: 'Authenticate Dan diplomas & licenses' },
+  { path: '/committee', label: 'Executive Board', desc: 'Sensei council & leadership directory' },
   { path: '/approved', label: 'Dojo Equipment', desc: 'Approved Gi, belts & training gear' },
   { path: '/about', label: 'About Academy', desc: 'Dojo lineage, senseis & philosophy' },
   { path: '/olympics', label: 'Olympic Standards', desc: 'WKF competition syllabus & pathways' },

@@ -140,6 +140,10 @@ const inputRef = ref(null)
 
 const pages = [
   { title: "Home", path: "/" },
+  { title: "Dojo Branches & Network", path: "/dojos" },
+  { title: "Certificate Verification", path: "/cert-verify" },
+  { title: "Executive Board & Senseis", path: "/committee" },
+  { title: "Prospectus & Techniques", path: "/prospectus" },
   { title: "Events & Calendar", path: "/events" },
   { title: "World Rankings", path: "/ranking" },
   { title: "News Center", path: "/news" },

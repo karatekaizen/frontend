@@ -122,12 +122,13 @@
         <!-- Governance & Rules -->
         <div class="space-y-3 text-xs">
           <div class="font-bold text-white uppercase tracking-wider text-xs">
-            Governance
+            Governance & Verifications
           </div>
           <ul class="space-y-2">
-            <li><router-link to="/documents" class="text-gray-400 hover:text-white transition-colors text-decoration-none">Rules 2026</router-link></li>
-            <li><router-link to="/documents" class="text-gray-400 hover:text-white transition-colors text-decoration-none">Kata Syllabus</router-link></li>
-            <li><router-link to="/about" class="text-gray-400 hover:text-white transition-colors text-decoration-none">Executive Board</router-link></li>
+            <li><router-link to="/cert-verify" class="text-rose-400 font-semibold hover:text-white transition-colors text-decoration-none">Verify Certificate</router-link></li>
+            <li><router-link to="/committee" class="text-gray-400 hover:text-white transition-colors text-decoration-none">Executive Committee</router-link></li>
+            <li><router-link to="/dojos" class="text-gray-400 hover:text-white transition-colors text-decoration-none">Dojo Branches</router-link></li>
+            <li><router-link to="/documents" class="text-gray-400 hover:text-white transition-colors text-decoration-none">Dan Syllabus & Rules</router-link></li>
             <li><router-link to="/olympics" class="text-gray-400 hover:text-white transition-colors text-decoration-none">Olympic Movement</router-link></li>
             <li><router-link to="/social-legacy" class="text-gray-400 hover:text-white transition-colors text-decoration-none">Guardian Girls</router-link></li>
           </ul>

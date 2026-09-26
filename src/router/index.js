@@ -15,11 +15,15 @@ import ProfileView from '../views/ProfileView.vue'
 import ProspectusView from '../views/ProspectusView.vue'
 import DojosView from '../views/DojosView.vue'
 import DojoDetailView from '../views/DojoDetailView.vue'
+import CertVerifyView from '../views/CertVerifyView.vue'
+import CommitteeView from '../views/CommitteeView.vue'
 
 const routes = [
   { path: '/', name: 'Home', component: HomeView },
   { path: '/dojos', name: 'Dojos', component: DojosView },
   { path: '/dojo/:slug', name: 'DojoDetail', component: DojoDetailView },
+  { path: '/cert-verify', name: 'CertVerify', component: CertVerifyView },
+  { path: '/committee', name: 'Committee', component: CommitteeView },
   { path: '/events', name: 'Events', component: EventsView },
   { path: '/ranking', name: 'Ranking', component: RankingView },
   { path: '/news', name: 'News', component: NewsView },
