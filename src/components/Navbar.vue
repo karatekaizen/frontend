@@ -331,6 +331,7 @@ const primaryLinks = [
 ]
 
 const moreNavLinks = [
+  { path: '/gallery', label: 'Photo Gallery', desc: 'Championships, belt exams & camps' },
   { path: '/cert-verify', label: 'Verify Certificates', desc: 'Authenticate Dan diplomas & licenses' },
   { path: '/committee', label: 'Executive Board', desc: 'Sensei council & leadership directory' },
   { path: '/approved', label: 'Dojo Equipment', desc: 'Approved Gi, belts & training gear' },

@@ -17,6 +17,7 @@ import DojosView from '../views/DojosView.vue'
 import DojoDetailView from '../views/DojoDetailView.vue'
 import CertVerifyView from '../views/CertVerifyView.vue'
 import CommitteeView from '../views/CommitteeView.vue'
+import GalleryView from '../views/GalleryView.vue'
 
 const routes = [
   { path: '/', name: 'Home', component: HomeView },
@@ -24,6 +25,7 @@ const routes = [
   { path: '/dojo/:slug', name: 'DojoDetail', component: DojoDetailView },
   { path: '/cert-verify', name: 'CertVerify', component: CertVerifyView },
   { path: '/committee', name: 'Committee', component: CommitteeView },
+  { path: '/gallery', name: 'Gallery', component: GalleryView },
   { path: '/events', name: 'Events', component: EventsView },
   { path: '/ranking', name: 'Ranking', component: RankingView },
   { path: '/news', name: 'News', component: NewsView },

@@ -79,6 +79,7 @@
             <li><router-link to="/events" class="text-gray-400 hover:text-white transition-colors text-decoration-none">Karate 1 Series A</router-link></li>
             <li><router-link to="/events" class="text-gray-400 hover:text-white transition-colors text-decoration-none">Youth League</router-link></li>
             <li><router-link to="/ranking" class="text-gray-400 hover:text-white transition-colors text-decoration-none">World Standings</router-link></li>
+            <li><router-link to="/gallery" class="text-gray-400 hover:text-white transition-colors text-decoration-none">Photo Gallery</router-link></li>
           </ul>
         </div>
 
